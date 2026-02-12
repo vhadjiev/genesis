@@ -3,14 +3,14 @@
   "slug": "equipment/genesis-universa",
   "seo": {
     "bg": {
-      "title": "Genesis Universa - E.S.E Pods кафемашина",
-      "description": "Екологична кафемашина, работеща с E.S.E pods - екологичната алтернатива на капсулното кафе.",
-      "keywords": ["genesis universa", "кафемашина", "E.S.E pods", "екологична"]
+      "title": "Genesis Universa — E.S.E Pods кафемашина | Генезис Текнолоджи",
+      "description": "Професионална кафемашина с E.S.E pods — нулев риск от грешка, биоразградими дози, Superfoam технология. Екологичната алтернатива на капсулното кафе.",
+      "keywords": ["genesis universa", "E.S.E pods", "екологична кафемашина", "професионална", "биоразградими", "superfoam"]
     },
     "en": {
-      "title": "Genesis Universa - E.S.E Pods Coffee Machine",
-      "description": "Eco-friendly coffee machine working with E.S.E pods - the ecological alternative to capsule coffee.",
-      "keywords": ["genesis universa", "coffee machine", "E.S.E pods", "eco-friendly"]
+      "title": "Genesis Universa — E.S.E Pods Coffee Machine | Genesis Technology",
+      "description": "Professional coffee machine with E.S.E pods — zero risk of error, biodegradable doses, Superfoam technology. The ecological alternative to capsule coffee.",
+      "keywords": ["genesis universa", "E.S.E pods", "eco-friendly coffee machine", "professional", "biodegradable", "superfoam"]
     }
   },
   "sections": [
@@ -18,88 +18,72 @@
       "type": "productHero",
       "name": "Genesis Universa",
       "tagline": {
-        "bg": "Genesis Universa E.S.E Pods",
-        "en": "Genesis Universa E.S.E Pods"
+        "bg": "Перфектно еспресо без зависимост от оператора",
+        "en": "Perfect Espresso Without Operator Dependency"
       },
       "badge": {
-        "bg": "0% Безпроблемна и надеждна | E.S.E Pods Compatible",
-        "en": "0% Trouble-free and reliable | E.S.E Pods Compatible"
+        "bg": "0% риск от грешка | E.S.E Pods",
+        "en": "0% Risk of Error | E.S.E Pods"
       },
       "description": {
-        "bg": "Кафе машината Universa работи с мляно кафе в хартиено филтърно покритие още познато като кафе на дози (e.s.e. pod). Кафето е предварително смляно, претеглено и пакетирано в азотна среда. По този начин винаги си гарантирате перфектното еспресо. Universa e екологична алтернатива на капсулното кафе, като не остава отпечатък върху природата (защото не се използва пластмаса).",
-        "en": "The Universa coffee machine works with ground coffee in paper filter covering, also known as coffee doses (e.s.e. pod). The coffee is pre-ground, weighed and packaged in a nitrogen atmosphere. This way you always guarantee perfect espresso. Universa is an eco-friendly alternative to capsule coffee, leaving no footprint on nature (because no plastic is used)."
+        "bg": "Genesis Universa работи с E.S.E pods — предварително смляно, претеглено и запечатано в азотна среда кафе в биоразградим хартиен филтър. Резултатът: перфектно еспресо всеки път, без нужда от обучен бариста, без настройки на мелачката, без отпадъци от пластмаса. Universa е екологичната алтернатива на капсулното кафе, без компромис с качеството.",
+        "en": "Genesis Universa works with E.S.E pods — pre-ground, weighed, and sealed in a nitrogen atmosphere coffee in a biodegradable paper filter. The result: perfect espresso every time, without a trained barista, without grinder adjustments, without plastic waste. Universa is the ecological alternative to capsule coffee, without compromising quality."
       },
       "image": "/images/products/universa.jpg"
     },
     {
       "type": "productFeatures",
       "title": {
-        "bg": "Какво я прави уникална?",
-        "en": "What makes it unique?"
+        "bg": "Защо Universa елиминира операционния риск",
+        "en": "Why Universa Eliminates Operational Risk"
       },
       "features": [
         {
           "icon": "mdi:shield-check",
-          "title": { "bg": "0% Без авариен риск", "en": "0% No failure risk" },
+          "title": { "bg": "Нулев риск от грешка", "en": "Zero Risk of Error" },
           "description": {
-            "bg": "Без авариен риск, без стрес. Universa работи стабилно - всеки ден и с всяка чаша.",
-            "en": "No failure risk, no stress. Universa works reliably - every day and with every cup."
+            "bg": "Без смилане, без разсипване, без калибриране. Всяка доза е стандартизирана от фабриката — постоянен вкус и качество с всяка чаша.",
+            "en": "No grinding, no spillage, no calibration. Every dose is standardised at the factory — consistent taste and quality with every cup."
           }
         },
         {
           "icon": "mdi:cup",
-          "title": { "bg": "2 канистъра + E.S.E pods", "en": "2 canisters + E.S.E pods" },
+          "title": { "bg": "Два канистъра + E.S.E pods", "en": "Two Canisters + E.S.E Pods" },
           "description": {
-            "bg": "Universa разполага с два канистъра за мляко и какао в комбинация с E.S.E pods системата.",
-            "en": "Universa features two canisters for milk and cocoa in combination with the E.S.E pods system."
-          }
-        },
-        {
-          "icon": "mdi:clock-fast",
-          "title": { "bg": "0% Бързо обслужване", "en": "0% Fast service" },
-          "description": {
-            "bg": "Universa за бързо обслужване и максимална ефективност.",
-            "en": "Universa for fast service and maximum efficiency."
-          }
-        },
-        {
-          "icon": "mdi:water",
-          "title": { "bg": "0% Superfoam технология", "en": "0% Superfoam technology" },
-          "description": {
-            "bg": "Universa приготвя лате с кокос чрез технология Superfoam.",
-            "en": "Universa prepares coconut latte using Superfoam technology."
-          }
-        },
-        {
-          "icon": "mdi:coffee",
-          "title": { "bg": "E.S.E. Pods група - Кафе под", "en": "E.S.E. Pods group - Coffee pod" },
-          "description": {
-            "bg": "Благодарение на вградения E.S.E. Pods модул, Genesis Universa предлага изключителна чистота, бързина и консистентност. Без смилане, без разсипване, без отпадък – просто поставяте дозата и натискате бутон. Винаги еднакъв вкус и качество. Поддържа всички стандартни E.S.E. подове. Лесно почистване, готово еспресо за по-малко от 30 секунди. Екологично решение – хартиените подове са биоразградими.",
-            "en": "Thanks to the built-in E.S.E. Pods module, Genesis Universa offers exceptional purity, speed and consistency. No grinding, no spillage, no waste - just place the dose and press the button. Consistent taste and quality. Supports all standard E.S.E. pods. Easy cleaning, ready espresso in less than 30 seconds. Eco-friendly solution - paper pods are biodegradable."
-          }
-        },
-        {
-          "icon": "mdi:bottle-tonic-plus",
-          "title": { "bg": "Два канистъра за мляко и какао", "en": "Two canisters for milk and cocoa" },
-          "description": {
-            "bg": "Genesis Universa разполага с два независими канистъра за мляко и какао. Перфектен баланс между класически рецепти и иновативни вкусове. Над 15 готови кафе шедьовъра – еспресо, капучино, лате, мока, горещ шоколад, бял шоколад, ванилия, кокос и други. Прецизно дозиране за повтаряем вкус и идеална текстура.",
-            "en": "Genesis Universa has two independent canisters for milk and cocoa. Perfect balance between classic recipes and innovative flavors. Over 15 ready coffee masterpieces - espresso, cappuccino, latte, mocha, hot chocolate, white chocolate, vanilla, coconut and more. Precise dosing for repeatable taste and ideal texture."
+            "bg": "Два независими канистъра за мляко и какао, комбинирани с E.S.E pods системата. Над 15 рецепти — еспресо, капучино, лате, мока, горещ шоколад, бял шоколад, ванилия, кокос и други.",
+            "en": "Two independent canisters for milk and cocoa, combined with the E.S.E pods system. Over 15 recipes — espresso, cappuccino, latte, mocha, hot chocolate, white chocolate, vanilla, coconut, and more."
           }
         },
         {
           "icon": "mdi:waveform",
-          "title": { "bg": "Иновативна Superfoam технология", "en": "Innovative Superfoam technology" },
+          "title": { "bg": "Superfoam технология", "en": "Superfoam Technology" },
           "description": {
-            "bg": "Genesis Universa използва усъвършенстваната технология Superfoam. Създава плътна микропяна с идеална текстура и температура. Подходяща за всички млечни напитки. Поддържа новата линия вкусове от RAUCH, включително кокосово капучино, лате и бял шоколад. Ново поколение млечна пяна - по-гъста, по-лека и с нежен кокосов аромат.",
-            "en": "Genesis Universa uses the advanced Superfoam technology. Creates dense microfoam with ideal texture and temperature. Suitable for all milk drinks. Supports the new flavor line from RAUCH, including coconut cappuccino, latte and white chocolate. New generation milk foam - thicker, lighter and with a delicate coconut aroma."
+            "bg": "Усъвършенствана технология за плътна микропяна с идеална текстура и температура. Поддържа вкусовата линия на RAUCH — кокосово капучино, лате и бял шоколад.",
+            "en": "Advanced technology for dense microfoam with ideal texture and temperature. Supports the RAUCH flavour line — coconut cappuccino, latte, and white chocolate."
+          }
+        },
+        {
+          "icon": "mdi:leaf",
+          "title": { "bg": "Устойчивост без компромис", "en": "Sustainability Without Compromise" },
+          "description": {
+            "bg": "Хартиените E.S.E дози са биоразградими — без пластмаса, без вреда за природата. Перфектно еспресо с чиста съвест.",
+            "en": "Paper E.S.E pods are biodegradable — no plastic, no environmental harm. Perfect espresso with a clear conscience."
+          }
+        },
+        {
+          "icon": "mdi:clock-fast",
+          "title": { "bg": "Готово еспресо за под 30 секунди", "en": "Ready Espresso in Under 30 Seconds" },
+          "description": {
+            "bg": "Поставете дозата, натиснете бутон — готово. Бързо обслужване без компромис с качеството, дори при високо натоварване.",
+            "en": "Place the pod, press the button — done. Fast service without compromising quality, even under high load."
           }
         },
         {
           "icon": "mdi:monitor",
-          "title": { "bg": "7-инчов дисплей", "en": "7-inch display" },
+          "title": { "bg": "7-инчов сензорен дисплей", "en": "7-Inch Touch Display" },
           "description": {
-            "bg": "Genesis Universa разполага с ярък 7-инчов сензорен дисплей с изчистен интерфейс и интуитивна навигация. Ясно и модерно меню с икони и категории напитки. Персонализирайте по вкус, размер и интензивност. Бърза реакция и плавна работа, оптимизирани за ежедневна употреба.",
-            "en": "Genesis Universa features a bright 7-inch touch display with a clean interface and intuitive navigation. Clear and modern menu with icons and drink categories. Customize by taste, size and intensity. Fast response and smooth operation, optimized for daily use."
+            "bg": "Ярък сензорен екран с изчистен интерфейс и интуитивна навигация. Персонализирайте по вкус, размер и интензивност. Оптимизиран за ежедневна употреба.",
+            "en": "Bright touch screen with clean interface and intuitive navigation. Customise by taste, size, and intensity. Optimised for daily use."
           }
         }
       ]
@@ -109,12 +93,12 @@
       "title": { "bg": "Технически характеристики", "en": "Technical Specifications" },
       "specs": [],
       "drinks": {
-        "bg": ["Горещ шоколад", "3 в 1", "Кафе със сметана", "Мокачино", "Капучино", "Дълго Еспресо", "Бял шоколад", "Еспресо", "Мляко с шоколад"],
-        "en": ["Hot chocolate", "3-in-1", "Coffee with cream", "Mochaccino", "Cappuccino", "Long Espresso", "White chocolate", "Espresso", "Milk with chocolate"]
+        "bg": ["Еспресо", "Дълго еспресо", "Капучино", "Лате", "Мокачино", "Горещ шоколад", "Бял шоколад", "Кафе със сметана", "Мляко с шоколад", "3 в 1"],
+        "en": ["Espresso", "Long Espresso", "Cappuccino", "Latte", "Mochaccino", "Hot Chocolate", "White Chocolate", "Coffee with Cream", "Milk with Chocolate", "3-in-1"]
       },
       "podExplanation": {
-        "bg": "Кафе машината Universa работи с готови хартиени дози кафе (E.S.E. pods) – предварително смляно и пресовано кафе, запечатано в биоразградим филтър. Всяка доза съдържа точно количество кафе за една перфектна чаша еспресо. Благодарение на опаковането в азотна среда, ароматът и вкусът се запазват свежи до последната доза. Системата е чиста, удобна и екологична – без пластмаса, без отпадък и без нужда от мелачка или бариста умения.",
-        "en": "The Universa coffee machine works with ready paper coffee doses (E.S.E. pods) - pre-ground and pressed coffee, sealed in a biodegradable filter. Each dose contains the exact amount of coffee for one perfect cup of espresso. Thanks to the nitrogen packaging, the aroma and taste stay fresh until the last dose. The system is clean, convenient and eco-friendly - no plastic, no waste and no need for a grinder or barista skills."
+        "bg": "E.S.E (Easy Serving Espresso) pods съдържат точно 7 грама прецизно смляно кафе, запечатано в биоразградим хартиен филтър. Азотното опаковане запазва свежестта и аромата до последната доза. Системата е чиста, удобна и екологична — без нужда от мелачка, без бариста умения, без пластмасови отпадъци.",
+        "en": "E.S.E (Easy Serving Espresso) pods contain exactly 7 grams of precisely ground coffee, sealed in a biodegradable paper filter. Nitrogen packaging preserves freshness and aroma until the last dose. The system is clean, convenient, and eco-friendly — no grinder needed, no barista skills, no plastic waste."
       }
     },
     {

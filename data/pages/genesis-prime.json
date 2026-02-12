@@ -3,14 +3,14 @@
   "slug": "equipment/genesis-prime",
   "seo": {
     "bg": {
-      "title": "Genesis Prime - Автоматична кафемашина",
-      "description": "Първата ни автоматична кафемашина с клауд система и един бункер за зърнено кафе.",
-      "keywords": ["genesis prime", "кафемашина", "автоматична", "клауд"]
+      "title": "Genesis Prime — Облачна кафемашина | Генезис Текнолоджи",
+      "description": "Компактна професионална кафемашина с облачна система, мобилно приложение и интелигентно управление. Идеална за офиси и бутикови обекти.",
+      "keywords": ["genesis prime", "облачна кафемашина", "професионална", "компактна", "офис кафемашина"]
     },
     "en": {
-      "title": "Genesis Prime - Automatic Coffee Machine",
-      "description": "Our first automatic coffee machine with cloud system and single bean hopper.",
-      "keywords": ["genesis prime", "coffee machine", "automatic", "cloud"]
+      "title": "Genesis Prime — Cloud Coffee Machine | Genesis Technology",
+      "description": "Compact professional coffee machine with cloud system, mobile app, and intelligent management. Ideal for offices and boutique venues.",
+      "keywords": ["genesis prime", "cloud coffee machine", "professional", "compact", "office coffee machine"]
     }
   },
   "sections": [
@@ -18,72 +18,68 @@
       "type": "productHero",
       "name": "Genesis Prime",
       "tagline": {
-        "bg": "Любимата машина от години",
-        "en": "The favorite machine for years"
+        "bg": "Облачно управление в компактен формат",
+        "en": "Cloud Management in a Compact Form"
       },
       "description": {
-        "bg": "Кафемашината Genesis Prime има иновативен софтуер за управление, комуникация и връзка с външни мрежи. За да поръчаш Генезис Прайм, е нужно да се свържеш с нас за оферта.",
-        "en": "The Genesis Prime coffee machine has innovative software for management, communication and connection with external networks. To order Genesis Prime, you need to contact us for an offer."
+        "bg": "Genesis Prime предоставя пълната функционалност на нашата облачна платформа в компактен, надежден формат. Един бункер за зърнено кафе, интелигентно софтуерно управление и мобилен достъп — всичко, което трябва за обекти, в които пространството е ограничено, но стандартите не са.",
+        "en": "Genesis Prime delivers the full functionality of our cloud platform in a compact, reliable form. Single bean hopper, intelligent software management, and mobile access — everything you need for venues where space is limited, but standards are not."
       },
       "image": "/images/products/prime.jpg"
     },
     {
       "type": "productFeatures",
+      "title": {
+        "bg": "Какво включва Genesis Prime",
+        "en": "What Genesis Prime Includes"
+      },
       "features": [
         {
-          "icon": "mdi:cloud",
-          "title": { "bg": "Cloud Система", "en": "Cloud System" },
+          "icon": "mdi:cloud-sync",
+          "title": { "bg": "Облачна платформа с дистанционен достъп", "en": "Cloud Platform with Remote Access" },
           "description": {
-            "bg": "Софтуерни обновление, комуникиране безжично, Wi-fi & Bluetooth.",
-            "en": "Software updates, wireless communication, Wi-Fi & Bluetooth."
+            "bg": "Безжична комуникация чрез Wi-Fi и Bluetooth. Софтуерни обновления, промяна на рецепти и мониторинг на консумацията — всичко от всяко устройство.",
+            "en": "Wireless communication via Wi-Fi and Bluetooth. Software updates, recipe changes, and consumption monitoring — all from any device."
           }
         },
         {
-          "icon": "mdi:alert-circle",
-          "title": { "bg": "Следене на грешки", "en": "Error tracking" },
+          "icon": "mdi:alert-circle-check",
+          "title": { "bg": "Проактивно следене за грешки", "en": "Proactive Error Tracking" },
           "description": {
-            "bg": "Машината може да следи и отчита грешки.",
-            "en": "The machine can track and report errors."
+            "bg": "Машината идентифицира и отчита грешки автоматично. Получавате известие преди проблемът да стане престой.",
+            "en": "The machine identifies and reports errors automatically. You receive a notification before the problem becomes downtime."
           }
         },
         {
           "icon": "mdi:thermometer",
-          "title": { "bg": "Анализ на температура", "en": "Temperature analysis" },
+          "title": { "bg": "Прецизен температурен контрол", "en": "Precise Temperature Control" },
           "description": {
-            "bg": "За направата на перфектните топли напитки.",
-            "en": "For making perfect hot drinks."
+            "bg": "Вградена система за анализ на температурата гарантира оптимални условия за приготвяне на всяка напитка.",
+            "en": "Built-in temperature analysis system ensures optimal conditions for preparing every beverage."
           }
         },
         {
           "icon": "mdi:cellphone",
-          "title": { "bg": "Android & iOS", "en": "Android & iOS" },
+          "title": { "bg": "Мобилно приложение за iOS и Android", "en": "Mobile App for iOS & Android" },
           "description": {
-            "bg": "Възползвайте се от приложението за мобилен телефон.",
-            "en": "Take advantage of the mobile phone application."
-          }
-        },
-        {
-          "icon": "mdi:cellphone-link",
-          "title": { "bg": "Мобилно Приложение", "en": "Mobile Application" },
-          "description": {
-            "bg": "Основната цел на приложението е възможност за избиране на напитки без докосване на екрана на кафемашината Genesis, забрана на напитки, показване на точна хранителна и калорийна стойност на конкретна напитка.",
-            "en": "The main purpose of the app is the ability to select drinks without touching the Genesis coffee machine screen, drink restrictions, and display of exact nutritional and calorie value of a specific drink."
+            "bg": "Избирайте напитки, проследявайте хранителни стойности и калории, задавайте ограничения по алергени — всичко от телефона.",
+            "en": "Select drinks, track nutritional values and calories, set allergen restrictions — all from your phone."
           }
         },
         {
           "icon": "mdi:food-apple-outline",
-          "title": { "bg": "Избирай какво пиеш", "en": "Choose what you drink" },
+          "title": { "bg": "Интелигентен подбор на напитки", "en": "Intelligent Drink Selection" },
           "description": {
-            "bg": "В случай на зададена забрана към конкретни напитки заради алергени или към общ дневен сбор на хранителни и калорийни стойности, мобилното приложение ще скрива или сигнализира на потребителя.",
-            "en": "In case of restrictions on specific drinks due to allergens or daily nutritional and calorie limits, the mobile app will hide or notify the user."
+            "bg": "При зададени ограничения за алергени или калорични стойности, приложението автоматично скрива или маркира неподходящи напитки.",
+            "en": "When allergen or calorie restrictions are set, the app automatically hides or flags unsuitable drinks."
           }
         },
         {
-          "icon": "mdi:cup-outline",
-          "title": { "bg": "И готова напитка", "en": "And your drink is ready" },
+          "icon": "mdi:book-open-variant",
+          "title": { "bg": "Пълно управление на рецептите", "en": "Full Recipe Management" },
           "description": {
-            "bg": "След като изберете желаната от вас рецепта, остава само да изчакате приготвянето на напитката. Толкова е лесно!",
-            "en": "After selecting your desired recipe, just wait for the drink to be prepared. It's that easy!"
+            "bg": "Добавяйте, редактирайте или премахвайте рецепти директно от машината или дистанционно чрез облачната платформа.",
+            "en": "Add, edit, or remove recipes directly from the machine or remotely via the cloud platform."
           }
         }
       ]

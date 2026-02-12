@@ -3,85 +3,85 @@
   "slug": "services/cloud-system",
   "seo": {
     "bg": {
-      "title": "Облачна система - Дистанционно управление",
-      "description": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията за напитки. Анализ, отчети и оптимизация.",
-      "keywords": ["облачна система", "клауд", "дистанционно управление", "мониторинг"]
+      "title": "Облачна платформа — Дистанционно управление | Генезис Текнолоджи",
+      "description": "Вградена облачна платформа за дистанционен мониторинг, управление на рецепти, анализ на консумацията и оптимизация на приходите. 24/7 достъп от всяко устройство.",
+      "keywords": ["облачна система", "дистанционно управление", "мониторинг", "аналитика", "IoT кафемашина"]
     },
     "en": {
-      "title": "Cloud System - Remote Management",
-      "description": "Cloud-based remote management system for monitoring and controlling beverage equipment. Analytics, reports and optimization.",
-      "keywords": ["cloud system", "remote management", "monitoring", "analytics"]
+      "title": "Cloud Platform — Remote Management | Genesis Technology",
+      "description": "Built-in cloud platform for remote monitoring, recipe management, consumption analytics, and revenue optimisation. 24/7 access from any device.",
+      "keywords": ["cloud system", "remote management", "monitoring", "analytics", "IoT coffee machine"]
     }
   },
   "sections": [
     {
       "type": "serviceHero",
-      "name": { "bg": "Облачна система", "en": "Cloud System" },
-      "tagline": { "bg": "Дигитални решения", "en": "Digital Solutions" },
+      "name": { "bg": "Облачна платформа", "en": "Cloud Platform" },
+      "tagline": { "bg": "Вградена интелигентност, не допълнение", "en": "Built-In Intelligence, Not an Add-On" },
       "description": {
-        "bg": "Чрез клауд системата на Генезис, вие лесно можете да следите различни статистически данни на кафемашината, променяте рецепти, следите потреблението, дори локацията на машината. С функциите за дистанционно управление можете да управлявате вашата кафемашина от всякъде и по всяко време. Дори в реално време.",
-        "en": "Through the Genesis cloud system, you can easily track various statistical data of the coffee machine, change recipes, monitor consumption, even the machine's location. With remote control functions you can manage your coffee machine from anywhere and at any time. Even in real time."
+        "bg": "Облачната платформа на Genesis не е аксесоар — тя е ядрото на всяка машина. Следете статистики в реално време, променяйте рецепти дистанционно, анализирайте потреблението и локацията на всяка машина. Управлявайте целия си парк от съоръжения от телефона, таблета или компютъра — по всяко време, от всякъде.",
+        "en": "The Genesis cloud platform is not an accessory — it is the core of every machine. Track statistics in real time, change recipes remotely, analyse consumption and location of every machine. Manage your entire equipment fleet from your phone, tablet, or computer — anytime, from anywhere."
       },
       "image": "/images/services/cloud-system.jpg"
     },
     {
       "type": "serviceDetails",
-      "title": { "bg": "Преимущества", "en": "Benefits" },
+      "title": { "bg": "Какво ви дава облачната платформа", "en": "What the Cloud Platform Gives You" },
       "features": [
         {
           "icon": "mdi:cloud-sync",
-          "title": { "bg": "Едновременна обработка", "en": "Simultaneous processing" },
+          "title": { "bg": "Едновременно управление на целия парк", "en": "Simultaneous Fleet Management" },
           "description": {
-            "bg": "Това ви позволява да спестите усилия при промяна на настройките, качване на данни или обновяване на софтуера на машината. Това също гарантира, че промените се обработват едновременно за всичките ви машини или само за някоя, която вие изберете.",
-            "en": "This allows you to save effort when changing settings, uploading data or updating the machine's software. This also ensures that changes are processed simultaneously for all your machines or only for the one you choose."
+            "bg": "Променяйте настройки, качвайте данни или обновявайте софтуера на всички машини едновременно — или само на избрани. Спестете часове ръчна работа при всяка промяна.",
+            "en": "Change settings, upload data, or update software on all machines simultaneously — or just selected ones. Save hours of manual work with every change."
           }
         },
         {
           "icon": "mdi:chart-line",
-          "title": { "bg": "Разширени статистики", "en": "Advanced statistics" },
+          "title": { "bg": "Бизнес аналитика и отчети", "en": "Business Analytics & Reports" },
           "description": {
-            "bg": "За да разберете по-добре и да подобрите ежедневния си бизнес с кафе, ние ви предлагаме Разширени анализи, базирани на платформа за бизнес развитие. Можете да получите стандартизирани отчети, персонализирани отчети или дори достъп до допълнителни данни, за да създавате самостоятелно направени отчети.",
-            "en": "To better understand and improve your daily coffee business, we offer Advanced analytics based on a business development platform. You can get standardized reports, personalized reports or even access to additional data to create custom reports."
+            "bg": "Разширена аналитична платформа за бизнес развитие. Стандартизирани отчети, персонализирани отчети и достъп до суровите данни за създаване на собствени анализи. Разберете кои напитки се продават, кога е пикът и къде имате потенциал за растеж.",
+            "en": "Advanced analytics platform for business development. Standardised reports, personalised reports, and access to raw data for creating your own analyses. Understand which drinks sell, when peak hours are, and where you have growth potential."
           }
         },
         {
-          "icon": "mdi:account-group",
-          "title": { "bg": "Доволни клиенти и продавачи", "en": "Satisfied customers and sellers" },
+          "icon": "mdi:trending-up",
+          "title": { "bg": "Управление на риска и печалбата", "en": "Risk & Profit Management" },
           "description": {
-            "bg": "Изведете бизнеса си на следващото ниво с вградените инструменти на Genesis за управление на риска и печалбата. Управлявайте всеки ваш обект, машина и настройки, независимо къде сте.",
-            "en": "Take your business to the next level with Genesis's built-in risk and profit management tools. Manage every object, machine and settings, regardless of where you are."
+            "bg": "Вградени инструменти за проследяване на рентабилността на всеки обект и всяка машина. Идентифицирайте проблеми преди да се превърнат в загуби.",
+            "en": "Built-in tools for tracking profitability of every venue and every machine. Identify problems before they become losses."
           }
         },
         {
           "icon": "mdi:chart-areaspline",
-          "title": { "bg": "Разширени статистики", "en": "Extended statistics" },
+          "title": { "bg": "Статистики в реално време 24/7", "en": "Real-Time Statistics 24/7" },
           "description": {
-            "bg": "Данните за използването и функционирането на кафемашини Генезис са на едно място. Използвайте наличните статистики в реално време 24/7, за да създадете правилен бизнес план.",
-            "en": "Genesis coffee machine usage and operation data is in one place. Use available real-time statistics 24/7 to create a proper business plan."
+            "bg": "Всички данни за използването и функционирането на вашите машини са на едно място. Достъпни в реално време, 24 часа в денонощието, 7 дни в седмицата.",
+            "en": "All data on the usage and operation of your machines is in one place. Accessible in real time, 24 hours a day, 7 days a week."
           }
         },
         {
           "icon": "mdi:map-marker",
-          "title": { "bg": "Гео-локация на машина", "en": "Machine geo-location" },
+          "title": { "bg": "Гео-локация на всяка машина", "en": "Geo-Location of Every Machine" },
           "description": {
-            "bg": "G cloud ви позволява да наблюдавате, контролирате, управлявате и оптимизирате вашият бизнес и кафемашина на Генезис.",
-            "en": "G cloud allows you to monitor, control, manage and optimize your business and Genesis coffee machine."
+            "bg": "Визуализирайте местоположението на всяка машина на картата. Оптимизирайте сервизни маршрути и планирайте разширяване на мрежата.",
+            "en": "Visualise the location of every machine on a map. Optimise service routes and plan network expansion."
           }
         },
         {
           "icon": "mdi:cellphone",
-          "title": { "bg": "Мобилно решение", "en": "Mobile solution" },
+          "title": { "bg": "Мобилно приложение", "en": "Mobile Application" },
           "description": {
-            "bg": "Мобилното приложение за смартфон е перфектната комбинация за работа на кафемашина Генезис в дигитална среда.",
-            "en": "The smartphone mobile app is the perfect combination for operating a Genesis coffee machine in a digital environment."
+            "bg": "Пълен достъп до платформата от смартфона. Управлявайте рецепти, следете статистики и получавайте известия за проблеми — всичко в джоба ви.",
+            "en": "Full platform access from your smartphone. Manage recipes, track statistics, and receive problem alerts — all in your pocket."
           }
         },
         {
           "icon": "mdi:server",
-          "title": { "bg": "Клауд сървъри", "en": "Cloud servers" },
+          "title": { "bg": "Облачна инфраструктура 24/7", "en": "24/7 Cloud Infrastructure" },
           "description": {
-            "bg": "Нашите сървъри са налични 24/7, за да може да следите информацията по всяко едно време.",
-            "en": "Our servers are available 24/7 so you can track the information at any time."
+            "bg": "Сървърите ни работят непрекъснато. Данните ви са достъпни и защитени по всяко време.",
+            "en": "Our servers run continuously. Your data is accessible and protected at all times."
           }
         }
       ]

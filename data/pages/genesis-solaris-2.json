@@ -3,14 +3,14 @@
   "slug": "equipment/genesis-solaris-2",
   "seo": {
     "bg": {
-      "title": "Genesis Solaris 2 - Ново поколение Post Mix",
-      "description": "Малка и компактна машина с голям тъч екран за фюжън, уелнес и сок напитки.",
-      "keywords": ["genesis solaris 2", "post mix", "тъч екран", "сок машина", "фюжън"]
+      "title": "Genesis Solaris 2 — Ново поколение Post Mix | Генезис Текнолоджи",
+      "description": "Компактна Post Mix система за фюжън, уелнес и сок напитки с голям тъч екран и облачно управление. 7 линии, многоезичен софтуер.",
+      "keywords": ["genesis solaris 2", "post mix", "фюжън напитки", "уелнес", "облачна система"]
     },
     "en": {
-      "title": "Genesis Solaris 2 - Next-Gen Post Mix",
-      "description": "Compact machine with large touch screen for fusion, wellness and juice drinks.",
-      "keywords": ["genesis solaris 2", "post mix", "touch screen", "juice machine", "fusion"]
+      "title": "Genesis Solaris 2 — Next-Gen Post Mix | Genesis Technology",
+      "description": "Compact Post Mix system for fusion, wellness, and juice drinks with large touchscreen and cloud management. 7 lines, multilingual software.",
+      "keywords": ["genesis solaris 2", "post mix", "fusion drinks", "wellness", "cloud system"]
     }
   },
   "sections": [
@@ -18,12 +18,12 @@
       "type": "productHero",
       "name": "Genesis Solaris 2",
       "tagline": {
-        "bg": "Post Mix машина",
-        "en": "Post Mix machine"
+        "bg": "Компактна мощ за фюжън и уелнес напитки",
+        "en": "Compact Power for Fusion & Wellness Drinks"
       },
       "description": {
-        "bg": "Съоръжението Solaris 2 е Post Mix машина, перфектното решение за приготвяне на фюжън, уелнес и сок напитки. Genesis Solaris 2 е малка и компактна машина с голям тъч екран, която позволява персонализиране на всяка рецепта, за да задоволи нуждите и предпочитанията на Вашите клиенти. Съоръжението поддържа многоезичен софтуер за управление с възможност за избор и настройка на рецепти.",
-        "en": "The Solaris 2 machine is a Post Mix machine, the perfect solution for preparing fusion, wellness and juice drinks. Genesis Solaris 2 is a small and compact machine with a large touch screen that allows customization of every recipe to meet your customers' needs and preferences. The unit supports multilingual management software with recipe selection and configuration."
+        "bg": "Genesis Solaris 2 е ново поколение Post Mix система, проектирана за обекти, които искат да предложат фюжън, уелнес и сок напитки с минимален отпечатък. Компактна машина с голям тъч екран, 7 линии + вода и многоезичен софтуер за пълно персонализиране на рецептите. Може да работи и като коктейлна система.",
+        "en": "Genesis Solaris 2 is a next-generation Post Mix system designed for venues that want to offer fusion, wellness, and juice drinks with a minimal footprint. Compact machine with a large touchscreen, 7 lines + water, and multilingual software for full recipe customisation. Can also operate as a cocktail system."
       },
       "image": "/images/products/solaris2.jpg"
     },
@@ -32,104 +32,64 @@
       "features": [
         {
           "icon": "mdi:monitor-cellphone",
-          "title": {
-            "bg": "Голям тъч екран",
-            "en": "Large Touch Screen"
-          },
+          "title": { "bg": "Голям тъч екран с интуитивен интерфейс", "en": "Large Touchscreen with Intuitive Interface" },
           "description": {
-            "bg": "Интуитивен интерфейс за избор на фюжън, уелнес напитки и сокове. Гъвкаво програмиране на рецепти и отчетност.",
-            "en": "Intuitive interface for selecting fusion, wellness drinks and juices. Flexible recipe programming and reporting."
+            "bg": "Интуитивна навигация за избор на фюжън, уелнес напитки и сокове. Гъвкаво програмиране на рецепти с визуална отчетност.",
+            "en": "Intuitive navigation for selecting fusion, wellness drinks, and juices. Flexible recipe programming with visual reporting."
           }
         },
         {
           "icon": "mdi:resize",
-          "title": {
-            "bg": "Компактна машина",
-            "en": "Compact Machine"
-          },
+          "title": { "bg": "Компактен дизайн, голям капацитет", "en": "Compact Design, Large Capacity" },
           "description": {
-            "bg": "Малка и компактна Post Mix машина – перфектна за Вашият бизнес. Разпределени 3 бр линии за фюжън и уелнес, 4 бр за сокове.",
-            "en": "Small and compact Post Mix machine – perfect for your business. 3 lines for fusion and wellness, 4 for juices."
+            "bg": "3 линии за фюжън и уелнес, 4 линии за сокове, плюс вода. Малък отпечатък, голямо разнообразие — идеална за обекти с ограничено пространство.",
+            "en": "3 lines for fusion and wellness, 4 lines for juices, plus water. Small footprint, large variety — ideal for venues with limited space."
           }
         },
         {
           "icon": "mdi:fruit-citrus",
-          "title": {
-            "bg": "Фюжън, уелнес и сокове",
-            "en": "Fusion, Wellness & Juices"
-          },
+          "title": { "bg": "Фюжън, уелнес и натурални сокове", "en": "Fusion, Wellness & Natural Juices" },
           "description": {
-            "bg": "Сок Ябълка, Черна Боровинка, Уелнес Вода Лимон, Сок Грейпфрут, Уелнес Вода Портокал и Лимон, Уелнес Вода Лимон и Малина, Студен чай Праскова 0% Sugar.",
-            "en": "Apple Juice, Black Currant, Wellness Water Lemon, Grapefruit Juice, Wellness Water Orange and Lemon, Wellness Water Lemon and Raspberry, Peach Iced Tea 0% Sugar."
+            "bg": "Сок ябълка, сок грейпфрут, уелнес вода лимон, уелнес вода портокал и лимон, уелнес вода лимон и малина, студен чай праскова 0% захар, черна боровинка и други.",
+            "en": "Apple juice, grapefruit juice, wellness water lemon, wellness water orange and lemon, wellness water lemon and raspberry, peach iced tea 0% sugar, blackcurrant, and more."
           }
         },
         {
-          "icon": "mdi:cloud",
-          "title": {
-            "bg": "Cloud Система",
-            "en": "Cloud System"
-          },
+          "icon": "mdi:cloud-sync",
+          "title": { "bg": "Облачна платформа", "en": "Cloud Platform" },
           "description": {
-            "bg": "Клауд базиран софтуер за отдалечен достъп при настройване на рецепти и обновяване на версии.",
-            "en": "Cloud-based software for remote access to configure recipes and update versions."
+            "bg": "Дистанционен достъп за настройване на рецепти, обновяване на софтуера и проследяване на консумацията в реално време.",
+            "en": "Remote access for recipe configuration, software updates, and real-time consumption tracking."
           }
         },
         {
           "icon": "mdi:translate",
-          "title": {
-            "bg": "Многоезичен софтуер",
-            "en": "Multilingual Software"
-          },
+          "title": { "bg": "Многоезичен софтуер", "en": "Multilingual Software" },
           "description": {
-            "bg": "Поддръжка на многоезичен софтуер за управление с възможност за избор и настройка на рецепти.",
-            "en": "Multilingual management software support with recipe selection and configuration."
+            "bg": "Подходяща за международни хотели и обекти с чуждоезични гости. Софтуерът поддържа множество езици за управление и избор на рецепти.",
+            "en": "Suitable for international hotels and venues with foreign-speaking guests. The software supports multiple languages for management and recipe selection."
           }
         },
         {
           "icon": "mdi:glass-cocktail",
-          "title": {
-            "bg": "Коктейлни възможности",
-            "en": "Cocktail Capability"
-          },
+          "title": { "bg": "Коктейлна функционалност", "en": "Cocktail Capability" },
           "description": {
-            "bg": "Solaris 2 може да работи като коктейлна машина. 7 бр линии + вода в корпуса на съоръжението. BiB концентрати 1:1 до 1:49.",
-            "en": "Solaris 2 can work as a cocktail machine. 7 lines + water in the unit body. BiB concentrates 1:1 to 1:49."
+            "bg": "Solaris 2 може да работи и като коктейлна система с BiB концентрати в съотношение 1:1 до 1:49. Гъвкавост за обекти, които искат повече от сокове.",
+            "en": "Solaris 2 can also function as a cocktail system with BiB concentrates in 1:1 to 1:49 ratio. Flexibility for venues that want more than juices."
           }
         }
       ]
     },
     {
       "type": "productSpecs",
-      "title": {
-        "bg": "Технически характеристики",
-        "en": "Technical Specifications"
-      },
+      "title": { "bg": "Технически характеристики", "en": "Technical Specifications" },
       "specs": [
-        {
-          "label": { "bg": "Линии (помпи)", "en": "Lines (pumps)" },
-          "value": { "bg": "7 бр + вода", "en": "7 pcs + water" }
-        },
-        {
-          "label": { "bg": "Фюжън и уелнес", "en": "Fusion & wellness" },
-          "value": { "bg": "3 бр линии", "en": "3 lines" }
-        },
-        {
-          "label": { "bg": "Сокове", "en": "Juices" },
-          "value": { "bg": "4 бр линии", "en": "4 lines" }
-        },
-        {
-          "label": { "bg": "Концентрати", "en": "Concentrates" },
-          "value": { "bg": "BiB 1:1 до 1:49", "en": "BiB 1:1 to 1:49" }
-        },
-        {
-          "label": { "bg": "Документация", "en": "Documentation" },
-          "value": { "bg": "Технически спецификации PDF", "en": "Technical specifications PDF" }
-        }
+        { "label": { "bg": "Линии (помпи)", "en": "Lines (pumps)" }, "value": { "bg": "7 бр + вода", "en": "7 pcs + water" } },
+        { "label": { "bg": "Фюжън и уелнес", "en": "Fusion & wellness" }, "value": { "bg": "3 линии", "en": "3 lines" } },
+        { "label": { "bg": "Сокове", "en": "Juices" }, "value": { "bg": "4 линии", "en": "4 lines" } },
+        { "label": { "bg": "Концентрати", "en": "Concentrates" }, "value": { "bg": "BiB 1:1 до 1:49", "en": "BiB 1:1 to 1:49" } }
       ]
     },
-    {
-      "type": "productGallery",
-      "images": []
-    }
+    { "type": "productGallery", "images": [] }
   ]
 }

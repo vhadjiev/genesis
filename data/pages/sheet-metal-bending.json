@@ -3,24 +3,24 @@
   "slug": "services/sheet-metal-bending",
   "seo": {
     "bg": {
-      "title": "Огъване на листова ламарина",
-      "description": "Услуги за огъване на листова ламарина с дебелина до 6мм и дължина до 2000мм.",
-      "keywords": ["огъване", "листова ламарина", "метал"]
+      "title": "Огъване на листова ламарина | Генезис Текнолоджи",
+      "description": "Прецизно огъване на листова ламарина до 6мм дебелина и 2000мм дължина. Опитен производствен екип с 15+ години опит.",
+      "keywords": ["огъване", "листова ламарина", "метал", "абкант", "прецизно огъване"]
     },
     "en": {
-      "title": "Sheet Metal Bending",
-      "description": "Sheet metal bending services up to 6mm thickness and 2000mm length.",
-      "keywords": ["sheet metal bending", "metal bending", "metal fabrication"]
+      "title": "Sheet Metal Bending | Genesis Technology",
+      "description": "Precise sheet metal bending up to 6mm thickness and 2000mm length. Experienced production team with 15+ years of experience.",
+      "keywords": ["sheet metal bending", "metal bending", "press brake", "precision bending"]
     }
   },
   "sections": [
     {
       "type": "serviceHero",
-      "name": { "bg": "Огъване с абкант", "en": "Sheet Metal Bending" },
-      "tagline": { "bg": "Висока прецизност и точност", "en": "High precision and accuracy" },
+      "name": { "bg": "Огъване на листова ламарина", "en": "Sheet Metal Bending" },
+      "tagline": { "bg": "Прецизност и повторяемост", "en": "Precision and Repeatability" },
       "description": {
-        "bg": "Висока прецизност и точност на огъване на металите. Получавате това, което сте заявили.",
-        "en": "High precision and accuracy of metal bending. You get what you ordered."
+        "bg": "Висока прецизност и точност на огъване от екипа, който произвежда металните корпуси на нашите системи за напитки. Получавате точно това, което сте заявили — всеки път.",
+        "en": "High precision and accuracy in bending from the team that manufactures the metal housings of our beverage systems. You get exactly what you ordered — every time."
       },
       "image": "/images/services/sheet-metal-bending.jpg"
     },
@@ -28,7 +28,8 @@
       "type": "serviceCapabilities",
       "title": { "bg": "Капацитет", "en": "Capacity" },
       "items": [
-        { "label": { "bg": "Дебелина", "en": "Thickness" }, "value": { "bg": "До 6мм при дължина 2000мм", "en": "Up to 6mm at length 2000mm" } }
+        { "label": { "bg": "Максимална дебелина", "en": "Maximum thickness" }, "value": { "bg": "До 6 мм", "en": "Up to 6mm" } },
+        { "label": { "bg": "Максимална дължина", "en": "Maximum length" }, "value": { "bg": "До 2000 мм", "en": "Up to 2000mm" } }
       ]
     }
   ]

@@ -3,101 +3,101 @@
   "slug": "services/laser-cutting",
   "seo": {
     "bg": {
-      "title": "Лазерно рязане",
-      "description": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм.",
-      "keywords": ["лазерно рязане", "метал", "рязане на ламарина"]
+      "title": "Лазерно рязане и огъване на метали | Генезис Текнолоджи",
+      "description": "Професионално лазерно рязане на черни, неръждаеми стомани, алуминий и месинг до 8мм. CO2 и файбър лазери. Индивидуална оферта до 24 часа.",
+      "keywords": ["лазерно рязане", "метал", "огъване", "абкант", "CO2 лазер", "файбър лазер"]
     },
     "en": {
-      "title": "Laser Cutting Services",
-      "description": "Professional laser cutting services for metals up to 8mm thickness.",
-      "keywords": ["laser cutting", "metal", "sheet metal cutting"]
+      "title": "Laser Cutting & Metal Bending | Genesis Technology",
+      "description": "Professional laser cutting of carbon steel, stainless steel, aluminium, and brass up to 8mm. CO2 and fibre lasers. Individual quote within 24 hours.",
+      "keywords": ["laser cutting", "metal", "bending", "press brake", "CO2 laser", "fibre laser"]
     }
   },
   "sections": [
     {
       "type": "serviceHero",
-      "name": { "bg": "Лазерно рязане, Огъване с абкант", "en": "Laser cutting, Bending with press brake" },
-      "tagline": { "bg": "За въпроси и поръчки", "en": "For questions and orders" },
+      "name": { "bg": "Лазерно рязане и огъване", "en": "Laser Cutting & Bending" },
+      "tagline": { "bg": "Прецизност от собствено производство", "en": "Precision from Our Own Production" },
       "description": {
-        "bg": "Телефон: +359 89 565 7706 | Email: info@gentech.bg",
-        "en": "Phone: +359 89 565 7706 | Email: info@gentech.bg"
+        "bg": "Същата прецизност, с която произвеждаме нашите системи за напитки, е достъпна и за вашите проекти. CO2 и файбър лазери за рязане на метали до 8мм, огъване с абкант и индивидуална оферта до 24 часа.",
+        "en": "The same precision we use to manufacture our beverage systems is available for your projects. CO2 and fibre lasers for metal cutting up to 8mm, press brake bending, and an individual quote within 24 hours."
       },
       "image": "/images/services/laser-cutting.jpg"
     },
     {
       "type": "serviceDetails",
-      "title": { "bg": "Предимства", "en": "Advantages" },
+      "title": { "bg": "Защо да изберете нас", "en": "Why Choose Us" },
       "features": [
         {
           "icon": "mdi:clock-fast",
-          "title": { "bg": "Отговор до 24 часа", "en": "Response within 24 hours" },
+          "title": { "bg": "Индивидуална оферта до 24 часа", "en": "Individual Quote Within 24 Hours" },
           "description": {
-            "bg": "Индивидуална оферта за всяка поръчка в рамките на 24 часа.",
-            "en": "Individual quote for each order within 24 hours."
+            "bg": "Изпратете ни чертежи или спецификации и ще получите персонализирана оферта в рамките на един работен ден.",
+            "en": "Send us drawings or specifications and you will receive a personalised quote within one business day."
           }
         },
         {
           "icon": "mdi:target",
-          "title": { "bg": "Висока точност на рязане", "en": "High cutting accuracy" },
+          "title": { "bg": "Висока точност на рязане", "en": "High Cutting Accuracy" },
           "description": {
-            "bg": "Прецизно и качествено рязане на метали.",
-            "en": "Precise and high-quality metal cutting."
+            "bg": "Тесен прорез и минимална зона за топлинно въздействие. Прецизно рязане на сложни детайли и форми с малки отвори.",
+            "en": "Narrow kerf and minimal heat-affected zone. Precise cutting of complex parts and shapes with small holes."
           }
         },
         {
           "icon": "mdi:account-hard-hat",
-          "title": { "bg": "Професионален екип", "en": "Professional team" },
+          "title": { "bg": "Опитен производствен екип", "en": "Experienced Production Team" },
           "description": {
-            "bg": "Опитни специалисти за всяка ваша поръчка.",
-            "en": "Experienced specialists for every order."
+            "bg": "Екипът, който произвежда нашите системи за напитки, работи и по вашите поръчки. Производствен опит от 15+ години.",
+            "en": "The team that manufactures our beverage systems also works on your orders. 15+ years of manufacturing experience."
           }
         }
       ]
     },
     {
       "type": "serviceCapabilities",
-      "title": { "bg": "Материали и дебелини", "en": "Materials and thicknesses" },
+      "title": { "bg": "Материали и максимални дебелини", "en": "Materials & Maximum Thicknesses" },
       "items": [
-        { "label": { "bg": "Черни и инструментални стомани", "en": "Carbon and tool steels" }, "value": { "bg": "До 8мм", "en": "Up to 8mm" } },
-        { "label": { "bg": "Неръждаеми стомани", "en": "Stainless steels" }, "value": { "bg": "До 6мм", "en": "Up to 6mm" } },
-        { "label": { "bg": "Алуминий и алуминиеви сплави", "en": "Aluminium and aluminium alloys" }, "value": { "bg": "До 6мм", "en": "Up to 6mm" } },
-        { "label": { "bg": "Месинг", "en": "Brass" }, "value": { "bg": "До 8мм", "en": "Up to 8mm" } }
+        { "label": { "bg": "Черни и инструментални стомани", "en": "Carbon and tool steels" }, "value": { "bg": "До 8 мм", "en": "Up to 8mm" } },
+        { "label": { "bg": "Неръждаеми стомани", "en": "Stainless steels" }, "value": { "bg": "До 6 мм", "en": "Up to 6mm" } },
+        { "label": { "bg": "Алуминий и алуминиеви сплави", "en": "Aluminium and aluminium alloys" }, "value": { "bg": "До 6 мм", "en": "Up to 6mm" } },
+        { "label": { "bg": "Месинг", "en": "Brass" }, "value": { "bg": "До 8 мм", "en": "Up to 8mm" } }
       ]
     },
     {
       "type": "serviceDetails",
-      "title": { "bg": "Технологии", "en": "Technologies" },
+      "title": { "bg": "Нашите технологии", "en": "Our Technologies" },
       "features": [
         {
           "icon": "mdi:laser-pointer",
-          "title": { "bg": "Какво е лазерно рязане?", "en": "What is laser cutting?" },
+          "title": { "bg": "Лазерно рязане", "en": "Laser Cutting" },
           "description": {
-            "bg": "Лазерното рязане има широко разпространение. Едно от тях е именно рязането на метали. Независимо дали е черна стомана, неръждаема стомана, алуминий и месинг, лазерното рязане винаги е точно, дава отлични резултати и качество на рязане. Има малка ширина на прореза и малка зона за топлинно въздействие, това прави възможно рязане на сложни детайли и форми с малки отвори. LASER означава усилване на светлина чрез стимулирано излъчване на радиация. Фокусът на лазерния лъч върху материала води до бързо нагряване, топене и изпаряване.",
-            "en": "Laser cutting is widely used. One application is metal cutting. Whether carbon steel, stainless steel, aluminium or brass, laser cutting is always precise and delivers excellent results and cutting quality. It has a narrow kerf and small heat-affected zone, enabling cutting of complex parts and shapes with small holes. LASER stands for Light Amplification by Stimulated Emission of Radiation. The laser beam focus on the material leads to rapid heating, melting and vaporization."
+            "bg": "Независимо дали е черна стомана, неръждаема стомана, алуминий или месинг — лазерното рязане осигурява прецизност, отлично качество на среза и възможност за сложни детайли с малки отвори. Тесен прорез и минимална зона за топлинно въздействие.",
+            "en": "Whether carbon steel, stainless steel, aluminium, or brass — laser cutting delivers precision, excellent cut quality, and the ability to handle complex parts with small holes. Narrow kerf and minimal heat-affected zone."
           }
         },
         {
           "icon": "mdi:lightning-bolt",
-          "title": { "bg": "Мощни CO2 лазери", "en": "Powerful CO2 lasers" },
+          "title": { "bg": "CO2 лазери", "en": "CO2 Lasers" },
           "description": {
-            "bg": "Лазерно рязане с мощни лазери използва въглероден диоксид. CO2 лазерът прокарва електричество през тръба, пълна с газова смес, произвеждайки светлинни лъчи. В тръбите има огледала от всеки край. Газовата смес е въглероден диоксид, азот, водород и хелий. Подобни типове лазери произвеждат невидима светлина в далечния инфрачервен диапазон. Типичните CO2 лазери за машинна обработка са с мощност от 25 до 100 вата с дължина на вълната 10,6 микрометра.",
-            "en": "Laser cutting with powerful lasers uses carbon dioxide. The CO2 laser passes electricity through a tube filled with gas mixture, producing light beams. The tubes have mirrors at each end. The gas mixture is carbon dioxide, nitrogen, hydrogen and helium. Such laser types produce invisible light in the far infrared range. Typical CO2 lasers for machining are 25 to 100 watts with 10.6 micrometer wavelength."
+            "bg": "Използват въглероден диоксид за генериране на мощен лъч в далечния инфрачервен диапазон. Типична мощност от 25 до 100 вата с дължина на вълната 10.6 микрометра. Подходящи за широк спектър метали и дебелини.",
+            "en": "Use carbon dioxide to generate a powerful beam in the far infrared range. Typical power from 25 to 100 watts with 10.6 micrometer wavelength. Suitable for a wide range of metals and thicknesses."
           }
         },
         {
-          "icon": "mdi:fiber",
-          "title": { "bg": "Файбър лазери", "en": "Fiber lasers" },
+          "icon": "mdi:flash",
+          "title": { "bg": "Файбър лазери", "en": "Fibre Lasers" },
           "description": {
-            "bg": "Тези лазери са от групата на твърдотелните и използват семенен лазер. Те усилват лъча чрез специално проектирани стъклени влакна. Имат много малка дължина на вълната и по-малък фокусен диаметър. Поради високата електрическа ефективност използват значително по-малко енергия. Имат дълъг експлоатационен живот от поне 100 000 лазерни часа. Файбър лазерите са оптимални за рязане и гравиране на метал, алуминий, неметали като дърво и пластмаса. Скоростта при рязане е три пъти по-бърза от CO2 лазерите.",
-            "en": "These lasers are from the solid-state group and use seed laser. They amplify the beam through specially designed glass fibers. They have very small wavelength and smaller focal diameter. Due to high electrical efficiency they use significantly less energy. They have long operational life of at least 100,000 laser hours. Fiber lasers are optimal for cutting and engraving metal, aluminium, non-metals such as wood and plastic. Cutting speed is three times faster than CO2 lasers."
+            "bg": "Твърдотелни лазери с много малка дължина на вълната и по-малък фокусен диаметър. До три пъти по-бързо рязане от CO2 лазерите. Висока електрическа ефективност и дълъг експлоатационен живот от минимум 100 000 лазерни часа.",
+            "en": "Solid-state lasers with very small wavelength and smaller focal diameter. Up to three times faster cutting than CO2 lasers. High electrical efficiency and long operational life of at least 100,000 laser hours."
           }
         },
         {
           "icon": "mdi:arrow-collapse-vertical",
-          "title": { "bg": "Огъване с абкант", "en": "Bending with press brake" },
+          "title": { "bg": "Огъване с абкант", "en": "Press Brake Bending" },
           "description": {
-            "bg": "Генезис Текнолоджи предлага и огъване на метали с абкант.",
-            "en": "Genesis Technology also offers metal bending with press brake."
+            "bg": "Прецизно огъване на метали с абкант — допълнение към нашите услуги за лазерно рязане за цялостно решение при обработка на ламарина.",
+            "en": "Precise metal bending with press brake — complementing our laser cutting services for a complete sheet metal processing solution."
           }
         }
       ]

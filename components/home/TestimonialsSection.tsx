@@ -8,7 +8,7 @@ import type { LocalizedContent } from '@/types'
 
 interface Testimonial {
     quote: LocalizedContent<string>
-    author: string
+    author: string | LocalizedContent<string>
     role: LocalizedContent<string>
 }
 
@@ -47,7 +47,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
     const testimonials = data.testimonials?.length
         ? data.testimonials.map((t) => ({
               quote: getLocalizedContent(t.quote, locale),
-              author: t.author,
+              author: typeof t.author === 'string' ? t.author : getLocalizedContent(t.author, locale),
               role: getLocalizedContent(t.role, locale),
           }))
         : PLACEHOLDER_TESTIMONIALS(locale)

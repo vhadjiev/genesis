@@ -3,29 +3,49 @@
   "slug": "equipment/genesis-solaris",
   "seo": {
     "bg": {
-      "title": "Genesis Solaris - Post Mix сок машина",
-      "description": "Post-mix сок и напитки машина за ХоРеКа индустрията.",
-      "keywords": ["genesis solaris", "сок машина", "post mix", "хорека"]
+      "title": "Genesis Solaris — Post Mix система за сокове | Генезис Текнолоджи",
+      "description": "Професионална Post Mix система за сокове и напитки за ХоРеКа индустрията. Проектирана и произведена от Genesis Technology.",
+      "keywords": ["genesis solaris", "post mix", "сок машина", "хорека", "напитки"]
     },
     "en": {
-      "title": "Genesis Solaris - Post Mix Juice Machine",
-      "description": "Post-mix juice and beverage dispensing machine for the HoReCa industry.",
-      "keywords": ["genesis solaris", "juice machine", "post mix", "horeca"]
+      "title": "Genesis Solaris — Post Mix Juice System | Genesis Technology",
+      "description": "Professional Post Mix juice and beverage system for the HoReCa industry. Designed and manufactured by Genesis Technology.",
+      "keywords": ["genesis solaris", "post mix", "juice machine", "horeca", "beverages"]
     }
   },
   "sections": [
     {
       "type": "productHero",
       "name": "Genesis Solaris",
-      "tagline": { "bg": "Сок машина Post Mix", "en": "Post Mix Juice Machine" },
-      "description": { "bg": "Универсалното решение за направата на сокове и напитки.", "en": "The universal solution for making juices and beverages." },
+      "tagline": {
+        "bg": "Post Mix система за сокове и напитки",
+        "en": "Post Mix System for Juices & Beverages"
+      },
+      "description": {
+        "bg": "Genesis Solaris е професионалната Post Mix система за смесване на сокове и напитки, проектирана за ХоРеКа обекти, които искат разнообразие от свежи напитки с минимални оперативни разходи. Работи с BiB концентрати за постоянно качество и лесна поддръжка.",
+        "en": "Genesis Solaris is the professional Post Mix system for mixing juices and beverages, designed for HoReCa venues that want a variety of fresh drinks with minimal operating costs. Works with BiB concentrates for consistent quality and easy maintenance."
+      },
       "image": "/images/products/solaris.jpg"
     },
     {
       "type": "productFeatures",
       "features": [
-        { "icon": "mdi:fruit-watermelon", "title": { "bg": "Post Mix", "en": "Post Mix" }, "description": { "bg": "Система за смесване на напитки", "en": "Beverage mixing system" } },
-        { "icon": "mdi:cup-water", "title": { "bg": "Сокове", "en": "Juices" }, "description": { "bg": "Фрешове и натурални сокове", "en": "Fresh and natural juices" } }
+        {
+          "icon": "mdi:fruit-watermelon",
+          "title": { "bg": "Post Mix система", "en": "Post Mix System" },
+          "description": {
+            "bg": "Прецизно смесване на концентрати с вода в зададено съотношение. Постоянен вкус, минимален отпадък и лесна смяна на продуктите.",
+            "en": "Precise mixing of concentrates with water at a set ratio. Consistent taste, minimal waste, and easy product changeover."
+          }
+        },
+        {
+          "icon": "mdi:cup-water",
+          "title": { "bg": "Свежи сокове и напитки", "en": "Fresh Juices & Beverages" },
+          "description": {
+            "bg": "Разнообразие от натурални сокове и освежаващи напитки — портокал, ябълка, грейпфрут, праскова и много други. Идеална за бюфети, барове и ресторанти.",
+            "en": "Variety of natural juices and refreshing beverages — orange, apple, grapefruit, peach, and many more. Ideal for buffets, bars, and restaurants."
+          }
+        }
       ]
     },
     { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },

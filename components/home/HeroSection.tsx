@@ -7,11 +7,18 @@ import { motion } from 'framer-motion'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
+interface HeroCTA {
+    text: LocalizedContent<string>
+    href: string
+}
+
 interface HeroSectionData {
     type: 'heroSection'
     title: LocalizedContent<string>
     subtitle: LocalizedContent<string>
     backgroundImage?: string
+    ctaPrimary?: HeroCTA
+    ctaSecondary?: HeroCTA
 }
 
 interface HeroSectionProps {
@@ -53,18 +60,18 @@ export function HeroSection({ data, locale }: HeroSectionProps) {
                         Technology
                     </h1>
                     <p className="hero-subtitle">{subtitle}</p>
-                    <div className="flex gap-4 mt-8">
+                    <div className="flex flex-col sm:flex-row gap-4 mt-8">
                         <Link
-                            href="/equipment/genesis-universa"
-                            className="inline-flex items-center gap-2 px-8 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-semibold rounded-lg transition-colors"
+                            href={data.ctaPrimary ? data.ctaPrimary.href : '/equipment/genesis-universa'}
+                            className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-semibold rounded-lg transition-colors"
                         >
-                            {locale === 'bg' ? 'Разгледай продуктите' : 'View Products'}
+                            {data.ctaPrimary ? getLocalizedContent(data.ctaPrimary.text, locale) : (locale === 'bg' ? 'Разгледай продуктите' : 'View Products')}
                         </Link>
                         <Link
-                            href="/contacts"
-                            className="inline-flex items-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors"
+                            href={data.ctaSecondary ? data.ctaSecondary.href : '/contacts'}
+                            className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-white/20 hover:border-white/40 text-white font-semibold rounded-lg transition-colors"
                         >
-                            {locale === 'bg' ? 'Свържи се' : 'Contact Us'}
+                            {data.ctaSecondary ? getLocalizedContent(data.ctaSecondary.text, locale) : (locale === 'bg' ? 'Свържи се' : 'Contact Us')}
                         </Link>
                     </div>
                 </motion.div>

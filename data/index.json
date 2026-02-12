@@ -3,8 +3,8 @@
         "id": "gentech",
         "name": "Genesis Technology",
         "tagline": {
-            "en": "Automatic coffee machines & beverage equipment",
-            "bg": "Автоматични кафемашини и съоръжения за напитки"
+            "en": "Professional beverage systems. Engineered in-house. Cloud-managed.",
+            "bg": "Професионални системи за напитки. Произведени от нас. Облачно управлявани."
         },
         "defaultLocale": "bg",
         "locales": ["bg", "en"],
@@ -19,7 +19,7 @@
                         "url": "/images/gentech-og.jpg",
                         "width": 1200,
                         "height": 630,
-                        "alt": "Genesis Technology - Automatic Coffee Machines"
+                        "alt": "Genesis Technology - Professional Beverage Systems"
                     }
                 ]
             },
@@ -80,120 +80,120 @@
             "id": "home",
             "slug": "",
             "title": {
-                "en": "Genesis Technology - Automatic Coffee Machines",
-                "bg": "Генезис Текнолоджи - Автоматични кафемашини"
+                "en": "Genesis Technology — Professional Beverage Systems",
+                "bg": "Генезис Текнолоджи — Професионални системи за напитки"
             },
             "description": {
-                "en": "Genesis Technology manufactures automatic coffee machines, beverage equipment, and bar systems for the HoReCa industry.",
-                "bg": "Генезис Текнолоджи произвежда автоматични кафемашини, съоръжения за напитки и бар системи за ХоРеКа индустрията."
+                "en": "Genesis Technology designs, manufactures and services professional coffee, cocktail and beverage systems with built-in cloud platform. TÜV Nord certified. Official ILLY partner.",
+                "bg": "Генезис Текнолоджи проектира, произвежда и обслужва професионални системи за кафе, коктейли и напитки с вградена облачна платформа. TÜV Nord сертифициран. Официален партньор на ILLY."
             }
         },
         {
             "id": "genesis-alpha",
             "slug": "equipment/genesis-alpha",
             "title": {
-                "en": "Genesis Alpha - Cloud AI Coffee Machine",
-                "bg": "Genesis Alpha - Клауд AI кафемашина"
+                "en": "Genesis Alpha — AI Cloud Coffee Machine",
+                "bg": "Genesis Alpha — AI облачна кафемашина"
             },
             "description": {
-                "en": "The most innovative automatic coffee machine with cloud-based system and AI technology.",
-                "bg": "Най-иновативната автоматична кафемашина с клауд система и AI технология."
+                "en": "Flagship system with dual bean hoppers, automatic milk, AI cloud platform, and 15.6\" IPS display. Engineered for high-traffic venues.",
+                "bg": "Водеща система с два бункера за зърна, автоматично мляко, AI облачна платформа и 15.6\" IPS дисплей. Проектирана за обекти с висок трафик."
             }
         },
         {
             "id": "genesis-prime",
             "slug": "equipment/genesis-prime",
             "title": {
-                "en": "Genesis Prime - Automatic Coffee Machine",
-                "bg": "Genesis Prime - Автоматична кафемашина"
+                "en": "Genesis Prime — Cloud Coffee Machine",
+                "bg": "Genesis Prime — Облачна кафемашина"
             },
             "description": {
-                "en": "Our first-generation automatic coffee machine with cloud system and single bean hopper.",
-                "bg": "Първата ни автоматична кафемашина с клауд система и един бункер за зърнено кафе."
+                "en": "Compact professional coffee machine with full cloud functionality. Ideal for offices and boutique venues.",
+                "bg": "Компактна професионална кафемашина с пълна облачна функционалност. Идеална за офиси и бутикови обекти."
             }
         },
         {
             "id": "genesis-universa",
             "slug": "equipment/genesis-universa",
             "title": {
-                "en": "Genesis Universa - E.S.E Pods Coffee Machine",
-                "bg": "Genesis Universa - Кафемашина с E.S.E Pods"
+                "en": "Genesis Universa — E.S.E Pods Coffee Machine",
+                "bg": "Genesis Universa — Кафемашина с E.S.E Pods"
             },
             "description": {
-                "en": "Eco-friendly coffee machine working with E.S.E pods - the ecological alternative to capsule coffee.",
-                "bg": "Екологична кафемашина, работеща с E.S.E pods - екологичната алтернатива на капсулното кафе."
+                "en": "Zero risk of error. Biodegradable E.S.E pods. Superfoam technology. The ecological alternative to capsule coffee.",
+                "bg": "Нулев риск от грешка. Биоразградими E.S.E дози. Superfoam технология. Екологичната алтернатива на капсулното кафе."
             }
         },
         {
             "id": "genesis-eclipse",
             "slug": "equipment/genesis-eclipse",
             "title": {
-                "en": "Genesis Eclipse - Cocktail Bar System",
-                "bg": "Genesis Eclipse - Коктейл Бар Система"
+                "en": "Genesis Eclipse — Automated Cocktail Bar System",
+                "bg": "Genesis Eclipse — Автоматична коктейл бар система"
             },
             "description": {
-                "en": "Universal cocktail bar system with CO2 for alcoholic, non-alcoholic and carbonated drinks.",
-                "bg": "Универсална коктейл бар система с CO₂ за алкохолни, безалкохолни и газирани напитки."
+                "en": "250+ cocktails, up to 40% cost savings. Automated bar system that eliminates waste, abuse, and errors. Cloud-managed.",
+                "bg": "250+ коктейла, до 40% спестяване. Автоматизирана бар система, която елиминира разхищение, злоупотреби и грешки. Облачно управление."
             }
         },
         {
             "id": "genesis-solaris",
             "slug": "equipment/genesis-solaris",
             "title": {
-                "en": "Genesis Solaris - Post Mix Juice Machine",
-                "bg": "Genesis Solaris - Post Mix сок машина"
+                "en": "Genesis Solaris — Post Mix Juice System",
+                "bg": "Genesis Solaris — Post Mix система за сокове"
             },
             "description": {
-                "en": "Post-mix juice and beverage dispensing machine for the HoReCa industry.",
-                "bg": "Post-mix сок и напитки машина за ХоРеКа индустрията."
+                "en": "Professional Post Mix juice and beverage system for the HoReCa industry.",
+                "bg": "Професионална Post Mix система за сокове и напитки за ХоРеКа индустрията."
             }
         },
         {
             "id": "genesis-solaris-2",
             "slug": "equipment/genesis-solaris-2",
             "title": {
-                "en": "Genesis Solaris 2 - Next-Gen Post Mix",
-                "bg": "Genesis Solaris 2 - Ново поколение Post Mix"
+                "en": "Genesis Solaris 2 — Next-Gen Post Mix",
+                "bg": "Genesis Solaris 2 — Ново поколение Post Mix"
             },
             "description": {
-                "en": "Compact machine with large touch screen for fusion, wellness and juice drinks.",
-                "bg": "Малка и компактна машина с голям тъч екран за фюжън, уелнес и сок напитки."
+                "en": "Compact Post Mix system for fusion, wellness and juice drinks. 7 lines, multilingual software, cloud-managed.",
+                "bg": "Компактна Post Mix система за фюжън, уелнес и сок напитки. 7 линии, многоезичен софтуер, облачно управление."
             }
         },
         {
             "id": "genesis-equinox",
             "slug": "equipment/genesis-equinox",
             "title": {
-                "en": "Genesis Equinox - Frappe & Lemonade Machine",
-                "bg": "Genesis Equinox - Фрапе и лимонада машина"
+                "en": "Genesis Equinox — Frappe & Lemonade System",
+                "bg": "Genesis Equinox — Система за фрапе и лимонади"
             },
             "description": {
-                "en": "New machine for cold drinks - frappes, lemonades and fresh beverages.",
-                "bg": "Нова машина за студени напитки - фрапе, лимонади и свежи напитки."
+                "en": "Ultra-compact cold beverage system. Frappes, lemonades, cold chocolate. Only 50W. A new revenue stream for your venue.",
+                "bg": "Ултракомпактна система за студени напитки. Фрапе, лимонади, студен шоколад. Само 50W. Нов източник на приходи за вашия обект."
             }
         },
         {
             "id": "cloud-system",
             "slug": "services/cloud-system",
             "title": {
-                "en": "Cloud System - Remote Management",
-                "bg": "Облачна система - Дистанционно управление"
+                "en": "Cloud Platform — Remote Management",
+                "bg": "Облачна платформа — Дистанционно управление"
             },
             "description": {
-                "en": "Cloud-based remote management system for monitoring and controlling beverage equipment.",
-                "bg": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията за напитки."
+                "en": "Built-in cloud platform for remote monitoring, recipe management, consumption analytics, and revenue optimisation.",
+                "bg": "Вградена облачна платформа за дистанционен мониторинг, управление на рецепти, анализ на консумацията и оптимизация на приходите."
             }
         },
         {
             "id": "laser-cutting",
             "slug": "services/laser-cutting",
             "title": {
-                "en": "Laser Cutting Services",
-                "bg": "Лазерно рязане"
+                "en": "Laser Cutting & Metal Bending",
+                "bg": "Лазерно рязане и огъване"
             },
             "description": {
-                "en": "Professional laser cutting services for metals up to 8mm thickness.",
-                "bg": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм."
+                "en": "Professional laser cutting and press brake bending. CO2 and fibre lasers. Metals up to 8mm. Quote within 24 hours.",
+                "bg": "Професионално лазерно рязане и огъване с абкант. CO2 и файбър лазери. Метали до 8мм. Оферта до 24 часа."
             }
         },
         {
@@ -204,8 +204,8 @@
                 "bg": "Огъване на листова ламарина"
             },
             "description": {
-                "en": "Sheet metal bending services up to 6mm thickness and 2000mm length.",
-                "bg": "Услуги за огъване на листова ламарина с дебелина до 6мм и дължина до 2000мм."
+                "en": "Precision sheet metal bending up to 6mm thickness and 2000mm length.",
+                "bg": "Прецизно огъване на листова ламарина до 6мм дебелина и 2000мм дължина."
             }
         },
         {
@@ -216,8 +216,8 @@
                 "bg": "За нас | Генезис Текнолоджи"
             },
             "description": {
-                "en": "Genesis Technology - 15 years of experience manufacturing automatic coffee machines and beverage equipment in Plovdiv, Bulgaria.",
-                "bg": "Генезис Текнолоджи - 15 години опит в производството на автоматични кафемашини и съоръжения за напитки в Пловдив, България."
+                "en": "Vertically integrated Bulgarian manufacturer of professional beverage systems. 15+ years, 3,000+ installations, TÜV Nord certified.",
+                "bg": "Вертикално интегриран български производител на професионални системи за напитки. 15+ години, 3000+ инсталации, TÜV Nord сертифициран."
             }
         },
         {
@@ -252,8 +252,8 @@
                 "bg": "Изложения | Генезис Текнолоджи"
             },
             "description": {
-                "en": "Genesis Technology at international exhibitions - ANUGA Germany, FOOD EXPO Greece and more.",
-                "bg": "Генезис Текнолоджи на международни изложения - ANUGA Германия, FOOD EXPO Гърция и други."
+                "en": "Genesis Technology at international exhibitions — ANUGA Germany, FOOD EXPO Greece and more.",
+                "bg": "Генезис Текнолоджи на международни изложения — ANUGA Германия, FOOD EXPO Гърция и други."
             }
         },
         {
@@ -261,11 +261,11 @@
             "slug": "contacts",
             "title": {
                 "en": "Contact Us | Genesis Technology",
-                "bg": "Контакти | Генезис Текнолоджи"
+                "bg": "Свържете се с нас | Генезис Текнолоджи"
             },
             "description": {
-                "en": "Get in touch with Genesis Technology in Plovdiv, Bulgaria.",
-                "bg": "Свържете се с Генезис Текнолоджи в Пловдив, България."
+                "en": "Request a free consultation. We will analyse your needs and recommend the right system for your venue.",
+                "bg": "Заявете безплатна консултация. Ще анализираме вашите нужди и ще препоръчаме правилната система за вашия обект."
             }
         }
     ]

@@ -3,14 +3,14 @@
   "slug": "equipment/genesis-alpha",
   "seo": {
     "bg": {
-      "title": "Genesis Alpha - Клауд AI кафемашина",
-      "description": "Най-иновативната автоматична кафемашина с клауд система и AI технология. Два бункера за зърнено кафе, автоматична млечна система.",
-      "keywords": ["genesis alpha", "кафемашина", "клауд", "AI", "автоматична"]
+      "title": "Genesis Alpha — AI облачна кафемашина | Генезис Текнолоджи",
+      "description": "Водещата система на Genesis Technology с два бункера за зърна, автоматично мляко, AI облачна платформа и 15.6\" IPS дисплей. TÜV Nord сертифицирана. Официален партньор на ILLY.",
+      "keywords": ["genesis alpha", "облачна кафемашина", "AI кафемашина", "професионална кафемашина", "хорека", "ILLY"]
     },
     "en": {
-      "title": "Genesis Alpha - Cloud AI Coffee Machine",
-      "description": "The most innovative automatic coffee machine with cloud-based system and AI technology. Two bean hoppers, automatic milk system.",
-      "keywords": ["genesis alpha", "coffee machine", "cloud", "AI", "automatic"]
+      "title": "Genesis Alpha — AI Cloud Coffee Machine | Genesis Technology",
+      "description": "Genesis Technology's flagship system with dual bean hoppers, automatic milk, AI cloud platform, and 15.6\" IPS display. TÜV Nord certified. Official ILLY partner.",
+      "keywords": ["genesis alpha", "cloud coffee machine", "AI coffee machine", "professional coffee machine", "horeca", "ILLY"]
     }
   },
   "sections": [
@@ -18,116 +18,116 @@
       "type": "productHero",
       "name": "Genesis Alpha",
       "tagline": {
-        "bg": "Автоматична кафемашина Genesis Alpha",
-        "en": "Automatic Coffee Machine Genesis Alpha"
+        "bg": "Интелигентната кафемашина с пълен облачен контрол",
+        "en": "The Intelligent Coffee Machine with Full Cloud Control"
       },
       "description": {
-        "bg": "Търсите начин да дадете ново представяне и качество за Вашите клиенти? Автоматичната кафемашината Генезис Алфа е интелигентно решение е за Вас.",
-        "en": "Looking for a way to give your customers a new presentation and quality? The Genesis Alpha automatic coffee machine is an intelligent solution for you."
+        "bg": "Genesis Alpha е нашата водеща система — проектирана за обекти, в които качеството на кафето и оперативната ефективност не са опция, а стандарт. Два бункера за зърна, автоматична млечна система, AI операционна система и вградена облачна платформа осигуряват перфектна чаша всеки път — и пълна видимост за разходите ви в реално време.",
+        "en": "Genesis Alpha is our flagship system — engineered for venues where coffee quality and operational efficiency are not optional, but standard. Dual bean hoppers, automatic milk system, AI operating system, and built-in cloud platform deliver a perfect cup every time — and full visibility into your costs in real time."
       },
       "image": "/images/products/alpha.jpg",
       "highlights": [
         {
-          "bg": "Елегантен дизайн позволява приготвяне на топли напитки. Нашите машини са оборудвани с най-новите иновативни технологии, които ви позволяват да станете бариста за нула време. Приготвяйте любимите си напитки за броени минути – еспресо, мокачино, капучино, лате, макиато, горещ шоколад, 3 в 1 и редица други вкусни напитки.",
-          "en": "Elegant design enables preparation of hot beverages. Our machines are equipped with the latest innovative technologies that allow you to become a barista in no time. Prepare your favorite drinks in minutes – espresso, mochaccino, cappuccino, latte, macchiato, hot chocolate, 3-in-1 and many other delicious drinks."
+          "bg": "Оборудвана с професионална еспресо група, Genesis Alpha приготвя пълната гама кафе и топли напитки — еспресо, капучино, лате, мокачино, горещ шоколад, 3 в 1 и много други. Компактен дизайн с първокласни функции за обекти с високи стандарти.",
+          "en": "Equipped with a professional espresso group, Genesis Alpha prepares the full range of coffee and hot beverages — espresso, cappuccino, latte, mochaccino, hot chocolate, 3-in-1, and many more. Compact design with first-class features for venues with high standards."
         },
         {
-          "bg": "Идеална за места с ограничено пространство и високи стандарти, компактният ѝ дизайн съдържа много първокласни функции.",
-          "en": "Ideal for places with limited space and high standards, its compact design contains many first-class features."
+          "bg": "Персонализируемо LED RGB осветление позволява адаптиране на визията към бранда на вашия обект. Всяка машина може да бъде поръчана в уникален цвят или дизайн.",
+          "en": "Customisable LED RGB lighting allows the visual to be adapted to your venue's brand. Every machine can be ordered in a unique colour or design."
         }
       ],
       "callouts": [
         {
           "value": "2X",
-          "label": { "bg": "По-надеждна и издръжлива от всички машини на пазара.", "en": "More reliable and durable than all machines on the market." }
+          "label": { "bg": "По-надеждна от стандартните вендинг машини на пазара.", "en": "More reliable than standard vending machines on the market." }
         },
         {
           "value": "ILLY",
-          "label": { "bg": "Ние сме официалните партньори на ILLY за България.", "en": "We are the official ILLY partners for Bulgaria." }
+          "label": { "bg": "Официален партньор на ILLY за България.", "en": "Official ILLY partner for Bulgaria." }
         }
       ],
       "designNote": {
-        "bg": "За персонализация на външния вид, Генезис Алфа позволява да сменяте лед осветлението спored визията на Вашите клиенти.",
-        "en": "For customization of the appearance, Genesis Alpha allows you to change the LED lighting according to your clients' vision."
+        "bg": "Genesis Alpha позволява смяна на LED осветлението, за да съответства на визията и бранда на вашия обект.",
+        "en": "Genesis Alpha allows LED lighting changes to match your venue's visual identity and brand."
       }
     },
     {
       "type": "productFeatures",
       "title": {
-        "bg": "Какво отличава Генезис Алфа?",
-        "en": "What sets Genesis Alpha apart?"
+        "bg": "Защо обектите с високи стандарти избират Alpha",
+        "en": "Why High-Standard Venues Choose Alpha"
       },
       "features": [
         {
           "icon": "mdi:cup",
-          "title": { "bg": "Широк диапазон напитки", "en": "Wide range of drinks" },
+          "title": { "bg": "Пълна гама напитки от един апарат", "en": "Full Beverage Range from One Machine" },
           "description": {
-            "bg": "В канистрите могат да се сложи мляко с комбинация шоколад или 3в1. Вие решавате какво ще продавате.",
-            "en": "The canisters can hold milk with chocolate or 3-in-1 combination. You decide what to sell."
+            "bg": "Два канистъра за мляко, шоколад или 3в1 в комбинация с два бункера за зърна. Вие решавате какво предлагате — еспресо, капучино, лате, горещ шоколад и десетки други рецепти.",
+            "en": "Two canisters for milk, chocolate or 3-in-1 combined with dual bean hoppers. You decide what you offer — espresso, cappuccino, latte, hot chocolate, and dozens of other recipes."
           }
         },
         {
-          "icon": "mdi:check-circle",
-          "title": { "bg": "Безпроблемна работа", "en": "Trouble-free operation" },
+          "icon": "mdi:shield-check",
+          "title": { "bg": "Професионална еспресо група", "en": "Professional Espresso Group" },
           "description": {
-            "bg": "За разлика от повечето кафе автомати, ние предлагаме професионална еспресо група, гарантираща безпроблемната и бърза работа на кафемашините.",
-            "en": "Unlike most coffee vending machines, we offer a professional espresso group ensuring trouble-free and fast operation."
-          }
-        },
-        {
-          "icon": "mdi:palette",
-          "title": { "bg": "Ръчен цвят на машината", "en": "Custom machine color" },
-          "description": {
-            "bg": "Свържете се с нас, за да обсъдим и съчетаем вашата визия с машината Генезис.",
-            "en": "Contact us to discuss and combine your vision with the Genesis machine."
-          }
-        },
-        {
-          "icon": "mdi:alert-circle",
-          "title": { "bg": "Следене за грешки", "en": "Error tracking" },
-          "description": {
-            "bg": "За разлика от повечето кафе автомати, ние предлагаме професионална еспресо група, гарантираща безпроблемната и бърза работа на кафемашините.",
-            "en": "Unlike most coffee vending machines, we offer a professional espresso group ensuring trouble-free and fast operation."
-          }
-        },
-        {
-          "icon": "mdi:history",
-          "title": { "bg": "Години опит", "en": "Years of experience" },
-          "description": {
-            "bg": "Автоматична кафемашина Генезис Алфа работи от години на пазара и обслужва над 500+ обекта",
-            "en": "Genesis Alpha automatic coffee machine has been on the market for years and serves over 500+ locations"
+            "bg": "За разлика от повечето вендинг апарати, Genesis Alpha е оборудвана с професионална еспресо група, която осигурява постоянно качество и безпроблемна работа при високо натоварване.",
+            "en": "Unlike most vending machines, Genesis Alpha is equipped with a professional espresso group that ensures consistent quality and trouble-free operation under high load."
           }
         },
         {
           "icon": "mdi:brain",
-          "title": { "bg": "Изкуствен Интелект", "en": "Artificial Intelligence" },
+          "title": { "bg": "AI операционна система", "en": "AI Operating System" },
           "description": {
-            "bg": "Възможностите на операционната система за изкуствен интелект позволяват на кафемашината да се адаптира към вашите нужди и работен процес.",
-            "en": "The AI operating system capabilities allow the coffee machine to adapt to your needs and workflow."
+            "bg": "Вградената интелигентна система се адаптира към работния процес на вашия обект — оптимизира рецепти, следи за грешки и предвижда нужди от поддръжка преди да се случат.",
+            "en": "The built-in intelligent system adapts to your venue's workflow — optimises recipes, tracks errors, and anticipates maintenance needs before they occur."
           }
         },
         {
-          "icon": "mdi:book-open-variant",
-          "title": { "bg": "Рецепти", "en": "Recipes" },
+          "icon": "mdi:cloud-sync",
+          "title": { "bg": "Облачна платформа в реално време", "en": "Real-Time Cloud Platform" },
           "description": {
-            "bg": "Станете бариста за нула време. Приготвяйте любимите си напитки за броени минути - еспресо, мокачино, капучино, лате, макиато, горещ шоколад, 3 в 1 и редица други вкусни напитки.",
-            "en": "Become a barista in no time. Prepare your favorite drinks in minutes - espresso, mochaccino, cappuccino, latte, macchiato, hot chocolate, 3-in-1 and many other delicious drinks."
+            "bg": "Управлявайте рецепти, следете консумацията и получавайте известия от телефона си. Дистанционен контрол без необходимост от физическо посещение на обекта.",
+            "en": "Manage recipes, track consumption, and receive alerts from your phone. Remote control without needing to physically visit the venue."
+          }
+        },
+        {
+          "icon": "mdi:palette",
+          "title": { "bg": "Брандиране по поръчка", "en": "Custom Branding" },
+          "description": {
+            "bg": "Цвят на корпуса, дизайн и LED RGB осветление — всичко може да бъде адаптирано към визуалната идентичност на вашия бранд или обект.",
+            "en": "Body colour, design, and LED RGB lighting — everything can be adapted to your brand's or venue's visual identity."
+          }
+        },
+        {
+          "icon": "mdi:cellphone",
+          "title": { "bg": "Мобилно приложение за iOS и Android", "en": "Mobile App for iOS & Android" },
+          "description": {
+            "bg": "Гостите и служителите могат да избират напитки от телефона си, без да докосват екрана. Проследяване на хранителни стойности, калории и алергени за всяка рецепта.",
+            "en": "Guests and staff can select drinks from their phone without touching the screen. Track nutritional values, calories, and allergens for every recipe."
           }
         },
         {
           "icon": "mdi:wifi",
-          "title": { "bg": "Безжично управление", "en": "Wireless control" },
+          "title": { "bg": "Патентована интелигентна система", "en": "Patented Intelligent System" },
           "description": {
-            "bg": "Патентното ведомство на Република България е издало регистрационен номер 3653 U1 за полезен модел, озаглавен \"Интелигентна система за управление и контрол на кафемашини\".",
-            "en": "The Patent Office of the Republic of Bulgaria has issued registration number 3653 U1 for a utility model entitled \"Intelligent system for management and control of coffee machines\"."
+            "bg": "Патент на Република България №3653 U1 — \"Интелигентна система за управление и контрол на кафемашини\". Wi-Fi и Bluetooth свързаност за безжично управление.",
+            "en": "Bulgarian Patent №3653 U1 — \"Intelligent system for management and control of coffee machines\". Wi-Fi and Bluetooth connectivity for wireless control."
           }
         },
         {
-          "icon": "mdi:cloud",
-          "title": { "bg": "Cloud Система", "en": "Cloud System" },
+          "icon": "mdi:history",
+          "title": { "bg": "Доказана надеждност в 500+ обекта", "en": "Proven Reliability Across 500+ Venues" },
           "description": {
-            "bg": "Управлявайте и анализирайте потреблението на машината.",
-            "en": "Manage and analyze machine consumption."
+            "bg": "Genesis Alpha е активна в над 500 обекта в цяла България — хотели, ресторанти, офиси и бензиностанции. Години опит в реални условия, не лабораторни.",
+            "en": "Genesis Alpha is active in over 500 venues across Bulgaria — hotels, restaurants, offices, and gas stations. Years of experience in real conditions, not laboratory ones."
+          }
+        },
+        {
+          "icon": "mdi:book-open-variant",
+          "title": { "bg": "Неограничени рецепти", "en": "Unlimited Recipes" },
+          "description": {
+            "bg": "Добавяйте, редактирайте или премахвайте рецепти чрез софтуера на машината или дистанционно от облачната платформа. До 256 напитки на екрана.",
+            "en": "Add, edit, or remove recipes through the machine software or remotely via the cloud platform. Up to 256 drinks on screen."
           }
         }
       ]
@@ -138,67 +138,52 @@
       "specs": [
         { "label": { "bg": "Захранване", "en": "Power supply" }, "value": { "bg": "230 V AC, 50-60 Hz", "en": "230 V AC, 50-60 Hz" } },
         { "label": { "bg": "Мощност", "en": "Power" }, "value": { "bg": "2.3 kW", "en": "2.3 kW" } },
-        { "label": { "bg": "Височина", "en": "Height" }, "value": { "bg": "670 мм", "en": "670 mm" } },
-        { "label": { "bg": "Ширина", "en": "Width" }, "value": { "bg": "350 мм", "en": "350 mm" } },
-        { "label": { "bg": "Дълбочина", "en": "Depth" }, "value": { "bg": "500 мм", "en": "500 mm" } },
-        { "label": { "bg": "Мин. налягане", "en": "Min. pressure" }, "value": { "bg": "0.6 kPa", "en": "0.6 kPa" } },
-        { "label": { "bg": "Макс. налягане", "en": "Max. pressure" }, "value": { "bg": "4 kPa", "en": "4 kPa" } },
+        { "label": { "bg": "Размери (В×Ш×Д)", "en": "Dimensions (H×W×D)" }, "value": { "bg": "670 × 350 × 500 мм", "en": "670 × 350 × 500 mm" } },
         { "label": { "bg": "Тегло", "en": "Weight" }, "value": { "bg": "28 kg", "en": "28 kg" } },
-        { "label": { "bg": "Бункер кафе", "en": "Coffee hopper" }, "value": { "bg": "1 бр. обем: 1,0 кг (приблизително)", "en": "1 pc. volume: 1.0 kg (approx.)" } },
-        { "label": { "bg": "Канистър", "en": "Canister" }, "value": { "bg": "2 бр. обем: 1,2 кг (приблизително)", "en": "2 pcs. volume: 1.2 kg (approx.)" } },
-        { "label": { "bg": "Смесителна чашка", "en": "Mixing cup" }, "value": { "bg": "1 бр.", "en": "1 pc." } },
-        { "label": { "bg": "Миксер", "en": "Mixer" }, "value": { "bg": "1 бр.", "en": "1 pc." } },
-        { "label": { "bg": "Водоизточник", "en": "Water drain" }, "value": { "bg": "конектор 3/4 или помпа", "en": "3/4 connector or pump" } },
-        { "label": { "bg": "Бойлер", "en": "Boiler" }, "value": { "bg": "1 бр. (0.5 л)", "en": "1 pc. (0.5 L)" } },
-        { "label": { "bg": "Напитки", "en": "Drinks" }, "value": { "bg": "1 до 256", "en": "1 to 256" } },
-        { "label": { "bg": "Цвят", "en": "Color" }, "value": { "bg": "Перлен графит/Черна перла", "en": "Pearl graphite/Black pearl" } },
-        { "label": { "bg": "Врата", "en": "Door" }, "value": { "bg": "Пластмаса", "en": "Plastic" } },
-        { "label": { "bg": "Дисплей", "en": "Display" }, "value": { "bg": "15,6\" IPS, FULL HD 1920×1080px, 16:9", "en": "15.6\" IPS, FULL HD 1920×1080px, 16:9" } },
-        { "label": { "bg": "Светлини", "en": "Lights" }, "value": { "bg": "LED Light (RGB) - дисплей, бункер за кафе", "en": "LED Light (RGB) - display, coffee hopper" } },
-        { "label": { "bg": "Операционна система", "en": "Operating system" }, "value": { "bg": "Линукс", "en": "Linux" } }
+        { "label": { "bg": "Бункер за зърна", "en": "Bean hopper" }, "value": { "bg": "2 бр. × 1.0 кг", "en": "2 pcs × 1.0 kg" } },
+        { "label": { "bg": "Канистри", "en": "Canisters" }, "value": { "bg": "2 бр. × 1.2 кг", "en": "2 pcs × 1.2 kg" } },
+        { "label": { "bg": "Бойлер", "en": "Boiler" }, "value": { "bg": "0.5 л", "en": "0.5 L" } },
+        { "label": { "bg": "Налягане", "en": "Pressure" }, "value": { "bg": "0.6 – 4 kPa", "en": "0.6 – 4 kPa" } },
+        { "label": { "bg": "Дисплей", "en": "Display" }, "value": { "bg": "15.6\" IPS, Full HD 1920×1080, 16:9", "en": "15.6\" IPS, Full HD 1920×1080, 16:9" } },
+        { "label": { "bg": "Осветление", "en": "Lighting" }, "value": { "bg": "LED RGB (дисплей + бункер)", "en": "LED RGB (display + hopper)" } },
+        { "label": { "bg": "Рецепти", "en": "Recipes" }, "value": { "bg": "До 256", "en": "Up to 256" } },
+        { "label": { "bg": "Операционна система", "en": "Operating system" }, "value": { "bg": "Linux", "en": "Linux" } },
+        { "label": { "bg": "Цвят", "en": "Colour" }, "value": { "bg": "Перлен графит / Черна перла (персонализиране по заявка)", "en": "Pearl graphite / Black pearl (customisation on request)" } }
       ],
       "pricing": [
         {
           "label": { "bg": "Единична бройка", "en": "Single unit" },
-          "sublabel": { "bg": "Нормална цена", "en": "Regular price" },
-          "price": { "bg": "7430 лв.", "en": "7430 BGN" },
-          "note": { "bg": "При закупуване на 1 бр. Genesis Alpha", "en": "When purchasing 1 pc. Genesis Alpha" }
+          "sublabel": { "bg": "Стандартна цена", "en": "Standard price" },
+          "price": { "bg": "7 430 лв.", "en": "7,430 BGN" },
+          "note": { "bg": "Включва инсталация и обучение", "en": "Includes installation and training" }
         },
         {
-          "label": { "bg": "10+ бр.", "en": "10+ units" },
-          "sublabel": { "bg": "Най-изгодно", "en": "Best value" },
-          "price": { "bg": "Спести 15%", "en": "Save 15%" },
-          "note": { "bg": "При закупуване на 10+ бр. Genesis Alpha", "en": "When purchasing 10+ pcs. Genesis Alpha" }
+          "label": { "bg": "10+ бройки", "en": "10+ units" },
+          "sublabel": { "bg": "Партньорска цена", "en": "Partner price" },
+          "price": { "bg": "Спестете 15%", "en": "Save 15%" },
+          "note": { "bg": "За операции с множество обекти", "en": "For multi-venue operations" }
         }
       ],
       "faq": [
         {
-          "question": { "bg": "В какъв цвят се предлага?", "en": "In what color is it available?" },
-          "answer": { "bg": "Генезис Алфа се предлага в цвят \"Перлен графит/Черна перла\". Предлагаме също и опция за настройване по ваш избор, избирате цвят или дизайн и ние изпълняваме по вашата поръчка.", "en": "Genesis Alpha is available in \"Pearl graphite/Black pearl\" color. We also offer customization options - you choose the color or design and we fulfill your order." }
+          "question": { "bg": "За какъв тип обекти е подходяща Genesis Alpha?", "en": "What type of venues is Genesis Alpha suitable for?" },
+          "answer": { "bg": "Genesis Alpha е проектирана за ресторанти, хотели, магазини, бензиностанции, кафетерии и всякакви обекти, предлагащи кафе напитки. Благодарение на AI операционната система, машината се адаптира към конкретния обект и начин на работа.", "en": "Genesis Alpha is designed for restaurants, hotels, stores, gas stations, cafeterias, and any venue offering coffee drinks. Thanks to the AI operating system, the machine adapts to the specific venue and workflow." }
         },
         {
-          "question": { "bg": "С колко канистъра разполага?", "en": "How many canisters does it have?" },
-          "answer": { "bg": "Генезис Алфа идва с два канистъра с обем от 1,2 кг (приблизително). Това ви позволява да поставяте различни разтворими продукти. В канистрите могат да се сложи мляко с комбинация шоколад или 3в1.", "en": "Genesis Alpha comes with two canisters with a volume of 1.2 kg (approx.). This allows you to place different soluble products. The canisters can hold milk with chocolate or 3-in-1 combination." }
+          "question": { "bg": "Могат ли рецептите да се променят дистанционно?", "en": "Can recipes be changed remotely?" },
+          "answer": { "bg": "Да. Чрез облачната платформа можете да добавяте, редактирате или премахвате рецепти от всяко устройство, без физическо посещение на обекта.", "en": "Yes. Through the cloud platform you can add, edit, or remove recipes from any device, without physically visiting the venue." }
         },
         {
-          "question": { "bg": "Има ли приложение за телефон?", "en": "Is there a phone app?" },
-          "answer": { "bg": "Мобилните решения за IOS и Android Ви дават възможност за отдалечено избиране и персонализиране на напитки, следене на точна хранителна и калорийна стойност на конкретна напитка и още много.", "en": "Mobile solutions for iOS and Android give you the ability for remote selection and customization of drinks, tracking of exact nutritional and calorie value of a specific drink and much more." }
+          "question": { "bg": "Какъв цвят или дизайн може да се поръча?", "en": "What colour or design can be ordered?" },
+          "answer": { "bg": "Стандартните цветове са Перлен графит и Черна перла. Предлагаме и пълна персонализация — изберете цвят, дизайн или брандиране и ние го изпълняваме по поръчка.", "en": "Standard colours are Pearl graphite and Black pearl. We also offer full customisation — choose a colour, design, or branding and we produce it to order." }
         },
         {
-          "question": { "bg": "Могат ли да се настройват рецепти?", "en": "Can recipes be customized?" },
-          "answer": { "bg": "Благодарение на софтуера и операционната система на машината, вие можете да настройвате, добавяте или премахвате всяка една рецепта.", "en": "Thanks to the machine's software and operating system, you can customize, add or remove any recipe." }
+          "question": { "bg": "Каква е гаранцията и сервизното обслужване?", "en": "What is the warranty and service?" },
+          "answer": { "bg": "Тъй като сами произвеждаме машината и софтуера, осигуряваме директна сервизна поддръжка без посредници. Свържете се с нас за конкретни условия.", "en": "Since we manufacture the machine and software ourselves, we provide direct service support without middlemen. Contact us for specific terms." }
         },
         {
-          "question": { "bg": "Какви патенти имате?", "en": "What patents do you have?" },
-          "answer": { "bg": "Регистрационен номер на полезен модел към патентно ведомство на Република България: 3653 U1 с наименование \"Интелигентна система за управление и контрол на кафемашини\".", "en": "Utility model registration number at the Patent Office of the Republic of Bulgaria: 3653 U1 with the name \"Intelligent system for management and control of coffee machines\"." }
-        },
-        {
-          "question": { "bg": "За кого е подходяща машината?", "en": "Who is the machine suitable for?" },
-          "answer": { "bg": "Разработени с идея да се използват в ресторанти, хотели, магазини, заведения за бързо хранене, бензиностанции, кафетерии и обекти предлагащи кафе напитки. Благодарение на изкуствения интелект на операционната система, кафе машината може да се адаптира към вашия обект и начин на работа.", "en": "Designed for use in restaurants, hotels, stores, fast food outlets, gas stations, cafeterias and venues offering coffee drinks. Thanks to the AI of the operating system, the coffee machine can adapt to your venue and way of working." }
-        },
-        {
-          "question": { "bg": "Ще се побере ли при ограничено пространство?", "en": "Will it fit in limited space?" },
-          "answer": { "bg": "Идеална за места с ограничено пространство и високи стандарти, компактният му дизайн съдържа много първокласни функции. Лесното използване благодарение на своя интуитивен сензорен интерфейс е удобна за потребителя.", "en": "Ideal for places with limited space and high standards, its compact design contains many first-class features. Easy to use thanks to its intuitive touch interface, it is user-friendly." }
+          "question": { "bg": "Какви патенти имате?", "en": "What patents do you hold?" },
+          "answer": { "bg": "Полезен модел №3653 U1, регистриран от Патентно ведомство на Република България — \"Интелигентна система за управление и контрол на кафемашини\".", "en": "Utility model №3653 U1, registered with the Patent Office of the Republic of Bulgaria — \"Intelligent system for management and control of coffee machines\"." }
         }
       ]
     },

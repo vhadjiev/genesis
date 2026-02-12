@@ -3,42 +3,45 @@
   "slug": "about",
   "seo": {
     "bg": {
-      "title": "За нас | Генезис Текнолоджи",
-      "description": "Генезис Текнолоджи - 15 години опит в производството на автоматични кафемашини и съоръжения за напитки.",
-      "keywords": ["за нас", "генезис текнолоджи", "производство", "пловдив"]
+      "title": "За нас | Генезис Текнолоджи — Вертикално интегриран производител",
+      "description": "Генезис Текнолоджи е български производител, който изцяло проектира, произвежда и обслужва професионални системи за напитки. 15+ години опит, 3000+ инсталации, TÜV Nord сертификат.",
+      "keywords": ["за нас", "генезис текнолоджи", "производство", "вертикална интеграция", "пловдив", "TÜV Nord"]
     },
     "en": {
-      "title": "About Us | Genesis Technology",
-      "description": "Genesis Technology - 15 years of experience manufacturing automatic coffee machines and beverage equipment.",
-      "keywords": ["about us", "genesis technology", "manufacturing", "plovdiv"]
+      "title": "About Us | Genesis Technology — Vertically Integrated Manufacturer",
+      "description": "Genesis Technology is a Bulgarian manufacturer that entirely designs, builds and services professional beverage systems. 15+ years of experience, 3,000+ installations, TÜV Nord certified.",
+      "keywords": ["about us", "genesis technology", "manufacturing", "vertical integration", "plovdiv", "TÜV Nord"]
     }
   },
   "sections": [
     {
       "type": "pageBanner",
-      "title": { "bg": "Цели и история", "en": "Goals and History" },
-      "subtitle": { "bg": "Генезис Текнолоджи ООД", "en": "Genesis Technology Ltd." },
+      "title": { "bg": "За Genesis Technology", "en": "About Genesis Technology" },
+      "subtitle": {
+        "bg": "Инженерно наследство. Вертикална интеграция. Безкомпромисно качество.",
+        "en": "Engineering Heritage. Vertical Integration. Uncompromising Quality."
+      },
       "backgroundImage": "/images/about-banner.jpg"
     },
     {
       "type": "companyOverview",
-      "title": { "bg": "Кои сме ние", "en": "Who we are" },
+      "title": { "bg": "Кои сме ние", "en": "Who We Are" },
       "description": {
-        "bg": "Генезис Текнолоджи ООД е българска компания, която изцяло проектира, разработва и произвежда професионални машини за кафе, топли напитки, пост микс и коктейли. Ние контролираме всеки аспект от производствения процес – от изрязването и огъването на металните корпуси до разработването на софтуера, който управлява машините ни. Ние вярваме в устойчивите партньорства и предлагаме цялостно сервизно обслужване, за да гарантираме надеждна работа на нашите машини.",
-        "en": "Genesis Technology Ltd. is a Bulgarian company that entirely designs, develops and manufactures professional machines for coffee, hot beverages, post mix and cocktails. We control every aspect of the production process – from cutting and bending metal housings to developing the software that operates our machines. We believe in sustainable partnerships and offer comprehensive service to ensure reliable operation of our machines."
+        "bg": "Genesis Technology е български производител на професионални системи за кафе, топли напитки, коктейли и пост микс напитки. За разлика от повечето компании в индустрията, ние контролираме всеки етап от производствения процес — от лазерното рязане и огъване на стоманените корпуси, през проектирането на електрониката, до разработването на софтуера и облачната платформа, която управлява всяка машина. Тази пълна вертикална интеграция означава едно нещо: когато нещо трябва да бъде подобрено, ние го правим — бързо, без посредници и без компромиси. Всяка машина, която напуска завода ни в Пловдив, носи нашето име и нашата отговорност. Сертифицирани от TÜV Nord и официални партньори на ILLY за България, ние не просто произвеждаме оборудване — ние изграждаме дългосрочни партньорства с всеки наш клиент.",
+        "en": "Genesis Technology is a Bulgarian manufacturer of professional coffee, hot beverage, cocktail, and post-mix beverage systems. Unlike most companies in the industry, we control every stage of the production process — from laser-cutting and bending steel housings, through electronics design, to developing the software and cloud platform that manages every machine. This full vertical integration means one thing: when something needs to be improved, we do it — fast, without middlemen, and without compromise. Every machine that leaves our factory in Plovdiv carries our name and our responsibility. Certified by TÜV Nord and official ILLY partners for Bulgaria, we do not merely manufacture equipment — we build long-term partnerships with every client."
       },
       "stats": [
-        { "value": 15, "label": { "bg": "Години опит", "en": "Years of experience" } },
-        { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани съоръжения", "en": "Installed equipment" } },
-        { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Satisfied clients" } }
+        { "value": 15, "suffix": "+", "label": { "bg": "Години в индустрията", "en": "Years in the Industry" } },
+        { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани системи", "en": "Installed Systems" } },
+        { "value": 98.2, "suffix": "%", "label": { "bg": "Удовлетвореност на клиентите", "en": "Client Satisfaction" } }
       ]
     },
     {
       "type": "companyOverview",
-      "title": { "bg": "Няколко думи от нашия екип", "en": "A few words from our team" },
+      "title": { "bg": "Нашата философия", "en": "Our Philosophy" },
       "description": {
-        "bg": "Нашият екип от висококвалифицирани инженери и програмисти работи неуморно, за да създава иновативни и надеждни решения, които не само отговарят, но и надминават стандартите на световните производители. Нашите продукти се отличават с: изключителен дизайн и прецизна изработка, изцяло направени в нашите производствени бази; интелигентен софтуер, разработен от нашия вътрешен екип програмисти, за максимална ефективност и лесна употреба; иновации, които поставят нови стандарти в Хо.Ре.Ка. индустрията.",
-        "en": "Our team of highly qualified engineers and programmers works tirelessly to create innovative and reliable solutions that not only meet but exceed the standards of world manufacturers. Our products stand out with: exceptional design and precise craftsmanship, entirely made in our production facilities; intelligent software developed by our in-house programming team for maximum efficiency and ease of use; innovations that set new standards in the HoReCa industry."
+        "bg": "Вярваме, че качеството не е характеристика — то е резултат от контрол. Затова не аутсорсваме нито един критичен процес. Нашият екип от инженери, програмисти и сервизни специалисти работи под един покрив, за да гарантира, че всяка система отговаря на стандартите, които сме си поставили. Продуктите ни се отличават с три неща: прецизна изработка, изцяло произведена в нашите бази; интелигентен софтуер, разработен от вътрешния ни екип, за максимална ефективност и лесна употреба; и иновации, които поставят нови стандарти в ХоРеКа индустрията. Ние не продаваме машини. Ние предоставяме цялостни решения за напитки — с инсталация, обучение, облачна платформа и сервиз, включени в партньорството.",
+        "en": "We believe quality is not a feature — it is the result of control. That is why we do not outsource a single critical process. Our team of engineers, programmers, and service specialists works under one roof to ensure every system meets the standards we have set for ourselves. Our products stand out in three ways: precise craftsmanship, entirely produced in our facilities; intelligent software developed by our in-house team for maximum efficiency and ease of use; and innovations that set new standards in the HoReCa industry. We do not sell machines. We deliver complete beverage solutions — with installation, training, cloud platform, and service included in the partnership."
       }
     }
   ]

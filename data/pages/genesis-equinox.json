@@ -3,14 +3,14 @@
   "slug": "equipment/genesis-equinox",
   "seo": {
     "bg": {
-      "title": "Genesis Equinox - Фрапе и лимонада машина",
-      "description": "Нови напитки, нови рецепти и изцяло нова машина за студени напитки.",
-      "keywords": ["genesis equinox", "фрапе", "лимонада", "студени напитки"]
+      "title": "Genesis Equinox — Фрапе и лимонада машина | Генезис Текнолоджи",
+      "description": "Автоматична система за фрапе, студен шоколад и лимонади. Компактна, енергоспестяваща (50W) и напълно автоматизирана. Нов източник на приходи за вашия обект.",
+      "keywords": ["genesis equinox", "фрапе машина", "лимонада", "студени напитки", "автоматична"]
     },
     "en": {
-      "title": "Genesis Equinox - Frappe & Lemonade Machine",
-      "description": "New drinks, new recipes and an entirely new cold drinks machine.",
-      "keywords": ["genesis equinox", "frappe", "lemonade", "cold drinks"]
+      "title": "Genesis Equinox — Frappe & Lemonade Machine | Genesis Technology",
+      "description": "Automatic frappe, cold chocolate, and lemonade system. Compact, energy-efficient (50W), and fully automated. A new revenue stream for your venue.",
+      "keywords": ["genesis equinox", "frappe machine", "lemonade", "cold drinks", "automatic"]
     }
   },
   "sections": [
@@ -18,12 +18,12 @@
       "type": "productHero",
       "name": "Genesis Equinox",
       "tagline": {
-        "bg": "Първата автоматична фрапе машина!",
-        "en": "The first automatic frappe machine!"
+        "bg": "Нов източник на приходи от студени напитки",
+        "en": "A New Revenue Stream from Cold Beverages"
       },
       "description": {
-        "bg": "Фрапе, Студен Шоколад и Лимонада с допълнителни вкусове. Студени напитки от EVO DRINKS. Насладете се на завладяващият вкус на лимонадата. Прибавете допълнителен такъв по ваш вкус. Или опитайте едно от фрапе предложенията ни. Толкова много избор.",
-        "en": "Frappe, Cold Chocolate and Lemonade with additional flavors. Cold drinks from EVO DRINKS. Enjoy the captivating taste of lemonade. Add extra flavor to your liking. Or try one of our frappe offerings. So many choices."
+        "bg": "Genesis Equinox е специализирана система за фрапе, студен шоколад и лимонади с допълнителни вкусове. Компактен дизайн (само 150 мм ширина), ултраниска консумация на енергия (50W) и пълна автоматизация — всяка напитка се приготвя перфектно, без нужда от обучен персонал. Над 10 конфигурируеми вкуса за максимално разнообразие.",
+        "en": "Genesis Equinox is a specialised system for frappes, cold chocolate, and lemonades with additional flavours. Compact design (only 150mm wide), ultra-low energy consumption (50W), and full automation — every drink is prepared perfectly, without trained staff. Over 10 configurable flavours for maximum variety."
       },
       "image": "/images/products/equinox.jpg"
     },
@@ -32,158 +32,71 @@
       "features": [
         {
           "icon": "mdi:check-decagram",
-          "title": {
-            "bg": "Високи стандарти за качество",
-            "en": "High quality standards"
-          },
+          "title": { "bg": "Постоянно качество, автоматизиран процес", "en": "Consistent Quality, Automated Process" },
           "description": {
-            "bg": "Всяка напитка бива приготвена така както трябва да бъде. Процесът е напълно автоматизиран.",
-            "en": "Every drink is prepared exactly as it should be. The process is fully automated."
-          }
-        },
-        {
-          "icon": "mdi:puzzle",
-          "title": {
-            "bg": "Комплексни решения",
-            "en": "Complex solutions"
-          },
-          "description": {
-            "bg": "Ние ще решим дори най-изненадващият проблем, при евентуално наличие на такъв. Разглеждаме всеки проблем персонално.",
-            "en": "We will solve even the most surprising problem, if any. We look at every problem personally."
+            "bg": "Всяка напитка се приготвя автоматично по зададена рецепта. Еднакъв вкус и качество с всяка чаша — без зависимост от оператора.",
+            "en": "Every drink is prepared automatically according to a set recipe. Consistent taste and quality with every cup — without operator dependency."
           }
         },
         {
           "icon": "mdi:lightning-bolt",
-          "title": {
-            "bg": "Натоварване",
-            "en": "Load capacity"
-          },
+          "title": { "bg": "Проектирана за издръжливост", "en": "Engineered for Durability" },
           "description": {
-            "bg": "Всяка от нашите машини се тества интензивно преди да достигне при вас. Нашите кафемашини са направени да издържат дори при високо натоварване.",
-            "en": "Each of our machines is tested intensively before reaching you. Our coffee machines are built to withstand even high load."
-          }
-        },
-        {
-          "icon": "mdi:headset",
-          "title": {
-            "bg": "Поддръжка",
-            "en": "Support"
-          },
-          "description": {
-            "bg": "При възникване на проблем или авария, нашият екип ще помогне за отстраняването му.",
-            "en": "If a problem or malfunction occurs, our team will help resolve it."
-          }
-        },
-        {
-          "icon": "mdi:cup",
-          "title": {
-            "bg": "Съвместимост",
-            "en": "Compatibility"
-          },
-          "description": {
-            "bg": "Фрапе машината е проектирана с цел да пасва перфектно на чашата за студени напитки. Идва със специална по-голяма, по-цветна и най-свежа чаша.",
-            "en": "The frappe machine is designed to fit perfectly with the cold drinks cup. Comes with a special larger, more colorful and freshest cup."
+            "bg": "Интензивно тествана преди всяка доставка. Метална конструкция, проектирана да издържи при високо натоварване в реални условия.",
+            "en": "Intensively tested before every delivery. Metal construction engineered to withstand high load in real conditions."
           }
         },
         {
           "icon": "mdi:palette",
-          "title": {
-            "bg": "Различни вкусове",
-            "en": "Various flavors"
-          },
+          "title": { "bg": "10+ конфигурируеми вкуса", "en": "10+ Configurable Flavours" },
           "description": {
-            "bg": "Можете да конфигурирате над 10 различни вкуса по ваша преценка. Фрапе, лимонада, шоколад и още.",
-            "en": "You can configure over 10 different flavors to your liking. Frappe, lemonade, chocolate and more."
+            "bg": "Фрапе, лимонада, студен шоколад и много други — конфигурирайте вкусовете според предпочитанията на вашите клиенти и сезона.",
+            "en": "Frappe, lemonade, cold chocolate, and more — configure flavours according to your customers' preferences and the season."
           }
         },
         {
           "icon": "mdi:leaf",
-          "title": {
-            "bg": "Energy saving",
-            "en": "Energy saving"
-          },
+          "title": { "bg": "Ултраниска консумация — само 50W", "en": "Ultra-Low Consumption — Only 50W" },
           "description": {
-            "bg": "Машината е изключително енерго-икономична! Мощност 50W.",
-            "en": "The machine is extremely energy efficient! Power 50W."
+            "bg": "Изключително енергоспестяваща система. Минимални оперативни разходи за максимална рентабилност.",
+            "en": "Extremely energy-efficient system. Minimal operating costs for maximum profitability."
           }
         },
         {
-          "icon": "mdi:tag",
-          "title": {
-            "bg": "Цена",
-            "en": "Price"
-          },
+          "icon": "mdi:resize",
+          "title": { "bg": "Ултракомпактен дизайн", "en": "Ultra-Compact Design" },
           "description": {
-            "bg": "2350 лв. за единична бройка.",
-            "en": "2350 BGN per single unit."
+            "bg": "Само 150 мм ширина — Equinox се вписва дори в най-тесните пространства. Специално проектирана чаша за студени напитки с перфектни пропорции.",
+            "en": "Only 150mm wide — Equinox fits even in the tightest spaces. Specially designed cold drink cup with perfect proportions."
+          }
+        },
+        {
+          "icon": "mdi:headset",
+          "title": { "bg": "Директна сервизна поддръжка", "en": "Direct Service Support" },
+          "description": {
+            "bg": "Тъй като сами проектираме и произвеждаме Equinox, осигуряваме директна поддръжка без посредници. Всеки проблем се разглежда персонално.",
+            "en": "Since we design and manufacture Equinox ourselves, we provide direct support without middlemen. Every issue is handled personally."
           }
         }
       ]
     },
     {
       "type": "productSpecs",
-      "title": {
-        "bg": "Технически характеристики",
-        "en": "Technical Specifications"
-      },
+      "title": { "bg": "Технически характеристики", "en": "Technical Specifications" },
       "specs": [
-        {
-          "label": { "bg": "Височина", "en": "Height" },
-          "value": { "bg": "630 мм", "en": "630 mm" }
-        },
-        {
-          "label": { "bg": "Широчина", "en": "Width" },
-          "value": { "bg": "150 мм", "en": "150 mm" }
-        },
-        {
-          "label": { "bg": "Дълбочина", "en": "Depth" },
-          "value": { "bg": "530 мм", "en": "530 mm" }
-        },
-        {
-          "label": { "bg": "Тегло", "en": "Weight" },
-          "value": { "bg": "6 кг", "en": "6 kg" }
-        },
-        {
-          "label": { "bg": "Ел. захранване", "en": "Power supply" },
-          "value": { "bg": "230V/AC 50-60Hz", "en": "230V/AC 50-60Hz" }
-        },
-        {
-          "label": { "bg": "Мощност", "en": "Power" },
-          "value": { "bg": "50W", "en": "50W" }
-        },
-        {
-          "label": { "bg": "Водоизточник", "en": "Water source" },
-          "value": { "bg": "Директно свързване или помпа", "en": "Direct connection or pump" }
-        },
-        {
-          "label": { "bg": "Дисплей", "en": "Display" },
-          "value": { "bg": "6 inch LCD Display", "en": "6 inch LCD Display" }
-        },
-        {
-          "label": { "bg": "LED осветление", "en": "LED lighting" },
-          "value": { "bg": "LED Light RGB", "en": "LED Light RGB" }
-        },
-        {
-          "label": { "bg": "Операционна система", "en": "Operating system" },
-          "value": { "bg": "Linux", "en": "Linux" }
-        },
-        {
-          "label": { "bg": "Врата", "en": "Door" },
-          "value": { "bg": "Метална конструкция", "en": "Metal construction" }
-        },
-        {
-          "label": { "bg": "Цвят", "en": "Color" },
-          "value": { "bg": "Перлен графит", "en": "Pearl graphite" }
-        },
-        {
-          "label": { "bg": "Напитки", "en": "Drinks" },
-          "value": { "bg": "1 до 256", "en": "1 to 256" }
-        }
+        { "label": { "bg": "Размери (В×Ш×Д)", "en": "Dimensions (H×W×D)" }, "value": { "bg": "630 × 150 × 530 мм", "en": "630 × 150 × 530 mm" } },
+        { "label": { "bg": "Тегло", "en": "Weight" }, "value": { "bg": "6 кг", "en": "6 kg" } },
+        { "label": { "bg": "Захранване", "en": "Power supply" }, "value": { "bg": "230V/AC 50-60Hz", "en": "230V/AC 50-60Hz" } },
+        { "label": { "bg": "Мощност", "en": "Power" }, "value": { "bg": "50W", "en": "50W" } },
+        { "label": { "bg": "Водоизточник", "en": "Water source" }, "value": { "bg": "Директно свързване или помпа", "en": "Direct connection or pump" } },
+        { "label": { "bg": "Дисплей", "en": "Display" }, "value": { "bg": "6\" LCD дисплей", "en": "6\" LCD display" } },
+        { "label": { "bg": "Осветление", "en": "Lighting" }, "value": { "bg": "LED RGB", "en": "LED RGB" } },
+        { "label": { "bg": "Операционна система", "en": "Operating system" }, "value": { "bg": "Linux", "en": "Linux" } },
+        { "label": { "bg": "Конструкция", "en": "Construction" }, "value": { "bg": "Метална", "en": "Metal" } },
+        { "label": { "bg": "Цвят", "en": "Colour" }, "value": { "bg": "Перлен графит", "en": "Pearl graphite" } },
+        { "label": { "bg": "Рецепти", "en": "Recipes" }, "value": { "bg": "До 256", "en": "Up to 256" } }
       ]
     },
-    {
-      "type": "productGallery",
-      "images": []
-    }
+    { "type": "productGallery", "images": [] }
   ]
 }

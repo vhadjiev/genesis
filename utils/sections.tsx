@@ -42,6 +42,27 @@ const sectionComponents: Record<
       >,
     { loading: () => <SectionSkeleton /> }
   ),
+  trustBarSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/TrustBarSection").then((m) => m.TrustBarSection) as Promise<
+        ComponentType<SectionComponentProps>
+      >,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  problemSolutionSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/ProblemSolutionSection").then(
+        (m) => m.ProblemSolutionSection
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  differentiatorSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/DifferentiatorSection").then(
+        (m) => m.DifferentiatorSection
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
   featuredProducts: dynamic<SectionComponentProps>(
     () =>
       import("@/components/home/FeaturedProducts").then((m) => m.FeaturedProducts) as Promise<

@@ -3,30 +3,33 @@
   "slug": "contacts",
   "seo": {
     "bg": {
-      "title": "Контакти | Генезис Текнолоджи",
-      "description": "Свържете се с Генезис Текнолоджи в Пловдив, България. Телефон: +359 89 565 7706, имейл: info@gentech.bg",
-      "keywords": ["контакти", "генезис текнолоджи", "пловдив"]
+      "title": "Свържете се с нас | Генезис Текнолоджи — Консултация и оферта",
+      "description": "Заявете безплатна консултация с Genesis Technology. Ще анализираме вашите нужди и ще препоръчаме правилната система за вашия обект. Пловдив, България.",
+      "keywords": ["контакти", "генезис текнолоджи", "консултация", "оферта", "пловдив"]
     },
     "en": {
-      "title": "Contact Us | Genesis Technology",
-      "description": "Get in touch with Genesis Technology in Plovdiv, Bulgaria. Phone: +359 89 565 7706, email: info@gentech.bg",
-      "keywords": ["contacts", "genesis technology", "plovdiv"]
+      "title": "Contact Us | Genesis Technology — Consultation & Quote",
+      "description": "Request a free consultation with Genesis Technology. We will analyse your needs and recommend the right system for your venue. Plovdiv, Bulgaria.",
+      "keywords": ["contact", "genesis technology", "consultation", "quote", "plovdiv"]
     }
   },
   "sections": [
     {
       "type": "pageBanner",
-      "title": { "bg": "Нуждаете се от помощ?", "en": "Need help?" },
-      "subtitle": { "bg": "Свържете се с нас", "en": "Get in touch" },
+      "title": { "bg": "Нека обсъдим вашите нужди", "en": "Let's Discuss Your Requirements" },
+      "subtitle": {
+        "bg": "Безплатна консултация за правилната система за вашия обект",
+        "en": "Free consultation for the right system for your venue"
+      },
       "backgroundImage": "/images/contacts-banner.jpg"
     },
     {
       "type": "contactInfo",
       "studioInfo": {
-        "title": { "bg": "Генезис Текнолоджи", "en": "Genesis Technology" },
+        "title": { "bg": "Genesis Technology", "en": "Genesis Technology" },
         "description": {
-          "bg": "Производство на автоматични кафемашини и съоръжения за напитки за ХоРеКа индустрията.",
-          "en": "Manufacturing automatic coffee machines and beverage equipment for the HoReCa industry."
+          "bg": "Вертикално интегриран производител на професионални системи за кафе, коктейли и напитки. Проектираме, произвеждаме и обслужваме — всичко под един покрив.",
+          "en": "Vertically integrated manufacturer of professional coffee, cocktail, and beverage systems. We design, manufacture, and service — all under one roof."
         },
         "phone": "+359 89 565 7706",
         "address": { "bg": "ул. Брезовско шосе 145, 4003 Пловдив", "en": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria" }
@@ -34,12 +37,12 @@
       "openingHours": {
         "title": { "bg": "Работно време", "en": "Working Hours" },
         "weekdays": {
-          "label": { "bg": "Понеделник - Петък", "en": "Monday - Friday" },
-          "hours": { "bg": "09:00 - 18:00", "en": "09:00 - 18:00" }
+          "label": { "bg": "Понеделник – Петък", "en": "Monday – Friday" },
+          "hours": { "bg": "09:00 – 18:00", "en": "09:00 – 18:00" }
         },
         "year": {
           "label": { "bg": "Събота", "en": "Saturday" },
-          "hours": { "bg": "По заявка", "en": "By appointment" }
+          "hours": { "bg": "По предварителна заявка", "en": "By appointment" }
         },
         "holidays": {
           "label": { "bg": "Неделя", "en": "Sunday" },
@@ -50,7 +53,7 @@
     {
       "type": "contactForm",
       "variant": "full",
-      "title": { "bg": "Изпратете съобщение", "en": "Send a Message" }
+      "title": { "bg": "Изпратете запитване", "en": "Send an Enquiry" }
     },
     {
       "type": "mapEmbed",
