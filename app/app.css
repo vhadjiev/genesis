@@ -23,39 +23,98 @@
    Apple / Microsoft Inspired — Clean & Premium
    ============================================= */
 
-/* ===== View Transitions (Cross-Document) ===== */
-@view-transition {
-    navigation: auto;
-}
+/* ===== View Transitions ===== */
+/* React's <ViewTransition> + Next.js experimental.viewTransition handle
+   startViewTransition() automatically. No @view-transition { navigation: auto }
+   needed — that's for MPA navigations. */
 
+/* Root page crossfade */
 ::view-transition-old(root) {
-    animation: gt-fade-out 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: gt-fade-out 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 ::view-transition-new(root) {
-    animation: gt-fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: gt-fade-in 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes gt-fade-out {
     from { opacity: 1; transform: scale(1); }
-    to { opacity: 0; transform: scale(0.998); }
+    to { opacity: 0; transform: scale(0.995); }
 }
-
 @keyframes gt-fade-in {
-    from { opacity: 0; transform: scale(1.002); }
+    from { opacity: 0; transform: scale(1.005); }
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Shared element transitions */
-::view-transition-group(product-image) {
-    animation-duration: 0.4s;
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+/* ── Shared element: product image (card ⟶ hero) ── */
+::view-transition-group(product-genesis-alpha),
+::view-transition-group(product-genesis-universa),
+::view-transition-group(product-genesis-prime),
+::view-transition-group(product-genesis-eclipse),
+::view-transition-group(product-genesis-solaris-2),
+::view-transition-group(product-genesis-equinox),
+::view-transition-group(product-genesis-solaris) {
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-::view-transition-old(product-image),
-::view-transition-new(product-image) {
+::view-transition-old(product-genesis-alpha),
+::view-transition-old(product-genesis-universa),
+::view-transition-old(product-genesis-prime),
+::view-transition-old(product-genesis-eclipse),
+::view-transition-old(product-genesis-solaris-2),
+::view-transition-old(product-genesis-equinox),
+::view-transition-old(product-genesis-solaris),
+::view-transition-new(product-genesis-alpha),
+::view-transition-new(product-genesis-universa),
+::view-transition-new(product-genesis-prime),
+::view-transition-new(product-genesis-eclipse),
+::view-transition-new(product-genesis-solaris-2),
+::view-transition-new(product-genesis-equinox),
+::view-transition-new(product-genesis-solaris) {
     animation: none;
     mix-blend-mode: normal;
+    object-fit: contain;
+}
+
+/* ── Shared element: product title (card name ⟶ hero h1) ── */
+::view-transition-group(product-title-genesis-alpha),
+::view-transition-group(product-title-genesis-universa),
+::view-transition-group(product-title-genesis-prime),
+::view-transition-group(product-title-genesis-eclipse),
+::view-transition-group(product-title-genesis-solaris-2),
+::view-transition-group(product-title-genesis-equinox),
+::view-transition-group(product-title-genesis-solaris) {
+    animation-duration: 0.45s;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::view-transition-old(product-title-genesis-alpha),
+::view-transition-old(product-title-genesis-universa),
+::view-transition-old(product-title-genesis-prime),
+::view-transition-old(product-title-genesis-eclipse),
+::view-transition-old(product-title-genesis-solaris-2),
+::view-transition-old(product-title-genesis-equinox),
+::view-transition-old(product-title-genesis-solaris) {
+    animation: gt-title-out 0.25s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+::view-transition-new(product-title-genesis-alpha),
+::view-transition-new(product-title-genesis-universa),
+::view-transition-new(product-title-genesis-prime),
+::view-transition-new(product-title-genesis-eclipse),
+::view-transition-new(product-title-genesis-solaris-2),
+::view-transition-new(product-title-genesis-equinox),
+::view-transition-new(product-title-genesis-solaris) {
+    animation: gt-title-in 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes gt-title-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes gt-title-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Respect reduced motion */
@@ -169,34 +228,11 @@ body {
 }
 
 /* ===== Header ===== */
-/* Header base */
+/* Header — background, blur, border, and shadow are applied via
+   Tailwind utility classes in the component (backdrop-blur-2xl, bg-black/80, etc.).
+   This CSS only handles structural layout and nav-link color transitions. */
 .gt-header {
-    transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                backdrop-filter 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    backdrop-filter: blur(0px);
-    -webkit-backdrop-filter: blur(0px);
-    background: transparent;
-    border-bottom: 1px solid transparent;
-}
-
-/* --- Theme: Dark (over dark sections) --- */
-.gt-header.theme-dark.is-scrolled {
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(40px) saturate(1.8);
-    -webkit-backdrop-filter: blur(40px) saturate(1.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.15);
-}
-
-/* --- Theme: Light (over light sections) --- */
-.gt-header.theme-light.is-scrolled {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(40px) saturate(1.8);
-    -webkit-backdrop-filter: blur(40px) saturate(1.8);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.04);
+    /* intentionally empty — styles come from Tailwind classes on the element */
 }
 
 .gt-header-nav {
@@ -289,23 +325,22 @@ body {
     color: var(--gt-dark-text);
 }
 
+/* Dropdown — uses HeroUI overlay pattern: solid bg + shadow, no backdrop-filter */
 .gt-dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%);
     min-width: 200px;
-    background: rgba(28, 28, 30, 0.72);
-    backdrop-filter: blur(40px) saturate(1.8);
-    -webkit-backdrop-filter: blur(40px) saturate(1.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: var(--gt-dark-surface);
+    border: 1px solid var(--gt-dark-border);
     border-radius: 16px;
     padding: 6px;
     opacity: 0;
     visibility: hidden;
     transform: translateX(-50%) translateY(6px);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    box-shadow: var(--overlay-shadow, 0 12px 48px rgba(0, 0, 0, 0.35));
     z-index: 100;
 }
 
@@ -426,9 +461,9 @@ body {
 
 /* --- Theme-light overrides for dropdown menus --- */
 .gt-header.theme-light .gt-dropdown-menu {
-    background: rgba(255, 255, 255, 0.78);
-    border-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: var(--gt-light-bg);
+    border-color: var(--gt-light-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 12px 48px rgba(0, 0, 0, 0.06);
 }
 
 .gt-header.theme-light .gt-dropdown-item {
@@ -446,9 +481,9 @@ body {
 }
 
 .gt-header.theme-light .gt-mega-dropdown-menu {
-    background: rgba(255, 255, 255, 0.78);
-    border-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    background: var(--gt-light-bg);
+    border-color: var(--gt-light-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 16px 64px rgba(0, 0, 0, 0.06);
 }
 
 .gt-header.theme-light .gt-mega-dropdown-label {
@@ -483,23 +518,21 @@ body {
     background: rgba(0, 0, 0, 0.04);
 }
 
-/* Mega-dropdown (grouped) — rich layout with product cards */
+/* Mega-dropdown — HeroUI overlay pattern: solid bg + rich shadow, rounded-3xl */
 .gt-mega-dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(6px);
     width: 720px;
-    background: rgba(22, 22, 24, 0.78);
-    backdrop-filter: blur(40px) saturate(1.8);
-    -webkit-backdrop-filter: blur(40px) saturate(1.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
+    background: var(--gt-dark-surface);
+    border: 1px solid var(--gt-dark-border);
+    border-radius: 24px;
     padding: 20px;
     opacity: 0;
     visibility: hidden;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    box-shadow: var(--overlay-shadow, 0 16px 64px rgba(0, 0, 0, 0.4));
     z-index: 100;
 }
 
@@ -552,6 +585,7 @@ body {
 }
 
 .gt-mega-product-thumb {
+    position: relative;
     width: 48px;
     height: 48px;
     border-radius: 10px;
@@ -1014,13 +1048,8 @@ button {
     z-index: 0;
 }
 
-/* ===== Smooth scroll ===== */
-html {
-    scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
+/* ===== Smooth scroll — only for in-page anchor links, not route navigation ===== */
+/* scroll-behavior: smooth on <html> interferes with View Transitions and
+   Next.js route navigation (causes a visible scroll animation on every page
+   change). Instead, apply smooth scrolling only where needed via JS or on
+   scroll-container elements that use anchor-based navigation. */

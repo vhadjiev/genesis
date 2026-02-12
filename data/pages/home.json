@@ -62,7 +62,7 @@
         "text": { "bg": "Заявете консултация", "en": "Schedule a Consultation" },
         "href": "/contacts"
       },
-      "backgroundImage": "/images/hero-home.jpg"
+      "backgroundImage": ""
     },
     {
       "type": "trustBarSection",
@@ -145,7 +145,7 @@
             "bg": "Нашата водеща система с два бункера за зърна, автоматично мляко и вградена AI облачна платформа. Проектирана за обекти с висок трафик, които изискват безкомпромисно качество.",
             "en": "Our flagship system with dual bean hoppers, automatic milk, and built-in AI cloud platform. Engineered for high-traffic venues that demand uncompromising quality."
           },
-          "image": "/images/products/alpha.jpg",
+          "image": "/images/alpha/genesis-alpha.png",
           "href": "/equipment/genesis-alpha"
         },
         {
@@ -156,7 +156,7 @@
             "bg": "Перфектно еспресо всеки път, без да зависите от оператора. Работи с биоразградими E.S.E дози — екологичната алтернатива на капсулите.",
             "en": "Perfect espresso every time, without relying on the operator. Uses biodegradable E.S.E pods — the ecological alternative to capsules."
           },
-          "image": "/images/products/universa.jpg",
+          "image": "/images/universa/genesis-universa-ese-pods.jpg",
           "href": "/equipment/genesis-universa"
         },
         {
@@ -188,7 +188,7 @@
             "bg": "250+ коктейла, до 40% спестяване на разходи. Автоматизирана бар система с CO₂, която елиминира грешките и отпадъците.",
             "en": "250+ cocktails, up to 40% cost savings. Automated bar system with CO₂ that eliminates errors and waste."
           },
-          "image": "/images/products/eclipse.jpg",
+          "image": "/images/eclipse/genesys-eclipse.jpg",
           "href": "/equipment/genesis-eclipse"
         },
         {
@@ -199,7 +199,7 @@
             "bg": "Ново поколение Post Mix система за фюжън, уелнес и сок напитки. Компактна, с голям тъч екран и пълно персонализиране.",
             "en": "Next-generation Post Mix system for fusion, wellness, and juice drinks. Compact, with a large touchscreen and full customisation."
           },
-          "image": "/images/products/solaris2.jpg",
+          "image": "/images/solaris/genesys-solaris2.jpg",
           "href": "/equipment/genesis-solaris-2"
         },
         {

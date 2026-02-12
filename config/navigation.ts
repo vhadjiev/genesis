@@ -11,6 +11,8 @@ export interface NavChild {
     desc?: string
     /** Gradient class for placeholder thumbnail */
     gradient?: string
+    /** Product image path (when available, replaces gradient placeholder) */
+    image?: string
 }
 
 export interface NavGroup {
@@ -38,16 +40,16 @@ export const navLinks: NavItem[] = [
             {
                 labelKey: 'hotBeverages',
                 children: [
-                    { key: 'genesisAlpha', href: '/equipment/genesis-alpha', desc: 'Compact hot beverage system', gradient: 'from-blue-950 to-slate-900' },
-                    { key: 'genesisUniversa', href: '/equipment/genesis-universa', desc: 'Universal premium platform', gradient: 'from-gray-900 to-slate-900' },
+                    { key: 'genesisAlpha', href: '/equipment/genesis-alpha', desc: 'Compact hot beverage system', gradient: 'from-blue-950 to-slate-900', image: '/images/alpha/genesis-alpha.png' },
+                    { key: 'genesisUniversa', href: '/equipment/genesis-universa', desc: 'Universal premium platform', gradient: 'from-gray-900 to-slate-900', image: '/images/universa/genesis-universa-ese-pods.jpg' },
                     { key: 'genesisPrime', href: '/equipment/genesis-prime', desc: 'High-volume professional', gradient: 'from-emerald-950 to-slate-900' },
                 ],
             },
             {
                 labelKey: 'coldBeverages',
                 children: [
-                    { key: 'genesisEclipse', href: '/equipment/genesis-eclipse', desc: 'Advanced cold brew system', gradient: 'from-purple-950 to-slate-900' },
-                    { key: 'genesisSolaris2', href: '/equipment/genesis-solaris-2', desc: 'Next-gen juice dispenser', gradient: 'from-amber-950 to-slate-900' },
+                    { key: 'genesisEclipse', href: '/equipment/genesis-eclipse', desc: 'Advanced cold brew system', gradient: 'from-purple-950 to-slate-900', image: '/images/eclipse/genesys-eclipse.jpg' },
+                    { key: 'genesisSolaris2', href: '/equipment/genesis-solaris-2', desc: 'Next-gen juice dispenser', gradient: 'from-amber-950 to-slate-900', image: '/images/solaris/genesys-solaris2.jpg' },
                     { key: 'genesisEquinox', href: '/equipment/genesis-equinox', desc: 'Dual temperature system', gradient: 'from-cyan-950 to-slate-900' },
                     { key: 'genesisSolaris', href: '/equipment/genesis-solaris', desc: 'Classic juice platform', gradient: 'from-orange-950 to-slate-900' },
                 ],

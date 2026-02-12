@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
@@ -148,7 +149,10 @@ export function Header() {
         <div className="gt-mega-dropdown-menu">
             <div className="gt-mega-dropdown-groups">
                 {item.groups!.map((group) => (
-                    <div key={group.labelKey} className="gt-mega-dropdown-group">
+                    <div
+                        key={group.labelKey}
+                        className="gt-mega-dropdown-group"
+                    >
                         <span className="gt-mega-dropdown-label">{t(`nav.${group.labelKey}`)}</span>
                         {group.children.map((child) => (
                             <Link
@@ -156,9 +160,24 @@ export function Header() {
                                 href={localizedHref(child.href)}
                                 className={`gt-mega-product-card ${isActive(child.href) ? 'is-active' : ''}`}
                             >
-                                {/* Placeholder thumbnail */}
-                                <div className={`gt-mega-product-thumb bg-gradient-to-br ${child.gradient || 'from-slate-800 to-slate-900'}`}>
-                                    <Icon icon="mdi:coffee-maker-outline" className="w-5 h-5 text-white/40" />
+                                {/* Product thumbnail — real image or gradient placeholder */}
+                                <div
+                                    className={`gt-mega-product-thumb ${child.image ? '' : `bg-gradient-to-br ${child.gradient || 'from-slate-800 to-slate-900'}`}`}
+                                >
+                                    {child.image ? (
+                                        <Image
+                                            src={child.image}
+                                            alt={t(`nav.${child.key}`)}
+                                            fill
+                                            className="object-cover"
+                                            sizes="48px"
+                                        />
+                                    ) : (
+                                        <Icon
+                                            icon="mdi:coffee-maker-outline"
+                                            className="w-5 h-5 text-white/40"
+                                        />
+                                    )}
                                 </div>
                                 <div className="gt-mega-product-info">
                                     <span className="gt-mega-product-name">{t(`nav.${child.key}`)}</span>
@@ -178,14 +197,24 @@ export function Header() {
                     >
                         <div className="gt-mega-featured-icon">
                             {item.featured.icon && (
-                                <Icon icon={item.featured.icon} className="w-4.5 h-4.5 text-[var(--gt-blue)]" />
+                                <Icon
+                                    icon={item.featured.icon}
+                                    className="w-4.5 h-4.5 text-[var(--gt-blue)]"
+                                />
                             )}
                         </div>
                         <div className="flex flex-col">
                             <span className="gt-mega-featured-title">{t(`nav.${item.featured.key}`)}</span>
-                            <span className="gt-mega-featured-desc">{currentLocale === 'bg' ? 'Управлявайте машините отдалечено' : 'Manage your machines remotely'}</span>
+                            <span className="gt-mega-featured-desc">
+                                {currentLocale === 'bg'
+                                    ? 'Управлявайте машините отдалечено'
+                                    : 'Manage your machines remotely'}
+                            </span>
                         </div>
-                        <Icon icon="mdi:arrow-right" className="w-4 h-4 ml-auto gt-mega-featured-arrow" />
+                        <Icon
+                            icon="mdi:arrow-right"
+                            className="w-4 h-4 ml-auto gt-mega-featured-arrow"
+                        />
                     </Link>
                 </>
             )}
@@ -229,7 +258,9 @@ export function Header() {
                             href={localizedHref(child.href)}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={`text-base transition-colors ${
-                                isActive(child.href) ? 'text-[var(--gt-dark-text)]' : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
+                                isActive(child.href)
+                                    ? 'text-[var(--gt-dark-text)]'
+                                    : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
                             }`}
                         >
                             {t(`nav.${child.key}`)}
@@ -244,10 +275,17 @@ export function Header() {
                         href={localizedHref(item.featured.href)}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`text-base flex items-center gap-2 transition-colors ${
-                            isActive(item.featured.href) ? 'text-[var(--gt-blue)]' : 'text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)]'
+                            isActive(item.featured.href)
+                                ? 'text-[var(--gt-blue)]'
+                                : 'text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)]'
                         }`}
                     >
-                        {item.featured.icon && <Icon icon={item.featured.icon} className="w-4 h-4" />}
+                        {item.featured.icon && (
+                            <Icon
+                                icon={item.featured.icon}
+                                className="w-4 h-4"
+                            />
+                        )}
                         {t(`nav.${item.featured.key}`)}
                     </Link>
                 </>
@@ -263,7 +301,9 @@ export function Header() {
                     href={localizedHref(item.href)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-base transition-colors ${
-                        isActive(item.href) ? 'text-[var(--gt-dark-text)]' : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
+                        isActive(item.href)
+                            ? 'text-[var(--gt-dark-text)]'
+                            : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
                     }`}
                 >
                     {t(`nav.${item.key}`)}
@@ -275,7 +315,9 @@ export function Header() {
                     href={localizedHref(child.href)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-base transition-colors ${
-                        isActive(child.href) ? 'text-[var(--gt-dark-text)]' : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
+                        isActive(child.href)
+                            ? 'text-[var(--gt-dark-text)]'
+                            : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
                     }`}
                 >
                     {t(`nav.${child.key}`)}
@@ -286,18 +328,37 @@ export function Header() {
 
     return (
         <>
-            <header className={`gt-header fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'is-scrolled' : ''} ${headerTheme === 'light' ? 'theme-light' : 'theme-dark'}`}>
+            <header
+                className={[
+                    'gt-header fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+                    isScrolled
+                        ? headerTheme === 'light'
+                            ? 'bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-black/[0.06] shadow-[0_1px_16px_rgba(0,0,0,0.06)]'
+                            : 'bg-black/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/[0.06] shadow-[0_1px_24px_rgba(0,0,0,0.25)]'
+                        : 'bg-transparent border-b border-transparent',
+                    headerTheme === 'light' ? 'theme-light' : 'theme-dark',
+                ].join(' ')}
+            >
                 <nav className="container mx-auto px-4 md:px-6 gt-header-nav">
                     <div className="gt-header-bar">
                         {/* Logo — adapts color to header theme */}
-                        <Link href={localizedHref('/')} className="gt-header-logo">
-                            <Logo className="h-[22px] w-auto transition-colors duration-500" color={headerTheme === 'light' ? '#4b6db1' : '#ffffff'} />
+                        <Link
+                            href={localizedHref('/')}
+                            className="gt-header-logo"
+                        >
+                            <Logo
+                                className="h-[22px] w-auto transition-colors duration-500"
+                                color={headerTheme === 'light' ? '#4b6db1' : '#ffffff'}
+                            />
                         </Link>
 
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex gt-header-links">
                             {navLinks.map((link) => (
-                                <div key={link.key} className="relative">
+                                <div
+                                    key={link.key}
+                                    className="relative"
+                                >
                                     {link.isCTA ? (
                                         <Link
                                             href={localizedHref(link.href)}
@@ -325,9 +386,7 @@ export function Header() {
                                                     }`}
                                                 />
                                             </button>
-                                            {link.groups
-                                                ? renderMegaDropdown(link)
-                                                : renderSimpleDropdown(link)}
+                                            {link.groups ? renderMegaDropdown(link) : renderSimpleDropdown(link)}
                                         </div>
                                     ) : (
                                         <Link
@@ -349,9 +408,7 @@ export function Header() {
                                     <button
                                         onClick={() => switchLanguage(locale)}
                                         className={`uppercase tracking-wide transition-colors duration-500 px-1 ${
-                                            currentLocale === locale
-                                                ? 'gt-lang-active font-medium'
-                                                : 'gt-lang-inactive'
+                                            currentLocale === locale ? 'gt-lang-active font-medium' : 'gt-lang-inactive'
                                         }`}
                                     >
                                         {locale}

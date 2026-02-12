@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { ViewTransition } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
@@ -27,6 +27,11 @@ interface FeaturedProductsData {
 interface FeaturedProductsProps {
     data: FeaturedProductsData
     locale: string
+}
+
+/** Check if a product has a real (non-placeholder) image */
+function hasRealImage(src: string): boolean {
+    return !!src && !src.includes('/products/')
 }
 
 /** Gradient placeholders per product for when images aren't ready */
@@ -74,28 +79,36 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                             >
                                 <ViewTransitionLink href={product.href} className="group block">
                                     <div className="glass-card-dark overflow-hidden">
-                                        {/* Product image with view transition */}
-                                        <div
-                                            className={`relative aspect-[4/3] bg-gradient-to-br ${gradient} overflow-hidden`}
-                                            style={{ viewTransitionName: `product-${product.id}` }}
-                                        >
-                                            <Image
-                                                src={product.image}
-                                                alt={product.name}
-                                                fill
-                                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                            />
-                                            {/* Hover overlay */}
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
-                                                <span className="flex items-center gap-2 text-sm font-medium text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                                                    {locale === 'bg' ? 'Разгледай' : 'Explore'}
-                                                    <Icon icon="mdi:arrow-right" className="w-4 h-4" />
-                                                </span>
+                                        {/* Product image — shared element via <ViewTransition name> */}
+                                        <ViewTransition name={`product-${product.id}`}>
+                                            <div
+                                                className={`relative aspect-[4/3] bg-gradient-to-br ${gradient} overflow-hidden`}
+                                            >
+                                                {hasRealImage(product.image) && (
+                                                    <Image
+                                                        src={product.image}
+                                                        alt={product.name}
+                                                        fill
+                                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                                    />
+                                                )}
+                                                {/* Hover overlay */}
+                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
+                                                    <span className="flex items-center gap-2 text-sm font-medium text-white opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                                        {locale === 'bg' ? 'Разгледай' : 'Explore'}
+                                                        <Icon icon="mdi:arrow-right" className="w-4 h-4" />
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
+                                        </ViewTransition>
 
                                         <div className="p-6">
-                                            <h3 className="text-lg font-semibold text-[var(--gt-dark-text)] mb-2">{product.name}</h3>
+                                            {/* Product title — shared element via <ViewTransition name> */}
+                                            <ViewTransition name={`product-title-${product.id}`}>
+                                                <h3 className="text-lg font-semibold text-[var(--gt-dark-text)] mb-2">
+                                                    {product.name}
+                                                </h3>
+                                            </ViewTransition>
                                             <p className="text-[var(--gt-dark-text-muted)] text-sm leading-relaxed line-clamp-2">{description}</p>
                                         </div>
                                     </div>
