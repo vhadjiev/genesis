@@ -1,6 +1,6 @@
 'use client'
 
-import React, { ViewTransition } from 'react'
+import React, { ViewTransition, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
@@ -61,6 +61,18 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
     const callouts = data.callouts || []
     const designNote = data.designNote ? getLocalizedContent(data.designNote, locale) : null
 
+    // Detect if we arrived via a ViewTransition navigation.
+    // When true, shared elements (title, image) render at full opacity so the
+    // browser captures a visible snapshot for the morph. On direct page load
+    // the flag is absent, so framer-motion entrance animations play normally.
+    const [isVTNav] = useState(() => {
+        if (typeof window === 'undefined') return false
+        return !!(window as any).__vtNavigating
+    })
+    useEffect(() => {
+        delete (window as any).__vtNavigating
+    }, [])
+
     return (
         <section className="gt-section-dark relative min-h-screen flex items-center overflow-hidden">
             {/* ── Background layers ── */}
@@ -94,10 +106,17 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                 <div className="absolute bottom-[15%] left-[10%] w-[60%] h-[60%] rounded-full bg-indigo-500 opacity-[0.04] blur-[70px] pointer-events-none" />
 
                 <div className="relative w-full h-full max-h-full">
-                    {/* ViewTransition wraps the rounded container so the snapshot includes border-radius */}
+                    {/* ViewTransition wraps the rounded container so the snapshot includes border-radius.
+                         motion.div adds an entrance animation on direct load; initial={false}
+                         during VT navigation keeps the element visible for snapshot capture. */}
                     {hasRealImage(data.image) ? (
                         <ViewTransition name={`product-${productId}`}>
-                            <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.06] bg-gradient-to-br from-white/[0.03] to-transparent shadow-[0_0_100px_rgba(75,109,177,0.18),0_0_200px_rgba(75,109,177,0.08)]">
+                            <motion.div
+                                initial={isVTNav ? false : { opacity: 0, scale: 0.96 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const, delay: 0.2 }}
+                                className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.06] bg-gradient-to-br from-white/[0.03] to-transparent shadow-[0_0_100px_rgba(75,109,177,0.18),0_0_200px_rgba(75,109,177,0.08)]"
+                            >
                                 <Image
                                     src={data.image}
                                     alt={data.name}
@@ -106,7 +125,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                                     priority
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                 />
-                            </div>
+                            </motion.div>
                         </ViewTransition>
                     ) : (
                         <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.04] bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900 flex items-center justify-center shadow-[0_0_100px_rgba(75,109,177,0.1)]">
@@ -145,14 +164,18 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                             {tagline}
                         </motion.p>
 
-                        {/* Product name — plain <h1> inside ViewTransition for shared-element morph.
-                             NOT a motion element: framer's initial opacity:0 would make the
-                             view-transition snapshot invisible. The stagger container's hidden
-                             state is {} so this h1 stays fully visible at capture time. */}
+                        {/* Product name — motion.h1 with conditional initial:
+                             • VT navigation → initial={false} keeps it visible for the snapshot
+                             • Direct load → fadeUp variant plays the stagger entrance */}
                         <ViewTransition name={`product-title-${productId}`}>
-                            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 tracking-tight leading-[1.08]">
+                            <motion.h1
+                                variants={fadeUp}
+                                initial={isVTNav ? false : 'hidden'}
+                                animate="show"
+                                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 tracking-tight leading-[1.08]"
+                            >
                                 {data.name}
-                            </h1>
+                            </motion.h1>
                         </ViewTransition>
 
                         {/* Description */}

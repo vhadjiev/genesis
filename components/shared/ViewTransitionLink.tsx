@@ -38,6 +38,13 @@ export function ViewTransitionLink({
             const href =
                 typeof props.href === 'string' ? props.href : props.href.pathname || '/'
 
+            // Signal to destination components that this is a VT navigation.
+            // Components with shared <ViewTransition> elements check this to
+            // skip framer-motion initial states (which would make snapshots invisible).
+            if (typeof window !== 'undefined') {
+                ;(window as any).__vtNavigating = true
+            }
+
             // Wrap navigation in startTransition so React activates
             // any <ViewTransition> boundaries during the update.
             startTransition(() => {
