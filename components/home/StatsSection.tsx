@@ -97,7 +97,7 @@ export function StatsSection({ data, locale }: StatsSectionProps) {
             </motion.div>
 
             <div className="relative container mx-auto px-4 md:px-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 max-w-4xl mx-auto glass-surface-dark rounded-[var(--radius-card)] p-12 lg:p-16">
                     {data.stats.map((stat, index) => (
                         <StatCounter key={index} stat={stat} locale={locale} index={index} />
                     ))}

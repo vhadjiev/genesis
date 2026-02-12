@@ -77,13 +77,13 @@ export function HeroSection({ data, locale }: HeroSectionProps) {
                     <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
                         <Link
                             href={data.ctaPrimary ? data.ctaPrimary.href : '/equipment/genesis-universa'}
-                            className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-[15px] rounded-full transition-all duration-300 hover:scale-[1.02]"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-[15px] rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_4px_20px_rgba(0,113,227,0.35)]"
                         >
                             {data.ctaPrimary ? getLocalizedContent(data.ctaPrimary.text, locale) : (locale === 'bg' ? 'Разгледай системите' : 'Explore Our Systems')}
                         </Link>
                         <Link
                             href={data.ctaSecondary ? data.ctaSecondary.href : '/contacts'}
-                            className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-[15px] rounded-full transition-all duration-300 border border-white/20"
+                            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-white/8 backdrop-blur-xl hover:bg-white/15 text-white font-medium text-[15px] rounded-full transition-all duration-300 border border-white/15 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"
                         >
                             {data.ctaSecondary ? getLocalizedContent(data.ctaSecondary.text, locale) : (locale === 'bg' ? 'Заявете консултация' : 'Schedule a Consultation')}
                         </Link>

@@ -56,9 +56,9 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                                className="modern-card rounded-2xl p-8 lg:p-10 text-center group"
+                                className="glass-card-light p-8 lg:p-10 text-center group"
                             >
-                                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-7">
+                                <div className="w-14 h-14 rounded-2xl bg-blue-50/80 backdrop-blur-sm flex items-center justify-center mx-auto mb-7">
                                     <Icon icon={pillar.icon} className="w-7 h-7 text-[var(--gt-blue)]" />
                                 </div>
                                 <h3 className="text-lg font-semibold text-[var(--gt-light-text)] mb-4">{pillarTitle}</h3>

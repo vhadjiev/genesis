@@ -73,13 +73,13 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="modern-card rounded-2xl p-8 lg:p-9 relative"
+                            className="glass-card-light p-8 lg:p-9 relative"
                         >
                             {/* Blue accent top bar */}
-                            <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-[var(--gt-blue)] to-transparent opacity-40" />
+                            <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-[var(--gt-blue)] to-transparent opacity-40 rounded-full" />
 
                             {/* Quote icon */}
-                            <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+                            <div className="w-10 h-10 rounded-2xl bg-blue-50/80 backdrop-blur-sm flex items-center justify-center mb-6">
                                 <Icon icon="mdi:format-quote-close" className="w-5 h-5 text-[var(--gt-blue)]" />
                             </div>
 

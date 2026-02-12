@@ -8,6 +8,7 @@ import { Providers } from "@/providers/Providers";
 import initTranslations from "@/app/i18n";
 import { getIndex } from "@/utils/data";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Header, Footer } from "@/components/layout";
 
 const GTM_ID = "GTM-MFZNM4LN";
 
@@ -153,7 +154,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
         </noscript>
         <Providers locale={locale} resources={resources}>
-          {children}
+          {/* Header persists across navigations — no re-render on page change */}
+          <Header />
+          {/* Main content wrapper for footer reveal effect */}
+          <div className="gt-main-content">
+            {children}
+          </div>
+          {/* Footer persists and reveals on scroll */}
+          <Footer />
         </Providers>
         <SpeedInsights/>
       </body>

@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
@@ -10,11 +9,15 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import i18nConfig from '@/i18nConfig'
 import { navLinks, type NavItem } from '@/config/navigation'
+import { Logo } from '@/components/shared'
+
+type HeaderTheme = 'dark' | 'light'
 
 export function Header() {
     const { t, i18n } = useTranslation()
     const pathname = usePathname()
     const [isScrolled, setIsScrolled] = useState(false)
+    const [headerTheme, setHeaderTheme] = useState<HeaderTheme>('dark')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [openDropdown, setOpenDropdown] = useState<string | null>(null)
     const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null)
@@ -48,8 +51,46 @@ export function Header() {
         window.location.href = newPath
     }
 
+    // Chameleon header: detect section behind header and adapt theme
     useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 50)
+        let ticking = false
+
+        const detectTheme = () => {
+            const scrollY = window.scrollY
+            setIsScrolled(scrollY > 50)
+
+            // Sample point: center of header (26px from top)
+            const probeY = 26
+            const sections = document.querySelectorAll<HTMLElement>('section, [class*="gt-section-"]')
+            let detectedTheme: HeaderTheme = 'dark' // default for hero
+
+            for (const section of sections) {
+                const rect = section.getBoundingClientRect()
+                if (rect.top <= probeY && rect.bottom > probeY) {
+                    const cls = section.className
+                    if (cls.includes('gt-section-light')) {
+                        detectedTheme = 'light'
+                    } else {
+                        detectedTheme = 'dark'
+                    }
+                    break
+                }
+            }
+
+            setHeaderTheme(detectedTheme)
+        }
+
+        const handleScroll = () => {
+            if (!ticking) {
+                ticking = true
+                requestAnimationFrame(() => {
+                    detectTheme()
+                    ticking = false
+                })
+            }
+        }
+
+        detectTheme()
         window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
@@ -102,7 +143,7 @@ export function Header() {
         dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150)
     }
 
-    /** Render a grouped mega-dropdown */
+    /** Render a grouped mega-dropdown with product cards */
     const renderMegaDropdown = (item: NavItem) => (
         <div className="gt-mega-dropdown-menu">
             <div className="gt-mega-dropdown-groups">
@@ -113,9 +154,16 @@ export function Header() {
                             <Link
                                 key={child.key}
                                 href={localizedHref(child.href)}
-                                className={`gt-dropdown-item ${isActive(child.href) ? 'is-active' : ''}`}
+                                className={`gt-mega-product-card ${isActive(child.href) ? 'is-active' : ''}`}
                             >
-                                {t(`nav.${child.key}`)}
+                                {/* Placeholder thumbnail */}
+                                <div className={`gt-mega-product-thumb bg-gradient-to-br ${child.gradient || 'from-slate-800 to-slate-900'}`}>
+                                    <Icon icon="mdi:coffee-maker-outline" className="w-5 h-5 text-white/40" />
+                                </div>
+                                <div className="gt-mega-product-info">
+                                    <span className="gt-mega-product-name">{t(`nav.${child.key}`)}</span>
+                                    {child.desc && <span className="gt-mega-product-desc">{child.desc}</span>}
+                                </div>
                             </Link>
                         ))}
                     </div>
@@ -128,11 +176,16 @@ export function Header() {
                         href={localizedHref(item.featured.href)}
                         className={`gt-mega-dropdown-featured ${isActive(item.featured.href) ? 'is-active' : ''}`}
                     >
-                        {item.featured.icon && (
-                            <Icon icon={item.featured.icon} className="w-4 h-4 text-[var(--gt-blue)]" />
-                        )}
-                        <span>{t(`nav.${item.featured.key}`)}</span>
-                        <Icon icon="mdi:arrow-right" className="w-3.5 h-3.5 ml-auto opacity-40" />
+                        <div className="gt-mega-featured-icon">
+                            {item.featured.icon && (
+                                <Icon icon={item.featured.icon} className="w-4.5 h-4.5 text-[var(--gt-blue)]" />
+                            )}
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="gt-mega-featured-title">{t(`nav.${item.featured.key}`)}</span>
+                            <span className="gt-mega-featured-desc">{currentLocale === 'bg' ? 'Управлявайте машините отдалечено' : 'Manage your machines remotely'}</span>
+                        </div>
+                        <Icon icon="mdi:arrow-right" className="w-4 h-4 ml-auto gt-mega-featured-arrow" />
                     </Link>
                 </>
             )}
@@ -233,22 +286,12 @@ export function Header() {
 
     return (
         <>
-            <header className={`gt-header fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'is-scrolled' : ''}`}>
+            <header className={`gt-header fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'is-scrolled' : ''} ${headerTheme === 'light' ? 'theme-light' : 'theme-dark'}`}>
                 <nav className="container mx-auto px-4 md:px-6 gt-header-nav">
                     <div className="gt-header-bar">
-                        {/* Clean text wordmark */}
+                        {/* Logo — adapts color to header theme */}
                         <Link href={localizedHref('/')} className="gt-header-logo">
-                            <Image
-                                src="/images/gentech-logo.svg"
-                                alt="Genesis Technology"
-                                width={140}
-                                height={40}
-                                className="w-auto h-[36px] object-contain hidden"
-                                priority
-                            />
-                            <span className="text-[15px] font-semibold tracking-[-0.01em] text-[var(--gt-dark-text)]">
-                                Genesis<span className="font-normal text-[var(--gt-dark-text-secondary)]"> Technology</span>
-                            </span>
+                            <Logo className="h-[22px] w-auto transition-colors duration-500" color={headerTheme === 'light' ? '#4b6db1' : '#ffffff'} />
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -298,17 +341,17 @@ export function Header() {
                             ))}
                         </div>
 
-                        {/* Language Switcher */}
+                        {/* Language Switcher — uses CSS classes for theme adaptation */}
                         <div className="hidden lg:flex items-center gap-1 text-[11px] absolute right-0 z-2">
                             {i18nConfig.locales.map((locale, index) => (
                                 <React.Fragment key={locale}>
-                                    {index > 0 && <span className="text-[var(--gt-dark-text-muted)]">/</span>}
+                                    {index > 0 && <span className="gt-lang-divider">/</span>}
                                     <button
                                         onClick={() => switchLanguage(locale)}
-                                        className={`uppercase tracking-wide transition-colors px-1 ${
+                                        className={`uppercase tracking-wide transition-colors duration-500 px-1 ${
                                             currentLocale === locale
-                                                ? 'text-[var(--gt-dark-text)] font-medium'
-                                                : 'text-[var(--gt-dark-text-muted)] hover:text-[var(--gt-dark-text-secondary)]'
+                                                ? 'gt-lang-active font-medium'
+                                                : 'gt-lang-inactive'
                                         }`}
                                     >
                                         {locale}
@@ -358,7 +401,7 @@ export function Header() {
                         className="fixed inset-0 z-40 lg:hidden"
                     >
                         <div
-                            className="absolute inset-0 bg-black/98 backdrop-blur-2xl"
+                            className="absolute inset-0 bg-black/70 backdrop-blur-[40px] saturate-[1.8]"
                             onClick={() => setIsMobileMenuOpen(false)}
                         />
 

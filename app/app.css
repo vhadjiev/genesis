@@ -156,30 +156,47 @@ body {
     color: var(--gt-dark-text);
 }
 
-/* Light section */
+/* Light section — subtle cool gradient for glass card contrast */
 .gt-section-light {
-    background-color: var(--gt-light-bg);
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FB 100%);
     color: var(--gt-light-text);
 }
 
-/* Light gray section */
+/* Light gray section — frosted background */
 .gt-section-light-gray {
-    background-color: var(--gt-light-surface);
+    background: linear-gradient(180deg, #F2F2F7 0%, #ECEDF2 100%);
     color: var(--gt-light-text);
 }
 
 /* ===== Header ===== */
+/* Header base */
 .gt-header {
-    background: transparent;
+    transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                backdrop-filter 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    background: transparent;
     border-bottom: 1px solid transparent;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gt-header.is-scrolled {
-    background: rgba(0, 0, 0, 0.72);
-    backdrop-filter: blur(20px) saturate(1.8);
-    border-bottom: 1px solid var(--gt-dark-border);
+/* --- Theme: Dark (over dark sections) --- */
+.gt-header.theme-dark.is-scrolled {
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(40px) saturate(1.8);
+    -webkit-backdrop-filter: blur(40px) saturate(1.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 1px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Theme: Light (over light sections) --- */
+.gt-header.theme-light.is-scrolled {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(40px) saturate(1.8);
+    -webkit-backdrop-filter: blur(40px) saturate(1.8);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 1px 16px rgba(0, 0, 0, 0.04);
 }
 
 .gt-header-nav {
@@ -278,16 +295,17 @@ body {
     left: 50%;
     transform: translateX(-50%);
     min-width: 200px;
-    background: rgba(28, 28, 30, 0.98);
-    backdrop-filter: blur(20px) saturate(1.8);
-    border: 1px solid var(--gt-dark-border);
-    border-radius: 12px;
+    background: rgba(28, 28, 30, 0.72);
+    backdrop-filter: blur(40px) saturate(1.8);
+    -webkit-backdrop-filter: blur(40px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
     padding: 6px;
     opacity: 0;
     visibility: hidden;
     transform: translateX(-50%) translateY(6px);
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
     z-index: 100;
 }
 
@@ -337,22 +355,151 @@ body {
     color: var(--gt-blue-light);
 }
 
-/* Mega-dropdown (grouped) */
+/* Language switcher default (dark theme) */
+.gt-lang-active {
+    color: var(--gt-dark-text);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gt-lang-inactive {
+    color: var(--gt-dark-text-muted);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gt-lang-inactive:hover {
+    color: var(--gt-dark-text-secondary);
+}
+
+.gt-lang-divider {
+    color: var(--gt-dark-text-muted);
+    transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Theme-light overrides for nav elements --- */
+.gt-header.theme-light .gt-nav-link {
+    color: var(--gt-light-text-secondary);
+}
+
+.gt-header.theme-light .gt-nav-link:hover,
+.gt-header.theme-light .gt-nav-link.is-active {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-dropdown-trigger {
+    color: var(--gt-light-text-secondary);
+}
+
+.gt-header.theme-light .gt-dropdown-trigger:hover,
+.gt-header.theme-light .gt-dropdown.is-open .gt-dropdown-trigger,
+.gt-header.theme-light .gt-dropdown-trigger.is-active {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-nav-cta {
+    color: var(--gt-blue);
+}
+
+.gt-header.theme-light .gt-nav-cta:hover {
+    color: var(--gt-blue-dark);
+}
+
+.gt-header.theme-light .gt-menu-button {
+    color: var(--gt-light-text);
+}
+
+/* Language switcher adapts too */
+.gt-header.theme-light .gt-lang-active {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-lang-inactive {
+    color: var(--gt-light-text-muted);
+}
+
+.gt-header.theme-light .gt-lang-inactive:hover {
+    color: var(--gt-light-text-secondary);
+}
+
+.gt-header.theme-light .gt-lang-divider {
+    color: var(--gt-light-text-muted);
+}
+
+/* --- Theme-light overrides for dropdown menus --- */
+.gt-header.theme-light .gt-dropdown-menu {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gt-header.theme-light .gt-dropdown-item {
+    color: var(--gt-light-text-secondary);
+}
+
+.gt-header.theme-light .gt-dropdown-item:hover {
+    color: var(--gt-light-text);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.gt-header.theme-light .gt-dropdown-item.is-active {
+    color: var(--gt-light-text);
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.gt-header.theme-light .gt-mega-dropdown-menu {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(0, 0, 0, 0.06);
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gt-header.theme-light .gt-mega-dropdown-label {
+    color: var(--gt-light-text-muted);
+}
+
+.gt-header.theme-light .gt-mega-product-card:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.gt-header.theme-light .gt-mega-product-card.is-active {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.gt-header.theme-light .gt-mega-product-name {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-mega-product-desc {
+    color: var(--gt-light-text-muted);
+}
+
+.gt-header.theme-light .gt-mega-dropdown-separator {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.gt-header.theme-light .gt-mega-dropdown-featured {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-mega-dropdown-featured:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+/* Mega-dropdown (grouped) — rich layout with product cards */
 .gt-mega-dropdown-menu {
     position: absolute;
     top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(6px);
-    min-width: 380px;
-    background: rgba(28, 28, 30, 0.98);
-    backdrop-filter: blur(20px) saturate(1.8);
-    border: 1px solid var(--gt-dark-border);
-    border-radius: 12px;
-    padding: 12px;
+    width: 720px;
+    background: rgba(22, 22, 24, 0.78);
+    backdrop-filter: blur(40px) saturate(1.8);
+    -webkit-backdrop-filter: blur(40px) saturate(1.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     z-index: 100;
 }
 
@@ -365,50 +512,143 @@ body {
 .gt-mega-dropdown-groups {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
+    gap: 16px;
 }
 
 .gt-mega-dropdown-group {
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 .gt-mega-dropdown-label {
     display: block;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     color: var(--gt-dark-text-muted);
-    padding: 6px 12px 4px;
+    padding: 0 4px 8px;
     white-space: nowrap;
+}
+
+/* Individual product card inside mega dropdown */
+.gt-mega-product-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.gt-mega-product-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.gt-mega-product-card.is-active {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.gt-mega-product-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gt-mega-product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    min-width: 0;
+}
+
+.gt-mega-product-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gt-dark-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gt-mega-product-desc {
+    font-size: 11px;
+    color: var(--gt-dark-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .gt-mega-dropdown-separator {
     height: 1px;
-    background: var(--gt-dark-border);
-    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 12px 0;
 }
 
 .gt-mega-dropdown-featured {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
+    gap: 12px;
+    padding: 10px 8px;
     font-size: 13px;
     font-weight: 500;
-    color: var(--gt-blue);
-    border-radius: 8px;
+    color: var(--gt-dark-text);
+    border-radius: 12px;
     transition: all 0.15s ease;
-    white-space: nowrap;
 }
 
 .gt-mega-dropdown-featured:hover {
-    background: rgba(0, 113, 227, 0.08);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .gt-mega-dropdown-featured.is-active {
-    background: rgba(0, 113, 227, 0.06);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.gt-mega-featured-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(0, 113, 227, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.gt-mega-featured-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gt-dark-text);
+}
+
+.gt-mega-featured-desc {
+    font-size: 11px;
+    color: var(--gt-dark-text-muted);
+}
+
+.gt-mega-featured-arrow {
+    color: var(--gt-dark-text-muted);
+}
+
+/* Light-theme featured overrides */
+.gt-header.theme-light .gt-mega-featured-title {
+    color: var(--gt-light-text);
+}
+
+.gt-header.theme-light .gt-mega-featured-desc {
+    color: var(--gt-light-text-muted);
+}
+
+.gt-header.theme-light .gt-mega-featured-arrow {
+    color: var(--gt-light-text-muted);
 }
 
 .gt-menu-button {
@@ -543,43 +783,72 @@ body {
     display: none;
 }
 
-/* ===== Modern Card ===== */
-.modern-card {
-    background: var(--gt-light-bg);
-    border-radius: 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+/* ===== Squircle radius tokens ===== */
+:root {
+    --radius-card: 28px;
+    --radius-card-inner: 20px;
+    --radius-badge: 16px;
 }
 
-.modern-card:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
+/* ===== Glass Card — Light (for light sections) ===== */
+.glass-card-light {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-card);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Dark card variant */
-.modern-card-dark {
-    background: var(--gt-dark-surface);
-    border: 1px solid var(--gt-dark-border);
-    border-radius: 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.glass-card-light:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.75);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.06),
+        0 16px 48px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
 }
 
-.modern-card-dark:hover {
-    background: var(--gt-dark-surface-elevated);
-    border-color: rgba(255, 255, 255, 0.12);
+/* ===== Glass Card — Dark (for dark sections) ===== */
+.glass-card-dark {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px) saturate(1.4);
+    -webkit-backdrop-filter: blur(24px) saturate(1.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-card);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Glass card for dark sections */
-.glass-card {
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--gt-dark-border-subtle);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.glass-card-dark:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.25),
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
 }
 
-.glass-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: var(--gt-dark-border);
+/* ===== Frosted surface — subtle glass bg for sections ===== */
+.glass-surface-light {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(40px) saturate(1.2);
+    -webkit-backdrop-filter: blur(40px) saturate(1.2);
+}
+
+.glass-surface-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px) saturate(1.2);
+    -webkit-backdrop-filter: blur(40px) saturate(1.2);
 }
 
 /* ===== Text gradient — blue modern ===== */
@@ -721,6 +990,28 @@ button {
 ::selection {
     background: rgba(0, 113, 227, 0.25);
     color: var(--gt-dark-text);
+}
+
+/* ===== Footer reveal effect (CodePen-style) ===== */
+/* Main content sits above the fixed footer and casts a shadow */
+.gt-main-content {
+    position: relative;
+    z-index: 1;
+    /* Solid background so content fully covers the fixed footer */
+    background: var(--gt-dark-bg);
+    /* Margin-bottom equals footer height so content scrolls away to reveal it */
+    margin-bottom: var(--footer-height, 400px);
+    /* Shadow on the bottom edge to enhance the reveal illusion */
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer is fixed to the viewport bottom, hidden behind content */
+.gt-footer-reveal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
 }
 
 /* ===== Smooth scroll ===== */

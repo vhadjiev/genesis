@@ -52,7 +52,7 @@ export function CTASection({ data, locale }: CTASectionProps) {
                     <p className="text-[var(--gt-dark-text-secondary)] text-lg max-w-2xl mx-auto mb-12 leading-relaxed">{subtitle}</p>
                     <Link
                         href={data.buttonHref}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-[15px] rounded-full transition-all duration-300 hover:scale-[1.02]"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-[15px] rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_4px_24px_rgba(0,113,227,0.4)]"
                     >
                         {buttonText}
                     </Link>

@@ -23,9 +23,9 @@ interface TrustBarSectionProps {
 
 export function TrustBarSection({ data, locale }: TrustBarSectionProps) {
     return (
-        <section className="gt-section-light py-8 border-b border-[var(--gt-light-border)]">
+        <section className="gt-section-light py-8 border-b border-[var(--gt-light-border)] relative">
             <div className="container mx-auto px-4 md:px-6">
-                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+                <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 backdrop-blur-sm">
                     {data.items.map((item, index) => {
                         const label = getLocalizedContent(item.label, locale)
                         return (

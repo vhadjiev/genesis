@@ -42,7 +42,7 @@ export function PartnersSection({ data, locale }: PartnersSectionProps) {
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: i * 0.08 }}
-                            className="w-full max-w-[140px] aspect-[2.5/1] rounded-xl bg-white flex items-center justify-center hover:shadow-md transition-all duration-300 cursor-default"
+                            className="w-full max-w-[140px] aspect-[2.5/1] rounded-2xl bg-white/60 backdrop-blur-xl border border-white/50 flex items-center justify-center hover:bg-white/80 hover:shadow-lg hover:shadow-black/5 transition-all duration-300 cursor-default shadow-sm"
                         >
                             <span className="text-[var(--gt-light-text-muted)] text-[10px] uppercase tracking-widest">Partner</span>
                         </motion.div>

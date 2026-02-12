@@ -7,7 +7,6 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getIndex, getPageData, getLocalizedContent, generateAllStaticParams } from '@/utils/data'
 import { renderSections } from '@/utils/sections'
-import { Header, Footer } from '@/components/layout'
 
 interface PageParams {
     locale: string
@@ -130,9 +129,7 @@ export default async function DynamicPage({ params }: { params: Promise<PagePara
                 />
             )}
             <main className="min-h-screen">
-                <Header />
                 {renderSections(page.sections, locale)}
-                <Footer />
             </main>
         </>
     )

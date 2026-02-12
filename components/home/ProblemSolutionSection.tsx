@@ -61,9 +61,9 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.12 }}
-                                    className="modern-card rounded-2xl p-7 flex gap-5"
+                                    className="glass-card-light p-7 flex gap-5"
                                 >
-                                    <div className="shrink-0 w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mt-0.5">
+                                    <div className="shrink-0 w-10 h-10 rounded-2xl bg-red-50/80 backdrop-blur-sm flex items-center justify-center mt-0.5">
                                         <Icon icon="mdi:alert-circle-outline" className="w-5 h-5 text-red-500" />
                                     </div>
                                     <div>
@@ -81,10 +81,10 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="rounded-2xl p-9 bg-[var(--gt-light-surface)] relative overflow-hidden"
+                        className="glass-card-light p-9 relative overflow-hidden"
                     >
                         <div className="relative">
-                            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+                            <div className="w-12 h-12 rounded-2xl bg-blue-50/80 backdrop-blur-sm flex items-center justify-center mb-6">
                                 <Icon icon="mdi:check-circle" className="w-6 h-6 text-[var(--gt-blue)]" />
                             </div>
                             <h3 className="text-2xl font-semibold text-[var(--gt-light-text)] mb-4">{solutionTitle}</h3>

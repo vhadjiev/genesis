@@ -73,7 +73,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
                                 <ViewTransitionLink href={product.href} className="group block">
-                                    <div className="modern-card-dark rounded-2xl overflow-hidden">
+                                    <div className="glass-card-dark overflow-hidden">
                                         {/* Product image with view transition */}
                                         <div
                                             className={`relative aspect-[4/3] bg-gradient-to-br ${gradient} overflow-hidden`}
