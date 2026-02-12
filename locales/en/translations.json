@@ -1,0 +1,101 @@
+{
+    "site": {
+        "name": "UBC Sound & Cinema"
+    },
+    "rooms": {
+        "info": "Info",
+        "openInfo": "Open room information",
+        "closeInfo": "Close room information"
+    },
+    "common": {
+        "close": "Close"
+    },
+    "nav": {
+        "studio": "Studio",
+        "gallery": "Gallery",
+        "equipment": "Rent Equipment",
+        "events": "Events",
+        "contacts": "Contacts",
+        "language": "Language"
+    },
+    "footer": {
+        "sitemap": "Sitemap",
+        "contacts": "Contacts",
+        "location": "Location",
+        "mobile": "Mobile"
+    },
+    "equipmentRental": {
+        "categories": {
+            "cameras": "Cameras",
+            "lenses": "Lenses",
+            "fieldRecorders": "Field Recorders / Monitors",
+            "microphones": "Microphones",
+            "storage": "Storage Media",
+            "sticks": "Sticks"
+        },
+        "form": {
+            "title": "Request Equipment",
+            "name": "Your name",
+            "mobile": "Mobile number",
+            "email": "Your email",
+            "categories": "Equipment Categories",
+            "message": "Message",
+            "submit": "Submit",
+            "successTitle": "Request Sent!",
+            "successDescription": "Thank you for your equipment rental request. We'll review your requirements and contact you shortly.",
+            "sendAnother": "Submit another request"
+        }
+    },
+    "contact": {
+        "form": {
+            "title": "Send message",
+            "name": "Your name",
+            "mobile": "Your mobile number",
+            "email": "Your email",
+            "projectType": "What's your project (you may select more than one option):",
+            "projectTypes": {
+                "featureFilm": "Feature film",
+                "shortFilm": "Short film",
+                "musicVideo": "Music video",
+                "album": "Album",
+                "single": "Single",
+                "audiobook": "Audiobook",
+                "vlog": "Vlog",
+                "other": "Other / Please specify in the Description"
+            },
+            "services": "What do you need (you may select more than one option):",
+            "serviceTypes": {
+                "postProduction": "Film / Video Post-Production",
+                "editing": "Editing",
+                "colorGrading": "Color Grading",
+                "vfx": "Visual Effects (VFX)",
+                "cinematography": "Video Shooting / Cinematography",
+                "directing": "Directing",
+                "studioRecording": "Studio Sound Recording",
+                "fieldRecording": "Field Sound Recording",
+                "filmMusic": "Film Music",
+                "musicComposition": "Music Composition",
+                "musicProduction": "Music Production",
+                "musicRecording": "Music Recording",
+                "foley": "Foley and Sound Effects Creation / Recording",
+                "voiceover": "Voiceover",
+                "dubbing": "Dubbing",
+                "soundDesign": "Sound Design",
+                "mixingMastering": "Mixing / Mastering",
+                "rendering": "Final Video Rendering",
+                "videoEquipment": "Video Equipment Rental",
+                "audioEquipment": "Audio Equipment Rental",
+                "locationScouting": "Location Scouting",
+                "other": "Other / Please specify in the Description"
+            },
+            "description": "Describe your project (as detailed as possible)",
+            "submit": "Submit",
+            "sending": "Sending...",
+            "successMessage": "Your message has been sent successfully! We'll get back to you soon.",
+            "errorMessage": "Something went wrong. Please try again later.",
+            "successTitle": "Message Sent!",
+            "successDescription": "Thank you for reaching out. We've received your message and will get back to you as soon as possible.",
+            "sendAnother": "Send another message"
+        }
+    }
+}

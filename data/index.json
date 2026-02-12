@@ -1,0 +1,113 @@
+{
+  "site": {
+    "id": "ubc-studio",
+    "name": "UBC Sound & Cinema Studio",
+    "tagline": {
+      "en": "A turnkey solution for your independent sound & cinema project!",
+      "bg": "Цялостно решение за вашия независим музикален и кино проект!"
+    },
+    "defaultLocale": "bg",
+    "locales": ["bg", "en"],
+    "seo": {
+      "titleTemplate": "%s | UBC Sound & Cinema Studio",
+      "siteUrl": "https://ubc.studio",
+      "openGraph": {
+        "type": "website",
+        "siteName": "UBC Sound & Cinema",
+        "images": [
+          {
+            "url": "/ubc-sound-and-cinema-studio-og.jpg",
+            "width": 1200,
+            "height": 630,
+            "alt": "UBC Sound & Cinema Studio"
+          }
+        ]
+      },
+      "twitter": {
+        "card": "summary_large_image",
+        "site": "@ubcstudio"
+      }
+    },
+    "contact": {
+      "phone": "+359 888 352211",
+      "email": "info@ubc.studio",
+      "address": {
+        "en": "Plovdiv, Preslav 15 str.",
+        "bg": "Пловдив, ул. Преслав 15"
+      },
+      "mapUrl": "https://maps.app.goo.gl/V3rvmEvFyFLjkH1d9",
+      "mapEmbed": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs&q=Preslav+15,+Plovdiv,+Bulgaria"
+    }
+  },
+  "navigation": {
+    "main": [
+      { "id": "home", "labelKey": "nav.studio" },
+      { "id": "events", "labelKey": "nav.events" },
+      { "id": "gallery", "labelKey": "nav.gallery" },
+      { "id": "equipment", "labelKey": "nav.equipment" },
+      { "id": "contacts", "labelKey": "nav.contacts" }
+    ]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "slug": "",
+      "title": {
+        "en": "UBC Sound & Cinema Studio",
+        "bg": "UBC Sound & Cinema Студио"
+      },
+      "description": {
+        "en": "A turnkey solution for your independent sound & cinema project! Right in the heart of Plovdiv, Bulgaria.",
+        "bg": "Цялостно решение за вашия независим музикален и кино проект! В самото сърце на Пловдив, България."
+      }
+    },
+    {
+      "id": "gallery",
+      "slug": "gallery",
+      "title": {
+        "en": "Gallery | UBC Studio",
+        "bg": "Галерия | UBC Studio"
+      },
+      "description": {
+        "en": "Explore UBC Sound & Cinema Studio spaces - recording rooms, voiceover booth, editing room, and private garden.",
+        "bg": "Разгледайте пространствата на UBC Sound & Cinema Studio - стаи за запис, кабина за войсоувър, монтажна стая и уединена градина."
+      }
+    },
+    {
+      "id": "equipment",
+      "slug": "equipment",
+      "title": {
+        "en": "Equipment for Rent | UBC Studio",
+        "bg": "Оборудване под наем | UBC Studio"
+      },
+      "description": {
+        "en": "Professional film and audio equipment for rent - cinema cameras, lenses, field recorders, microphones, and storage solutions.",
+        "bg": "Професионално филмово и аудио оборудване под наем - кино камери, обективи, полеви рекордери, микрофони и решения за съхранение."
+      }
+    },
+    {
+      "id": "events",
+      "slug": "events",
+      "title": {
+        "en": "Events | UBC Studio",
+        "bg": "Събития | UBC Studio"
+      },
+      "description": {
+        "en": "Host your creative events at UBC Studio - project showcases, listening parties, private screenings, and meet & greets.",
+        "bg": "Организирайте вашите творчески събития в UBC Studio - представяне на проекти, слушателски партита, частни прожекции и срещи с фенове."
+      }
+    },
+    {
+      "id": "contacts",
+      "slug": "contacts",
+      "title": {
+        "en": "Contact Us | UBC Studio",
+        "bg": "Контакти | UBC Studio"
+      },
+      "description": {
+        "en": "Get in touch with UBC Sound & Cinema Studio in Plovdiv, Bulgaria. Available 24/7 for your film and audio production needs.",
+        "bg": "Свържете се с UBC Sound & Cinema Studio в Пловдив, България. На разположение 24/7 за вашите филмови и аудио продукции."
+      }
+    }
+  ]
+}

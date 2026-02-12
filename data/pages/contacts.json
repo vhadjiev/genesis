@@ -1,0 +1,133 @@
+{
+  "id": "contacts",
+  "slug": "contacts",
+  "seo": {
+    "en": {
+      "title": "Contact Us | UBC Sound & Cinema Studio",
+      "description": "Get in touch with UBC Sound & Cinema Studio in Plovdiv, Bulgaria. Available 24/7 for your film and audio production needs.",
+      "keywords": [
+        "contact UBC studio",
+        "Plovdiv studio contact",
+        "film studio Bulgaria",
+        "audio studio contact",
+        "book studio"
+      ],
+      "openGraph": {
+        "title": "Contact Us | UBC Sound & Cinema Studio",
+        "description": "Reach out to UBC Studio for your film and audio production needs. Open 24/7.",
+        "images": [
+          {
+            "url": "/images/contacts-banner.jpg",
+            "width": 1200,
+            "height": 630
+          }
+        ]
+      },
+      "structuredData": {
+        "@type": "ContactPage",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "name": "UBC Sound & Cinema Studio",
+          "telephone": "+359 888 352211",
+          "email": "info@ubc.studio",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Preslav 15 str.",
+            "addressLocality": "Plovdiv",
+            "addressCountry": "BG"
+          }
+        }
+      }
+    },
+    "bg": {
+      "title": "Контакти | UBC Sound & Cinema Студио",
+      "description": "Свържете се с UBC Sound & Cinema Studio в Пловдив, България. На разположение 24/7 за вашите филмови и аудио продукции.",
+      "keywords": [
+        "контакт UBC студио",
+        "контакт студио Пловдив",
+        "филмово студио България",
+        "резервация студио"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "type": "pageBanner",
+      "backgroundImage": "/images/header-board.jpg",
+      "title": { "en": "UBC Contacts", "bg": "UBC Контакти" }
+    },
+    {
+      "type": "contactPageContent",
+      "studioInfo": {
+        "title": {
+          "en": "UBC Sound & Cinema Studio",
+          "bg": "UBC Sound & Cinema Studio"
+        },
+        "description": {
+          "en": "You can find us in the very heart of Plovdiv, right next to pl. \"Grozdov Pazar\"",
+          "bg": "Можете да ни намерите в самото сърце на Пловдив, точно до пл. \"Гроздов пазар\""
+        },
+        "phone": "+359 888 352211",
+        "address": {
+          "en": "Plovdiv, Preslav 15 str.",
+          "bg": "Пловдив, ул. Преслав 15"
+        }
+      },
+      "openingHours": {
+        "title": { "en": "Opening Hours", "bg": "Работно време" },
+        "weekdays": {
+          "label": { "en": "Monday – Sunday", "bg": "Понеделник – Неделя" },
+          "hours": { "en": "24h", "bg": "24ч" }
+        },
+        "year": {
+          "label": { "en": "Jan – Dec", "bg": "Ян – Дек" },
+          "hours": { "en": "24/7", "bg": "24/7" }
+        },
+        "holidays": {
+          "label": { "en": "Even on holidays", "bg": "Дори в празниците" },
+          "answer": { "en": "Yes", "bg": "Да" }
+        }
+      },
+      "formTitle": { "en": "Send message", "bg": "Изпратете съобщение" },
+      "projectTypes": [
+        { "id": "featureFilm", "label": { "en": "Feature film", "bg": "Пълнометражен филм" } },
+        { "id": "shortFilm", "label": { "en": "Short film", "bg": "Къс филм" } },
+        { "id": "musicVideo", "label": { "en": "Music video", "bg": "Музикално видео" } },
+        { "id": "album", "label": { "en": "Album", "bg": "Албум" } },
+        { "id": "single", "label": { "en": "Single", "bg": "Сингъл" } },
+        { "id": "audiobook", "label": { "en": "Audiobook", "bg": "Аудиокнига" } },
+        { "id": "podcast", "label": { "en": "Podcast", "bg": "Подкаст" } },
+        { "id": "other", "label": { "en": "Other / Please specify in the Description", "bg": "Друго / Моля, уточнете в описанието" } }
+      ],
+      "serviceTypes": [
+        { "id": "postProduction", "label": { "en": "Film / Video Post-Production", "bg": "Филмова / Видео постпродукция" } },
+        { "id": "editing", "label": { "en": "Editing", "bg": "Монтаж" } },
+        { "id": "colorGrading", "label": { "en": "Color Grading", "bg": "Цветова корекция" } },
+        { "id": "vfx", "label": { "en": "Visual Effects (VFX)", "bg": "Визуални ефекти (VFX)" } },
+        { "id": "cinematography", "label": { "en": "Video Shooting / Cinematography", "bg": "Видео заснемане / Кинематография" } },
+        { "id": "directing", "label": { "en": "Directing", "bg": "Режисура" } },
+        { "id": "studioRecording", "label": { "en": "Studio Sound Recording", "bg": "Студиен звукозапис" } },
+        { "id": "fieldRecording", "label": { "en": "Field Sound Recording", "bg": "Полеви звукозапис" } },
+        { "id": "filmMusic", "label": { "en": "Film Music", "bg": "Филмова музика" } },
+        { "id": "musicComposition", "label": { "en": "Music Composition", "bg": "Композиране на музика" } },
+        { "id": "musicProduction", "label": { "en": "Music Production", "bg": "Музикална продукция" } },
+        { "id": "musicRecording", "label": { "en": "Music Recording", "bg": "Музикален запис" } },
+        { "id": "foley", "label": { "en": "Foley and Sound Effects Creation / Recording", "bg": "Foley и създаване/запис на звукови ефекти" } },
+        { "id": "voiceover", "label": { "en": "Voiceover", "bg": "Войсоувър" } },
+        { "id": "dubbing", "label": { "en": "Dubbing", "bg": "Дублаж" } },
+        { "id": "soundDesign", "label": { "en": "Sound Design", "bg": "Звуков дизайн" } },
+        { "id": "mixingMastering", "label": { "en": "Mixing / Mastering", "bg": "Миксиране / Мастеринг" } },
+        { "id": "rendering", "label": { "en": "Final Video Rendering", "bg": "Финално видео рендиране" } },
+        { "id": "videoEquipment", "label": { "en": "Video Equipment Rental", "bg": "Наем на видео оборудване" } },
+        { "id": "audioEquipment", "label": { "en": "Audio Equipment Rental", "bg": "Наем на аудио оборудване" } },
+        { "id": "locationScouting", "label": { "en": "Location Scouting", "bg": "Търсене на локации" } },
+        { "id": "other", "label": { "en": "Other / Please specify in the Description", "bg": "Друго / Моля, уточнете в описанието" } }
+      ]
+    },
+    {
+      "type": "mapEmbed",
+      "embedUrl": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs&q=Preslav+15,+Plovdiv,+Bulgaria",
+      "height": "400px"
+    }
+  ]
+}

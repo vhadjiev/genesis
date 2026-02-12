@@ -1,0 +1,526 @@
+@import 'tailwindcss';
+@import '@heroui/styles';
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+/* UBC Studio Dark Theme */
+:root,
+.dark {
+    --background: 160 30% 5%;
+    --foreground: 0 0% 100%;
+    --primary: 93 43% 40%; /* #67923d - UBC green */
+    --primary-foreground: 0 0% 100%;
+    --muted: 220 9% 46%;
+    --card: 0 0% 100% / 0.05;
+}
+
+html,
+body {
+    min-height: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #0a1612;
+    color: #ffffff;
+    font-family: var(--font-open-sans, 'Open Sans', sans-serif);
+}
+
+[data-overlay-container] {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    min-height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+/* Header */
+.ubc-header {
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border-bottom: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.ubc-header.is-scrolled {
+    background: rgba(10, 22, 18, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.ubc-header-nav {
+    position: relative;
+}
+
+.ubc-header-bar {
+    position: relative;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ubc-header-logo {
+    position: absolute;
+    left: 16px;
+    z-index: 2;
+    display: inline-block;
+}
+
+@media (min-width: 1024px) {
+    .ubc-header-logo {
+        left: 0;
+    }
+}
+
+.ubc-header-search {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.ubc-search-button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.ubc-search-button:hover {
+    color: #67923d;
+}
+
+.ubc-search-icon {
+    font-size: 14px;
+}
+
+.ubc-header-links {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 1200px) {
+    .ubc-header-links {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
+
+.ubc-nav-link {
+    font-family: var(--font-open-sans, 'Open Sans', sans-serif);
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 0 18px;
+    transition: color 0.4s ease;
+}
+
+.ubc-nav-link:hover {
+    color: #67923d;
+}
+
+.ubc-nav-link.is-active {
+    color: #67923d;
+    cursor: default;
+}
+
+.ubc-menu-button {
+    color: #ffffff;
+}
+
+.ubc-menu-button:hover {
+    color: #67923d;
+}
+
+/* Loading animation */
+.loading {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: hsl(var(--background) / 0.85);
+    z-index: 9999;
+    transition: opacity 0.35s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+/* Mask image gradient */
+.mask-image {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 30%, transparent 100%);
+}
+
+/* SVG container */
+.svg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Hero Slider Animations */
+
+/* Ken Burns Zoom Effect */
+@keyframes ken-burns-zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.ken-burns-zoom {
+    animation: ken-burns-zoom 8s ease-out forwards;
+}
+
+/* Slide fade in animation */
+@keyframes slide-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-fade-in {
+    animation: slide-fade-in 0.8s ease-out forwards;
+}
+
+/* Hero overlay (dark + dots) */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.hero-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 101%;
+    height: 100%;
+    background-color: #282834;
+    opacity: 0.62;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    background-position: 27px 27px;
+    background-image: none;
+}
+
+.hero-slide {
+    transform-origin: center center;
+}
+
+/* Hero typography */
+.hero-content {
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-family: var(--font-open-sans, 'Open Sans', sans-serif);
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 0.95em;
+    margin: 0 0 24px 0;
+}
+
+.hero-title-outline {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    /* font-weight: 300; */
+    display: block;
+    /* text-transform: uppercase; */
+    line-height: 1;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1599px) {
+    .hero-title {
+        font-size: 100px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 64px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero-title {
+        font-size: 48px;
+    }
+}
+
+
+/* Slide indicators (numbers) */
+.hero-slide-indicators {
+    position: absolute;
+    right: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 991px) {
+    .hero-slide-indicators {
+        display: none;
+    }
+}
+
+.slide-indicator {
+    position: relative;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    text-align: right;
+    font-family: var(--font-open-sans, 'Open Sans', sans-serif);
+    font-weight: 900;
+    font-size: 30px;
+    color: transparent;
+    transition: all 0.3s ease;
+}
+
+.slide-indicator:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.slide-indicator::after {
+    content: attr(data-label);
+    display: block;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.slide-indicator::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0s;
+    pointer-events: none;
+}
+
+.slide-indicator:hover::before {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.slide-indicator.is-active::after {
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.slide-indicator.is-active::before {
+    display: none;
+}
+
+/* Carousel/Slider styles */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Glass effect for cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #67923d 0%, #8ab35d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Section divider */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(103, 146, 61, 0.3), transparent);
+}
+
+/* Background color utility */
+.bg-background {
+    background-color: #0a1612;
+}
+
+/* Foreground color utilities */
+.text-foreground {
+    color: #ffffff;
+}
+
+.text-foreground\/80 {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.text-foreground\/70 {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.text-foreground\/60 {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.text-foreground\/50 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.text-foreground\/40 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Primary color utilities - UBC Green #67923d */
+.text-primary {
+    color: #67923d;
+}
+
+.bg-primary {
+    background-color: #67923d;
+}
+
+.bg-primary\/10 {
+    background-color: rgba(103, 146, 61, 0.1);
+}
+
+.bg-primary\/20 {
+    background-color: rgba(103, 146, 61, 0.2);
+}
+
+.border-primary {
+    border-color: #67923d;
+}
+
+.border-primary\/30 {
+    border-color: rgba(103, 146, 61, 0.3);
+}
+
+/* Foreground background utilities */
+.bg-foreground\/5 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.bg-foreground\/10 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg-foreground\/20 {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bg-foreground\/\[0\.02\] {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.border-foreground\/10 {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.border-foreground\/20 {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover states */
+.hover\:text-primary:hover {
+    color: #67923d;
+}
+
+.hover\:bg-primary\/20:hover {
+    background-color: rgba(103, 146, 61, 0.2);
+}
+
+.hover\:bg-foreground\/5:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hover\:bg-foreground\/20:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hover\:border-primary\/30:hover {
+    border-color: rgba(103, 146, 61, 0.3);
+}
+
+/* Ensure buttons have pointer cursor */
+button {
+    cursor: pointer;
+}
