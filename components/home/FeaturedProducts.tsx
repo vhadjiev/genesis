@@ -2,7 +2,6 @@
 
 import React, { ViewTransition } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import { getLocalizedContent } from '@/utils/data'
 import { ViewTransitionLink } from '@/components/shared/ViewTransitionLink'
@@ -52,16 +51,10 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
     return (
         <section className="gt-section-dark py-28 lg:py-36">
             <div className="container mx-auto px-4 md:px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="text-center mb-20"
-                >
+                <div className="text-center mb-20">
                     <h2 className="text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-dark-text)] tracking-tight">{title}</h2>
                     {subtitle && <p className="text-[var(--gt-dark-text-secondary)] text-lg mt-5 max-w-2xl mx-auto leading-relaxed">{subtitle}</p>}
-                </motion.div>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {data.products.map((product, index) => {
@@ -70,27 +63,25 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                         const gradient = productGradients[product.id] || 'from-slate-900 to-gray-900'
 
                         return (
-                            <motion.div
-                                key={product.id}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
+                            <div key={product.id}>
                                 <ViewTransitionLink href={product.href} className="group block">
                                     <div className="glass-card-dark overflow-hidden">
-                                        {/* Product image — shared element via <ViewTransition name> */}
+                                        {/* ViewTransition wraps the image container so the snapshot includes border-radius */}
                                         <ViewTransition name={`product-${product.id}`}>
-                                            <div
-                                                className={`relative aspect-[4/3] bg-gradient-to-br ${gradient} overflow-hidden`}
-                                            >
-                                                {hasRealImage(product.image) && (
+                                            <div className={`relative aspect-[4/3] overflow-hidden rounded-t-[var(--radius-card)] ${hasRealImage(product.image) ? '' : `bg-gradient-to-br ${gradient}`}`}>
+                                                {hasRealImage(product.image) ? (
                                                     <Image
                                                         src={product.image}
                                                         alt={product.name}
                                                         fill
                                                         className="object-cover transition-transform duration-700 group-hover:scale-105"
                                                     />
+                                                ) : (
+                                                    <div className="absolute inset-0 flex items-center justify-center">
+                                                        <span className="text-white/[0.06] text-[80px] font-bold tracking-tighter select-none leading-none">
+                                                            {product.name.split(' ').pop()}
+                                                        </span>
+                                                    </div>
                                                 )}
                                                 {/* Hover overlay */}
                                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 flex items-center justify-center">
@@ -113,7 +104,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                                         </div>
                                     </div>
                                 </ViewTransitionLink>
-                            </motion.div>
+                            </div>
                         )
                     })}
                 </div>

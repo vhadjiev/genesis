@@ -53,48 +53,48 @@ export function Header() {
     }
 
     // Chameleon header: detect section behind header and adapt theme
-    useEffect(() => {
-        let ticking = false
+    // useEffect(() => {
+    //     let ticking = false
 
-        const detectTheme = () => {
-            const scrollY = window.scrollY
-            setIsScrolled(scrollY > 50)
+    //     const detectTheme = () => {
+    //         const scrollY = window.scrollY
+    //         setIsScrolled(scrollY > 50)
 
-            // Sample point: center of header (26px from top)
-            const probeY = 26
-            const sections = document.querySelectorAll<HTMLElement>('section, [class*="gt-section-"]')
-            let detectedTheme: HeaderTheme = 'dark' // default for hero
+    //         // Sample point: center of header (26px from top)
+    //         const probeY = 26
+    //         const sections = document.querySelectorAll<HTMLElement>('section, [class*="gt-section-"]')
+    //         let detectedTheme: HeaderTheme = 'dark' // default for hero
 
-            for (const section of sections) {
-                const rect = section.getBoundingClientRect()
-                if (rect.top <= probeY && rect.bottom > probeY) {
-                    const cls = section.className
-                    if (cls.includes('gt-section-light')) {
-                        detectedTheme = 'light'
-                    } else {
-                        detectedTheme = 'dark'
-                    }
-                    break
-                }
-            }
+    //         for (const section of sections) {
+    //             const rect = section.getBoundingClientRect()
+    //             if (rect.top <= probeY && rect.bottom > probeY) {
+    //                 const cls = section.className
+    //                 if (cls.includes('gt-section-light')) {
+    //                     detectedTheme = 'light'
+    //                 } else {
+    //                     detectedTheme = 'dark'
+    //                 }
+    //                 break
+    //             }
+    //         }
 
-            setHeaderTheme(detectedTheme)
-        }
+    //         setHeaderTheme(detectedTheme)
+    //     }
 
-        const handleScroll = () => {
-            if (!ticking) {
-                ticking = true
-                requestAnimationFrame(() => {
-                    detectTheme()
-                    ticking = false
-                })
-            }
-        }
+    //     const handleScroll = () => {
+    //         if (!ticking) {
+    //             ticking = true
+    //             requestAnimationFrame(() => {
+    //                 detectTheme()
+    //                 ticking = false
+    //             })
+    //         }
+    //     }
 
-        detectTheme()
-        window.addEventListener('scroll', handleScroll, { passive: true })
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    //     detectTheme()
+    //     window.addEventListener('scroll', handleScroll, { passive: true })
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    // }, [])
 
     useEffect(() => {
         setIsMobileMenuOpen(false)
@@ -331,12 +331,14 @@ export function Header() {
             <header
                 className={[
                     'gt-header fixed top-0 left-0 right-0 z-50 transition-all duration-500',
-                    isScrolled
-                        ? headerTheme === 'light'
-                            ? 'bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-black/[0.06] shadow-[0_1px_16px_rgba(0,0,0,0.06)]'
-                            : 'bg-black/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/[0.06] shadow-[0_1px_24px_rgba(0,0,0,0.25)]'
-                        : 'bg-transparent border-b border-transparent',
-                    headerTheme === 'light' ? 'theme-light' : 'theme-dark',
+                    'bg-black/85 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/[0.06] shadow-[0_1px_24px_rgba(0,0,0,0.25)]',
+                    'theme-dark',
+                    // isScrolled
+                    //     ? headerTheme === 'light'
+                    //         ? 'bg-white/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-black/[0.06] shadow-[0_1px_16px_rgba(0,0,0,0.06)]'
+                    //         : 'bg-black/80 backdrop-blur-2xl backdrop-saturate-150 border-b border-white/[0.06] shadow-[0_1px_24px_rgba(0,0,0,0.25)]'
+                    //     : 'bg-transparent border-b border-transparent',
+                    // headerTheme === 'light' ? 'theme-light' : 'theme-dark',
                 ].join(' ')}
             >
                 <nav className="container mx-auto px-4 md:px-6 gt-header-nav">
@@ -344,7 +346,7 @@ export function Header() {
                         {/* Logo — adapts color to header theme */}
                         <Link
                             href={localizedHref('/')}
-                            className="gt-header-logo"
+                            className="gt-header-logo py-5"
                         >
                             <Logo
                                 className="h-[22px] w-auto transition-colors duration-500"

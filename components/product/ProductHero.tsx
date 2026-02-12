@@ -39,11 +39,12 @@ function hasRealImage(src: string): boolean {
     return !!src && !src.includes('/products/')
 }
 
-/* ---- Stagger children orchestration ---- */
-const container = {
-    hidden: { opacity: 0 },
+/* ---- Stagger orchestration ----
+   Container does NOT set opacity — that would hide the <ViewTransition>
+   title at capture time and break the shared-element morph. */
+const stagger = {
+    hidden: {},
     show: {
-        opacity: 1,
         transition: { staggerChildren: 0.1, delayChildren: 0.15 },
     },
 }
@@ -82,16 +83,49 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                 }}
             />
 
-            {/* ── Content: two-column grid ── */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6 py-32 lg:py-40">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch min-h-[70vh]">
+            {/* ═══ Product image — single element, always in DOM ═══
+                 On desktop: absolute, right half, inset for rounded container.
+                 On mobile: full width background behind text.
+                 Single <ViewTransition name> so the morph works at all viewports + back nav. */}
+            <div className="absolute top-0 right-0 bottom-0 left-0 lg:left-1/2 z-10 pointer-events-none flex items-center justify-center lg:py-24 lg:px-8 lg:pr-12">
+                {/* Multi-layer glow */}
+                <div className="absolute inset-[-15%] rounded-full bg-[var(--gt-blue)] opacity-[0.1] blur-[120px] pointer-events-none" />
+                <div className="absolute top-[10%] right-[5%] w-[80%] h-[80%] rounded-full bg-blue-400 opacity-[0.06] blur-[90px] pointer-events-none" />
+                <div className="absolute bottom-[15%] left-[10%] w-[60%] h-[60%] rounded-full bg-indigo-500 opacity-[0.04] blur-[70px] pointer-events-none" />
 
-                    {/* ═══ LEFT: Product info ═══ */}
+                <div className="relative w-full h-full max-h-full">
+                    {/* ViewTransition wraps the rounded container so the snapshot includes border-radius */}
+                    {hasRealImage(data.image) ? (
+                        <ViewTransition name={`product-${productId}`}>
+                            <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.06] bg-gradient-to-br from-white/[0.03] to-transparent shadow-[0_0_100px_rgba(75,109,177,0.18),0_0_200px_rgba(75,109,177,0.08)]">
+                                <Image
+                                    src={data.image}
+                                    alt={data.name}
+                                    fill
+                                    className="object-contain lg:object-cover drop-shadow-[0_25px_80px_rgba(75,109,177,0.35)]"
+                                    priority
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                />
+                            </div>
+                        </ViewTransition>
+                    ) : (
+                        <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.04] bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900 flex items-center justify-center shadow-[0_0_100px_rgba(75,109,177,0.1)]">
+                            <span className="text-white/[0.05] text-[80px] lg:text-[140px] font-bold tracking-tighter select-none leading-none">
+                                {data.name.split(' ').pop()}
+                            </span>
+                        </div>
+                    )}
+                </div>
+            </div>
+
+            {/* ── Content — sits on top of the image on mobile, left half on desktop ── */}
+            <div className="relative z-20 container mx-auto px-4 md:px-6 py-32 lg:py-40">
+                <div className="lg:w-1/2 lg:pr-12">
                     <motion.div
-                        variants={container}
+                        variants={stagger}
                         initial="hidden"
                         animate="show"
-                        className="max-w-xl flex flex-col justify-center"
+                        className="max-w-xl flex flex-col justify-center min-h-[60vh]"
                     >
                         {/* Badge */}
                         {badge && (
@@ -111,14 +145,14 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                             {tagline}
                         </motion.p>
 
-                        {/* Product name — shared element for view transition */}
+                        {/* Product name — plain <h1> inside ViewTransition for shared-element morph.
+                             NOT a motion element: framer's initial opacity:0 would make the
+                             view-transition snapshot invisible. The stagger container's hidden
+                             state is {} so this h1 stays fully visible at capture time. */}
                         <ViewTransition name={`product-title-${productId}`}>
-                            <motion.h1
-                                variants={fadeUp}
-                                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 tracking-tight leading-[1.08]"
-                            >
+                            <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 tracking-tight leading-[1.08]">
                                 {data.name}
-                            </motion.h1>
+                            </h1>
                         </ViewTransition>
 
                         {/* Description */}
@@ -161,43 +195,6 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                                 })}
                             </motion.div>
                         )}
-                    </motion.div>
-
-                    {/* ═══ RIGHT: Product image — fills full height ═══ */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95, x: 40 }}
-                        animate={{ opacity: 1, scale: 1, x: 0 }}
-                        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const, delay: 0.2 }}
-                        className="relative flex items-stretch justify-center min-h-[400px] lg:min-h-0"
-                    >
-                        {/* Multi-layer glow effect behind the image */}
-                        <div className="absolute inset-[-15%] rounded-full bg-[var(--gt-blue)] opacity-[0.08] blur-[100px] pointer-events-none" />
-                        <div className="absolute inset-[-8%] rounded-full bg-blue-400 opacity-[0.05] blur-[70px] pointer-events-none" />
-                        <div className="absolute inset-[5%] rounded-full bg-indigo-500 opacity-[0.04] blur-[50px] pointer-events-none" />
-
-                        {/* Shared element — matches <ViewTransition name> in FeaturedProducts */}
-                        <ViewTransition name={`product-${productId}`}>
-                            <div className="relative w-full h-full">
-                                {hasRealImage(data.image) ? (
-                                    <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/[0.06] bg-gradient-to-br from-white/[0.02] to-transparent shadow-[0_0_80px_rgba(75,109,177,0.15),0_0_160px_rgba(75,109,177,0.08)]">
-                                        <Image
-                                            src={data.image}
-                                            alt={data.name}
-                                            fill
-                                            className="object-contain p-8 drop-shadow-[0_20px_60px_rgba(75,109,177,0.3)]"
-                                            priority
-                                            sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 680px"
-                                        />
-                                    </div>
-                                ) : (
-                                    <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/[0.04] bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900 flex items-center justify-center shadow-[0_0_80px_rgba(75,109,177,0.1)]">
-                                        <span className="text-white/[0.06] text-[120px] font-bold tracking-tighter select-none leading-none">
-                                            {data.name.split(' ').pop()}
-                                        </span>
-                                    </div>
-                                )}
-                            </div>
-                        </ViewTransition>
                     </motion.div>
                 </div>
             </div>

@@ -25,58 +25,44 @@
 
 /* ===== View Transitions ===== */
 /* React's <ViewTransition> + Next.js experimental.viewTransition handle
-   startViewTransition() automatically. No @view-transition { navigation: auto }
-   needed — that's for MPA navigations. */
+   startViewTransition() automatically. */
 
 /* Root page crossfade */
 ::view-transition-old(root) {
-    animation: gt-fade-out 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: gt-fade-out 0.25s ease-out;
 }
 ::view-transition-new(root) {
-    animation: gt-fade-in 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: gt-fade-in 0.3s ease-in;
 }
 
 @keyframes gt-fade-out {
-    from { opacity: 1; transform: scale(1); }
-    to { opacity: 0; transform: scale(0.995); }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 @keyframes gt-fade-in {
-    from { opacity: 0; transform: scale(1.005); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-/* ── Shared element: product image (card ⟶ hero) ── */
+/* ── Shared elements: product images & titles ──
+   Use the default browser crossfade for old↔new snapshots.
+   Only customize the group morph timing.
+   Works for both forward (card→hero) and reverse (hero→card). */
 ::view-transition-group(product-genesis-alpha),
 ::view-transition-group(product-genesis-universa),
 ::view-transition-group(product-genesis-prime),
 ::view-transition-group(product-genesis-eclipse),
 ::view-transition-group(product-genesis-solaris-2),
 ::view-transition-group(product-genesis-equinox),
-::view-transition-group(product-genesis-solaris) {
-    animation-duration: 0.5s;
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-::view-transition-old(product-genesis-alpha),
-::view-transition-old(product-genesis-universa),
-::view-transition-old(product-genesis-prime),
-::view-transition-old(product-genesis-eclipse),
-::view-transition-old(product-genesis-solaris-2),
-::view-transition-old(product-genesis-equinox),
-::view-transition-old(product-genesis-solaris),
-::view-transition-new(product-genesis-alpha),
-::view-transition-new(product-genesis-universa),
-::view-transition-new(product-genesis-prime),
-::view-transition-new(product-genesis-eclipse),
-::view-transition-new(product-genesis-solaris-2),
-::view-transition-new(product-genesis-equinox),
-::view-transition-new(product-genesis-solaris) {
-    animation: none;
-    mix-blend-mode: normal;
-    object-fit: contain;
-}
-
-/* ── Shared element: product title (card name ⟶ hero h1) ── */
+::view-transition-group(product-genesis-solaris),
 ::view-transition-group(product-title-genesis-alpha),
 ::view-transition-group(product-title-genesis-universa),
 ::view-transition-group(product-title-genesis-prime),
@@ -84,37 +70,8 @@
 ::view-transition-group(product-title-genesis-solaris-2),
 ::view-transition-group(product-title-genesis-equinox),
 ::view-transition-group(product-title-genesis-solaris) {
-    animation-duration: 0.45s;
+    animation-duration: 0.35s;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-::view-transition-old(product-title-genesis-alpha),
-::view-transition-old(product-title-genesis-universa),
-::view-transition-old(product-title-genesis-prime),
-::view-transition-old(product-title-genesis-eclipse),
-::view-transition-old(product-title-genesis-solaris-2),
-::view-transition-old(product-title-genesis-equinox),
-::view-transition-old(product-title-genesis-solaris) {
-    animation: gt-title-out 0.25s cubic-bezier(0.4, 0, 1, 1) forwards;
-}
-
-::view-transition-new(product-title-genesis-alpha),
-::view-transition-new(product-title-genesis-universa),
-::view-transition-new(product-title-genesis-prime),
-::view-transition-new(product-title-genesis-eclipse),
-::view-transition-new(product-title-genesis-solaris-2),
-::view-transition-new(product-title-genesis-equinox),
-::view-transition-new(product-title-genesis-solaris) {
-    animation: gt-title-in 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
-}
-
-@keyframes gt-title-out {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-@keyframes gt-title-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 /* Respect reduced motion */
@@ -130,28 +87,28 @@
 :root,
 .dark {
     /* Brand blue */
-    --gt-blue: #0071E3;
-    --gt-blue-light: #3694FF;
-    --gt-blue-dark: #0058B5;
-    --gt-blue-vivid: #0A84FF;
+    --gt-blue: #0071e3;
+    --gt-blue-light: #3694ff;
+    --gt-blue-dark: #0058b5;
+    --gt-blue-vivid: #0a84ff;
 
     /* Dark theme */
     --gt-dark-bg: #000000;
-    --gt-dark-surface: #1C1C1E;
-    --gt-dark-surface-elevated: #2C2C2E;
-    --gt-dark-text: #F5F5F7;
-    --gt-dark-text-secondary: #A1A1A6;
-    --gt-dark-text-muted: #6E6E73;
+    --gt-dark-surface: #1c1c1e;
+    --gt-dark-surface-elevated: #2c2c2e;
+    --gt-dark-text: #f5f5f7;
+    --gt-dark-text-secondary: #a1a1a6;
+    --gt-dark-text-muted: #6e6e73;
     --gt-dark-border: rgba(255, 255, 255, 0.08);
     --gt-dark-border-subtle: rgba(255, 255, 255, 0.04);
 
     /* Light theme */
-    --gt-light-bg: #FFFFFF;
-    --gt-light-surface: #F5F5F7;
-    --gt-light-surface-elevated: #EBEBED;
-    --gt-light-text: #1D1D1F;
-    --gt-light-text-secondary: #6E6E73;
-    --gt-light-text-muted: #A1A1A6;
+    --gt-light-bg: #ffffff;
+    --gt-light-surface: #f5f5f7;
+    --gt-light-surface-elevated: #ebebed;
+    --gt-light-text: #1d1d1f;
+    --gt-light-text-secondary: #6e6e73;
+    --gt-light-text-muted: #a1a1a6;
     --gt-light-border: rgba(0, 0, 0, 0.08);
     --gt-light-border-subtle: rgba(0, 0, 0, 0.04);
 
@@ -164,8 +121,8 @@
     --gt-text-muted: var(--gt-dark-text-muted);
     --gt-border: var(--gt-dark-border);
     --gt-border-subtle: var(--gt-dark-border-subtle);
-    --gt-danger: #FF453A;
-    --gt-success: #30D158;
+    --gt-danger: #ff453a;
+    --gt-success: #30d158;
 
     /* Legacy variable mappings */
     --background: 0 0% 0%;
@@ -217,13 +174,13 @@ body {
 
 /* Light section — subtle cool gradient for glass card contrast */
 .gt-section-light {
-    background: linear-gradient(180deg, #FFFFFF 0%, #F8F9FB 100%);
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fb 100%);
     color: var(--gt-light-text);
 }
 
 /* Light gray section — frosted background */
 .gt-section-light-gray {
-    background: linear-gradient(180deg, #F2F2F7 0%, #ECEDF2 100%);
+    background: linear-gradient(180deg, #f2f2f7 0%, #ecedf2 100%);
     color: var(--gt-light-text);
 }
 
@@ -241,7 +198,7 @@ body {
 
 .gt-header-bar {
     position: relative;
-    height: 52px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -303,8 +260,8 @@ body {
     display: flex;
     align-items: center;
     gap: 4px;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 300;
     letter-spacing: 0;
     color: var(--gt-dark-text-secondary);
     padding: 8px 12px;
@@ -319,10 +276,12 @@ body {
 .gt-dropdown-trigger:hover,
 .gt-dropdown.is-open .gt-dropdown-trigger {
     color: var(--gt-dark-text);
+    /* font-weight: 600; */
 }
 
 .gt-dropdown-trigger.is-active {
     color: var(--gt-dark-text);
+    /* font-weight: 600; */
 }
 
 /* Dropdown — uses HeroUI overlay pattern: solid bg + shadow, no backdrop-filter */
@@ -378,8 +337,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
     color: var(--gt-blue);
     padding: 8px 12px;
     transition: color 0.2s ease;
@@ -463,7 +422,9 @@ body {
 .gt-header.theme-light .gt-dropdown-menu {
     background: var(--gt-light-bg);
     border-color: var(--gt-light-border);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 12px 48px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 12px 48px rgba(0, 0, 0, 0.06);
 }
 
 .gt-header.theme-light .gt-dropdown-item {
@@ -483,7 +444,9 @@ body {
 .gt-header.theme-light .gt-mega-dropdown-menu {
     background: var(--gt-light-bg);
     border-color: var(--gt-light-border);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 16px 64px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 16px 64px rgba(0, 0, 0, 0.06);
 }
 
 .gt-header.theme-light .gt-mega-dropdown-label {
@@ -719,8 +682,12 @@ body {
 
 /* Ken Burns Zoom Effect */
 @keyframes ken-burns-zoom {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.06); }
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.06);
+    }
 }
 
 .ken-burns-zoom {
@@ -729,8 +696,14 @@ body {
 
 /* Slide fade in animation */
 @keyframes slide-fade-in {
-    0% { opacity: 0; transform: translateY(24px); }
-    100% { opacity: 1; transform: translateY(0); }
+    0% {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-slide-fade-in {
@@ -749,12 +722,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.5) 0%,
-        rgba(0, 0, 0, 0.3) 50%,
-        rgba(0, 0, 0, 0.7) 100%
-    );
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
 }
 
 .hero-slide {
@@ -791,20 +759,30 @@ body {
 }
 
 @media (max-width: 1599px) {
-    .hero-title { font-size: 56px; }
+    .hero-title {
+        font-size: 56px;
+    }
 }
 
 @media (max-width: 1199px) {
-    .hero-title { font-size: 48px; }
+    .hero-title {
+        font-size: 48px;
+    }
 }
 
 @media (max-width: 991px) {
-    .hero-title { font-size: 40px; }
+    .hero-title {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 479px) {
-    .hero-title { font-size: 32px; }
-    .hero-subtitle { font-size: 16px; }
+    .hero-title {
+        font-size: 32px;
+    }
+    .hero-subtitle {
+        font-size: 16px;
+    }
 }
 
 /* ===== Carousel/Slider ===== */
