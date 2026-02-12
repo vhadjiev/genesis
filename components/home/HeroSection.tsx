@@ -1,9 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -29,70 +29,70 @@ interface HeroSectionProps {
 export function HeroSection({ data, locale }: HeroSectionProps) {
     const title = getLocalizedContent(data.title, locale)
     const subtitle = getLocalizedContent(data.subtitle, locale)
+    const sectionRef = useRef<HTMLElement>(null)
+
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start start', 'end start'],
+    })
+
+    const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '30%'])
+    const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
 
     return (
-        <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-            {/* Background with Ken Burns */}
+        <section ref={sectionRef} className="gt-section-dark relative h-screen min-h-[700px] flex items-center overflow-hidden">
+            {/* Parallax background */}
             {data.backgroundImage ? (
-                <div className="absolute inset-0">
+                <motion.div className="absolute inset-0" style={{ y: bgY }}>
                     <Image
                         src={data.backgroundImage}
                         alt=""
                         fill
-                        className="object-cover ken-burns-zoom"
+                        className="object-cover scale-110"
                         priority
                     />
-                </div>
+                </motion.div>
             ) : (
-                /* Premium gradient placeholder */
-                <div className="absolute inset-0 bg-gradient-to-br from-[var(--gt-bg)] via-[var(--gt-surface)] to-[var(--gt-bg)]">
-                    <div className="absolute inset-0 opacity-[0.03]" style={{
-                        backgroundImage: 'radial-gradient(circle at 25% 25%, var(--gt-gold) 0%, transparent 50%), radial-gradient(circle at 75% 75%, var(--gt-gold) 0%, transparent 50%)',
+                <div className="absolute inset-0 bg-black">
+                    <div className="absolute inset-0 opacity-20" style={{
+                        backgroundImage: 'radial-gradient(circle at 30% 40%, var(--gt-blue) 0%, transparent 50%), radial-gradient(circle at 70% 60%, var(--gt-blue-dark) 0%, transparent 50%)',
                     }} />
                 </div>
             )}
             <div className="hero-overlay" />
 
             {/* Content */}
-            <div className="relative z-10 container mx-auto px-4 md:px-6">
+            <motion.div style={{ opacity }} className="relative z-10 container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
-                    className="hero-text max-w-3xl"
+                    className="hero-text max-w-4xl mx-auto"
                 >
-                    {/* Decorative label */}
-                    <motion.div
-                        initial={{ opacity: 0, width: 0 }}
-                        animate={{ opacity: 1, width: 48 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
-                        className="gold-accent-line mb-8"
-                    />
-
                     <h1 className="hero-title">
                         {title}
                     </h1>
                     <p className="hero-subtitle">{subtitle}</p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mt-10">
+                    <div className="flex flex-col sm:flex-row gap-4 mt-10 justify-center">
                         <Link
                             href={data.ctaPrimary ? data.ctaPrimary.href : '/equipment/genesis-universa'}
-                            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[var(--gt-gold)] hover:bg-[var(--gt-gold-light)] text-[var(--gt-bg)] font-semibold text-sm tracking-wide uppercase rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-[var(--gt-gold)]/15"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-[15px] rounded-full transition-all duration-300 hover:scale-[1.02]"
                         >
                             {data.ctaPrimary ? getLocalizedContent(data.ctaPrimary.text, locale) : (locale === 'bg' ? 'Разгледай системите' : 'Explore Our Systems')}
                         </Link>
                         <Link
                             href={data.ctaSecondary ? data.ctaSecondary.href : '/contacts'}
-                            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-[var(--gt-gold)]/30 hover:border-[var(--gt-gold)]/60 text-[var(--gt-text)] font-medium text-sm tracking-wide uppercase rounded-lg transition-all duration-300"
+                            className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white font-medium text-[15px] rounded-full transition-all duration-300 border border-white/20"
                         >
                             {data.ctaSecondary ? getLocalizedContent(data.ctaSecondary.text, locale) : (locale === 'bg' ? 'Заявете консултация' : 'Schedule a Consultation')}
                         </Link>
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
 
             {/* Bottom gradient fade */}
-            <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[var(--gt-bg)] to-transparent z-10" />
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
         </section>
     )
 }

@@ -31,11 +31,8 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
     const title = getLocalizedContent(data.title, locale)
 
     return (
-        <section className="py-32 relative">
-            {/* Subtle background gradient */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--gt-gold)]/[0.015] to-transparent" />
-
-            <div className="relative container mx-auto px-4 md:px-6">
+        <section className="gt-section-light py-28 lg:py-36">
+            <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -43,8 +40,7 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="font-display text-3xl md:text-4xl lg:text-[3.25rem] text-[var(--gt-text)] italic">{title}</h2>
-                    <div className="gold-accent-line mx-auto mt-8" />
+                    <h2 className="text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -60,20 +56,17 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                                className="glass-card rounded-2xl p-8 lg:p-10 text-center relative overflow-hidden group"
+                                className="modern-card rounded-2xl p-8 lg:p-10 text-center group"
                             >
-                                {/* Top gold accent line */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-0.5 bg-gradient-to-r from-transparent via-[var(--gt-gold)] to-transparent opacity-60 group-hover:w-20 group-hover:opacity-100 transition-all duration-500" />
-
-                                <div className="w-14 h-14 rounded-full bg-[var(--gt-gold)]/8 flex items-center justify-center mx-auto mb-7">
-                                    <Icon icon={pillar.icon} className="w-7 h-7 text-[var(--gt-gold)]" />
+                                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-7">
+                                    <Icon icon={pillar.icon} className="w-7 h-7 text-[var(--gt-blue)]" />
                                 </div>
-                                <h3 className="text-lg font-semibold text-[var(--gt-text)] mb-4">{pillarTitle}</h3>
-                                <p className="text-[var(--gt-text-secondary)] leading-relaxed mb-8 text-sm">{pillarDesc}</p>
+                                <h3 className="text-lg font-semibold text-[var(--gt-light-text)] mb-4">{pillarTitle}</h3>
+                                <p className="text-[var(--gt-light-text-secondary)] leading-relaxed mb-8 text-sm">{pillarDesc}</p>
 
-                                <div className="pt-6 border-t border-[var(--gt-border-subtle)]">
-                                    <div className="font-mono text-3xl font-bold text-gradient tracking-tight">{pillar.stat.value}</div>
-                                    <p className="text-[var(--gt-text-muted)] text-[11px] uppercase tracking-[0.15em] mt-2">{statLabel}</p>
+                                <div className="pt-6 border-t border-[var(--gt-light-border)]">
+                                    <div className="font-mono text-3xl font-bold text-[var(--gt-blue)] tracking-tight">{pillar.stat.value}</div>
+                                    <p className="text-[var(--gt-light-text-muted)] text-[11px] uppercase tracking-widest mt-2">{statLabel}</p>
                                 </div>
                             </motion.div>
                         )

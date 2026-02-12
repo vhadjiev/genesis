@@ -20,7 +20,7 @@ export function ProductGallery({ data }: ProductGalleryProps) {
     }
 
     return (
-        <section className="py-24">
+        <section className="gt-section-light py-24">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {data.images.map((image, index) => (
@@ -30,16 +30,14 @@ export function ProductGallery({ data }: ProductGalleryProps) {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.08 }}
-                            className="relative aspect-[4/3] rounded-2xl overflow-hidden glass-card group cursor-pointer"
+                            className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[var(--gt-light-surface)] group cursor-pointer shadow-sm"
                         >
                             <Image
                                 src={image}
                                 alt={`Product image ${index + 1}`}
                                 fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            {/* Premium hover overlay */}
-                            <div className="absolute inset-0 bg-[var(--gt-bg)]/0 group-hover:bg-[var(--gt-bg)]/20 transition-all duration-500" />
                         </motion.div>
                     ))}
                 </div>

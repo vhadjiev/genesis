@@ -2,7 +2,7 @@ import "../app.css";
 
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Providers } from "@/providers/Providers";
 import initTranslations from "@/app/i18n";
@@ -11,19 +11,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const GTM_ID = "GTM-MFZNM4LN";
 
-const dmSans = DM_Sans({
-  subsets: ["latin", "latin-ext"],
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "cyrillic"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-body",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  display: "swap",
-  variable: "--font-display",
+  variable: "--font-sans",
 });
 
 const jetBrainsMono = JetBrains_Mono({
@@ -96,7 +88,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0A0A0F",
+  themeColor: "#000000",
 };
 
 /**
@@ -127,7 +119,7 @@ export default async function RootLayout({
   });
 
   return (
-    <html lang={locale} className={`dark ${dmSans.variable} ${instrumentSerif.variable} ${jetBrainsMono.variable}`}>
+    <html lang={locale} className={`dark ${inter.variable} ${jetBrainsMono.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <Script
@@ -149,7 +141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${dmSans.className} antialiased min-h-screen bg-background text-foreground`}
+        className={`${inter.className} antialiased min-h-screen bg-background text-foreground`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -34,7 +34,6 @@ function useCounter(end: number, duration: number = 2000, shouldStart: boolean =
         const step = (timestamp: number) => {
             if (!startTime) startTime = timestamp
             const progress = Math.min((timestamp - startTime) / duration, 1)
-            // Ease out cubic
             const eased = 1 - Math.pow(1 - progress, 3)
             setCount(Math.floor(eased * end))
 
@@ -65,38 +64,42 @@ function StatCounter({ stat, locale, index }: { stat: StatItem; locale: string; 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.15 }}
-            className="text-center relative"
+            className="text-center"
         >
-            <div className="font-mono text-5xl md:text-6xl lg:text-7xl font-bold text-gradient mb-4 tracking-tighter">
+            <div className="font-mono text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tighter">
                 {Number.isInteger(stat.value) ? count : count.toFixed(1)}
-                {stat.suffix && <span>{stat.suffix}</span>}
+                {stat.suffix && <span className="text-[var(--gt-blue)]">{stat.suffix}</span>}
             </div>
-            <p className="text-[var(--gt-text-muted)] text-[11px] uppercase tracking-[0.15em]">{label}</p>
+            <p className="text-[var(--gt-dark-text-muted)] text-[12px] uppercase tracking-widest">{label}</p>
         </motion.div>
     )
 }
 
 export function StatsSection({ data, locale }: StatsSectionProps) {
-    return (
-        <section className="py-24 relative">
-            {/* Subtle divider line */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-gradient-to-b from-transparent via-[var(--gt-border)] to-transparent" />
+    const sectionRef = useRef<HTMLElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ['start end', 'end start'],
+    })
+    const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
 
-            <div className="container mx-auto px-4 md:px-6">
+    return (
+        <section ref={sectionRef} className="gt-section-dark py-28 lg:py-36 relative overflow-hidden">
+            {/* Parallax gradient bg */}
+            <motion.div
+                style={{ y: bgY }}
+                className="absolute inset-0 opacity-30"
+            >
+                <div className="absolute inset-0" style={{
+                    backgroundImage: 'radial-gradient(ellipse at 50% 50%, var(--gt-blue) 0%, transparent 70%)',
+                    opacity: 0.15,
+                }} />
+            </motion.div>
+
+            <div className="relative container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 max-w-4xl mx-auto">
                     {data.stats.map((stat, index) => (
-                        <React.Fragment key={index}>
-                            <StatCounter stat={stat} locale={locale} index={index} />
-                            {/* Gold separator between stats on desktop */}
-                            {index < data.stats.length - 1 && (
-                                <div className="hidden md:block absolute" style={{
-                                    left: `${((index + 1) / data.stats.length) * 100}%`,
-                                    top: '50%',
-                                    transform: 'translate(-50%, -50%)',
-                                }}>
-                                </div>
-                            )}
-                        </React.Fragment>
+                        <StatCounter key={index} stat={stat} locale={locale} index={index} />
                     ))}
                 </div>
             </div>

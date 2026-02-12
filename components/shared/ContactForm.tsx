@@ -125,9 +125,9 @@ export function ContactForm({ data, locale }: ContactFormProps) {
         }
     }
 
-    /** Premium gold-themed input classes */
+    /** Modern input classes */
     const inputClasses =
-        'w-full px-5 py-3.5 rounded-xl bg-[var(--gt-surface-elevated)] border border-[var(--gt-border-subtle)] text-[var(--gt-text)] placeholder-[var(--gt-text-muted)] focus:border-[var(--gt-gold)]/50 focus:outline-none focus:ring-2 focus:ring-[var(--gt-gold)]/10 transition-all duration-200 text-sm'
+        'w-full px-5 py-3.5 rounded-xl bg-[var(--gt-light-surface)] border border-[var(--gt-light-border)] text-[var(--gt-light-text)] placeholder-[var(--gt-light-text-muted)] focus:border-[var(--gt-blue)] focus:outline-none focus:ring-2 focus:ring-[var(--gt-blue)]/10 transition-all duration-200 text-sm'
 
     /** Success View */
     const SuccessView = () => (
@@ -142,15 +142,15 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: 'spring', stiffness: 200, damping: 15 }}
-                className="w-20 h-20 rounded-full bg-gradient-to-br from-[var(--gt-gold)] to-[var(--gt-gold-dim)] flex items-center justify-center mb-6 shadow-lg shadow-[var(--gt-gold)]/20"
+                className="w-20 h-20 rounded-full bg-[var(--gt-blue)] flex items-center justify-center mb-6"
             >
-                <Icon icon="mdi:check" className="w-10 h-10 text-[var(--gt-bg)]" />
+                <Icon icon="mdi:check" className="w-10 h-10 text-white" />
             </motion.div>
             <motion.h3
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="font-display text-2xl text-[var(--gt-text)] mb-3 italic"
+                className="text-2xl font-semibold text-[var(--gt-light-text)] mb-3"
             >
                 {t(variant === 'equipment' ? 'equipmentRental.form.successTitle' : 'contact.form.successTitle')}
             </motion.h3>
@@ -158,7 +158,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-[var(--gt-text-secondary)] max-w-md mb-8 leading-relaxed"
+                className="text-[var(--gt-light-text-secondary)] max-w-md mb-8 leading-relaxed"
             >
                 {t(variant === 'equipment' ? 'equipmentRental.form.successDescription' : 'contact.form.successDescription')}
             </motion.p>
@@ -169,7 +169,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                 onClick={handleSendAnother}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[var(--gt-border)] text-[var(--gt-text)] font-medium hover:border-[var(--gt-gold)]/30 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--gt-light-border)] text-[var(--gt-light-text)] font-medium hover:border-[var(--gt-blue)] transition-colors"
             >
                 <Icon icon="mdi:plus" className="w-5 h-5" />
                 {t(variant === 'equipment' ? 'equipmentRental.form.sendAnother' : 'contact.form.sendAnother')}
@@ -185,7 +185,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                     initial={{ opacity: 0, y: -10, height: 0 }}
                     animate={{ opacity: 1, y: 0, height: 'auto' }}
                     exit={{ opacity: 0, y: -10, height: 0 }}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-[var(--gt-danger)]/10 border border-[var(--gt-danger)]/20 text-[var(--gt-danger)]"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-600"
                 >
                     <Icon icon="mdi:alert-circle" className="w-5 h-5 shrink-0" />
                     <span className="text-sm font-medium">
@@ -216,16 +216,16 @@ export function ContactForm({ data, locale }: ContactFormProps) {
             whileTap={{ scale: 0.98 }}
             className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-200 border disabled:opacity-50 disabled:cursor-not-allowed ${
                 isSelected
-                    ? 'bg-[var(--gt-gold)] text-[var(--gt-bg)] border-[var(--gt-gold)] shadow-md shadow-[var(--gt-gold)]/15'
-                    : 'bg-[var(--gt-surface-elevated)] text-[var(--gt-text-secondary)] border-[var(--gt-border-subtle)] hover:border-[var(--gt-gold)]/30'
+                    ? 'bg-[var(--gt-blue)] text-white border-[var(--gt-blue)]'
+                    : 'bg-[var(--gt-light-surface)] text-[var(--gt-light-text-secondary)] border-[var(--gt-light-border)] hover:border-[var(--gt-blue)]'
             }`}
         >
             <span
                 className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all ${
-                    isSelected ? 'border-[var(--gt-bg)] bg-[var(--gt-bg)]' : 'border-[var(--gt-text-muted)] bg-transparent'
+                    isSelected ? 'border-white bg-white' : 'border-[var(--gt-light-text-muted)] bg-transparent'
                 }`}
             >
-                {isSelected && <Icon icon="mdi:check" className="w-3 h-3 text-[var(--gt-gold)]" />}
+                {isSelected && <Icon icon="mdi:check" className="w-3 h-3 text-[var(--gt-blue)]" />}
             </span>
             {children}
         </motion.button>
@@ -238,7 +238,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
             disabled={status === 'submitting'}
             whileHover={{ scale: status === 'submitting' ? 1 : 1.01 }}
             whileTap={{ scale: status === 'submitting' ? 1 : 0.99 }}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[var(--gt-gold)] text-[var(--gt-bg)] font-semibold text-sm uppercase tracking-wide hover:bg-[var(--gt-gold-light)] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-[var(--gt-gold)]/15"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[var(--gt-blue)] text-white font-medium text-[15px] hover:bg-[var(--gt-blue-light)] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
         >
             {status === 'submitting' ? (
                 <>
@@ -257,9 +257,8 @@ export function ContactForm({ data, locale }: ContactFormProps) {
     // Equipment variant
     if (variant === 'equipment') {
         return (
-            <section className="py-16" style={{ backgroundColor: 'var(--gt-surface)' }}>
+            <section className="gt-section-light-gray py-16">
                 <div className="container mx-auto px-4 md:px-6 max-w-xl">
-                    <div className="border-t border-[var(--gt-border-subtle)] mb-12" />
                     <AnimatePresence mode="wait">
                         {status === 'success' ? (
                             <SuccessView key="success" />
@@ -274,34 +273,33 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                 className="space-y-5"
                             >
                                 <div className="text-center mb-8">
-                                    <h3 className="font-display text-2xl text-[var(--gt-text)] mb-3 italic">
+                                    <h3 className="text-2xl font-semibold text-[var(--gt-light-text)] mb-3">
                                         {getLocalizedContent(data.title, locale)}
                                     </h3>
-                                    <div className="gold-accent-line mx-auto" />
                                 </div>
                                 <ErrorBanner />
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                            {t('equipmentRental.form.name')} <span className="text-[var(--gt-danger)]">*</span>
+                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                            {t('equipmentRental.form.name')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="text" required value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder={t('equipmentRental.form.name')} />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                            {t('equipmentRental.form.mobile')} <span className="text-[var(--gt-danger)]">*</span>
+                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                            {t('equipmentRental.form.mobile')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="+359 ..." />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                        {t('equipmentRental.form.email')} <span className="text-[var(--gt-danger)]">*</span>
+                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                        {t('equipmentRental.form.email')} <span className="text-red-500">*</span>
                                     </label>
                                     <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="email@example.com" />
                                 </div>
                                 <div className="space-y-3">
-                                    <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">{t('equipmentRental.form.categories')}</label>
+                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.categories')}</label>
                                     <div className="flex flex-wrap gap-2">
                                         {equipmentCategories.map((category) => (
                                             <ChipButton key={category} isSelected={selectedCategories.includes(category)} onClick={() => handleCheckboxChange(category, selectedCategories, setSelectedCategories)} disabled={status === 'submitting'}>
@@ -311,7 +309,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">{t('equipmentRental.form.message')}</label>
+                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.message')}</label>
                                     <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} disabled={status === 'submitting'} className={`${inputClasses} resize-none`} placeholder={t('equipmentRental.form.message')} />
                                 </div>
                                 <SubmitButton />
@@ -325,10 +323,10 @@ export function ContactForm({ data, locale }: ContactFormProps) {
 
     // Full Contact Form
     return (
-        <section className="py-16" style={{ backgroundColor: 'var(--gt-bg)' }}>
+        <section className="gt-section-light py-16">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div className="glass-card rounded-2xl p-7 md:p-9 overflow-hidden">
+                    <div className="bg-white rounded-2xl p-7 md:p-9 shadow-sm overflow-hidden">
                         <AnimatePresence mode="wait">
                             {status === 'success' ? (
                                 <SuccessView key="success" />
@@ -343,35 +341,35 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     className="space-y-5"
                                 >
                                     <div className="mb-6">
-                                        <h3 className="font-display text-xl text-[var(--gt-text)] mb-3 italic">
+                                        <h3 className="text-xl font-semibold text-[var(--gt-light-text)] mb-3">
                                             {getLocalizedContent(data.title, locale)}
                                         </h3>
-                                        <div className="gold-accent-line" />
+                                        <div className="accent-line" />
                                     </div>
                                     <ErrorBanner />
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                                {t('contact.form.name')} <span className="text-[var(--gt-danger)]">*</span>
+                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                                {t('contact.form.name')} <span className="text-red-500">*</span>
                                             </label>
                                             <input type="text" required value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder={t('contact.form.name')} />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                                {t('contact.form.mobile')} <span className="text-[var(--gt-danger)]">*</span>
+                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                                {t('contact.form.mobile')} <span className="text-red-500">*</span>
                                             </label>
                                             <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="+359 ..." />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">
-                                            {t('contact.form.email')} <span className="text-[var(--gt-danger)]">*</span>
+                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                            {t('contact.form.email')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="email@example.com" />
                                     </div>
                                     {data.projectTypes && data.projectTypes.length > 0 && (
                                         <div className="space-y-3">
-                                            <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">{t('contact.form.projectType')}</label>
+                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.projectType')}</label>
                                             <div className="flex flex-wrap gap-2">
                                                 {data.projectTypes.map((type) => (
                                                     <ChipButton key={type.id} isSelected={selectedProjects.includes(type.id)} onClick={() => handleCheckboxChange(type.id, selectedProjects, setSelectedProjects)} disabled={status === 'submitting'}>
@@ -383,7 +381,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     )}
                                     {data.serviceTypes && data.serviceTypes.length > 0 && (
                                         <div className="space-y-3">
-                                            <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">{t('contact.form.services')}</label>
+                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.services')}</label>
                                             <div className="flex flex-wrap gap-2">
                                                 {data.serviceTypes.map((type) => (
                                                     <ChipButton key={type.id} isSelected={selectedServices.includes(type.id)} onClick={() => handleCheckboxChange(type.id, selectedServices, setSelectedServices)} disabled={status === 'submitting'}>
@@ -394,7 +392,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                         </div>
                                     )}
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-text-secondary)]">{t('contact.form.description')}</label>
+                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.description')}</label>
                                         <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} disabled={status === 'submitting'} className={`${inputClasses} resize-none`} placeholder={t('contact.form.description')} />
                                     </div>
                                     <SubmitButton />

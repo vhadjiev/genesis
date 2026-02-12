@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Icon } from '@iconify/react'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -52,7 +53,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
         : PLACEHOLDER_TESTIMONIALS(locale)
 
     return (
-        <section className="py-32">
+        <section className="gt-section-light py-28 lg:py-36">
             <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -61,8 +62,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="font-display text-3xl md:text-4xl text-[var(--gt-text)] italic">{title}</h2>
-                    <div className="gold-accent-line mx-auto mt-8" />
+                    <h2 className="text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -73,19 +73,21 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="glass-card rounded-2xl p-8 lg:p-9 relative"
+                            className="modern-card rounded-2xl p-8 lg:p-9 relative"
                         >
-                            {/* Left gold accent border */}
-                            <div className="absolute left-0 top-8 bottom-8 w-0.5 bg-gradient-to-b from-[var(--gt-gold)] via-[var(--gt-gold)]/40 to-transparent rounded-full" />
+                            {/* Blue accent top bar */}
+                            <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-[var(--gt-blue)] to-transparent opacity-40" />
 
-                            {/* Large decorative serif quote mark */}
-                            <span className="font-display text-6xl text-[var(--gt-gold)]/15 absolute top-4 right-6 select-none leading-none">&ldquo;</span>
+                            {/* Quote icon */}
+                            <div className="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+                                <Icon icon="mdi:format-quote-close" className="w-5 h-5 text-[var(--gt-blue)]" />
+                            </div>
 
-                            <p className="text-[var(--gt-text)]/85 mb-8 leading-relaxed relative pl-4 text-[15px]">{testimonial.quote}</p>
+                            <p className="text-[var(--gt-light-text)] mb-8 leading-relaxed text-[15px]">{testimonial.quote}</p>
 
-                            <div className="pl-4 border-t border-[var(--gt-border-subtle)] pt-5">
-                                <p className="font-semibold text-[var(--gt-text)] text-sm">{testimonial.author}</p>
-                                <p className="text-[11px] text-[var(--gt-text-muted)] uppercase tracking-[0.1em] mt-0.5">{testimonial.role}</p>
+                            <div className="pt-5 border-t border-[var(--gt-light-border)]">
+                                <p className="font-semibold text-[var(--gt-light-text)] text-sm">{testimonial.author}</p>
+                                <p className="text-[12px] text-[var(--gt-light-text-muted)] mt-0.5">{testimonial.role}</p>
                             </div>
                         </motion.div>
                     ))}

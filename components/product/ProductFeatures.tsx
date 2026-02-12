@@ -24,7 +24,7 @@ interface ProductFeaturesProps {
 
 export function ProductFeatures({ data, locale }: ProductFeaturesProps) {
     return (
-        <section className="py-24">
+        <section className="gt-section-light py-24 lg:py-28">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
                     {data.features.map((feature, index) => {
@@ -37,16 +37,13 @@ export function ProductFeatures({ data, locale }: ProductFeaturesProps) {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="glass-card rounded-2xl p-7 text-center group relative overflow-hidden"
+                                className="modern-card rounded-2xl p-7 text-center group"
                             >
-                                {/* Top gold accent */}
-                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-gradient-to-r from-transparent via-[var(--gt-gold)] to-transparent opacity-40 group-hover:w-16 group-hover:opacity-80 transition-all duration-500" />
-
-                                <div className="w-14 h-14 rounded-xl bg-[var(--gt-gold)]/8 flex items-center justify-center mx-auto mb-5">
-                                    <Icon icon={feature.icon} className="w-7 h-7 text-[var(--gt-gold)]" />
+                                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-5">
+                                    <Icon icon={feature.icon} className="w-7 h-7 text-[var(--gt-blue)]" />
                                 </div>
-                                <h3 className="text-base font-semibold text-[var(--gt-text)] mb-2">{title}</h3>
-                                <p className="text-[var(--gt-text-muted)] text-sm leading-relaxed">{description}</p>
+                                <h3 className="text-base font-semibold text-[var(--gt-light-text)] mb-2">{title}</h3>
+                                <p className="text-[var(--gt-light-text-muted)] text-sm leading-relaxed">{description}</p>
                             </motion.div>
                         )
                     })}

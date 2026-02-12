@@ -34,7 +34,7 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
     const solutionDesc = getLocalizedContent(data.solution.description, locale)
 
     return (
-        <section className="py-32 relative">
+        <section className="gt-section-light py-28 lg:py-36">
             <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -43,15 +43,14 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="font-display text-3xl md:text-4xl lg:text-[3.25rem] text-[var(--gt-text)] max-w-4xl mx-auto leading-[1.15] italic">
+                    <h2 className="text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-light-text)] max-w-3xl mx-auto leading-tight tracking-tight">
                         {title}
                     </h2>
-                    <div className="gold-accent-line mx-auto mt-8" />
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
                     {/* Problems */}
-                    <div className="space-y-5">
+                    <div className="space-y-4">
                         {data.problems.map((problem, index) => {
                             const problemTitle = getLocalizedContent(problem.title, locale)
                             const problemDesc = getLocalizedContent(problem.description, locale)
@@ -62,14 +61,14 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                                     whileInView={{ opacity: 1, x: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: index * 0.12 }}
-                                    className="glass-card rounded-2xl p-7 flex gap-5"
+                                    className="modern-card rounded-2xl p-7 flex gap-5"
                                 >
-                                    <div className="shrink-0 w-10 h-10 rounded-full bg-[var(--gt-danger)]/10 flex items-center justify-center mt-0.5">
-                                        <Icon icon="mdi:alert-circle-outline" className="w-5 h-5 text-[var(--gt-danger)]" />
+                                    <div className="shrink-0 w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center mt-0.5">
+                                        <Icon icon="mdi:alert-circle-outline" className="w-5 h-5 text-red-500" />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-[var(--gt-text)] text-lg mb-1.5">{problemTitle}</h3>
-                                        <p className="text-[var(--gt-text-secondary)] leading-relaxed">{problemDesc}</p>
+                                        <h3 className="font-semibold text-[var(--gt-light-text)] text-lg mb-1.5">{problemTitle}</h3>
+                                        <p className="text-[var(--gt-light-text-secondary)] leading-relaxed">{problemDesc}</p>
                                     </div>
                                 </motion.div>
                             )
@@ -82,17 +81,14 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="glass-card rounded-2xl p-9 border-[var(--gt-border)] relative overflow-hidden"
+                        className="rounded-2xl p-9 bg-[var(--gt-light-surface)] relative overflow-hidden"
                     >
-                        {/* Gold glow effect */}
-                        <div className="absolute -top-20 -right-20 w-40 h-40 bg-[var(--gt-gold)]/[0.04] rounded-full blur-3xl" />
-
                         <div className="relative">
-                            <div className="w-12 h-12 rounded-full bg-[var(--gt-gold)]/10 flex items-center justify-center mb-6">
-                                <Icon icon="mdi:check-circle" className="w-6 h-6 text-[var(--gt-gold)]" />
+                            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+                                <Icon icon="mdi:check-circle" className="w-6 h-6 text-[var(--gt-blue)]" />
                             </div>
-                            <h3 className="font-display text-2xl italic text-[var(--gt-text)] mb-4">{solutionTitle}</h3>
-                            <p className="text-[var(--gt-text-secondary)] leading-relaxed text-lg">{solutionDesc}</p>
+                            <h3 className="text-2xl font-semibold text-[var(--gt-light-text)] mb-4">{solutionTitle}</h3>
+                            <p className="text-[var(--gt-light-text-secondary)] leading-relaxed text-lg">{solutionDesc}</p>
                         </div>
                     </motion.div>
                 </div>
