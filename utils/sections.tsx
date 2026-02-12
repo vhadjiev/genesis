@@ -1,7 +1,6 @@
 /**
  * Section Type Registry with dynamic imports and Suspense boundaries
- * Vercel best practice 2.4: Dynamic Imports for Heavy Components
- * Vercel best practice 1.5: Strategic Suspense Boundaries
+ * Maps section type strings from page JSON to React components
  */
 
 import { Suspense, ComponentType } from "react";
@@ -35,97 +34,138 @@ const sectionComponents: Record<
   string,
   ComponentType<SectionComponentProps>
 > = {
-  // Home page sections
-  heroSlider: dynamic<SectionComponentProps>(
+  // ===== Home page sections =====
+  heroSection: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/HeroSlider").then((m) => m.HeroSlider) as Promise<
+      import("@/components/home/HeroSection").then((m) => m.HeroSection) as Promise<
         ComponentType<SectionComponentProps>
       >,
     { loading: () => <SectionSkeleton /> }
   ),
-  gallerySwiper: dynamic<SectionComponentProps>(
+  featuredProducts: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/GallerySwiper").then((m) => m.GallerySwiper) as Promise<
+      import("@/components/home/FeaturedProducts").then((m) => m.FeaturedProducts) as Promise<
         ComponentType<SectionComponentProps>
       >,
     { loading: () => <SectionSkeleton /> }
   ),
-  servicesCarousel: dynamic<SectionComponentProps>(
+  statsSection: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/ServicesCarousel").then(
-        (m) => m.ServicesCarousel
+      import("@/components/home/StatsSection").then((m) => m.StatsSection) as Promise<
+        ComponentType<SectionComponentProps>
+      >,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  partnersSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/PartnersSection").then((m) => m.PartnersSection) as Promise<
+        ComponentType<SectionComponentProps>
+      >,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  testimonialsSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/TestimonialsSection").then(
+        (m) => m.TestimonialsSection
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),
-  processSteps: dynamic<SectionComponentProps>(
+  ctaSection: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/ProcessSteps").then(
-        (m) => m.ProcessSteps
+      import("@/components/home/CTASection").then((m) => m.CTASection) as Promise<
+        ComponentType<SectionComponentProps>
+      >,
+    { loading: () => <SectionSkeleton /> }
+  ),
+
+  // ===== Product page sections =====
+  productHero: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductHero").then((m) => m.ProductHero) as Promise<
+        ComponentType<SectionComponentProps>
+      >,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  productFeatures: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductFeatures").then(
+        (m) => m.ProductFeatures
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),
-  featuresGrid: dynamic<SectionComponentProps>(
+  productSpecs: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/FeaturesGrid").then(
-        (m) => m.FeaturesGrid
+      import("@/components/product/ProductSpecs").then(
+        (m) => m.ProductSpecs
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),
-  workingRooms: dynamic<SectionComponentProps>(
+  productGallery: dynamic<SectionComponentProps>(
     () =>
-      import("@/components/home/WorkingRooms").then(
-        (m) => m.WorkingRooms
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  rentToShoot: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/home/RentToShoot").then(
-        (m) => m.RentToShoot
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  andromedaEffect: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/home/AndromedaEffect").then(
-        (m) => m.AndromedaEffect
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  studioEquipment: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/home/StudioEquipment").then(
-        (m) => m.StudioEquipment
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  completedProjects: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/home/CompletedProjects").then(
-        (m) => m.CompletedProjects
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  conceptionSection: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/home/ConceptionSection").then(
-        (m) => m.ConceptionSection
+      import("@/components/product/ProductGallery").then(
+        (m) => m.ProductGallery
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),
 
-  // Shared sections
+  // ===== Service page sections =====
+  serviceHero: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/services/ServiceHero").then(
+        (m) => m.ServiceHero
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  serviceDetails: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/services/ServiceDetails").then(
+        (m) => m.ServiceDetails
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  serviceCapabilities: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/services/ServiceCapabilities").then(
+        (m) => m.ServiceCapabilities
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+
+  // ===== Company sections =====
+  companyOverview: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/company/CompanyOverview").then(
+        (m) => m.CompanyOverview
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  projectsGrid: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/company/ProjectsGrid").then(
+        (m) => m.ProjectsGrid
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  newsGrid: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/company/NewsGrid").then(
+        (m) => m.NewsGrid
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  exhibitionsGrid: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/company/ExhibitionsGrid").then(
+        (m) => m.ExhibitionsGrid
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+
+  // ===== Shared sections =====
   pageBanner: dynamic<SectionComponentProps>(
     () =>
       import("@/components/shared/PageBanner").then(
         (m) => m.PageBanner
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-  imageGallery: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/shared/ImageGallery").then(
-        (m) => m.ImageGallery
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),
@@ -137,16 +177,7 @@ const sectionComponents: Record<
     { loading: () => <SectionSkeleton /> }
   ),
 
-  // Equipment page sections
-  equipmentList: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/sections/EquipmentList").then(
-        (m) => m.EquipmentList
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-
-  // Contacts page sections
+  // ===== Contacts page sections =====
   contactInfo: dynamic<SectionComponentProps>(
     () =>
       import("@/components/sections/ContactInfo").then(
@@ -165,15 +196,6 @@ const sectionComponents: Record<
     () =>
       import("@/components/sections/MapEmbed").then(
         (m) => m.MapEmbed
-      ) as Promise<ComponentType<SectionComponentProps>>,
-    { loading: () => <SectionSkeleton /> }
-  ),
-
-  // Events page sections
-  eventsGrid: dynamic<SectionComponentProps>(
-    () =>
-      import("@/components/sections/EventsGrid").then(
-        (m) => m.EventsGrid
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),

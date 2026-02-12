@@ -1,0 +1,35 @@
+{
+  "id": "genesis-prime",
+  "slug": "equipment/genesis-prime",
+  "seo": {
+    "bg": {
+      "title": "Genesis Prime - Автоматична кафемашина",
+      "description": "Първата ни автоматична кафемашина с клауд система и един бункер за зърнено кафе.",
+      "keywords": ["genesis prime", "кафемашина", "автоматична", "клауд"]
+    },
+    "en": {
+      "title": "Genesis Prime - Automatic Coffee Machine",
+      "description": "Our first automatic coffee machine with cloud system and single bean hopper.",
+      "keywords": ["genesis prime", "coffee machine", "automatic", "cloud"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Prime",
+      "tagline": { "bg": "Първата ни кафемашина", "en": "Our First Coffee Machine" },
+      "description": { "bg": "Разполага с клауд система и един бункер за зърнено кафе.", "en": "Features a cloud system and a single bean hopper." },
+      "image": "/images/products/prime.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:cloud", "title": { "bg": "Клауд система", "en": "Cloud System" }, "description": { "bg": "Дистанционно управление", "en": "Remote management" } },
+        { "icon": "mdi:coffee", "title": { "bg": "Един бункер", "en": "Single Hopper" }, "description": { "bg": "За зърнено кафе", "en": "For coffee beans" } },
+        { "icon": "mdi:certificate", "title": { "bg": "TÜV Nord", "en": "TÜV Nord" }, "description": { "bg": "Сертифицирано качество", "en": "Certified quality" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

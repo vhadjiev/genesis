@@ -1,0 +1,34 @@
+{
+  "id": "genesis-solaris",
+  "slug": "equipment/genesis-solaris",
+  "seo": {
+    "bg": {
+      "title": "Genesis Solaris - Post Mix сок машина",
+      "description": "Post-mix сок и напитки машина за ХоРеКа индустрията.",
+      "keywords": ["genesis solaris", "сок машина", "post mix", "хорека"]
+    },
+    "en": {
+      "title": "Genesis Solaris - Post Mix Juice Machine",
+      "description": "Post-mix juice and beverage dispensing machine for the HoReCa industry.",
+      "keywords": ["genesis solaris", "juice machine", "post mix", "horeca"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Solaris",
+      "tagline": { "bg": "Сок машина Post Mix", "en": "Post Mix Juice Machine" },
+      "description": { "bg": "Универсалното решение за направата на сокове и напитки.", "en": "The universal solution for making juices and beverages." },
+      "image": "/images/products/solaris.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:fruit-watermelon", "title": { "bg": "Post Mix", "en": "Post Mix" }, "description": { "bg": "Система за смесване на напитки", "en": "Beverage mixing system" } },
+        { "icon": "mdi:cup-water", "title": { "bg": "Сокове", "en": "Juices" }, "description": { "bg": "Фрешове и натурални сокове", "en": "Fresh and natural juices" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

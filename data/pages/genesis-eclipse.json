@@ -1,0 +1,36 @@
+{
+  "id": "genesis-eclipse",
+  "slug": "equipment/genesis-eclipse",
+  "seo": {
+    "bg": {
+      "title": "Genesis Eclipse - Коктейл Бар Система",
+      "description": "Универсална коктейл бар система с CO₂ за алкохолни, безалкохолни и газирани напитки. 250+ напитки.",
+      "keywords": ["genesis eclipse", "бар система", "коктейли", "CO2", "газирани напитки"]
+    },
+    "en": {
+      "title": "Genesis Eclipse - Cocktail Bar System",
+      "description": "Universal cocktail bar system with CO₂ for alcoholic, non-alcoholic and carbonated drinks. 250+ drinks.",
+      "keywords": ["genesis eclipse", "bar system", "cocktails", "CO2", "carbonated drinks"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Eclipse",
+      "tagline": { "bg": "Коктейл Бар Система", "en": "Cocktail Bar System" },
+      "description": { "bg": "Съчетаваща високата производителност и уникалния си луксозен дизайн. Многообразие на коктейли, шотове, алкохолни, безалкохолни напитки.", "en": "Combining high performance and unique luxury design. A variety of cocktails, shots, alcoholic and non-alcoholic drinks." },
+      "image": "/images/products/eclipse.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:glass-cocktail", "title": { "bg": "250+ напитки", "en": "250+ Drinks" }, "description": { "bg": "Многообразие от рецепти", "en": "Wide variety of recipes" } },
+        { "icon": "mdi:molecule-co2", "title": { "bg": "CO₂ Система", "en": "CO₂ System" }, "description": { "bg": "За газирани напитки", "en": "For carbonated drinks" } },
+        { "icon": "mdi:palette", "title": { "bg": "Луксозен дизайн", "en": "Luxury Design" }, "description": { "bg": "Персонализиран дизайн", "en": "Customizable design" } },
+        { "icon": "mdi:tune", "title": { "bg": "Персонализация", "en": "Customization" }, "description": { "bg": "Персонализиране на рецепти", "en": "Customize every recipe" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

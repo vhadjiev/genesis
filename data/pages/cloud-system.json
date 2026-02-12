@@ -1,0 +1,40 @@
+{
+  "id": "cloud-system",
+  "slug": "services/cloud-system",
+  "seo": {
+    "bg": {
+      "title": "Облачна система - Дистанционно управление",
+      "description": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията за напитки. Анализ, отчети и оптимизация.",
+      "keywords": ["облачна система", "клауд", "дистанционно управление", "мониторинг"]
+    },
+    "en": {
+      "title": "Cloud System - Remote Management",
+      "description": "Cloud-based remote management system for monitoring and controlling beverage equipment. Analytics, reports and optimization.",
+      "keywords": ["cloud system", "remote management", "monitoring", "analytics"]
+    }
+  },
+  "sections": [
+    {
+      "type": "serviceHero",
+      "name": { "bg": "Облачна система", "en": "Cloud System" },
+      "tagline": { "bg": "Дистанционно управление", "en": "Remote Management" },
+      "description": { "bg": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията.", "en": "Cloud-based system for remote monitoring and control of equipment." },
+      "image": "/images/services/cloud-system.jpg"
+    },
+    {
+      "type": "serviceDetails",
+      "title": { "bg": "Функционалности", "en": "Features" },
+      "features": [
+        { "icon": "mdi:monitor-dashboard", "title": { "bg": "Табло за управление", "en": "Dashboard" }, "description": { "bg": "Реално време мониторинг на всички съоръжения", "en": "Real-time monitoring of all equipment" } },
+        { "icon": "mdi:chart-line", "title": { "bg": "Анализи и отчети", "en": "Analytics & Reports" }, "description": { "bg": "Подробни отчети за продажби и консумация", "en": "Detailed sales and consumption reports" } },
+        { "icon": "mdi:cellphone-link", "title": { "bg": "Мобилно приложение", "en": "Mobile App" }, "description": { "bg": "Управление от телефон или таблет", "en": "Control from phone or tablet" } },
+        { "icon": "mdi:alert-circle", "title": { "bg": "Известия", "en": "Notifications" }, "description": { "bg": "Автоматични известия при нужда от сервиз", "en": "Automatic notifications when service is needed" } }
+      ]
+    },
+    {
+      "type": "serviceCapabilities",
+      "title": { "bg": "Възможности", "en": "Capabilities" },
+      "items": []
+    }
+  ]
+}

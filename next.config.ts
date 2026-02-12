@@ -2,7 +2,6 @@ import type { NextConfig } from 'next'
 import { withBotId } from 'botid/next/config'
 
 const nextConfig: NextConfig = {
-    /* config options here */
     images: {
         remotePatterns: [
             {
@@ -33,21 +32,6 @@ const nextConfig: NextConfig = {
     // Explicitly set the workspace root to silence turbopack warning
     turbopack: {
         root: __dirname,
-    },
-
-    async redirects() {
-        const AUTH_URL = process.env.NEXT_PUBLIC_AUTH_URL as string
-        const APP_URL = process.env.NEXT_PUBLIC_APP_URL as string
-
-        return [
-            {
-                source: '/logout/:token',
-                destination: `${AUTH_URL}/oidc/logout?id_token_hint=:token&post_logout_redirect_uri=${encodeURIComponent(
-                    APP_URL
-                )}`,
-                permanent: true,
-            },
-        ]
     },
 }
 

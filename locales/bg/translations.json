@@ -1,50 +1,38 @@
 {
     "site": {
-        "name": "UBC Sound & Cinema"
-    },
-    "rooms": {
-        "info": "Инфо",
-        "openInfo": "Покажи информация за стаята",
-        "closeInfo": "Скрий информация за стаята"
-    },
-    "common": {
-        "close": "Затвори"
+        "name": "Генезис Текнолоджи"
     },
     "nav": {
-        "studio": "Студио",
-        "gallery": "Галерия",
-        "equipment": "Оборудване под наем",
-        "events": "Събития",
+        "home": "Начало",
+        "equipment": "Съоръжения",
+        "services": "Услуги",
+        "about": "За нас",
         "contacts": "Контакти",
+        "genesisAlpha": "Genesis Alpha",
+        "genesisPrime": "Genesis Prime",
+        "genesisUniversa": "Genesis Universa",
+        "genesisEclipse": "Genesis Eclipse",
+        "genesisSolaris": "Genesis Solaris",
+        "genesisSolaris2": "Genesis Solaris 2",
+        "genesisEquinox": "Genesis Equinox",
+        "cloudSystem": "Облачна система",
+        "laserCutting": "Лазерно рязане",
+        "sheetMetalBending": "Огъване на ламарина",
+        "news": "Новини",
+        "exhibitions": "Изложения",
+        "projects": "Проекти",
         "language": "Език"
     },
     "footer": {
-        "sitemap": "Карта на сайта",
+        "company": "Компания",
         "contacts": "Контакти",
         "location": "Локация",
-        "mobile": "Телефон"
-    },
-    "equipmentRental": {
-        "categories": {
-            "cameras": "Камери",
-            "lenses": "Обективи",
-            "fieldRecorders": "Полеви рекордери / Монитори",
-            "microphones": "Микрофони",
-            "storage": "Носители за съхранение",
-            "sticks": "Стативи"
-        },
-        "form": {
-            "title": "Заявка за оборудване",
-            "name": "Вашето име",
-            "mobile": "Мобилен номер",
-            "email": "Вашият имейл",
-            "categories": "Категории оборудване",
-            "message": "Съобщение",
-            "submit": "Изпрати",
-            "successTitle": "Заявката е изпратена!",
-            "successDescription": "Благодарим ви за заявката за оборудване под наем. Ще прегледаме вашите изисквания и ще се свържем с вас скоро.",
-            "sendAnother": "Изпрати нова заявка"
-        }
+        "phone": "Телефон",
+        "tagline": "Производство на автоматични кафемашини и съоръжения за напитки за ХоРеКа индустрията.",
+        "rights": "Всички права запазени.",
+        "certificate": "Сертификат #3653 U1",
+        "addressLine1": "ул. Брезовско шосе 145",
+        "addressLine2": "4003 Пловдив, България"
     },
     "contact": {
         "form": {
@@ -52,50 +40,19 @@
             "name": "Вашето име",
             "mobile": "Вашият мобилен номер",
             "email": "Вашият имейл",
-            "projectType": "Какъв е вашият проект (можете да изберете повече от една опция):",
-            "projectTypes": {
-                "featureFilm": "Пълнометражен филм",
-                "shortFilm": "Къс филм",
-                "musicVideo": "Музикално видео",
-                "album": "Албум",
-                "single": "Сингъл",
-                "audiobook": "Аудиокнига",
-                "podcast": "Подкаст",
-                "other": "Друго / Моля, уточнете в описанието"
-            },
-            "services": "От какво се нуждаете (можете да изберете повече от една опция):",
-            "serviceTypes": {
-                "postProduction": "Филмова / Видео постпродукция",
-                "editing": "Монтаж",
-                "colorGrading": "Цветова корекция",
-                "vfx": "Визуални ефекти (VFX)",
-                "cinematography": "Видео заснемане / Кинематография",
-                "directing": "Режисура",
-                "studioRecording": "Студиен звукозапис",
-                "fieldRecording": "Полеви звукозапис",
-                "filmMusic": "Филмова музика",
-                "musicComposition": "Композиране на музика",
-                "musicProduction": "Музикална продукция",
-                "musicRecording": "Музикален запис",
-                "foley": "Foley и създаване/запис на звукови ефекти",
-                "voiceover": "Войсоувър",
-                "dubbing": "Дублаж",
-                "soundDesign": "Звуков дизайн",
-                "mixingMastering": "Миксиране / Мастеринг",
-                "rendering": "Финално видео рендиране",
-                "videoEquipment": "Наем на видео оборудване",
-                "audioEquipment": "Наем на аудио оборудване",
-                "locationScouting": "Търсене на локации",
-                "other": "Друго / Моля, уточнете в описанието"
-            },
-            "description": "Опишете проекта си (възможно най-подробно)",
+            "message": "Вашето съобщение",
             "submit": "Изпрати",
             "sending": "Изпращане...",
-            "successMessage": "Съобщението ви беше изпратено успешно! Ще се свържем с вас скоро.",
-            "errorMessage": "Нещо се обърка. Моля, опитайте отново по-късно.",
             "successTitle": "Съобщението е изпратено!",
-            "successDescription": "Благодарим ви, че се свързахте с нас. Получихме съобщението ви и ще ви отговорим възможно най-скоро.",
+            "successDescription": "Благодарим ви, че се свързахте с нас. Ще ви отговорим възможно най-скоро.",
+            "errorMessage": "Нещо се обърка. Моля, опитайте отново по-късно.",
             "sendAnother": "Изпрати ново съобщение"
         }
+    },
+    "common": {
+        "close": "Затвори",
+        "learnMore": "Научи повече",
+        "viewAll": "Виж всички",
+        "back": "Назад"
     }
 }

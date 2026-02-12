@@ -1,0 +1,35 @@
+{
+  "id": "projects",
+  "slug": "projects",
+  "seo": {
+    "bg": {
+      "title": "Проекти | Генезис Текнолоджи",
+      "description": "Нашите инсталации в хотели, офиси, ресторанти, магазини и киоскове в цяла България.",
+      "keywords": ["проекти", "инсталации", "хотели", "ресторанти"]
+    },
+    "en": {
+      "title": "Projects | Genesis Technology",
+      "description": "Our installations in hotels, offices, restaurants, stores and kiosks across Bulgaria.",
+      "keywords": ["projects", "installations", "hotels", "restaurants"]
+    }
+  },
+  "sections": [
+    {
+      "type": "pageBanner",
+      "title": { "bg": "Проекти", "en": "Projects" },
+      "subtitle": { "bg": "Нашите реализирани проекти", "en": "Our completed projects" },
+      "backgroundImage": "/images/projects-banner.jpg"
+    },
+    {
+      "type": "projectsGrid",
+      "title": { "bg": "Категории проекти", "en": "Project Categories" },
+      "categories": [
+        { "id": "hotels", "title": { "bg": "Хотели", "en": "Hotels" }, "image": "/images/projects/hotels.jpg" },
+        { "id": "offices", "title": { "bg": "Офиси", "en": "Offices" }, "image": "/images/projects/offices.jpg" },
+        { "id": "restaurants", "title": { "bg": "Ресторанти", "en": "Restaurants" }, "image": "/images/projects/restaurants.jpg" },
+        { "id": "stores", "title": { "bg": "Магазини", "en": "Stores" }, "image": "/images/projects/stores.jpg" },
+        { "id": "kiosks", "title": { "bg": "Киоскове", "en": "Kiosks" }, "image": "/images/projects/kiosks.jpg" }
+      ]
+    }
+  ]
+}

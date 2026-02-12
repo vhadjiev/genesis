@@ -1,0 +1,29 @@
+{
+  "id": "exhibitions",
+  "slug": "exhibitions",
+  "seo": {
+    "bg": {
+      "title": "Изложения | Генезис Текнолоджи",
+      "description": "Генезис Текнолоджи на международни изложения - ANUGA Германия, FOOD EXPO Гърция и други.",
+      "keywords": ["изложения", "ANUGA", "FOOD EXPO", "генезис текнолоджи"]
+    },
+    "en": {
+      "title": "Exhibitions | Genesis Technology",
+      "description": "Genesis Technology at international exhibitions - ANUGA Germany, FOOD EXPO Greece and more.",
+      "keywords": ["exhibitions", "ANUGA", "FOOD EXPO", "genesis technology"]
+    }
+  },
+  "sections": [
+    {
+      "type": "pageBanner",
+      "title": { "bg": "Изложения", "en": "Exhibitions" },
+      "subtitle": { "bg": "Международни изложения и панаири", "en": "International exhibitions and fairs" },
+      "backgroundImage": "/images/exhibitions-banner.jpg"
+    },
+    {
+      "type": "exhibitionsGrid",
+      "title": { "bg": "Нашите изложения", "en": "Our Exhibitions" },
+      "exhibitions": []
+    }
+  ]
+}

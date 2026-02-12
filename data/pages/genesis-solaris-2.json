@@ -1,0 +1,36 @@
+{
+  "id": "genesis-solaris-2",
+  "slug": "equipment/genesis-solaris-2",
+  "seo": {
+    "bg": {
+      "title": "Genesis Solaris 2 - Ново поколение Post Mix",
+      "description": "Малка и компактна машина с голям тъч екран за фюжън, уелнес и сок напитки.",
+      "keywords": ["genesis solaris 2", "post mix", "тъч екран", "сок машина", "фюжън"]
+    },
+    "en": {
+      "title": "Genesis Solaris 2 - Next-Gen Post Mix",
+      "description": "Compact machine with large touch screen for fusion, wellness and juice drinks.",
+      "keywords": ["genesis solaris 2", "post mix", "touch screen", "juice machine", "fusion"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Solaris 2",
+      "tagline": { "bg": "Ново поколение Post Mix", "en": "Next-Gen Post Mix" },
+      "description": { "bg": "Малка и компактна машина с голям тъч екран, позволява персонализиране на всяка рецепта.", "en": "Compact machine with large touch screen, allows customization of every recipe." },
+      "image": "/images/products/solaris2.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:monitor-cellphone", "title": { "bg": "Тъч екран", "en": "Touch Screen" }, "description": { "bg": "Голям тъч екран за управление", "en": "Large touch screen for control" } },
+        { "icon": "mdi:resize", "title": { "bg": "Компактна", "en": "Compact" }, "description": { "bg": "Малка и компактна машина", "en": "Small and compact machine" } },
+        { "icon": "mdi:translate", "title": { "bg": "Многоезичен", "en": "Multilingual" }, "description": { "bg": "Многоезичен софтуер за управление", "en": "Multilingual management software" } },
+        { "icon": "mdi:tune-variant", "title": { "bg": "Персонализация", "en": "Customization" }, "description": { "bg": "Настройка на всяка рецепта", "en": "Customize every recipe" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

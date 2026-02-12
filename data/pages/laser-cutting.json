@@ -1,0 +1,38 @@
+{
+  "id": "laser-cutting",
+  "slug": "services/laser-cutting",
+  "seo": {
+    "bg": {
+      "title": "Лазерно рязане",
+      "description": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм.",
+      "keywords": ["лазерно рязане", "метал", "рязане на ламарина"]
+    },
+    "en": {
+      "title": "Laser Cutting Services",
+      "description": "Professional laser cutting services for metals up to 8mm thickness.",
+      "keywords": ["laser cutting", "metal", "sheet metal cutting"]
+    }
+  },
+  "sections": [
+    {
+      "type": "serviceHero",
+      "name": { "bg": "Лазерно рязане", "en": "Laser Cutting" },
+      "tagline": { "bg": "Прецизност и качество", "en": "Precision and quality" },
+      "description": { "bg": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм.", "en": "Professional laser cutting services for metals up to 8mm thickness." },
+      "image": "/images/services/laser-cutting.jpg"
+    },
+    {
+      "type": "serviceDetails",
+      "title": { "bg": "Характеристики", "en": "Features" },
+      "features": [
+        { "icon": "mdi:laser-pointer", "title": { "bg": "До 8мм дебелина", "en": "Up to 8mm thickness" }, "description": { "bg": "Рязане на метали с дебелина до 8мм", "en": "Cutting metals up to 8mm thick" } },
+        { "icon": "mdi:precision-manufacturing", "title": { "bg": "Висока прецизност", "en": "High Precision" }, "description": { "bg": "Прецизно и чисто рязане", "en": "Precise and clean cutting" } }
+      ]
+    },
+    {
+      "type": "serviceCapabilities",
+      "title": { "bg": "Възможности", "en": "Capabilities" },
+      "items": []
+    }
+  ]
+}

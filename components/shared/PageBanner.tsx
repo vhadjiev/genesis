@@ -32,12 +32,12 @@ export function PageBanner({ data, locale }: PageBannerProps) {
           style={{ backgroundImage: `url(${data.backgroundImage})` }}
         />
       )}
-      {/* Color overlay to mute the image */}
+      {/* Color overlay */}
       <div 
-        className="absolute inset-0 opacity-60"
-        style={{ backgroundColor: '#282834' }}
+        className="absolute inset-0 opacity-70"
+        style={{ backgroundColor: 'var(--gt-dark)' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[var(--gt-dark)]/80 via-[var(--gt-dark)]/60 to-[var(--gt-dark)]" />
 
       {/* Content */}
       <div className="relative container mx-auto px-4 md:px-6 text-center">

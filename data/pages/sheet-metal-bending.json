@@ -1,0 +1,38 @@
+{
+  "id": "sheet-metal-bending",
+  "slug": "services/sheet-metal-bending",
+  "seo": {
+    "bg": {
+      "title": "Огъване на листова ламарина",
+      "description": "Услуги за огъване на листова ламарина с дебелина до 6мм и дължина до 2000мм.",
+      "keywords": ["огъване", "листова ламарина", "метал"]
+    },
+    "en": {
+      "title": "Sheet Metal Bending",
+      "description": "Sheet metal bending services up to 6mm thickness and 2000mm length.",
+      "keywords": ["sheet metal bending", "metal bending", "metal fabrication"]
+    }
+  },
+  "sections": [
+    {
+      "type": "serviceHero",
+      "name": { "bg": "Огъване на листова ламарина", "en": "Sheet Metal Bending" },
+      "tagline": { "bg": "Професионално огъване", "en": "Professional bending" },
+      "description": { "bg": "Услуги за огъване на листова ламарина с дебелина до 6мм и дължина до 2000мм.", "en": "Sheet metal bending services up to 6mm thickness and 2000mm length." },
+      "image": "/images/services/sheet-metal-bending.jpg"
+    },
+    {
+      "type": "serviceDetails",
+      "title": { "bg": "Характеристики", "en": "Features" },
+      "features": [
+        { "icon": "mdi:arrow-collapse-vertical", "title": { "bg": "До 6мм дебелина", "en": "Up to 6mm thickness" }, "description": { "bg": "Огъване на ламарина до 6мм", "en": "Bending sheet metal up to 6mm" } },
+        { "icon": "mdi:ruler", "title": { "bg": "До 2000мм дължина", "en": "Up to 2000mm length" }, "description": { "bg": "Максимална дължина 2000мм", "en": "Maximum length 2000mm" } }
+      ]
+    },
+    {
+      "type": "serviceCapabilities",
+      "title": { "bg": "Възможности", "en": "Capabilities" },
+      "items": []
+    }
+  ]
+}

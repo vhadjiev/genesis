@@ -2,635 +2,86 @@
   "id": "home",
   "slug": "",
   "seo": {
-    "en": {
-      "title": "UBC Sound & Cinema Studio",
-      "description": "A turnkey solution for your independent sound & cinema project! Right in the heart of Plovdiv, Bulgaria.",
-      "keywords": [
-        "studio",
-        "sound",
-        "cinema",
-        "post-production",
-        "audio",
-        "video",
-        "Plovdiv",
-        "Bulgaria",
-        "film production",
-        "recording studio"
-      ],
-      "openGraph": {
-        "title": "UBC Sound & Cinema Studio",
-        "description": "Professional audio & video post-production studio in Plovdiv, Bulgaria",
-        "images": [
-          {
-            "url": "/images/og-home.jpg",
-            "width": 1200,
-            "height": 630
-          }
-        ]
-      },
+    "bg": {
+      "title": "Генезис Текнолоджи - Автоматични кафемашини",
+      "description": "Генезис Текнолоджи произвежда автоматични кафемашини, съоръжения за напитки и бар системи за ХоРеКа индустрията. 15 години опит, 3000+ инсталирани съоръжения.",
+      "keywords": ["кафемашини", "автоматични кафемашини", "генезис текнолоджи", "хорека", "бар системи", "пловдив"],
       "structuredData": {
-        "@type": "LocalBusiness",
-        "name": "UBC Sound & Cinema Studio",
-        "description": "A turnkey solution for your independent sound & cinema project",
-        "image": "/images/og-home.jpg",
-        "telephone": "+359 888 352211",
-        "email": "info@ubc.studio",
+        "@type": "Organization",
+        "name": "Genesis Technology",
+        "description": "Manufacturer of automatic coffee machines and beverage equipment",
+        "url": "https://gentech.bg",
+        "telephone": "+359 89 565 7706",
+        "email": "info@gentech.bg",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Preslav 15 str.",
+          "streetAddress": "Brezovsko Shose 145",
           "addressLocality": "Plovdiv",
+          "postalCode": "4003",
           "addressCountry": "BG"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
         }
       }
     },
-    "bg": {
-      "title": "UBC Sound & Cinema Студио",
-      "description": "Цялостно решение за твоя независим музикален или кино проект! В самото сърце на Пловдив, България.",
-      "keywords": [
-        "студио",
-        "звук",
-        "кино",
-        "постпродукция",
-        "аудио",
-        "видео",
-        "Пловдив",
-        "България",
-        "филмова продукция",
-        "звукозаписно студио"
-      ]
+    "en": {
+      "title": "Genesis Technology - Automatic Coffee Machines",
+      "description": "Genesis Technology manufactures automatic coffee machines, beverage equipment and bar systems for the HoReCa industry. 15 years of experience, 3000+ installations.",
+      "keywords": ["coffee machines", "automatic coffee machines", "genesis technology", "horeca", "bar systems", "plovdiv"],
+      "structuredData": {
+        "@type": "Organization",
+        "name": "Genesis Technology",
+        "description": "Manufacturer of automatic coffee machines and beverage equipment",
+        "url": "https://gentech.bg",
+        "telephone": "+359 89 565 7706",
+        "email": "info@gentech.bg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Brezovsko Shose 145",
+          "addressLocality": "Plovdiv",
+          "postalCode": "4003",
+          "addressCountry": "BG"
+        }
+      }
     }
   },
   "sections": [
     {
-      "type": "heroSlider",
-      "items": [
-        {
-          "id": "slide1",
-          "image": "/images/hero/hero-1.jpg",
-          "content": {
-            "en": {
-              "outline": "UBC Sound & Cinema",
-              "main": "Studio",
-              "subtitle": "A turnkey solution for your independent sound & cinema project!",
-              "location": "Right in the heart of Plovdiv, Bulgaria."
-            },
-            "bg": {
-              "outline": "UBC Sound & Cinema",
-              "main": "Студио",
-              "subtitle": "Цялостно решение за вашия независим музикален и кино проект!",
-              "location": "В самото сърце на Пловдив, България."
-            }
-          }
-        },
-        {
-          "id": "slide2",
-          "image": "/images/hero/hero-2.jpg",
-          "content": {
-            "en": {
-              "outline": "Audio & Video",
-              "main": "Post Production",
-              "subtitle": "UBC Studio is designed primarily for audio & video post-production, offering professional spaces tailored for precision and creativity."
-            },
-            "bg": {
-              "outline": "Аудио и видео",
-              "main": "постпродукция",
-              "subtitle": "UBC Studio е проектирано основно за аудио и видео постпродукция, предлагайки професионални пространства, пригодени за прецизност и креативност."
-            }
-          }
-        },
-        {
-          "id": "slide3",
-          "image": "/images/hero/hero-3.jpg",
-          "content": {
-            "en": {
-              "outline": "STUDIO",
-              "main": "for Rent",
-              "subtitle": "Rent UBC Studio and use it as your own for audio, film & video production, fully equipped for every stage of the process."
-            },
-            "bg": {
-              "outline": "СТУДИО",
-              "main": "под наем",
-              "subtitle": "Наемете UBC и го използвайте като свое студио за аудио, филмова и видео продукция, напълно оборудвано за всеки етап от процеса."
-            }
-          }
-        },
-        {
-          "id": "slide4",
-          "image": "/images/hero/hero-4.jpg",
-          "content": {
-            "en": {
-              "outline": "EQUIPMENT",
-              "main": "for Rent",
-              "subtitle": "UBC Studio offers a wide range of rental equipment for film, video and audio production, from cameras & lenses to audio recorders & mics."
-            },
-            "bg": {
-              "outline": "ОБОРУДВАНЕ",
-              "main": "под наем",
-              "subtitle": "UBC Studio предлага широка гама от оборудване под наем за филмова, видео и аудио продукция – от камери и обективи до аудио рекордери и микрофони."
-            }
-          }
-        }
+      "type": "heroSection",
+      "title": { "bg": "Genesis Technology", "en": "Genesis Technology" },
+      "subtitle": { "bg": "Автоматични кафемашини и съоръжения за напитки", "en": "Automatic coffee machines & beverage equipment" },
+      "backgroundImage": "/images/hero-home.jpg"
+    },
+    {
+      "type": "featuredProducts",
+      "title": { "bg": "Нашите съоръжения", "en": "Our Equipment" },
+      "products": [
+        { "id": "genesis-universa", "name": "Genesis Universa", "tagline": { "bg": "E.S.E Pods кафемашина", "en": "E.S.E Pods coffee machine" }, "image": "/images/products/universa.jpg", "href": "/equipment/genesis-universa" },
+        { "id": "genesis-eclipse", "name": "Genesis Eclipse", "tagline": { "bg": "Коктейл Бар Система", "en": "Cocktail Bar System" }, "image": "/images/products/eclipse.jpg", "href": "/equipment/genesis-eclipse" },
+        { "id": "genesis-solaris-2", "name": "Genesis Solaris 2", "tagline": { "bg": "Ново поколение Post Mix", "en": "Next-gen Post Mix" }, "image": "/images/products/solaris2.jpg", "href": "/equipment/genesis-solaris-2" }
       ]
     },
     {
-      "type": "gallerySwiper",
-      "images": [
-        "/images/gallery/UBC-Gallery-01.jpg",
-        "/images/gallery/UBC-Gallery-02.jpg",
-        "/images/gallery/UBC-Gallery-03.jpg",
-        "/images/gallery/UBC-Gallery-04.jpg",
-        "/images/gallery/UBC-Gallery-05.jpg",
-        "/images/gallery/UBC-Gallery-06.jpg",
-        "/images/gallery/UBC-Gallery-07.jpg",
-        "/images/gallery/UBC-Gallery-08.jpg",
-        "/images/gallery/UBC-Gallery-09.jpg",
-        "/images/gallery/UBC-Gallery-10.jpg",
-        "/images/gallery/UBC-Gallery-11.jpg",
-        "/images/gallery/UBC-Gallery-12.jpg",
-        "/images/gallery/UBC-Gallery-13.jpg",
-        "/images/gallery/UBC-Gallery-14.jpg",
-        "/images/gallery/UBC-Gallery-15.jpg"
+      "type": "statsSection",
+      "stats": [
+        { "value": 15, "suffix": "", "label": { "bg": "Години опит", "en": "Years of experience" } },
+        { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани съоръжения", "en": "Installed equipment" } },
+        { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Satisfied clients" } }
       ]
     },
     {
-      "type": "servicesCarousel",
-      "title": {
-        "en": "Studio Services",
-        "bg": "Услуги на студиото"
-      },
-      "items": [
-        {
-          "id": "postProduction",
-          "image": "/images/services/post-production.jpg",
-          "title": {
-            "en": "Post-production",
-            "bg": "Постпродукция"
-          },
-          "description": {
-            "en": "UBC Studio offers rental space for your film's post-production, equipped with software, high-end system and creative atmosphere.",
-            "bg": "UBC Studio предлага пространство под наем за постпродукция на вашия филм, оборудвано със софтуер, високотехнологична система и творческа атмосфера."
-          }
-        },
-        {
-          "id": "podcast",
-          "image": "/images/services/podcast.jpg",
-          "title": {
-            "en": "Podcast",
-            "bg": "Подкаст"
-          },
-          "description": {
-            "en": "Shoot and record your audio or video podcast in the cozy artistic atmosphere and acoustically treated rooms of UBC Studio with professional sound recording and video capturing equipment.",
-            "bg": "Запишете своя аудио или видео подкаст в уютната артистична атмосфера и акустично обработените помещения на UBC Studio с професионално оборудване за звукозапис и видеозаснемане."
-          }
-        },
-        {
-          "id": "colorGrading",
-          "image": "/images/services/color-grading.jpg",
-          "title": {
-            "en": "Color Grading",
-            "bg": "Цветова корекция"
-          },
-          "description": {
-            "en": "Rent our fully equipped studio to work on your color grading projects using professional tools and industry-calibrated monitors.",
-            "bg": "Наемете нашето напълно оборудвано студио за работа по цветова корекция с професионални инструменти и калибрирани монитори."
-          }
-        },
-        {
-          "id": "foley",
-          "image": "/images/services/foley-recording.jpg",
-          "title": {
-            "en": "Foley Recording",
-            "bg": "Foley запис"
-          },
-          "description": {
-            "en": "Foley recording at UBC Studio is ideal for your short film or commercial, with quiet rooms, pro mics, and a range of props.",
-            "bg": "Фоли записът в UBC Studio е идеален за вашия късометражен филм или реклама, с тихи помещения, професионални микрофони и разнообразие от реквизит."
-          }
-        },
-        {
-          "id": "voiceover",
-          "image": "/images/services/voiceover.jpg",
-          "title": {
-            "en": "Voiceover",
-            "bg": "Войсоувър"
-          },
-          "description": {
-            "en": "Perfect for short films, ads, or animation—our voiceover booths offer pristine acoustics, pro gear, and a focused setup.",
-            "bg": "Перфектни за късометражни филми, реклами или анимация - нашето войсоувър помещение предлага безупречна акустика, професионално оборудване и обстановка за целенасочена работа."
-          }
-        },
-        {
-          "id": "music",
-          "image": "/images/services/music.jpg",
-          "title": {
-            "en": "Music",
-            "bg": "Музика"
-          },
-          "description": {
-            "en": "Create your music in a professional space designed for clarity and creativity, equipped with high-quality recording gear and interfaces.",
-            "bg": "Създавайте музика в професионално пространство, проектирано за яснота и креативност, оборудвано с висококачествена записваща техника."
-          }
-        },
-        {
-          "id": "soundEffects",
-          "image": "/images/services/sound-effects.jpg",
-          "title": {
-            "en": "Sound Effects",
-            "bg": "Звукови ефекти"
-          },
-          "description": {
-            "en": "Work on your sound effects in a dedicated room with industry-grade gear and a 5.1 surround setup for immersive, crisp audio.",
-            "bg": "Работете върху звуковите си ефекти в специално обособено помещение с оборудване от професионален клас и 5.1 съраунд система за реалистично аудио преживяване и кристално чист звук."
-          }
-        },
-        {
-          "id": "liveRecording",
-          "image": "/images/services/live-recording.jpg",
-          "title": {
-            "en": "Live Recording",
-            "bg": "Запис на живо"
-          },
-          "description": {
-            "en": "Capture your live recordings in a professional space with top-tier equipment and acoustics designed for clear, vibrant sound.",
-            "bg": "Заснемайте записи на живо в професионално пространство с първокласно оборудване и акустика за чист, жив звук."
-          }
-        }
-      ]
+      "type": "partnersSection",
+      "title": { "bg": "Партньори", "en": "Partners" },
+      "subtitle": { "bg": "Най-добрите хотели в България ни се довериха", "en": "The best hotels in Bulgaria trust us" }
     },
     {
-      "type": "processSteps",
-      "items": [
-        {
-          "id": "create",
-          "icon": "mdi:lightbulb",
-          "title": { "en": "Create", "bg": "Създай" },
-          "description": {
-            "en": "For the creation waits in eager expectation...",
-            "bg": "Защото твоето творение чака с нетърпение..."
-          }
-        },
-        {
-          "id": "rent",
-          "icon": "mdi:key-variant",
-          "title": { "en": "Rent", "bg": "Наеми" },
-          "description": {
-            "en": "Rent the studio and use it as your own!",
-            "bg": "Наемете студиото и го използвайте като свое!"
-          }
-        },
-        {
-          "id": "record",
-          "icon": "mdi:microphone",
-          "title": { "en": "Record", "bg": "Запиши" },
-          "description": {
-            "en": "Record your music and sounds at your own pace.",
-            "bg": "Записвайте музика и звуци със собствено темпо."
-          }
-        },
-        {
-          "id": "edit",
-          "icon": "mdi:movie-edit",
-          "title": { "en": "Edit", "bg": "Монтирай" },
-          "description": {
-            "en": "Editing is part of the magic - don't rush it!",
-            "bg": "Монтажът е част от магията – не бързайте!"
-          }
-        },
-        {
-          "id": "render",
-          "icon": "mdi:export",
-          "title": { "en": "Render", "bg": "Рендирай" },
-          "description": {
-            "en": "You can hit Render whenever you feel like it.",
-            "bg": "Натиснете Render когато почувствате, че е време."
-          }
-        }
-      ]
+      "type": "testimonialsSection",
+      "title": { "bg": "Какво казват клиентите", "en": "What our clients say" }
     },
     {
-      "type": "featuresGrid",
-      "intro": {
-        "en": "Whether you have the ideas and know-how but lack the studio equipment, or you have the ideas but you need independent artists, equipment and studio to realize them, UBC Sound & Cinema Studio is your place!",
-        "bg": "Ако имате идея и ноухау, но ви липсва студийно оборудване, или имате само идеен проект и се нуждаете от независими творци, оборудване и студио, за да го реализирате, то UBC Sound & Cinema е точното място за вас!"
-      },
-      "ctaText": { "en": "Contact us", "bg": "Свържете се с нас" },
-      "ctaLink": "/contacts",
-      "items": [
-        {
-          "id": "ownStudio",
-          "icon": "/images/icons/your-own-studio.svg",
-          "title": { "en": "Your own Studio", "bg": "Вашето студио" },
-          "description": {
-            "en": "Your own studio experience available now at your pace, comfort and time (24/7).",
-            "bg": "Студийно преживяване на ваше разположение – според вашето темпо, комфорт и време (24/7)."
-          }
-        },
-        {
-          "id": "multipleRooms",
-          "icon": "/images/icons/multiple-rooms.svg",
-          "title": { "en": "Multiple Rooms", "bg": "Множество стаи" },
-          "description": {
-            "en": "4 rooms to fit in: recording, voiceover, control/post-production & a multipurpose space.",
-            "bg": "4 стаи: за запис, войсоувър, контролна/постпродукционна и многофункционално пространство."
-          }
-        },
-        {
-          "id": "professionalEquipment",
-          "icon": "/images/icons/professional-equipment.svg",
-          "title": {
-            "en": "Professional Equipment",
-            "bg": "Професионално оборудване"
-          },
-          "description": {
-            "en": "All the right ingredients for your project: from hardware to software and then some.",
-            "bg": "Всички необходими съставки за вашия проект: от хардуер до софтуер и още."
-          }
-        },
-        {
-          "id": "requestGear",
-          "icon": "/images/icons/request-gear.svg",
-          "title": { "en": "Request Gear", "bg": "Заявка за оборудване" },
-          "description": {
-            "en": "Even if we don't have your favorite gear we could be able to find it for you.",
-            "bg": "Дори да нямаме любимото ви оборудване, бихме могли да го намерим за вас."
-          }
-        },
-        {
-          "id": "acousticallyTreated",
-          "icon": "/images/icons/acoustically-treated.svg",
-          "title": {
-            "en": "Acoustically Treated",
-            "bg": "Акустично третирано"
-          },
-          "description": {
-            "en": "The acoustically treated space tames sound reverberation and improves clarity.",
-            "bg": "Акустично обработеното пространство редуцира реверберацията и подобрява яснотата."
-          }
-        },
-        {
-          "id": "bookInAdvance",
-          "icon": "/images/icons/book-in-advance.svg",
-          "title": {
-            "en": "Book in Advance",
-            "bg": "Резервирайте предварително"
-          },
-          "description": {
-            "en": "Flexible booking depending on your project: from a day to a whole month (or more).",
-            "bg": "Гъвкаво резервиране според проекта: от ден до цял месец (или повече)."
-          }
-        }
-      ]
-    },
-    {
-      "type": "workingRooms",
-      "title": { "en": "Working Rooms", "bg": "Работни помещения" },
-      "description": {
-        "en": "UBC Studio features a fully equipped recording room and a sound-isolated voiceover booth, perfect for capturing clear audio. The editing room offers a quiet space with professional gear for precise post-production work. Additionally, the multifunctional room can be adapted for various creative needs, while the serene garden provides a relaxing outdoor area to recharge.",
-        "bg": "UBC Studio разполага с напълно оборудвана стая за запис и звукоизолирано помещение за войсоувър, перфектни за чисто аудио. Монтажната стая предлага тихо пространство с професионално оборудване за прецизна постпродукция. Многофункционалната стая може да бъде адаптирана за различни творчески нужди, а спокойната градина осигурява релаксираща зона на открито."
-      },
-      "rooms": [
-        {
-          "id": "recording",
-          "icon": "mdi:microphone",
-          "image": "/images/gallery/UBC-Gallery-09.jpg",
-          "title": { "en": "Recording Room", "bg": "Стая за запис" },
-          "description": {
-            "en": "The recording room offers a sound-treated environment designed to capture high-quality audio with minimal interference. The space is acoustically optimized to reduce reflections and noise, ensuring clean, accurate recordings for vocals, instruments, or other sound sources.",
-            "bg": "Стаята за запис предлага звуково обработена среда, проектирана за висококачествено аудио с минимални смущения. Пространството е акустично оптимизирано за намаляване на отраженията и шума, осигурявайки чисти, точни записи за вокали, инструменти или други звукови източници."
-          },
-          "size": { "en": "10sq/m", "bg": "10кв.м" },
-          "feature": {
-            "en": "acoustically treated",
-            "bg": "акустично третирано"
-          }
-        },
-        {
-          "id": "voiceover",
-          "icon": "mdi:account-voice",
-          "image": "/images/gallery/UBC-Gallery-08.jpg",
-          "title": {
-            "en": "Voiceover Booth",
-            "bg": "Войсоувър помещение"
-          },
-          "description": {
-            "en": "The voiceover booth in UBC studio offers a compact, soundproof space designed to capture clean, focused vocal recordings. We have professional-grade microphones, pop filters and acoustic treatment to eliminate background noise and echo. The booth ensures vocal clarity and consistency, making it ideal for narration, dubbing, animation and commercial voice work.",
-            "bg": "Помещението за войсоувър в UBC studio предлага компактно, звукоизолирано пространство за чисти, фокусирани вокални записи. Разполагаме с професионални микрофони, поп филтри и акустична обработка за елиминиране на фонов шум и ехо. Помещението осигурява вокална яснота и последователност, идеална за озвучаване, дублаж, анимация и рекламни гласове."
-          },
-          "size": { "en": "4sq/m", "bg": "4кв.м" },
-          "feature": {
-            "en": "acoustically treated",
-            "bg": "акустично третирано"
-          }
-        },
-        {
-          "id": "editing",
-          "icon": "mdi:movie-edit",
-          "image": "/images/gallery/UBC-Gallery-11.jpg",
-          "title": { "en": "Editing Room", "bg": "Монтажна стая" },
-          "description": {
-            "en": "The editing room in the studio offers a quiet, controlled environment equipped with high-performance computer, professional software and calibrated monitors for precise video and audio editing. It provides an ergonomic workstation, sound isolation and color-accurate displays to ensure your post-production work. Whether for film, music videos or commercials, the room supports tasks like cutting, color grading, sound mixing, VFX and more.",
-            "bg": "Монтажната стая в студиото предлага тиха и контролирана среда, оборудвана с високопроизводителен компютър, професионален софтуер и калибрирани монитори за прецизен видео и аудио монтаж. Тя разполага с ергономично работно място, звукоизолация и цветово коректни дисплеи, които гарантират качество в постпродукционната работа. Независимо дали става дума за филми, музикални видеа или реклами, помещението поддържа дейности като монтаж, цветови корекции (color grading), звуков микс, VFX и още."
-          },
-          "size": { "en": "20sq/m", "bg": "20кв.м" },
-          "feature": {
-            "en": "acoustically treated",
-            "bg": "акустично третирано"
-          }
-        },
-        {
-          "id": "multifunctional",
-          "icon": "mdi:sofa",
-          "image": "/images/gallery/UBC-Gallery-03.jpg",
-          "title": {
-            "en": "Multifunctional Room",
-            "bg": "Многофункционална стая"
-          },
-          "description": {
-            "en": "The multifunctional room offers a flexible space that can be adapted to various creative needs, such as podcasts, rehearsals, meetings, workshops, or small-scale shoots. This versatile room is ideal for brainstorming sessions, pre-production planning or any activity that benefits from an adaptable, comfortable studio environment.",
-            "bg": "Многофункционалната стая предлага гъвкаво пространство, което може да се адаптира към различни творчески нужди, като подкасти, репетиции, срещи, уъркшопи или малки снимачни продукции. Това универсално помещение е идеално за брейнсторминг сесии, планиране на предпродукция или всяка дейност, която се възползва от адаптивна и комфортна студийна среда"
-          },
-          "size": { "en": "15sq/m", "bg": "15кв.м" },
-          "feature": {
-            "en": "acoustically not treated",
-            "bg": "акустично нетретирано"
-          }
-        },
-        {
-          "id": "garden",
-          "icon": "mdi:flower",
-          "image": "/images/gallery/UBC-Gallery-10.jpg",
-          "title": { "en": "Private Garden", "bg": "Уединена градина" },
-          "description": {
-            "en": "The garden is a peaceful outdoor space where creatives can relax, recharge or hold informal meetings. It provides a natural break from indoor work, helping to boost focus and well-being. The garden can also serve as a casual setting for networking, small events or even outdoor shoots, adding versatility and inspiration to the UBC studio experience.",
-            "bg": "Градината е спокойно външно пространство, където творците могат да се отпуснат, да презаредят или да проведат неформални срещи. Тя предлага естествена почивка от работата на закрито, като подпомага концентрацията и благосъстояние. Градината може да служи и като непринудена среда за нетуъркинг, малки събития или дори снимачни сесии на открито, добавяйки гъвкавост и вдъхновение към преживяването в студио UBC."
-          },
-          "size": { "en": "35sq/m", "bg": "35кв.м" }
-        }
-      ]
-    },
-    {
-      "type": "rentToShoot",
-      "columns": [
-        {
-          "id": "rentToShoot",
-          "title": { "en": "Rent to Shoot", "bg": "Наем за заснемане" },
-          "subtitle": {
-            "en": "Music videos, Documentaries, Interviews, Podcasts...",
-            "bg": "Музикални видеоклипове, документални филми, интервюта, подкасти..."
-          },
-          "description": {
-            "en": "UBC Sound & Cinema studio is designed as an artistic environment which you can rent to shoot your video project inside. Be it a personal vlog or a music video for your band, or you need a cozy space where to shoot your podcast or the interviews of your documentary film, we can accommodate your creative thinking for these and much more.",
-            "bg": "Студио UBC Sound & Cinema е създадено като артистична среда, която можете да наемете за заснемане на своя видео проект. Независимо дали става дума за личен подкаст, музикален видеоклип за вашата група или уютно пространство за интервютата във вашия подкаст или документален филм, ние можем да отговорим на вашето креативно виждане – и на още много други идеи."
-          }
-        },
-        {
-          "id": "filmmakingTourism",
-          "title": { "en": "Filmmaking tourism", "bg": "Кино туризъм" },
-          "subtitle": null,
-          "description": {
-            "en": "Bulgaria has everything a filmmaker might need. Stunning locations: from alien-looking landscapes, abundant Nature, from untouched places to ruins from the far or near past, from luxurious setups to deserted buildings, villages and even neighborhoods. And it still holds a lot of secrets the determined location scouter might discover. So, we have the locations, the people, the equipment and the post-production studio. Sounds like you can make your film here. We take care of your whole stay.",
-            "bg": "България притежава всички необходими дадености за цялостна реализация на кино проект. Зашеметяващи локации: извънземни пейзажи, девствена природа, руини от далечното или близко минало, от луксозни постройки до изоставени сгради, села и дори цели квартали, както и много още добре пазени тайни и мистериозни кътчета. Така че локациите ги имаме, имаме и филмовия екип, както и студиото за пост продукция. Ние можем да се погрижим за целия ви престой и да удовлетворим всичките ви нужди, за да реализирате своя кино проект в България."
-          }
-        }
-      ]
-    },
-    {
-      "type": "andromedaEffect",
-      "id": "andromeda",
-      "logo": "/images/andromeda-logo.svg",
-      "paragraphs": [
-        {
-          "en": "UBC Sound & Cinema uses a unique model of working with independent artists to be able to offer realization of any part of the process of creating a sound & cinema content in an organic independent nature.",
-          "bg": "UBC Sound & Cinema използва единствен по рода си модел на работа с независими творци, за да предложи реализация на която и да е част от процеса по създаване на аудио и видео съдържание с органичен и независим по своята природа подход."
-        },
-        {
-          "en": "\"Independent\" is our motto and our mission. We offer a multitude of services not by owning the people who provide them but by empowering them through their independence. Call it a symbiosis.",
-          "bg": "\"Независим\" е нашето мото и нашата мисия. Предлагаме широка гама от услуги в сферата на музикалното и киноизкуство не като притежаваме хората, които ги предоставят, а като им даваме свобода да изразят себе си автентично чрез своята независимост. Наричаме това симбиоза."
-        }
-      ]
-    },
-    {
-      "type": "studioEquipment",
-      "title": { "en": "Studio Equipment", "bg": "Студийно оборудване" },
-      "description": {
-        "en": "If you need studio equipment that we currently don't have — such as specific microphones, software or other specialized gear — feel free to reach out. We're happy to accommodate custom requests or help source the right equipment for your production.",
-        "bg": "Ако се нуждаете от студийно оборудване, което в момента нямаме – като специфични микрофони, софтуер или друго специализирано оборудване – не се колебайте да се свържете с нас. С удоволствие ще посрещнем специални заявки или ще помогнем да намерите подходящото оборудване за вашата продукция."
-      },
-      "categories": [
-        {
-          "id": "microphones",
-          "icon": "mdi:microphone",
-          "label": { "en": "Microphones", "bg": "Микрофони" },
-          "items": ["Rode NT2-A", "Rode NTG-2", "Rode NTG5"]
-        },
-        {
-          "id": "monitors",
-          "icon": "mdi:speaker",
-          "label": { "en": "Monitors", "bg": "Монитори" },
-          "items": [
-            "5x Adam A7V",
-            "1x Adam Sub10 MK2 Subwoofer",
-            "2x Adam A7X",
-            "2x Yamaha NS-10M STUDIO"
-          ]
-        },
-        {
-          "id": "interfaces",
-          "icon": "mdi:audio-input-stereo-minijack",
-          "label": { "en": "Interfaces", "bg": "Интерфейси" },
-          "items": [
-            "UA Apollo X6 Gen 1 (Thunderbolt)",
-            "Sound Devices MixPre-6"
-          ]
-        },
-        {
-          "id": "software",
-          "icon": "mdi:application",
-          "label": { "en": "Software", "bg": "Софтуер" },
-          "items": [
-            "Adobe Audition",
-            "Adobe CC",
-            "Steinberg Spectralayers",
-            "Reaper",
-            "UA Luna",
-            "DaVinci Resolve Studio"
-          ]
-        },
-        {
-          "id": "instruments",
-          "icon": "mdi:piano",
-          "label": { "en": "Instruments", "bg": "Инструменти" },
-          "items": ["Native Instruments Maschine"]
-        }
-      ]
-    },
-    {
-      "type": "completedProjects",
-      "title": { "en": "Completed Projects", "bg": "Завършени проекти" },
-      "projects": [
-        {
-          "id": "triumphOfLife",
-          "image": "/images/projects/ALT-Poster.jpg",
-          "link": "https://atriumphoflife.com/",
-          "title": { "en": "A Triumph Of Life", "bg": "A Triumph Of Life" },
-          "year": "2024",
-          "type": { "en": "Documentary", "bg": "Документален" },
-          "specs": { "en": "short 25min 4K DCI 5.1", "bg": "късометражен 25мин 4K DCI 5.1" }
-        },
-        {
-          "id": "umbilicalCord",
-          "image": "/images/projects/UBC-Poster.jpg",
-          "link": "https://umbilical.film/",
-          "title": { "en": "Umbilical Cord", "bg": "Пъпна връв" },
-          "year": "2022",
-          "type": { "en": "Documentary", "bg": "Документален" },
-          "specs": { "en": "feature 81min UHD 5.1", "bg": "пълнометражен 81мин UHD 5.1" }
-        }
-      ]
-    },
-    {
-      "type": "conceptionSection",
-      "title": { "en": "The Conception", "bg": "Генезис" },
-      "subtitle": {
-        "en": "From the filmmakers behind the independent documentary film \"Umbilical Cord\"!",
-        "bg": "От създателите на независимия документален филм \"Пъпна връв\"!"
-      },
-      "founders": [
-        {
-          "id": "boris",
-          "image": "/images/founders/boris.jpg",
-          "name": { "en": "Boris", "bg": "Борис" },
-          "role": { "en": "Co-founder", "bg": "Съосновател" },
-          "quote": {
-            "en": "It's very simple. We've created what we needed while we were still working on \"Umbilical Cord\". The truth is that we lost a lot of time trying to deal with technical limitations instead of concentrating on the creativity of filmmaking and filmmaking is a creative process in the first place. When the film was completed we felt it as a mission and responsibility – Having gone through all the difficulties, to build a bridge for the people that will walk the same path after us.",
-            "bg": "Много е просто! Създадохме това, от което ние самите имахме нужда докато работихме по \"Пъпна връв\". Истината е, че изгубихме много време в борба с технически ограничения вместо да се концентрираме изцяло в творческия процес, а правенето на филми трябва да бъде на първо място творчески процес. Тогава го възприехме като мисия и едва ли не отговорност - Щом сме минали през всичките трудности, да построим мост за хората, които ще минат по същия път след нас."
-          }
-        },
-        {
-          "id": "jose",
-          "image": "/images/founders/jose.jpg",
-          "name": { "en": "Jose", "bg": "Jose" },
-          "role": { "en": "Co-founder", "bg": "Съосновател" },
-          "quote": {
-            "en": "Most studios are shaped by the engineers who run them – steering projects based on their own methods, not always aligned with the client's vision. UBC Studio will flip that model where you're in control. Whether you're an experienced creative or just starting out, the space is yours to explore, experiment, and learn by doing. True inspiration doesn't follow a time schedule – it often strikes at midnight, long after most studios have shut down while the most honest work happens when you're free to follow your own rhythm.",
-            "bg": "Повечето студия са оформени от инженерите, които ги управляват – насочвайки проектите въз основа на собствените си методи, не винаги съобразени с визията на клиента. UBC Studio ще обърне този модел – вие ще контролирате. Независимо дали сте опитен творец или тепърва започвате, пространството е вашез за да изследвате, експериментирате и да се учите пробвайки. Истинското вдъхновение не следва времеви график – често идва в полунощ, дълго след като повечето студия са затворили, а най-истинските неща се случват, когато човек е свободен да следва собствения си ритъм."
-          }
-        }
-      ]
+      "type": "ctaSection",
+      "title": { "bg": "Разрастваме бизнеса ви!", "en": "We grow your business!" },
+      "subtitle": { "bg": "Нашите машини и продукти са пригодени за нуждите на вашите служители и клиенти.", "en": "Our machines and products are tailored to the needs of your employees and customers." },
+      "buttonText": { "bg": "Свържете се с нас", "en": "Contact us" },
+      "buttonHref": "/contacts"
     }
   ]
 }

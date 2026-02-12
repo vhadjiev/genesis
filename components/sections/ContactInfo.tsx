@@ -9,10 +9,10 @@ import type { LocalizedContent } from "@/types";
 
 const GOOGLE_MAPS_API_KEY = "AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs";
 
-// UBC Studio coordinates (Preslav 15, Plovdiv, Bulgaria)
-const UBC_STUDIO_LOCATION = {
-  lat: 42.14404752827351,
-  lng: 24.744736131468695,
+// GenTech coordinates (Brezovsko Shose 145, Plovdiv, Bulgaria)
+const GENTECH_LOCATION = {
+  lat: 42.1354,
+  lng: 24.7453,
 };
 
 // Dark mode style for Google Maps
@@ -166,14 +166,14 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
       >
         <APIProvider apiKey={GOOGLE_MAPS_API_KEY}>
           <Map
-            defaultCenter={UBC_STUDIO_LOCATION}
+            defaultCenter={GENTECH_LOCATION}
             defaultZoom={17}
             gestureHandling="cooperative"
             disableDefaultUI={false}
             styles={DARK_MAP_STYLES}
             style={{ width: "100%", height: "100%" }}
           >
-            <Marker position={UBC_STUDIO_LOCATION} title="UBC Sound & Cinema Studio" />
+            <Marker position={GENTECH_LOCATION} title="Genesis Technology" />
           </Map>
         </APIProvider>
       </motion.div>

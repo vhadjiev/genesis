@@ -1,113 +1,272 @@
 {
-  "site": {
-    "id": "ubc-studio",
-    "name": "UBC Sound & Cinema Studio",
-    "tagline": {
-      "en": "A turnkey solution for your independent sound & cinema project!",
-      "bg": "Цялостно решение за вашия независим музикален и кино проект!"
+    "site": {
+        "id": "gentech",
+        "name": "Genesis Technology",
+        "tagline": {
+            "en": "Automatic coffee machines & beverage equipment",
+            "bg": "Автоматични кафемашини и съоръжения за напитки"
+        },
+        "defaultLocale": "bg",
+        "locales": ["bg", "en"],
+        "seo": {
+            "titleTemplate": "%s | Генезис Текнолоджи",
+            "siteUrl": "https://gentech.bg",
+            "openGraph": {
+                "type": "website",
+                "siteName": "Genesis Technology",
+                "images": [
+                    {
+                        "url": "/images/gentech-og.jpg",
+                        "width": 1200,
+                        "height": 630,
+                        "alt": "Genesis Technology - Automatic Coffee Machines"
+                    }
+                ]
+            },
+            "twitter": {
+                "card": "summary_large_image",
+                "site": "@gentechtechnology"
+            }
+        },
+        "contact": {
+            "phone": "+359 89 565 7706",
+            "email": "info@gentech.bg",
+            "address": {
+                "en": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria",
+                "bg": "ул. \"Брезовско шосе\" 145, 4003 Пловдив"
+            },
+            "mapUrl": "https://maps.app.goo.gl/gentech-plovdiv",
+            "mapEmbed": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs&q=Brezovsko+Shose+145,+Plovdiv,+Bulgaria"
+        }
     },
-    "defaultLocale": "bg",
-    "locales": ["bg", "en"],
-    "seo": {
-      "titleTemplate": "%s | UBC Sound & Cinema Studio",
-      "siteUrl": "https://ubc.studio",
-      "openGraph": {
-        "type": "website",
-        "siteName": "UBC Sound & Cinema",
-        "images": [
-          {
-            "url": "/ubc-sound-and-cinema-studio-og.jpg",
-            "width": 1200,
-            "height": 630,
-            "alt": "UBC Sound & Cinema Studio"
-          }
+    "navigation": {
+        "main": [
+            {
+                "id": "equipment",
+                "labelKey": "nav.equipment",
+                "children": [
+                    { "id": "genesis-alpha", "labelKey": "nav.genesisAlpha" },
+                    { "id": "genesis-prime", "labelKey": "nav.genesisPrime" },
+                    { "id": "genesis-universa", "labelKey": "nav.genesisUniversa" },
+                    { "id": "genesis-eclipse", "labelKey": "nav.genesisEclipse" },
+                    { "id": "genesis-solaris", "labelKey": "nav.genesisSolaris" },
+                    { "id": "genesis-solaris-2", "labelKey": "nav.genesisSolaris2" },
+                    { "id": "genesis-equinox", "labelKey": "nav.genesisEquinox" }
+                ]
+            },
+            {
+                "id": "services",
+                "labelKey": "nav.services",
+                "children": [
+                    { "id": "cloud-system", "labelKey": "nav.cloudSystem" },
+                    { "id": "laser-cutting", "labelKey": "nav.laserCutting" },
+                    { "id": "sheet-metal-bending", "labelKey": "nav.sheetMetalBending" }
+                ]
+            },
+            {
+                "id": "about",
+                "labelKey": "nav.about",
+                "children": [
+                    { "id": "news", "labelKey": "nav.news" },
+                    { "id": "exhibitions", "labelKey": "nav.exhibitions" },
+                    { "id": "projects", "labelKey": "nav.projects" }
+                ]
+            },
+            { "id": "contacts", "labelKey": "nav.contacts" }
         ]
-      },
-      "twitter": {
-        "card": "summary_large_image",
-        "site": "@ubcstudio"
-      }
     },
-    "contact": {
-      "phone": "+359 888 352211",
-      "email": "info@ubc.studio",
-      "address": {
-        "en": "Plovdiv, Preslav 15 str.",
-        "bg": "Пловдив, ул. Преслав 15"
-      },
-      "mapUrl": "https://maps.app.goo.gl/V3rvmEvFyFLjkH1d9",
-      "mapEmbed": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs&q=Preslav+15,+Plovdiv,+Bulgaria"
-    }
-  },
-  "navigation": {
-    "main": [
-      { "id": "home", "labelKey": "nav.studio" },
-      { "id": "events", "labelKey": "nav.events" },
-      { "id": "gallery", "labelKey": "nav.gallery" },
-      { "id": "equipment", "labelKey": "nav.equipment" },
-      { "id": "contacts", "labelKey": "nav.contacts" }
+    "pages": [
+        {
+            "id": "home",
+            "slug": "",
+            "title": {
+                "en": "Genesis Technology - Automatic Coffee Machines",
+                "bg": "Генезис Текнолоджи - Автоматични кафемашини"
+            },
+            "description": {
+                "en": "Genesis Technology manufactures automatic coffee machines, beverage equipment, and bar systems for the HoReCa industry.",
+                "bg": "Генезис Текнолоджи произвежда автоматични кафемашини, съоръжения за напитки и бар системи за ХоРеКа индустрията."
+            }
+        },
+        {
+            "id": "genesis-alpha",
+            "slug": "equipment/genesis-alpha",
+            "title": {
+                "en": "Genesis Alpha - Cloud AI Coffee Machine",
+                "bg": "Genesis Alpha - Клауд AI кафемашина"
+            },
+            "description": {
+                "en": "The most innovative automatic coffee machine with cloud-based system and AI technology.",
+                "bg": "Най-иновативната автоматична кафемашина с клауд система и AI технология."
+            }
+        },
+        {
+            "id": "genesis-prime",
+            "slug": "equipment/genesis-prime",
+            "title": {
+                "en": "Genesis Prime - Automatic Coffee Machine",
+                "bg": "Genesis Prime - Автоматична кафемашина"
+            },
+            "description": {
+                "en": "Our first-generation automatic coffee machine with cloud system and single bean hopper.",
+                "bg": "Първата ни автоматична кафемашина с клауд система и един бункер за зърнено кафе."
+            }
+        },
+        {
+            "id": "genesis-universa",
+            "slug": "equipment/genesis-universa",
+            "title": {
+                "en": "Genesis Universa - E.S.E Pods Coffee Machine",
+                "bg": "Genesis Universa - Кафемашина с E.S.E Pods"
+            },
+            "description": {
+                "en": "Eco-friendly coffee machine working with E.S.E pods - the ecological alternative to capsule coffee.",
+                "bg": "Екологична кафемашина, работеща с E.S.E pods - екологичната алтернатива на капсулното кафе."
+            }
+        },
+        {
+            "id": "genesis-eclipse",
+            "slug": "equipment/genesis-eclipse",
+            "title": {
+                "en": "Genesis Eclipse - Cocktail Bar System",
+                "bg": "Genesis Eclipse - Коктейл Бар Система"
+            },
+            "description": {
+                "en": "Universal cocktail bar system with CO2 for alcoholic, non-alcoholic and carbonated drinks.",
+                "bg": "Универсална коктейл бар система с CO₂ за алкохолни, безалкохолни и газирани напитки."
+            }
+        },
+        {
+            "id": "genesis-solaris",
+            "slug": "equipment/genesis-solaris",
+            "title": {
+                "en": "Genesis Solaris - Post Mix Juice Machine",
+                "bg": "Genesis Solaris - Post Mix сок машина"
+            },
+            "description": {
+                "en": "Post-mix juice and beverage dispensing machine for the HoReCa industry.",
+                "bg": "Post-mix сок и напитки машина за ХоРеКа индустрията."
+            }
+        },
+        {
+            "id": "genesis-solaris-2",
+            "slug": "equipment/genesis-solaris-2",
+            "title": {
+                "en": "Genesis Solaris 2 - Next-Gen Post Mix",
+                "bg": "Genesis Solaris 2 - Ново поколение Post Mix"
+            },
+            "description": {
+                "en": "Compact machine with large touch screen for fusion, wellness and juice drinks.",
+                "bg": "Малка и компактна машина с голям тъч екран за фюжън, уелнес и сок напитки."
+            }
+        },
+        {
+            "id": "genesis-equinox",
+            "slug": "equipment/genesis-equinox",
+            "title": {
+                "en": "Genesis Equinox - Frappe & Lemonade Machine",
+                "bg": "Genesis Equinox - Фрапе и лимонада машина"
+            },
+            "description": {
+                "en": "New machine for cold drinks - frappes, lemonades and fresh beverages.",
+                "bg": "Нова машина за студени напитки - фрапе, лимонади и свежи напитки."
+            }
+        },
+        {
+            "id": "cloud-system",
+            "slug": "services/cloud-system",
+            "title": {
+                "en": "Cloud System - Remote Management",
+                "bg": "Облачна система - Дистанционно управление"
+            },
+            "description": {
+                "en": "Cloud-based remote management system for monitoring and controlling beverage equipment.",
+                "bg": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията за напитки."
+            }
+        },
+        {
+            "id": "laser-cutting",
+            "slug": "services/laser-cutting",
+            "title": {
+                "en": "Laser Cutting Services",
+                "bg": "Лазерно рязане"
+            },
+            "description": {
+                "en": "Professional laser cutting services for metals up to 8mm thickness.",
+                "bg": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм."
+            }
+        },
+        {
+            "id": "sheet-metal-bending",
+            "slug": "services/sheet-metal-bending",
+            "title": {
+                "en": "Sheet Metal Bending",
+                "bg": "Огъване на листова ламарина"
+            },
+            "description": {
+                "en": "Sheet metal bending services up to 6mm thickness and 2000mm length.",
+                "bg": "Услуги за огъване на листова ламарина с дебелина до 6мм и дължина до 2000мм."
+            }
+        },
+        {
+            "id": "about",
+            "slug": "about",
+            "title": {
+                "en": "About Us | Genesis Technology",
+                "bg": "За нас | Генезис Текнолоджи"
+            },
+            "description": {
+                "en": "Genesis Technology - 15 years of experience manufacturing automatic coffee machines and beverage equipment in Plovdiv, Bulgaria.",
+                "bg": "Генезис Текнолоджи - 15 години опит в производството на автоматични кафемашини и съоръжения за напитки в Пловдив, България."
+            }
+        },
+        {
+            "id": "projects",
+            "slug": "projects",
+            "title": {
+                "en": "Projects | Genesis Technology",
+                "bg": "Проекти | Генезис Текнолоджи"
+            },
+            "description": {
+                "en": "Our installations in hotels, offices, restaurants, stores and kiosks across Bulgaria.",
+                "bg": "Нашите инсталации в хотели, офиси, ресторанти, магазини и киоскове в цяла България."
+            }
+        },
+        {
+            "id": "news",
+            "slug": "news",
+            "title": {
+                "en": "News | Genesis Technology",
+                "bg": "Новини | Генезис Текнолоджи"
+            },
+            "description": {
+                "en": "Latest news, exhibitions and product launches from Genesis Technology.",
+                "bg": "Последни новини, изложения и продуктови представяния от Генезис Текнолоджи."
+            }
+        },
+        {
+            "id": "exhibitions",
+            "slug": "exhibitions",
+            "title": {
+                "en": "Exhibitions | Genesis Technology",
+                "bg": "Изложения | Генезис Текнолоджи"
+            },
+            "description": {
+                "en": "Genesis Technology at international exhibitions - ANUGA Germany, FOOD EXPO Greece and more.",
+                "bg": "Генезис Текнолоджи на международни изложения - ANUGA Германия, FOOD EXPO Гърция и други."
+            }
+        },
+        {
+            "id": "contacts",
+            "slug": "contacts",
+            "title": {
+                "en": "Contact Us | Genesis Technology",
+                "bg": "Контакти | Генезис Текнолоджи"
+            },
+            "description": {
+                "en": "Get in touch with Genesis Technology in Plovdiv, Bulgaria.",
+                "bg": "Свържете се с Генезис Текнолоджи в Пловдив, България."
+            }
+        }
     ]
-  },
-  "pages": [
-    {
-      "id": "home",
-      "slug": "",
-      "title": {
-        "en": "UBC Sound & Cinema Studio",
-        "bg": "UBC Sound & Cinema Студио"
-      },
-      "description": {
-        "en": "A turnkey solution for your independent sound & cinema project! Right in the heart of Plovdiv, Bulgaria.",
-        "bg": "Цялостно решение за вашия независим музикален и кино проект! В самото сърце на Пловдив, България."
-      }
-    },
-    {
-      "id": "gallery",
-      "slug": "gallery",
-      "title": {
-        "en": "Gallery | UBC Studio",
-        "bg": "Галерия | UBC Studio"
-      },
-      "description": {
-        "en": "Explore UBC Sound & Cinema Studio spaces - recording rooms, voiceover booth, editing room, and private garden.",
-        "bg": "Разгледайте пространствата на UBC Sound & Cinema Studio - стаи за запис, кабина за войсоувър, монтажна стая и уединена градина."
-      }
-    },
-    {
-      "id": "equipment",
-      "slug": "equipment",
-      "title": {
-        "en": "Equipment for Rent | UBC Studio",
-        "bg": "Оборудване под наем | UBC Studio"
-      },
-      "description": {
-        "en": "Professional film and audio equipment for rent - cinema cameras, lenses, field recorders, microphones, and storage solutions.",
-        "bg": "Професионално филмово и аудио оборудване под наем - кино камери, обективи, полеви рекордери, микрофони и решения за съхранение."
-      }
-    },
-    {
-      "id": "events",
-      "slug": "events",
-      "title": {
-        "en": "Events | UBC Studio",
-        "bg": "Събития | UBC Studio"
-      },
-      "description": {
-        "en": "Host your creative events at UBC Studio - project showcases, listening parties, private screenings, and meet & greets.",
-        "bg": "Организирайте вашите творчески събития в UBC Studio - представяне на проекти, слушателски партита, частни прожекции и срещи с фенове."
-      }
-    },
-    {
-      "id": "contacts",
-      "slug": "contacts",
-      "title": {
-        "en": "Contact Us | UBC Studio",
-        "bg": "Контакти | UBC Studio"
-      },
-      "description": {
-        "en": "Get in touch with UBC Sound & Cinema Studio in Plovdiv, Bulgaria. Available 24/7 for your film and audio production needs.",
-        "bg": "Свържете се с UBC Sound & Cinema Studio в Пловдив, България. На разположение 24/7 за вашите филмови и аудио продукции."
-      }
-    }
-  ]
 }

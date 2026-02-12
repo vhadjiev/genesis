@@ -18,10 +18,11 @@ export interface ContactInfo {
   mapEmbed: string;
 }
 
-/** Navigation item */
+/** Navigation item (supports nested dropdown children) */
 export interface NavigationItem {
   id: string;
   labelKey: string;
+  children?: NavigationItem[];
 }
 
 /** Navigation configuration */

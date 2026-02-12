@@ -34,12 +34,12 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     description: site.tagline.en,
     keywords: [
-      "studio",
-      "sound",
-      "cinema",
-      "post-production",
-      "audio",
-      "video",
+      "coffee machines",
+      "automatic coffee machines",
+      "genesis technology",
+      "beverage equipment",
+      "bar systems",
+      "HoReCa",
       "Plovdiv",
       "Bulgaria",
     ],
@@ -81,7 +81,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#c9a227",
+  themeColor: "#0066cc",
 };
 
 /**
@@ -130,7 +130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="UBC" />
+        <meta name="apple-mobile-web-app-title" content="GenTech" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body

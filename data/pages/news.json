@@ -1,0 +1,29 @@
+{
+  "id": "news",
+  "slug": "news",
+  "seo": {
+    "bg": {
+      "title": "Новини | Генезис Текнолоджи",
+      "description": "Последни новини от Генезис Текнолоджи - продуктови представяния, изложения и нови проекти.",
+      "keywords": ["новини", "генезис текнолоджи"]
+    },
+    "en": {
+      "title": "News | Genesis Technology",
+      "description": "Latest news from Genesis Technology - product launches, exhibitions and new projects.",
+      "keywords": ["news", "genesis technology"]
+    }
+  },
+  "sections": [
+    {
+      "type": "pageBanner",
+      "title": { "bg": "Новини", "en": "News" },
+      "subtitle": { "bg": "Последни новини и събития", "en": "Latest news and events" },
+      "backgroundImage": "/images/news-banner.jpg"
+    },
+    {
+      "type": "newsGrid",
+      "title": { "bg": "Последни новини", "en": "Latest News" },
+      "articles": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "genesis-universa",
+  "slug": "equipment/genesis-universa",
+  "seo": {
+    "bg": {
+      "title": "Genesis Universa - E.S.E Pods кафемашина",
+      "description": "Екологична кафемашина, работеща с E.S.E pods - екологичната алтернатива на капсулното кафе.",
+      "keywords": ["genesis universa", "кафемашина", "E.S.E pods", "екологична"]
+    },
+    "en": {
+      "title": "Genesis Universa - E.S.E Pods Coffee Machine",
+      "description": "Eco-friendly coffee machine working with E.S.E pods - the ecological alternative to capsule coffee.",
+      "keywords": ["genesis universa", "coffee machine", "E.S.E pods", "eco-friendly"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Universa",
+      "tagline": { "bg": "E.S.E Pods кафемашина", "en": "E.S.E Pods Coffee Machine" },
+      "description": { "bg": "Кафе машината Universa работи с мляно кафе в хартиено филтърно покритие. Екологична алтернатива на капсулното кафе.", "en": "The Universa coffee machine works with ground coffee in paper filter covering. Eco-friendly alternative to capsule coffee." },
+      "image": "/images/products/universa.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:leaf", "title": { "bg": "Екологична", "en": "Eco-friendly" }, "description": { "bg": "Без отпечатък върху природата", "en": "No environmental footprint" } },
+        { "icon": "mdi:coffee", "title": { "bg": "E.S.E Pods", "en": "E.S.E Pods" }, "description": { "bg": "Предварително смляно и пакетирано кафе", "en": "Pre-ground and packaged coffee" } },
+        { "icon": "mdi:shield-check", "title": { "bg": "Перфектно еспресо", "en": "Perfect Espresso" }, "description": { "bg": "Гарантирано качество всеки път", "en": "Guaranteed quality every time" } },
+        { "icon": "mdi:recycle", "title": { "bg": "Азотна среда", "en": "Nitrogen Sealed" }, "description": { "bg": "Пакетирано в азотна среда за свежест", "en": "Packed in nitrogen for freshness" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

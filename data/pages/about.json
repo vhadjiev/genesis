@@ -1,0 +1,34 @@
+{
+  "id": "about",
+  "slug": "about",
+  "seo": {
+    "bg": {
+      "title": "За нас | Генезис Текнолоджи",
+      "description": "Генезис Текнолоджи - 15 години опит в производството на автоматични кафемашини и съоръжения за напитки.",
+      "keywords": ["за нас", "генезис текнолоджи", "производство", "пловдив"]
+    },
+    "en": {
+      "title": "About Us | Genesis Technology",
+      "description": "Genesis Technology - 15 years of experience manufacturing automatic coffee machines and beverage equipment.",
+      "keywords": ["about us", "genesis technology", "manufacturing", "plovdiv"]
+    }
+  },
+  "sections": [
+    {
+      "type": "pageBanner",
+      "title": { "bg": "За нас", "en": "About Us" },
+      "subtitle": { "bg": "Генезис Текнолоджи ООД", "en": "Genesis Technology Ltd." },
+      "backgroundImage": "/images/about-banner.jpg"
+    },
+    {
+      "type": "companyOverview",
+      "title": { "bg": "Кои сме ние", "en": "Who we are" },
+      "description": { "bg": "Генезис Текнолоджи ООД е предприятие, което се занимава с производство на съоръжения за кафе и топли напитки тип OCS (office coffee service)/Tabletop за Хо.Ре.Ка. областта.", "en": "Genesis Technology Ltd. is a company engaged in manufacturing coffee and hot beverage equipment of OCS (office coffee service)/Tabletop type for the HoReCa sector." },
+      "stats": [
+        { "value": 15, "label": { "bg": "Години опит", "en": "Years of experience" } },
+        { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани съоръжения", "en": "Installed equipment" } },
+        { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Satisfied clients" } }
+      ]
+    }
+  ]
+}

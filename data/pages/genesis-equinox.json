@@ -1,0 +1,34 @@
+{
+  "id": "genesis-equinox",
+  "slug": "equipment/genesis-equinox",
+  "seo": {
+    "bg": {
+      "title": "Genesis Equinox - Фрапе и лимонада машина",
+      "description": "Нови напитки, нови рецепти и изцяло нова машина за студени напитки.",
+      "keywords": ["genesis equinox", "фрапе", "лимонада", "студени напитки"]
+    },
+    "en": {
+      "title": "Genesis Equinox - Frappe & Lemonade Machine",
+      "description": "New drinks, new recipes and an entirely new cold drinks machine.",
+      "keywords": ["genesis equinox", "frappe", "lemonade", "cold drinks"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Equinox",
+      "tagline": { "bg": "Фрапе машина + лимонада", "en": "Frappe Machine + Lemonade" },
+      "description": { "bg": "Нови напитки, нови рецепти и изцяло нова машина за студени напитки. И това е само началото.", "en": "New drinks, new recipes and an entirely new cold drinks machine. And this is just the beginning." },
+      "image": "/images/products/equinox.jpg"
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:snowflake", "title": { "bg": "Студени напитки", "en": "Cold Drinks" }, "description": { "bg": "Фрапе, лимонади и свежи напитки", "en": "Frappes, lemonades and fresh drinks" } },
+        { "icon": "mdi:book-open-variant", "title": { "bg": "Нови рецепти", "en": "New Recipes" }, "description": { "bg": "Иновативни рецепти за напитки", "en": "Innovative drink recipes" } }
+      ]
+    },
+    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
+    { "type": "productGallery", "images": [] }
+  ]
+}

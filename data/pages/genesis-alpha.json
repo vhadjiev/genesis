@@ -1,0 +1,44 @@
+{
+  "id": "genesis-alpha",
+  "slug": "equipment/genesis-alpha",
+  "seo": {
+    "bg": {
+      "title": "Genesis Alpha - Клауд AI кафемашина",
+      "description": "Най-иновативната автоматична кафемашина с клауд система и AI технология. Два бункера за зърнено кафе, автоматична млечна система.",
+      "keywords": ["genesis alpha", "кафемашина", "клауд", "AI", "автоматична"]
+    },
+    "en": {
+      "title": "Genesis Alpha - Cloud AI Coffee Machine",
+      "description": "The most innovative automatic coffee machine with cloud-based system and AI technology. Two bean hoppers, automatic milk system.",
+      "keywords": ["genesis alpha", "coffee machine", "cloud", "AI", "automatic"]
+    }
+  },
+  "sections": [
+    {
+      "type": "productHero",
+      "name": "Genesis Alpha",
+      "tagline": { "bg": "Автоматична кафемашина", "en": "Automatic Coffee Machine" },
+      "description": { "bg": "Клауд базирана система в най-иновативната автоматична кафемашина.", "en": "Cloud-based system in the most innovative automatic coffee machine." },
+      "image": "/images/products/alpha.jpg",
+      "badge": { "bg": "Очаквайте скоро", "en": "Coming soon" }
+    },
+    {
+      "type": "productFeatures",
+      "features": [
+        { "icon": "mdi:cloud", "title": { "bg": "Клауд система", "en": "Cloud System" }, "description": { "bg": "Дистанционно управление и мониторинг", "en": "Remote control and monitoring" } },
+        { "icon": "mdi:brain", "title": { "bg": "AI Технология", "en": "AI Technology" }, "description": { "bg": "Интелигентно управление на рецепти", "en": "Intelligent recipe management" } },
+        { "icon": "mdi:coffee", "title": { "bg": "Два бункера", "en": "Two Hoppers" }, "description": { "bg": "За различни видове зърнено кафе", "en": "For different types of coffee beans" } },
+        { "icon": "mdi:cow", "title": { "bg": "Млечна система", "en": "Milk System" }, "description": { "bg": "Автоматична млечна система", "en": "Automatic milk system" } }
+      ]
+    },
+    {
+      "type": "productSpecs",
+      "title": { "bg": "Технически характеристики", "en": "Technical Specifications" },
+      "specs": []
+    },
+    {
+      "type": "productGallery",
+      "images": []
+    }
+  ]
+}
