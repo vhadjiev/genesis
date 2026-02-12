@@ -23,7 +23,26 @@
     {
       "type": "exhibitionsGrid",
       "title": { "bg": "Нашите изложения", "en": "Our Exhibitions" },
-      "exhibitions": []
+      "exhibitions": [
+        {
+          "id": "anuga-2025",
+          "name": "ANUGA 2025 – Кьолн, Германия",
+          "location": { "bg": "Кьолн, Германия", "en": "Cologne, Germany" },
+          "date": "2025"
+        },
+        {
+          "id": "food-expo-greece-2024",
+          "name": "FOOD EXPO GREECE 2024",
+          "location": { "bg": "Проект: FOOD EXPO GREECE 2024 и RIO с Генезис Соларис. Натовареност: Висока. Атина, Гърция", "en": "Project: FOOD EXPO GREECE 2024 and RIO with Genesis Solaris. High load. Athens, Greece" },
+          "date": "2024"
+        },
+        {
+          "id": "izlojenie-hrani-napitki",
+          "name": "Изложение храни и напитки за туризма",
+          "location": { "bg": "Генезис Текнолоджи представи ново решение за студени напитки", "en": "Genesis Technology presented a new solution for cold beverages" },
+          "date": "2024"
+        }
+      ]
     }
   ]
 }

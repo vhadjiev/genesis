@@ -24,11 +24,11 @@
       "type": "projectsGrid",
       "title": { "bg": "Категории проекти", "en": "Project Categories" },
       "categories": [
-        { "id": "hotels", "title": { "bg": "Хотели", "en": "Hotels" }, "image": "/images/projects/hotels.jpg" },
-        { "id": "offices", "title": { "bg": "Офиси", "en": "Offices" }, "image": "/images/projects/offices.jpg" },
-        { "id": "restaurants", "title": { "bg": "Ресторанти", "en": "Restaurants" }, "image": "/images/projects/restaurants.jpg" },
-        { "id": "stores", "title": { "bg": "Магазини", "en": "Stores" }, "image": "/images/projects/stores.jpg" },
-        { "id": "kiosks", "title": { "bg": "Киоскове", "en": "Kiosks" }, "image": "/images/projects/kiosks.jpg" }
+        { "id": "stores", "title": { "bg": "Професионална кафемашина за магазин", "en": "Professional coffee machine for store" }, "image": "/images/projects/stores.jpg" },
+        { "id": "hotels", "title": { "bg": "Кафемашина за хотел", "en": "Coffee machine for hotel" }, "image": "/images/projects/hotels.jpg" },
+        { "id": "pavilion", "title": { "bg": "Кафемашина за павилион", "en": "Coffee machine for pavilion" }, "image": "/images/projects/kiosks.jpg" },
+        { "id": "offices", "title": { "bg": "Кафемашина за офис", "en": "Coffee machine for office" }, "image": "/images/projects/offices.jpg" },
+        { "id": "restaurants", "title": { "bg": "Кафемашина за ресторант и заведения", "en": "Coffee machine for restaurant" }, "image": "/images/projects/restaurants.jpg" }
       ]
     }
   ]

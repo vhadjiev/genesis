@@ -17,19 +17,85 @@
     {
       "type": "productHero",
       "name": "Genesis Prime",
-      "tagline": { "bg": "Първата ни кафемашина", "en": "Our First Coffee Machine" },
-      "description": { "bg": "Разполага с клауд система и един бункер за зърнено кафе.", "en": "Features a cloud system and a single bean hopper." },
+      "tagline": {
+        "bg": "Любимата машина от години",
+        "en": "The favorite machine for years"
+      },
+      "description": {
+        "bg": "Кафемашината Genesis Prime има иновативен софтуер за управление, комуникация и връзка с външни мрежи. За да поръчаш Генезис Прайм, е нужно да се свържеш с нас за оферта.",
+        "en": "The Genesis Prime coffee machine has innovative software for management, communication and connection with external networks. To order Genesis Prime, you need to contact us for an offer."
+      },
       "image": "/images/products/prime.jpg"
     },
     {
       "type": "productFeatures",
       "features": [
-        { "icon": "mdi:cloud", "title": { "bg": "Клауд система", "en": "Cloud System" }, "description": { "bg": "Дистанционно управление", "en": "Remote management" } },
-        { "icon": "mdi:coffee", "title": { "bg": "Един бункер", "en": "Single Hopper" }, "description": { "bg": "За зърнено кафе", "en": "For coffee beans" } },
-        { "icon": "mdi:certificate", "title": { "bg": "TÜV Nord", "en": "TÜV Nord" }, "description": { "bg": "Сертифицирано качество", "en": "Certified quality" } }
+        {
+          "icon": "mdi:cloud",
+          "title": { "bg": "Cloud Система", "en": "Cloud System" },
+          "description": {
+            "bg": "Софтуерни обновление, комуникиране безжично, Wi-fi & Bluetooth.",
+            "en": "Software updates, wireless communication, Wi-Fi & Bluetooth."
+          }
+        },
+        {
+          "icon": "mdi:alert-circle",
+          "title": { "bg": "Следене на грешки", "en": "Error tracking" },
+          "description": {
+            "bg": "Машината може да следи и отчита грешки.",
+            "en": "The machine can track and report errors."
+          }
+        },
+        {
+          "icon": "mdi:thermometer",
+          "title": { "bg": "Анализ на температура", "en": "Temperature analysis" },
+          "description": {
+            "bg": "За направата на перфектните топли напитки.",
+            "en": "For making perfect hot drinks."
+          }
+        },
+        {
+          "icon": "mdi:cellphone",
+          "title": { "bg": "Android & iOS", "en": "Android & iOS" },
+          "description": {
+            "bg": "Възползвайте се от приложението за мобилен телефон.",
+            "en": "Take advantage of the mobile phone application."
+          }
+        },
+        {
+          "icon": "mdi:cellphone-link",
+          "title": { "bg": "Мобилно Приложение", "en": "Mobile Application" },
+          "description": {
+            "bg": "Основната цел на приложението е възможност за избиране на напитки без докосване на екрана на кафемашината Genesis, забрана на напитки, показване на точна хранителна и калорийна стойност на конкретна напитка.",
+            "en": "The main purpose of the app is the ability to select drinks without touching the Genesis coffee machine screen, drink restrictions, and display of exact nutritional and calorie value of a specific drink."
+          }
+        },
+        {
+          "icon": "mdi:food-apple-outline",
+          "title": { "bg": "Избирай какво пиеш", "en": "Choose what you drink" },
+          "description": {
+            "bg": "В случай на зададена забрана към конкретни напитки заради алергени или към общ дневен сбор на хранителни и калорийни стойности, мобилното приложение ще скрива или сигнализира на потребителя.",
+            "en": "In case of restrictions on specific drinks due to allergens or daily nutritional and calorie limits, the mobile app will hide or notify the user."
+          }
+        },
+        {
+          "icon": "mdi:cup-outline",
+          "title": { "bg": "И готова напитка", "en": "And your drink is ready" },
+          "description": {
+            "bg": "След като изберете желаната от вас рецепта, остава само да изчакате приготвянето на напитката. Толкова е лесно!",
+            "en": "After selecting your desired recipe, just wait for the drink to be prepared. It's that easy!"
+          }
+        }
       ]
     },
-    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
-    { "type": "productGallery", "images": [] }
+    {
+      "type": "productSpecs",
+      "title": { "bg": "Технически характеристики", "en": "Technical Specifications" },
+      "specs": []
+    },
+    {
+      "type": "productGallery",
+      "images": []
+    }
   ]
 }

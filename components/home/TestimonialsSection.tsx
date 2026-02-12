@@ -6,9 +6,16 @@ import { Icon } from '@iconify/react'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
+interface Testimonial {
+    quote: LocalizedContent<string>
+    author: string
+    role: LocalizedContent<string>
+}
+
 interface TestimonialsSectionData {
     type: 'testimonialsSection'
     title: LocalizedContent<string>
+    testimonials?: Testimonial[]
 }
 
 interface TestimonialsSectionProps {
@@ -16,27 +23,34 @@ interface TestimonialsSectionProps {
     locale: string
 }
 
+const PLACEHOLDER_TESTIMONIALS = (locale: string) => [
+    {
+        quote: locale === 'bg' ? 'Отлично обслужване и професионален подход.' : 'Excellent service and professional approach.',
+        author: locale === 'bg' ? 'Хотел Марица' : 'Hotel Maritsa',
+        role: locale === 'bg' ? 'Пловдив' : 'Plovdiv',
+    },
+    {
+        quote: locale === 'bg' ? 'Машините работят безупречно вече 5 години.' : 'The machines have been working flawlessly for 5 years.',
+        author: locale === 'bg' ? 'Бизнес Парк' : 'Business Park',
+        role: locale === 'bg' ? 'София' : 'Sofia',
+    },
+    {
+        quote: locale === 'bg' ? 'Клауд системата ни спестява много време.' : 'The cloud system saves us a lot of time.',
+        author: locale === 'bg' ? 'Ресторант Верея' : 'Restaurant Vereya',
+        role: locale === 'bg' ? 'Стара Загора' : 'Stara Zagora',
+    },
+]
+
 export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) {
     const title = getLocalizedContent(data.title, locale)
 
-    // Placeholder testimonials
-    const testimonials = [
-        {
-            quote: locale === 'bg' ? 'Отлично обслужване и професионален подход.' : 'Excellent service and professional approach.',
-            author: locale === 'bg' ? 'Хотел Марица' : 'Hotel Maritsa',
-            role: locale === 'bg' ? 'Пловдив' : 'Plovdiv',
-        },
-        {
-            quote: locale === 'bg' ? 'Машините работят безупречно вече 5 години.' : 'The machines have been working flawlessly for 5 years.',
-            author: locale === 'bg' ? 'Бизнес Парк' : 'Business Park',
-            role: locale === 'bg' ? 'София' : 'Sofia',
-        },
-        {
-            quote: locale === 'bg' ? 'Клауд системата ни спестява много време.' : 'The cloud system saves us a lot of time.',
-            author: locale === 'bg' ? 'Ресторант Верея' : 'Restaurant Vereya',
-            role: locale === 'bg' ? 'Стара Загора' : 'Stara Zagora',
-        },
-    ]
+    const testimonials = data.testimonials?.length
+        ? data.testimonials.map((t) => ({
+              quote: getLocalizedContent(t.quote, locale),
+              author: t.author,
+              role: getLocalizedContent(t.role, locale),
+          }))
+        : PLACEHOLDER_TESTIMONIALS(locale)
 
     return (
         <section className="py-20">

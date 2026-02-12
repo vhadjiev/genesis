@@ -17,24 +17,74 @@
     {
       "type": "serviceHero",
       "name": { "bg": "Облачна система", "en": "Cloud System" },
-      "tagline": { "bg": "Дистанционно управление", "en": "Remote Management" },
-      "description": { "bg": "Клауд базирана система за дистанционно наблюдение и управление на съоръженията.", "en": "Cloud-based system for remote monitoring and control of equipment." },
+      "tagline": { "bg": "Дигитални решения", "en": "Digital Solutions" },
+      "description": {
+        "bg": "Чрез клауд системата на Генезис, вие лесно можете да следите различни статистически данни на кафемашината, променяте рецепти, следите потреблението, дори локацията на машината. С функциите за дистанционно управление можете да управлявате вашата кафемашина от всякъде и по всяко време. Дори в реално време.",
+        "en": "Through the Genesis cloud system, you can easily track various statistical data of the coffee machine, change recipes, monitor consumption, even the machine's location. With remote control functions you can manage your coffee machine from anywhere and at any time. Even in real time."
+      },
       "image": "/images/services/cloud-system.jpg"
     },
     {
       "type": "serviceDetails",
-      "title": { "bg": "Функционалности", "en": "Features" },
+      "title": { "bg": "Преимущества", "en": "Benefits" },
       "features": [
-        { "icon": "mdi:monitor-dashboard", "title": { "bg": "Табло за управление", "en": "Dashboard" }, "description": { "bg": "Реално време мониторинг на всички съоръжения", "en": "Real-time monitoring of all equipment" } },
-        { "icon": "mdi:chart-line", "title": { "bg": "Анализи и отчети", "en": "Analytics & Reports" }, "description": { "bg": "Подробни отчети за продажби и консумация", "en": "Detailed sales and consumption reports" } },
-        { "icon": "mdi:cellphone-link", "title": { "bg": "Мобилно приложение", "en": "Mobile App" }, "description": { "bg": "Управление от телефон или таблет", "en": "Control from phone or tablet" } },
-        { "icon": "mdi:alert-circle", "title": { "bg": "Известия", "en": "Notifications" }, "description": { "bg": "Автоматични известия при нужда от сервиз", "en": "Automatic notifications when service is needed" } }
+        {
+          "icon": "mdi:cloud-sync",
+          "title": { "bg": "Едновременна обработка", "en": "Simultaneous processing" },
+          "description": {
+            "bg": "Това ви позволява да спестите усилия при промяна на настройките, качване на данни или обновяване на софтуера на машината. Това също гарантира, че промените се обработват едновременно за всичките ви машини или само за някоя, която вие изберете.",
+            "en": "This allows you to save effort when changing settings, uploading data or updating the machine's software. This also ensures that changes are processed simultaneously for all your machines or only for the one you choose."
+          }
+        },
+        {
+          "icon": "mdi:chart-line",
+          "title": { "bg": "Разширени статистики", "en": "Advanced statistics" },
+          "description": {
+            "bg": "За да разберете по-добре и да подобрите ежедневния си бизнес с кафе, ние ви предлагаме Разширени анализи, базирани на платформа за бизнес развитие. Можете да получите стандартизирани отчети, персонализирани отчети или дори достъп до допълнителни данни, за да създавате самостоятелно направени отчети.",
+            "en": "To better understand and improve your daily coffee business, we offer Advanced analytics based on a business development platform. You can get standardized reports, personalized reports or even access to additional data to create custom reports."
+          }
+        },
+        {
+          "icon": "mdi:account-group",
+          "title": { "bg": "Доволни клиенти и продавачи", "en": "Satisfied customers and sellers" },
+          "description": {
+            "bg": "Изведете бизнеса си на следващото ниво с вградените инструменти на Genesis за управление на риска и печалбата. Управлявайте всеки ваш обект, машина и настройки, независимо къде сте.",
+            "en": "Take your business to the next level with Genesis's built-in risk and profit management tools. Manage every object, machine and settings, regardless of where you are."
+          }
+        },
+        {
+          "icon": "mdi:chart-areaspline",
+          "title": { "bg": "Разширени статистики", "en": "Extended statistics" },
+          "description": {
+            "bg": "Данните за използването и функционирането на кафемашини Генезис са на едно място. Използвайте наличните статистики в реално време 24/7, за да създадете правилен бизнес план.",
+            "en": "Genesis coffee machine usage and operation data is in one place. Use available real-time statistics 24/7 to create a proper business plan."
+          }
+        },
+        {
+          "icon": "mdi:map-marker",
+          "title": { "bg": "Гео-локация на машина", "en": "Machine geo-location" },
+          "description": {
+            "bg": "G cloud ви позволява да наблюдавате, контролирате, управлявате и оптимизирате вашият бизнес и кафемашина на Генезис.",
+            "en": "G cloud allows you to monitor, control, manage and optimize your business and Genesis coffee machine."
+          }
+        },
+        {
+          "icon": "mdi:cellphone",
+          "title": { "bg": "Мобилно решение", "en": "Mobile solution" },
+          "description": {
+            "bg": "Мобилното приложение за смартфон е перфектната комбинация за работа на кафемашина Генезис в дигитална среда.",
+            "en": "The smartphone mobile app is the perfect combination for operating a Genesis coffee machine in a digital environment."
+          }
+        },
+        {
+          "icon": "mdi:server",
+          "title": { "bg": "Клауд сървъри", "en": "Cloud servers" },
+          "description": {
+            "bg": "Нашите сървъри са налични 24/7, за да може да следите информацията по всяко едно време.",
+            "en": "Our servers are available 24/7 so you can track the information at any time."
+          }
+        }
       ]
-    },
-    {
-      "type": "serviceCapabilities",
-      "title": { "bg": "Възможности", "en": "Capabilities" },
-      "items": []
     }
   ]
 }

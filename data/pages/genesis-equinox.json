@@ -17,18 +17,173 @@
     {
       "type": "productHero",
       "name": "Genesis Equinox",
-      "tagline": { "bg": "Фрапе машина + лимонада", "en": "Frappe Machine + Lemonade" },
-      "description": { "bg": "Нови напитки, нови рецепти и изцяло нова машина за студени напитки. И това е само началото.", "en": "New drinks, new recipes and an entirely new cold drinks machine. And this is just the beginning." },
+      "tagline": {
+        "bg": "Първата автоматична фрапе машина!",
+        "en": "The first automatic frappe machine!"
+      },
+      "description": {
+        "bg": "Фрапе, Студен Шоколад и Лимонада с допълнителни вкусове. Студени напитки от EVO DRINKS. Насладете се на завладяващият вкус на лимонадата. Прибавете допълнителен такъв по ваш вкус. Или опитайте едно от фрапе предложенията ни. Толкова много избор.",
+        "en": "Frappe, Cold Chocolate and Lemonade with additional flavors. Cold drinks from EVO DRINKS. Enjoy the captivating taste of lemonade. Add extra flavor to your liking. Or try one of our frappe offerings. So many choices."
+      },
       "image": "/images/products/equinox.jpg"
     },
     {
       "type": "productFeatures",
       "features": [
-        { "icon": "mdi:snowflake", "title": { "bg": "Студени напитки", "en": "Cold Drinks" }, "description": { "bg": "Фрапе, лимонади и свежи напитки", "en": "Frappes, lemonades and fresh drinks" } },
-        { "icon": "mdi:book-open-variant", "title": { "bg": "Нови рецепти", "en": "New Recipes" }, "description": { "bg": "Иновативни рецепти за напитки", "en": "Innovative drink recipes" } }
+        {
+          "icon": "mdi:check-decagram",
+          "title": {
+            "bg": "Високи стандарти за качество",
+            "en": "High quality standards"
+          },
+          "description": {
+            "bg": "Всяка напитка бива приготвена така както трябва да бъде. Процесът е напълно автоматизиран.",
+            "en": "Every drink is prepared exactly as it should be. The process is fully automated."
+          }
+        },
+        {
+          "icon": "mdi:puzzle",
+          "title": {
+            "bg": "Комплексни решения",
+            "en": "Complex solutions"
+          },
+          "description": {
+            "bg": "Ние ще решим дори най-изненадващият проблем, при евентуално наличие на такъв. Разглеждаме всеки проблем персонално.",
+            "en": "We will solve even the most surprising problem, if any. We look at every problem personally."
+          }
+        },
+        {
+          "icon": "mdi:lightning-bolt",
+          "title": {
+            "bg": "Натоварване",
+            "en": "Load capacity"
+          },
+          "description": {
+            "bg": "Всяка от нашите машини се тества интензивно преди да достигне при вас. Нашите кафемашини са направени да издържат дори при високо натоварване.",
+            "en": "Each of our machines is tested intensively before reaching you. Our coffee machines are built to withstand even high load."
+          }
+        },
+        {
+          "icon": "mdi:headset",
+          "title": {
+            "bg": "Поддръжка",
+            "en": "Support"
+          },
+          "description": {
+            "bg": "При възникване на проблем или авария, нашият екип ще помогне за отстраняването му.",
+            "en": "If a problem or malfunction occurs, our team will help resolve it."
+          }
+        },
+        {
+          "icon": "mdi:cup",
+          "title": {
+            "bg": "Съвместимост",
+            "en": "Compatibility"
+          },
+          "description": {
+            "bg": "Фрапе машината е проектирана с цел да пасва перфектно на чашата за студени напитки. Идва със специална по-голяма, по-цветна и най-свежа чаша.",
+            "en": "The frappe machine is designed to fit perfectly with the cold drinks cup. Comes with a special larger, more colorful and freshest cup."
+          }
+        },
+        {
+          "icon": "mdi:palette",
+          "title": {
+            "bg": "Различни вкусове",
+            "en": "Various flavors"
+          },
+          "description": {
+            "bg": "Можете да конфигурирате над 10 различни вкуса по ваша преценка. Фрапе, лимонада, шоколад и още.",
+            "en": "You can configure over 10 different flavors to your liking. Frappe, lemonade, chocolate and more."
+          }
+        },
+        {
+          "icon": "mdi:leaf",
+          "title": {
+            "bg": "Energy saving",
+            "en": "Energy saving"
+          },
+          "description": {
+            "bg": "Машината е изключително енерго-икономична! Мощност 50W.",
+            "en": "The machine is extremely energy efficient! Power 50W."
+          }
+        },
+        {
+          "icon": "mdi:tag",
+          "title": {
+            "bg": "Цена",
+            "en": "Price"
+          },
+          "description": {
+            "bg": "2350 лв. за единична бройка.",
+            "en": "2350 BGN per single unit."
+          }
+        }
       ]
     },
-    { "type": "productSpecs", "title": { "bg": "Технически характеристики", "en": "Technical Specifications" }, "specs": [] },
-    { "type": "productGallery", "images": [] }
+    {
+      "type": "productSpecs",
+      "title": {
+        "bg": "Технически характеристики",
+        "en": "Technical Specifications"
+      },
+      "specs": [
+        {
+          "label": { "bg": "Височина", "en": "Height" },
+          "value": { "bg": "630 мм", "en": "630 mm" }
+        },
+        {
+          "label": { "bg": "Широчина", "en": "Width" },
+          "value": { "bg": "150 мм", "en": "150 mm" }
+        },
+        {
+          "label": { "bg": "Дълбочина", "en": "Depth" },
+          "value": { "bg": "530 мм", "en": "530 mm" }
+        },
+        {
+          "label": { "bg": "Тегло", "en": "Weight" },
+          "value": { "bg": "6 кг", "en": "6 kg" }
+        },
+        {
+          "label": { "bg": "Ел. захранване", "en": "Power supply" },
+          "value": { "bg": "230V/AC 50-60Hz", "en": "230V/AC 50-60Hz" }
+        },
+        {
+          "label": { "bg": "Мощност", "en": "Power" },
+          "value": { "bg": "50W", "en": "50W" }
+        },
+        {
+          "label": { "bg": "Водоизточник", "en": "Water source" },
+          "value": { "bg": "Директно свързване или помпа", "en": "Direct connection or pump" }
+        },
+        {
+          "label": { "bg": "Дисплей", "en": "Display" },
+          "value": { "bg": "6 inch LCD Display", "en": "6 inch LCD Display" }
+        },
+        {
+          "label": { "bg": "LED осветление", "en": "LED lighting" },
+          "value": { "bg": "LED Light RGB", "en": "LED Light RGB" }
+        },
+        {
+          "label": { "bg": "Операционна система", "en": "Operating system" },
+          "value": { "bg": "Linux", "en": "Linux" }
+        },
+        {
+          "label": { "bg": "Врата", "en": "Door" },
+          "value": { "bg": "Метална конструкция", "en": "Metal construction" }
+        },
+        {
+          "label": { "bg": "Цвят", "en": "Color" },
+          "value": { "bg": "Перлен графит", "en": "Pearl graphite" }
+        },
+        {
+          "label": { "bg": "Напитки", "en": "Drinks" },
+          "value": { "bg": "1 до 256", "en": "1 to 256" }
+        }
+      ]
+    },
+    {
+      "type": "productGallery",
+      "images": []
+    }
   ]
 }

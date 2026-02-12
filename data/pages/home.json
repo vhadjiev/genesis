@@ -54,32 +54,118 @@
       "type": "featuredProducts",
       "title": { "bg": "Нашите съоръжения", "en": "Our Equipment" },
       "products": [
-        { "id": "genesis-universa", "name": "Genesis Universa", "tagline": { "bg": "E.S.E Pods кафемашина", "en": "E.S.E Pods coffee machine" }, "image": "/images/products/universa.jpg", "href": "/equipment/genesis-universa" },
-        { "id": "genesis-eclipse", "name": "Genesis Eclipse", "tagline": { "bg": "Коктейл Бар Система", "en": "Cocktail Bar System" }, "image": "/images/products/eclipse.jpg", "href": "/equipment/genesis-eclipse" },
-        { "id": "genesis-solaris-2", "name": "Genesis Solaris 2", "tagline": { "bg": "Ново поколение Post Mix", "en": "Next-gen Post Mix" }, "image": "/images/products/solaris2.jpg", "href": "/equipment/genesis-solaris-2" }
+        {
+          "id": "genesis-universa",
+          "name": "Genesis Universa",
+          "tagline": { "bg": "E.S.E Pods кафемашина", "en": "E.S.E Pods coffee machine" },
+          "description": {
+            "bg": "Кафе машината Universa работи с мляно кафе в хартиено филтърно покритие още познато като кафе на дози (e.s.e. pod). Кафето е предварително смляно, претеглено и пакетирано в азотна среда. По този начин винаги си гарантирате перфектното еспресо. Universa e eкологична алтернатива на капсулното кафе, като не остава отпечатък върху природата.",
+            "en": "The Universa coffee machine works with ground coffee in a paper filter cover, also known as e.s.e. pod. The coffee is pre-ground, weighed and packaged in a nitrogen environment. This way, you always guarantee the perfect espresso. Universa is an ecological alternative to capsule coffee, leaving no footprint on nature."
+          },
+          "image": "/images/products/universa.jpg",
+          "href": "/equipment/genesis-universa"
+        },
+        {
+          "id": "genesis-eclipse",
+          "name": "Genesis Eclipse",
+          "tagline": { "bg": "Коктейл Бар Система", "en": "Cocktail Bar System" },
+          "description": {
+            "bg": "Коктейл Бар Системата Solaris е универсалното решение за направата на алкохолни, безалкохолни и газирани напитки. Възможност за персонализиране на всяка една рецепта, така че да задоволи Вашите нужди и предпочитанията на Вашите клиенти. Съчетаваща високата производителност и уникалния си луксозен дизайн прави Solaris перфектен избор! Многообразие на коктейли, шотове, алкохолни, безалкохолни напитки.",
+            "en": "Cocktail Bar The Solaris system is the universal solution for making alcoholic, non-alcoholic and carbonated drinks. Possibility to customize each recipe to meet your needs and the preferences of your customers. Combining high performance and its unique luxurious design makes Solaris a perfect choice! Variety of cocktails, shots, alcoholic, non-alcoholic drinks."
+          },
+          "image": "/images/products/eclipse.jpg",
+          "href": "/equipment/genesis-eclipse"
+        },
+        {
+          "id": "genesis-solaris-2",
+          "name": "Genesis Solaris 2",
+          "tagline": { "bg": "Фюжън, уелнес и сок напитки", "en": "Fusion, wellness and juice drinks" },
+          "description": {
+            "bg": "Съоръжението Solaris 2 е перфектното решение за приготвяне на фюжън, уелнес и сок напитки. Genesis Solaris 2 е малка и компактна машина с голям тъч екран, позволява персонализиране на всяка рецепта за да задоволи нуждите и предпочитанията на Вашите клиенти. Съоръжението поддържа многоезичен софтуер за управление за избор и настройка на рецепти.",
+            "en": "The Solaris 2 machine is the perfect solution for preparing fusion, wellness and juice drinks. Genesis Solaris 2 is a small and compact machine with a large touch screen, allowing you to customize each recipe to meet the needs and preferences of your customers. The machine supports multilingual management software for selecting and setting recipes."
+          },
+          "image": "/images/products/solaris2.jpg",
+          "href": "/equipment/genesis-solaris-2"
+        }
+      ]
+    },
+    {
+      "type": "featuredProducts",
+      "title": { "bg": "Други машини", "en": "Other Machines" },
+      "subtitle": { "bg": "Разгледайте и останалите ни предложения, които също могат да привлечат вашият интерес.", "en": "Check out our other dispensers that may also interest you." },
+      "products": [
+        {
+          "id": "genesis-alpha",
+          "name": "Genesis Alpha",
+          "tagline": { "bg": "Клауд AI кафемашина", "en": "Cloud AI Coffee Machine" },
+          "description": {
+            "bg": "Клауд базирана система в най-иновативната автоматична кафемашина.",
+            "en": "Cloud-based system in the most innovative automatic coffee machine."
+          },
+          "image": "/images/products/alpha.jpg",
+          "href": "/equipment/genesis-alpha"
+        },
+        {
+          "id": "genesis-equinox",
+          "name": "Genesis Equinox",
+          "tagline": { "bg": "Машина за студени напитки", "en": "Cold drink machine" },
+          "description": {
+            "bg": "Нови напитки, нови рецепти и изцяло нова машина за студени напитки. И това е само началото.",
+            "en": "New drinks, new recipes and a whole new cold drink machine. And that's just the beginning."
+          },
+          "image": "/images/products/equinox.jpg",
+          "href": "/equipment/genesis-equinox"
+        },
+        {
+          "id": "genesis-prime",
+          "name": "Genesis Prime",
+          "tagline": { "bg": "Кафемашина с клауд система", "en": "Coffee machine with cloud system" },
+          "description": {
+            "bg": "Разполага с клауд система и един бункер за зърнено кафе.",
+            "en": "It has a cloud system and a coffee bean cannister."
+          },
+          "image": "/images/products/prime.jpg",
+          "href": "/equipment/genesis-prime"
+        }
+      ]
+    },
+    {
+      "type": "partnersSection",
+      "title": { "bg": "Партньори", "en": "Partners" },
+      "subtitle": {
+        "bg": "Нашият екип е висококвалифициран и на разположение да ви помогне по всяко време. Ние ценим позитивното отношение и бързината като основни компоненти на успешното партньорство. Най-добрите хотели в България ни се довериха",
+        "en": "Our team is highly qualified and available to help you at any time. We value a positive attitude and speed as key components of a successful partnership. The best hotels in Bulgaria trusted us"
+      }
+    },
+    {
+      "type": "testimonialsSection",
+      "title": { "bg": "Какво казват клиентите", "en": "What our clients say" },
+      "testimonials": [
+        {
+          "quote": {
+            "bg": "През последната една година екипа на развойната дейност на предприятието ни се занимава с разработване на подобрен бизнес модел за работа на съоръженията за кафе и топли напитки, които чрез внедряване на нови иновативни зелени технологии и решения, да осъществят нов контрол над съоръженията. Като основни цели са – намаляване на разходите и увеличаване на приходите, допринасяне за намаляване на замърсяването на въздуха и вредното въздействие върху здравето на човека както и опазване на околната среда.",
+            "en": "Over the past year, our company's R&D team has been working on developing an improved business model for operating coffee and hot beverage facilities, which, through the implementation of new innovative green technologies and solutions, will provide new control over the facilities. The main goals are - reducing costs and increasing revenues, contributing to reducing air pollution and the harmful impact on human health, as well as protecting the environment."
+          },
+          "author": "Nikola Garkov",
+          "role": { "bg": "Директор продажби", "en": "Sales Director" }
+        }
       ]
     },
     {
       "type": "statsSection",
       "stats": [
         { "value": 15, "suffix": "", "label": { "bg": "Години опит", "en": "Years of experience" } },
-        { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани съоръжения", "en": "Installed equipment" } },
-        { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Satisfied clients" } }
+        { "value": 3000, "suffix": "", "label": { "bg": "Инсталирани съоръжения", "en": "Placed machines" } },
+        { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Customer satisfaction" } }
       ]
     },
     {
-      "type": "partnersSection",
-      "title": { "bg": "Партньори", "en": "Partners" },
-      "subtitle": { "bg": "Най-добрите хотели в България ни се довериха", "en": "The best hotels in Bulgaria trust us" }
-    },
-    {
-      "type": "testimonialsSection",
-      "title": { "bg": "Какво казват клиентите", "en": "What our clients say" }
-    },
-    {
       "type": "ctaSection",
-      "title": { "bg": "Разрастваме бизнеса ви!", "en": "We grow your business!" },
-      "subtitle": { "bg": "Нашите машини и продукти са пригодени за нуждите на вашите служители и клиенти.", "en": "Our machines and products are tailored to the needs of your employees and customers." },
+      "title": { "bg": "Какво правим ние? Разрастваме бизнеса ви!", "en": "What do we do? We grow your business!" },
+      "subtitle": {
+        "bg": "Нашите машини и продукти са пригодени за нуждите на вашите служители и клиенти. Може да ни се доверите, че ще ви предложим точно това, което търсите.",
+        "en": "Our machines and products are tailored to the needs of your employees and customers. You can trust us to offer you exactly what you are looking for."
+      },
       "buttonText": { "bg": "Свържете се с нас", "en": "Contact us" },
       "buttonHref": "/contacts"
     }

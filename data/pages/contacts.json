@@ -16,7 +16,7 @@
   "sections": [
     {
       "type": "pageBanner",
-      "title": { "bg": "Контакти", "en": "Contact Us" },
+      "title": { "bg": "Нуждаете се от помощ?", "en": "Need help?" },
       "subtitle": { "bg": "Свържете се с нас", "en": "Get in touch" },
       "backgroundImage": "/images/contacts-banner.jpg"
     },
@@ -24,7 +24,10 @@
       "type": "contactInfo",
       "studioInfo": {
         "title": { "bg": "Генезис Текнолоджи", "en": "Genesis Technology" },
-        "description": { "bg": "Производство на автоматични кафемашини и съоръжения за напитки за ХоРеКа индустрията.", "en": "Manufacturing automatic coffee machines and beverage equipment for the HoReCa industry." },
+        "description": {
+          "bg": "Производство на автоматични кафемашини и съоръжения за напитки за ХоРеКа индустрията.",
+          "en": "Manufacturing automatic coffee machines and beverage equipment for the HoReCa industry."
+        },
         "phone": "+359 89 565 7706",
         "address": { "bg": "ул. Брезовско шосе 145, 4003 Пловдив", "en": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria" }
       },

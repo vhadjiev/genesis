@@ -16,23 +16,91 @@
   "sections": [
     {
       "type": "serviceHero",
-      "name": { "bg": "Лазерно рязане", "en": "Laser Cutting" },
-      "tagline": { "bg": "Прецизност и качество", "en": "Precision and quality" },
-      "description": { "bg": "Професионални услуги за лазерно рязане на метали с дебелина до 8мм.", "en": "Professional laser cutting services for metals up to 8mm thickness." },
+      "name": { "bg": "Лазерно рязане, Огъване с абкант", "en": "Laser cutting, Bending with press brake" },
+      "tagline": { "bg": "За въпроси и поръчки", "en": "For questions and orders" },
+      "description": {
+        "bg": "Телефон: +359 89 565 7706 | Email: info@gentech.bg",
+        "en": "Phone: +359 89 565 7706 | Email: info@gentech.bg"
+      },
       "image": "/images/services/laser-cutting.jpg"
     },
     {
       "type": "serviceDetails",
-      "title": { "bg": "Характеристики", "en": "Features" },
+      "title": { "bg": "Предимства", "en": "Advantages" },
       "features": [
-        { "icon": "mdi:laser-pointer", "title": { "bg": "До 8мм дебелина", "en": "Up to 8mm thickness" }, "description": { "bg": "Рязане на метали с дебелина до 8мм", "en": "Cutting metals up to 8mm thick" } },
-        { "icon": "mdi:precision-manufacturing", "title": { "bg": "Висока прецизност", "en": "High Precision" }, "description": { "bg": "Прецизно и чисто рязане", "en": "Precise and clean cutting" } }
+        {
+          "icon": "mdi:clock-fast",
+          "title": { "bg": "Отговор до 24 часа", "en": "Response within 24 hours" },
+          "description": {
+            "bg": "Индивидуална оферта за всяка поръчка в рамките на 24 часа.",
+            "en": "Individual quote for each order within 24 hours."
+          }
+        },
+        {
+          "icon": "mdi:target",
+          "title": { "bg": "Висока точност на рязане", "en": "High cutting accuracy" },
+          "description": {
+            "bg": "Прецизно и качествено рязане на метали.",
+            "en": "Precise and high-quality metal cutting."
+          }
+        },
+        {
+          "icon": "mdi:account-hard-hat",
+          "title": { "bg": "Професионален екип", "en": "Professional team" },
+          "description": {
+            "bg": "Опитни специалисти за всяка ваша поръчка.",
+            "en": "Experienced specialists for every order."
+          }
+        }
       ]
     },
     {
       "type": "serviceCapabilities",
-      "title": { "bg": "Възможности", "en": "Capabilities" },
-      "items": []
+      "title": { "bg": "Материали и дебелини", "en": "Materials and thicknesses" },
+      "items": [
+        { "label": { "bg": "Черни и инструментални стомани", "en": "Carbon and tool steels" }, "value": { "bg": "До 8мм", "en": "Up to 8mm" } },
+        { "label": { "bg": "Неръждаеми стомани", "en": "Stainless steels" }, "value": { "bg": "До 6мм", "en": "Up to 6mm" } },
+        { "label": { "bg": "Алуминий и алуминиеви сплави", "en": "Aluminium and aluminium alloys" }, "value": { "bg": "До 6мм", "en": "Up to 6mm" } },
+        { "label": { "bg": "Месинг", "en": "Brass" }, "value": { "bg": "До 8мм", "en": "Up to 8mm" } }
+      ]
+    },
+    {
+      "type": "serviceDetails",
+      "title": { "bg": "Технологии", "en": "Technologies" },
+      "features": [
+        {
+          "icon": "mdi:laser-pointer",
+          "title": { "bg": "Какво е лазерно рязане?", "en": "What is laser cutting?" },
+          "description": {
+            "bg": "Лазерното рязане има широко разпространение. Едно от тях е именно рязането на метали. Независимо дали е черна стомана, неръждаема стомана, алуминий и месинг, лазерното рязане винаги е точно, дава отлични резултати и качество на рязане. Има малка ширина на прореза и малка зона за топлинно въздействие, това прави възможно рязане на сложни детайли и форми с малки отвори. LASER означава усилване на светлина чрез стимулирано излъчване на радиация. Фокусът на лазерния лъч върху материала води до бързо нагряване, топене и изпаряване.",
+            "en": "Laser cutting is widely used. One application is metal cutting. Whether carbon steel, stainless steel, aluminium or brass, laser cutting is always precise and delivers excellent results and cutting quality. It has a narrow kerf and small heat-affected zone, enabling cutting of complex parts and shapes with small holes. LASER stands for Light Amplification by Stimulated Emission of Radiation. The laser beam focus on the material leads to rapid heating, melting and vaporization."
+          }
+        },
+        {
+          "icon": "mdi:lightning-bolt",
+          "title": { "bg": "Мощни CO2 лазери", "en": "Powerful CO2 lasers" },
+          "description": {
+            "bg": "Лазерно рязане с мощни лазери използва въглероден диоксид. CO2 лазерът прокарва електричество през тръба, пълна с газова смес, произвеждайки светлинни лъчи. В тръбите има огледала от всеки край. Газовата смес е въглероден диоксид, азот, водород и хелий. Подобни типове лазери произвеждат невидима светлина в далечния инфрачервен диапазон. Типичните CO2 лазери за машинна обработка са с мощност от 25 до 100 вата с дължина на вълната 10,6 микрометра.",
+            "en": "Laser cutting with powerful lasers uses carbon dioxide. The CO2 laser passes electricity through a tube filled with gas mixture, producing light beams. The tubes have mirrors at each end. The gas mixture is carbon dioxide, nitrogen, hydrogen and helium. Such laser types produce invisible light in the far infrared range. Typical CO2 lasers for machining are 25 to 100 watts with 10.6 micrometer wavelength."
+          }
+        },
+        {
+          "icon": "mdi:fiber",
+          "title": { "bg": "Файбър лазери", "en": "Fiber lasers" },
+          "description": {
+            "bg": "Тези лазери са от групата на твърдотелните и използват семенен лазер. Те усилват лъча чрез специално проектирани стъклени влакна. Имат много малка дължина на вълната и по-малък фокусен диаметър. Поради високата електрическа ефективност използват значително по-малко енергия. Имат дълъг експлоатационен живот от поне 100 000 лазерни часа. Файбър лазерите са оптимални за рязане и гравиране на метал, алуминий, неметали като дърво и пластмаса. Скоростта при рязане е три пъти по-бърза от CO2 лазерите.",
+            "en": "These lasers are from the solid-state group and use seed laser. They amplify the beam through specially designed glass fibers. They have very small wavelength and smaller focal diameter. Due to high electrical efficiency they use significantly less energy. They have long operational life of at least 100,000 laser hours. Fiber lasers are optimal for cutting and engraving metal, aluminium, non-metals such as wood and plastic. Cutting speed is three times faster than CO2 lasers."
+          }
+        },
+        {
+          "icon": "mdi:arrow-collapse-vertical",
+          "title": { "bg": "Огъване с абкант", "en": "Bending with press brake" },
+          "description": {
+            "bg": "Генезис Текнолоджи предлага и огъване на метали с абкант.",
+            "en": "Genesis Technology also offers metal bending with press brake."
+          }
+        }
+      ]
     }
   ]
 }

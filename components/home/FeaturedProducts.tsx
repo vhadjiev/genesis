@@ -11,6 +11,7 @@ interface Product {
     id: string
     name: string
     tagline: LocalizedContent<string>
+    description?: LocalizedContent<string>
     image: string
     href: string
 }
@@ -18,6 +19,7 @@ interface Product {
 interface FeaturedProductsData {
     type: 'featuredProducts'
     title: LocalizedContent<string>
+    subtitle?: LocalizedContent<string>
     products: Product[]
 }
 
@@ -28,6 +30,7 @@ interface FeaturedProductsProps {
 
 export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
     const title = getLocalizedContent(data.title, locale)
+    const subtitle = data.subtitle ? getLocalizedContent(data.subtitle, locale) : null
 
     return (
         <section className="py-24 relative">
@@ -40,6 +43,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">{title}</h2>
+                    {subtitle && <p className="text-foreground/60 text-lg mt-4 max-w-2xl mx-auto">{subtitle}</p>}
                     <div className="w-20 h-1 bg-[var(--gt-blue)] mx-auto mt-6" />
                 </motion.div>
 
@@ -66,7 +70,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                                         </div>
                                         <div className="p-6">
                                             <h3 className="text-xl font-bold text-foreground mb-2">{product.name}</h3>
-                                            <p className="text-foreground/60">{tagline}</p>
+                                            <p className="text-foreground/60 line-clamp-2">{product.description ? getLocalizedContent(product.description, locale) : tagline}</p>
                                         </div>
                                     </div>
                                 </Link>

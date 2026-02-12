@@ -23,7 +23,50 @@
     {
       "type": "newsGrid",
       "title": { "bg": "Последни новини", "en": "Latest News" },
-      "articles": []
+      "articles": [
+        {
+          "id": "anuga-2025",
+          "title": { "bg": "ANUGA 2025 – Кьолн, Германия", "en": "ANUGA 2025 – Cologne, Germany" },
+          "excerpt": { "bg": "Генезис Текнолоджи на световното изложение за храни ANUGA 2025 в Кьолн.", "en": "Genesis Technology at the ANUGA 2025 world food exhibition in Cologne." },
+          "date": "2025"
+        },
+        {
+          "id": "food-expo-greece-2024",
+          "title": { "bg": "FOOD EXPO GREECE 2024", "en": "FOOD EXPO GREECE 2024" },
+          "excerpt": { "bg": "Проект: FOOD EXPO GREECE 2024 и RIO с Генезис Соларис. Дата: 2024 година. Натовареност: Висока. Град: Атина, Гърция", "en": "Project: FOOD EXPO GREECE 2024 and RIO with Genesis Solaris. Date: 2024. Load: High. City: Athens, Greece" },
+          "date": "2024"
+        },
+        {
+          "id": "kafemashina-s-display",
+          "title": { "bg": "Кафемашина с дисплей", "en": "Coffee machine with display" },
+          "excerpt": { "bg": "Нашите кафемашини с дисплей от Генезис са автоматични кафемашини предвидени за обекти с голямо натоварване.", "en": "Our Genesis coffee machines with display are automatic coffee machines designed for high-traffic locations." },
+          "date": "2024"
+        },
+        {
+          "id": "europe-projects",
+          "title": { "bg": "Проекти по европейска програма", "en": "European programme projects" },
+          "excerpt": { "bg": "Генезис Текнолоджи ООД и Европейски фонд за регионално развитие изпълниха няколко проекта за развитие на облачните технологии.", "en": "Genesis Technology Ltd. and the European Regional Development Fund implemented several projects for cloud technology development." },
+          "date": "2024"
+        },
+        {
+          "id": "bezplatna-kafemashina",
+          "title": { "bg": "Безплатна кафемашина", "en": "Free coffee machine" },
+          "excerpt": { "bg": "Ние предлагаме безплатна кафемашина за всеки бизнес.", "en": "We offer a free coffee machine for every business." },
+          "date": "2024"
+        },
+        {
+          "id": "izlojenie-hrani-napitki",
+          "title": { "bg": "Изложение храни и напитки за туризма", "en": "Food and beverage exhibition for tourism" },
+          "excerpt": { "bg": "Генезис Текнолоджи представи ново решение за студени напитки", "en": "Genesis Technology presented a new solution for cold beverages" },
+          "date": "2024"
+        },
+        {
+          "id": "genesis-technology",
+          "title": { "bg": "Повече за Генезис Текнолоджи", "en": "More about Genesis Technology" },
+          "excerpt": { "bg": "Генезис Текнолоджи ООД е предприятие, което се занимава с производство на съоръжения за кафе и топли напитки тип OCS/Tabletop за Хо.Ре.Ка. областта.", "en": "Genesis Technology Ltd. is a company engaged in manufacturing coffee and hot beverage equipment of OCS/Tabletop type for the HoReCa sector." },
+          "date": "2024"
+        }
+      ]
     }
   ]
 }

@@ -16,19 +16,30 @@
   "sections": [
     {
       "type": "pageBanner",
-      "title": { "bg": "За нас", "en": "About Us" },
+      "title": { "bg": "Цели и история", "en": "Goals and History" },
       "subtitle": { "bg": "Генезис Текнолоджи ООД", "en": "Genesis Technology Ltd." },
       "backgroundImage": "/images/about-banner.jpg"
     },
     {
       "type": "companyOverview",
       "title": { "bg": "Кои сме ние", "en": "Who we are" },
-      "description": { "bg": "Генезис Текнолоджи ООД е предприятие, което се занимава с производство на съоръжения за кафе и топли напитки тип OCS (office coffee service)/Tabletop за Хо.Ре.Ка. областта.", "en": "Genesis Technology Ltd. is a company engaged in manufacturing coffee and hot beverage equipment of OCS (office coffee service)/Tabletop type for the HoReCa sector." },
+      "description": {
+        "bg": "Генезис Текнолоджи ООД е българска компания, която изцяло проектира, разработва и произвежда професионални машини за кафе, топли напитки, пост микс и коктейли. Ние контролираме всеки аспект от производствения процес – от изрязването и огъването на металните корпуси до разработването на софтуера, който управлява машините ни. Ние вярваме в устойчивите партньорства и предлагаме цялостно сервизно обслужване, за да гарантираме надеждна работа на нашите машини.",
+        "en": "Genesis Technology Ltd. is a Bulgarian company that entirely designs, develops and manufactures professional machines for coffee, hot beverages, post mix and cocktails. We control every aspect of the production process – from cutting and bending metal housings to developing the software that operates our machines. We believe in sustainable partnerships and offer comprehensive service to ensure reliable operation of our machines."
+      },
       "stats": [
         { "value": 15, "label": { "bg": "Години опит", "en": "Years of experience" } },
         { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани съоръжения", "en": "Installed equipment" } },
         { "value": 98.2, "suffix": "%", "label": { "bg": "Доволни клиенти", "en": "Satisfied clients" } }
       ]
+    },
+    {
+      "type": "companyOverview",
+      "title": { "bg": "Няколко думи от нашия екип", "en": "A few words from our team" },
+      "description": {
+        "bg": "Нашият екип от висококвалифицирани инженери и програмисти работи неуморно, за да създава иновативни и надеждни решения, които не само отговарят, но и надминават стандартите на световните производители. Нашите продукти се отличават с: изключителен дизайн и прецизна изработка, изцяло направени в нашите производствени бази; интелигентен софтуер, разработен от нашия вътрешен екип програмисти, за максимална ефективност и лесна употреба; иновации, които поставят нови стандарти в Хо.Ре.Ка. индустрията.",
+        "en": "Our team of highly qualified engineers and programmers works tirelessly to create innovative and reliable solutions that not only meet but exceed the standards of world manufacturers. Our products stand out with: exceptional design and precise craftsmanship, entirely made in our production facilities; intelligent software developed by our in-house programming team for maximum efficiency and ease of use; innovations that set new standards in the HoReCa industry."
+      }
     }
   ]
 }
