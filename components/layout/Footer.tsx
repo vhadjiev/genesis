@@ -6,27 +6,7 @@ import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { Icon } from '@iconify/react'
 import i18nConfig from '@/i18nConfig'
-
-const equipmentLinks = [
-    { key: 'genesisAlpha', href: '/equipment/genesis-alpha' },
-    { key: 'genesisPrime', href: '/equipment/genesis-prime' },
-    { key: 'genesisUniversa', href: '/equipment/genesis-universa' },
-    { key: 'genesisEclipse', href: '/equipment/genesis-eclipse' },
-    { key: 'genesisSolaris2', href: '/equipment/genesis-solaris-2' },
-]
-
-const companyLinks = [
-    { key: 'about', href: '/about' },
-    { key: 'projects', href: '/projects' },
-    { key: 'news', href: '/news' },
-    { key: 'exhibitions', href: '/exhibitions' },
-    { key: 'contacts', href: '/contacts' },
-]
-
-const socialLinks = [
-    { icon: 'mdi:facebook', href: 'https://www.facebook.com/gentechtechnology/', label: 'Facebook' },
-    { icon: 'mdi:email', href: 'mailto:info@gentech.bg', label: 'Email' },
-]
+import { getAllProductLinks, getCompanyLinks, manufacturingLinks, socialLinks } from '@/config/navigation'
 
 export function Footer() {
     const { t, i18n } = useTranslation()
@@ -38,6 +18,9 @@ export function Footer() {
         if (href === '/') return `/${currentLocale}`
         return `/${currentLocale}${href}`
     }
+
+    const productLinks = getAllProductLinks()
+    const companyLinks = getCompanyLinks()
 
     return (
         <footer className="bg-(--gt-darker) border-t border-white/6">
@@ -82,12 +65,18 @@ export function Footer() {
                                 {t(`nav.${link.key}`)}
                             </Link>
                         ))}
+                        <Link
+                            href={localizedHref('/contacts')}
+                            className="text-sm text-white/60 hover:text-(--gt-accent) transition-colors"
+                        >
+                            {t('nav.contacts')}
+                        </Link>
                     </div>
 
                     {/* Contact Info */}
                     <div className="flex flex-col gap-2 text-sm text-white/60 mb-6">
                         <a
-                            href="tel:+35989565770‭6"
+                            href="tel:+359895657706"
                             className="flex items-center gap-2 hover:text-(--gt-accent) transition-colors"
                         >
                             <Icon icon="mdi:phone" className="w-4 h-4 text-(--gt-accent)" />
@@ -112,7 +101,7 @@ export function Footer() {
 
                 {/* Desktop Layout */}
                 <div className="hidden md:block">
-                    <div className="grid grid-cols-4 gap-12">
+                    <div className="grid grid-cols-5 gap-10">
                         {/* Logo & Social */}
                         <div className="flex flex-col gap-6">
                             <Link href={localizedHref('/')} className="inline-block">
@@ -143,11 +132,39 @@ export function Footer() {
                             </div>
                         </div>
 
-                        {/* Equipment */}
+                        {/* Systems (all 7 products) */}
                         <div>
-                            <h3 className="text-sm font-semibold text-white mb-4">{t('nav.equipment')}</h3>
+                            <h3 className="text-sm font-semibold text-white mb-4">{t('nav.systems')}</h3>
                             <ul className="space-y-2">
-                                {equipmentLinks.map((link) => (
+                                {productLinks.map((link) => (
+                                    <li key={link.key}>
+                                        <Link
+                                            href={localizedHref(link.href)}
+                                            className="text-sm text-white/50 hover:text-(--gt-accent) transition-colors flex items-center gap-2"
+                                        >
+                                            <Icon icon="mdi:chevron-right" className="w-4 h-4" />
+                                            {t(`nav.${link.key}`)}
+                                        </Link>
+                                    </li>
+                                ))}
+                                {/* Cloud Platform */}
+                                <li>
+                                    <Link
+                                        href={localizedHref('/services/cloud-system')}
+                                        className="text-sm text-(--gt-accent)/70 hover:text-(--gt-accent) transition-colors flex items-center gap-2"
+                                    >
+                                        <Icon icon="mdi:cloud-sync" className="w-4 h-4" />
+                                        {t('nav.cloudPlatform')}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Company */}
+                        <div>
+                            <h3 className="text-sm font-semibold text-white mb-4">{t('nav.company')}</h3>
+                            <ul className="space-y-2">
+                                {companyLinks.map((link) => (
                                     <li key={link.key}>
                                         <Link
                                             href={localizedHref(link.href)}
@@ -161,11 +178,11 @@ export function Footer() {
                             </ul>
                         </div>
 
-                        {/* Company */}
+                        {/* Manufacturing Services */}
                         <div>
-                            <h3 className="text-sm font-semibold text-white mb-4">{t('footer.company')}</h3>
+                            <h3 className="text-sm font-semibold text-white mb-4">{t('nav.manufacturingServices')}</h3>
                             <ul className="space-y-2">
-                                {companyLinks.map((link) => (
+                                {manufacturingLinks.map((link) => (
                                     <li key={link.key}>
                                         <Link
                                             href={localizedHref(link.href)}
@@ -200,7 +217,7 @@ export function Footer() {
                                 </li>
                                 <li>
                                     <a
-                                        href="tel:+35989565770‭6"
+                                        href="tel:+359895657706"
                                         className="text-sm text-white/50 hover:text-(--gt-accent) transition-colors flex items-center gap-2"
                                     >
                                         <Icon icon="mdi:phone" className="w-5 h-5 shrink-0 text-(--gt-accent)" />

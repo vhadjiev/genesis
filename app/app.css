@@ -209,6 +209,100 @@ body {
     background: rgba(0, 170, 255, 0.08);
 }
 
+/* CTA nav button */
+.gt-nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-open-sans, 'Open Sans', sans-serif);
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+    padding: 8px 20px;
+    background: var(--gt-blue);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.gt-nav-cta:hover {
+    background: var(--gt-blue-light);
+}
+
+/* Mega-dropdown (grouped) */
+.gt-mega-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 400px;
+    background: rgba(18, 20, 29, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.gt-dropdown.is-open .gt-mega-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.gt-mega-dropdown-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.gt-mega-dropdown-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.gt-mega-dropdown-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.35);
+    padding: 6px 16px 4px;
+    white-space: nowrap;
+}
+
+.gt-mega-dropdown-separator {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 170, 255, 0.2), transparent);
+    margin: 8px 0;
+}
+
+.gt-mega-dropdown-featured {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gt-accent);
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.gt-mega-dropdown-featured:hover {
+    background: rgba(0, 170, 255, 0.1);
+}
+
+.gt-mega-dropdown-featured.is-active {
+    background: rgba(0, 170, 255, 0.08);
+}
+
 .gt-menu-button {
     color: #ffffff;
 }

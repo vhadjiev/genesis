@@ -9,52 +9,7 @@ import { Button } from '@heroui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import i18nConfig from '@/i18nConfig'
-
-interface NavChild {
-    key: string
-    href: string
-}
-
-interface NavItem {
-    key: string
-    href: string
-    children?: NavChild[]
-}
-
-const navLinks: NavItem[] = [
-    {
-        key: 'equipment',
-        href: '#',
-        children: [
-            { key: 'genesisAlpha', href: '/equipment/genesis-alpha' },
-            { key: 'genesisPrime', href: '/equipment/genesis-prime' },
-            { key: 'genesisUniversa', href: '/equipment/genesis-universa' },
-            { key: 'genesisEclipse', href: '/equipment/genesis-eclipse' },
-            { key: 'genesisSolaris', href: '/equipment/genesis-solaris' },
-            { key: 'genesisSolaris2', href: '/equipment/genesis-solaris-2' },
-            { key: 'genesisEquinox', href: '/equipment/genesis-equinox' },
-        ],
-    },
-    {
-        key: 'services',
-        href: '#',
-        children: [
-            { key: 'cloudSystem', href: '/services/cloud-system' },
-            { key: 'laserCutting', href: '/services/laser-cutting' },
-            { key: 'sheetMetalBending', href: '/services/sheet-metal-bending' },
-        ],
-    },
-    {
-        key: 'about',
-        href: '/about',
-        children: [
-            { key: 'news', href: '/news' },
-            { key: 'exhibitions', href: '/exhibitions' },
-            { key: 'projects', href: '/projects' },
-        ],
-    },
-    { key: 'contacts', href: '/contacts' },
-]
+import { navLinks, type NavItem, type NavChild, type NavGroup } from '@/config/navigation'
 
 export function Header() {
     const { t, i18n } = useTranslation()
@@ -124,11 +79,19 @@ export function Header() {
     }
 
     const isParentActive = (item: NavItem) => {
+        if (item.groups) {
+            return item.groups.some((group) => group.children.some((child) => pathname.includes(child.href)))
+        }
         if (item.children) {
             return item.children.some((child) => pathname.includes(child.href))
         }
+        if (item.featured) {
+            return pathname.includes(item.featured.href)
+        }
         return isActive(item.href)
     }
+
+    const hasDropdown = (item: NavItem) => !!(item.groups || item.children)
 
     const handleDropdownEnter = (key: string) => {
         if (dropdownTimeoutRef.current) clearTimeout(dropdownTimeoutRef.current)
@@ -138,6 +101,135 @@ export function Header() {
     const handleDropdownLeave = () => {
         dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150)
     }
+
+    /** Render a grouped mega-dropdown (for "Systems") */
+    const renderMegaDropdown = (item: NavItem) => (
+        <div className="gt-mega-dropdown-menu">
+            <div className="gt-mega-dropdown-groups">
+                {item.groups!.map((group) => (
+                    <div key={group.labelKey} className="gt-mega-dropdown-group">
+                        <span className="gt-mega-dropdown-label">{t(`nav.${group.labelKey}`)}</span>
+                        {group.children.map((child) => (
+                            <Link
+                                key={child.key}
+                                href={localizedHref(child.href)}
+                                className={`gt-dropdown-item ${isActive(child.href) ? 'is-active' : ''}`}
+                            >
+                                {t(`nav.${child.key}`)}
+                            </Link>
+                        ))}
+                    </div>
+                ))}
+            </div>
+            {item.featured && (
+                <>
+                    <div className="gt-mega-dropdown-separator" />
+                    <Link
+                        href={localizedHref(item.featured.href)}
+                        className={`gt-mega-dropdown-featured ${isActive(item.featured.href) ? 'is-active' : ''}`}
+                    >
+                        {item.featured.icon && (
+                            <Icon icon={item.featured.icon} className="w-5 h-5 text-(--gt-accent)" />
+                        )}
+                        <span>{t(`nav.${item.featured.key}`)}</span>
+                        <Icon icon="mdi:arrow-right" className="w-4 h-4 ml-auto opacity-50" />
+                    </Link>
+                </>
+            )}
+        </div>
+    )
+
+    /** Render a simple dropdown (for "Company") */
+    const renderSimpleDropdown = (item: NavItem) => (
+        <div className="gt-dropdown-menu">
+            {item.href !== '#' && (
+                <Link
+                    href={localizedHref(item.href)}
+                    className={`gt-dropdown-item font-semibold ${isActive(item.href) ? 'is-active' : ''}`}
+                >
+                    {t(`nav.${item.key}`)}
+                </Link>
+            )}
+            {item.children!.map((child) => (
+                <Link
+                    key={child.key}
+                    href={localizedHref(child.href)}
+                    className={`gt-dropdown-item ${isActive(child.href) ? 'is-active' : ''}`}
+                >
+                    {t(`nav.${child.key}`)}
+                </Link>
+            ))}
+        </div>
+    )
+
+    /** Render mobile submenu content for a grouped item */
+    const renderMobileGroupedSubmenu = (item: NavItem) => (
+        <div className="flex flex-col items-center gap-2 mt-3">
+            {item.groups!.map((group) => (
+                <React.Fragment key={group.labelKey}>
+                    <span className="text-xs uppercase tracking-widest text-white/30 mt-2 mb-1">
+                        {t(`nav.${group.labelKey}`)}
+                    </span>
+                    {group.children.map((child) => (
+                        <Link
+                            key={child.key}
+                            href={localizedHref(child.href)}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-base transition-colors ${
+                                isActive(child.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                            }`}
+                        >
+                            {t(`nav.${child.key}`)}
+                        </Link>
+                    ))}
+                </React.Fragment>
+            ))}
+            {item.featured && (
+                <>
+                    <div className="w-12 h-px bg-white/10 my-2" />
+                    <Link
+                        href={localizedHref(item.featured.href)}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`text-base flex items-center gap-2 transition-colors ${
+                            isActive(item.featured.href) ? 'text-(--gt-accent)' : 'text-(--gt-accent)/80 hover:text-(--gt-accent)'
+                        }`}
+                    >
+                        {item.featured.icon && <Icon icon={item.featured.icon} className="w-4 h-4" />}
+                        {t(`nav.${item.featured.key}`)}
+                    </Link>
+                </>
+            )}
+        </div>
+    )
+
+    /** Render mobile submenu content for a simple dropdown */
+    const renderMobileSimpleSubmenu = (item: NavItem) => (
+        <div className="flex flex-col items-center gap-3 mt-3">
+            {item.href !== '#' && (
+                <Link
+                    href={localizedHref(item.href)}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-base transition-colors ${
+                        isActive(item.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                    }`}
+                >
+                    {t(`nav.${item.key}`)}
+                </Link>
+            )}
+            {item.children!.map((child) => (
+                <Link
+                    key={child.key}
+                    href={localizedHref(child.href)}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-base transition-colors ${
+                        isActive(child.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                    }`}
+                >
+                    {t(`nav.${child.key}`)}
+                </Link>
+            ))}
+        </div>
+    )
 
     return (
         <>
@@ -160,7 +252,15 @@ export function Header() {
                         <div className="hidden lg:flex gt-header-links">
                             {navLinks.map((link) => (
                                 <div key={link.key} className="relative">
-                                    {link.children ? (
+                                    {link.isCTA ? (
+                                        /* CTA Button */
+                                        <Link
+                                            href={localizedHref(link.href)}
+                                            className="gt-nav-cta"
+                                        >
+                                            {t(`nav.${link.key}`)}
+                                        </Link>
+                                    ) : hasDropdown(link) ? (
                                         <div
                                             className={`gt-dropdown ${openDropdown === link.key ? 'is-open' : ''}`}
                                             onMouseEnter={() => handleDropdownEnter(link.key)}
@@ -180,29 +280,9 @@ export function Header() {
                                                     }`}
                                                 />
                                             </button>
-                                            <div className="gt-dropdown-menu">
-                                                {link.href !== '#' && (
-                                                    <Link
-                                                        href={localizedHref(link.href)}
-                                                        className={`gt-dropdown-item font-semibold ${
-                                                            isActive(link.href) ? 'is-active' : ''
-                                                        }`}
-                                                    >
-                                                        {t(`nav.${link.key}`)}
-                                                    </Link>
-                                                )}
-                                                {link.children.map((child) => (
-                                                    <Link
-                                                        key={child.key}
-                                                        href={localizedHref(child.href)}
-                                                        className={`gt-dropdown-item ${
-                                                            isActive(child.href) ? 'is-active' : ''
-                                                        }`}
-                                                    >
-                                                        {t(`nav.${child.key}`)}
-                                                    </Link>
-                                                ))}
-                                            </div>
+                                            {link.groups
+                                                ? renderMegaDropdown(link)
+                                                : renderSimpleDropdown(link)}
                                         </div>
                                     ) : (
                                         <Link
@@ -296,7 +376,16 @@ export function Header() {
                                         transition={{ delay: 0.1 + index * 0.05 }}
                                         className="w-full text-center"
                                     >
-                                        {link.children ? (
+                                        {link.isCTA ? (
+                                            /* Mobile CTA */
+                                            <Link
+                                                href={localizedHref(link.href)}
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="inline-flex items-center justify-center px-8 py-3 bg-(--gt-blue) hover:bg-(--gt-blue-light) text-white font-semibold rounded-lg transition-colors text-lg"
+                                            >
+                                                {t(`nav.${link.key}`)}
+                                            </Link>
+                                        ) : hasDropdown(link) ? (
                                             <div>
                                                 <button
                                                     onClick={() =>
@@ -327,35 +416,9 @@ export function Header() {
                                                             transition={{ duration: 0.2 }}
                                                             className="overflow-hidden"
                                                         >
-                                                            <div className="flex flex-col items-center gap-3 mt-3">
-                                                                {link.href !== '#' && (
-                                                                    <Link
-                                                                        href={localizedHref(link.href)}
-                                                                        onClick={() => setIsMobileMenuOpen(false)}
-                                                                        className={`text-base transition-colors ${
-                                                                            isActive(link.href)
-                                                                                ? 'text-(--gt-accent)'
-                                                                                : 'text-white/60 hover:text-white'
-                                                                        }`}
-                                                                    >
-                                                                        {t(`nav.${link.key}`)}
-                                                                    </Link>
-                                                                )}
-                                                                {link.children.map((child) => (
-                                                                    <Link
-                                                                        key={child.key}
-                                                                        href={localizedHref(child.href)}
-                                                                        onClick={() => setIsMobileMenuOpen(false)}
-                                                                        className={`text-base transition-colors ${
-                                                                            isActive(child.href)
-                                                                                ? 'text-(--gt-accent)'
-                                                                                : 'text-white/60 hover:text-white'
-                                                                        }`}
-                                                                    >
-                                                                        {t(`nav.${child.key}`)}
-                                                                    </Link>
-                                                                ))}
-                                                            </div>
+                                                            {link.groups
+                                                                ? renderMobileGroupedSubmenu(link)
+                                                                : renderMobileSimpleSubmenu(link)}
                                                         </motion.div>
                                                     )}
                                                 </AnimatePresence>

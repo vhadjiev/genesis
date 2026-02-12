@@ -42,37 +42,44 @@
     "navigation": {
         "main": [
             {
-                "id": "equipment",
-                "labelKey": "nav.equipment",
-                "children": [
-                    { "id": "genesis-alpha", "labelKey": "nav.genesisAlpha" },
-                    { "id": "genesis-prime", "labelKey": "nav.genesisPrime" },
-                    { "id": "genesis-universa", "labelKey": "nav.genesisUniversa" },
-                    { "id": "genesis-eclipse", "labelKey": "nav.genesisEclipse" },
-                    { "id": "genesis-solaris", "labelKey": "nav.genesisSolaris" },
-                    { "id": "genesis-solaris-2", "labelKey": "nav.genesisSolaris2" },
-                    { "id": "genesis-equinox", "labelKey": "nav.genesisEquinox" }
-                ]
+                "id": "systems",
+                "labelKey": "nav.systems",
+                "groups": [
+                    {
+                        "labelKey": "nav.hotBeverages",
+                        "children": [
+                            { "id": "genesis-alpha", "labelKey": "nav.genesisAlpha" },
+                            { "id": "genesis-universa", "labelKey": "nav.genesisUniversa" },
+                            { "id": "genesis-prime", "labelKey": "nav.genesisPrime" }
+                        ]
+                    },
+                    {
+                        "labelKey": "nav.coldBeverages",
+                        "children": [
+                            { "id": "genesis-eclipse", "labelKey": "nav.genesisEclipse" },
+                            { "id": "genesis-solaris-2", "labelKey": "nav.genesisSolaris2" },
+                            { "id": "genesis-equinox", "labelKey": "nav.genesisEquinox" },
+                            { "id": "genesis-solaris", "labelKey": "nav.genesisSolaris" }
+                        ]
+                    }
+                ],
+                "featured": { "id": "cloud-system", "labelKey": "nav.cloudPlatform" }
             },
             {
-                "id": "services",
-                "labelKey": "nav.services",
+                "id": "company",
+                "labelKey": "nav.company",
                 "children": [
-                    { "id": "cloud-system", "labelKey": "nav.cloudSystem" },
-                    { "id": "laser-cutting", "labelKey": "nav.laserCutting" },
-                    { "id": "sheet-metal-bending", "labelKey": "nav.sheetMetalBending" }
-                ]
-            },
-            {
-                "id": "about",
-                "labelKey": "nav.about",
-                "children": [
+                    { "id": "about", "labelKey": "nav.about" },
+                    { "id": "projects", "labelKey": "nav.projects" },
                     { "id": "news", "labelKey": "nav.news" },
-                    { "id": "exhibitions", "labelKey": "nav.exhibitions" },
-                    { "id": "projects", "labelKey": "nav.projects" }
+                    { "id": "exhibitions", "labelKey": "nav.exhibitions" }
                 ]
             },
-            { "id": "contacts", "labelKey": "nav.contacts" }
+            { "id": "contacts", "labelKey": "nav.contactUs", "isCTA": true }
+        ],
+        "manufacturing": [
+            { "id": "laser-cutting", "labelKey": "nav.laserCutting" },
+            { "id": "sheet-metal-bending", "labelKey": "nav.sheetMetalBending" }
         ]
     },
     "pages": [
