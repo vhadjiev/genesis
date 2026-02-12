@@ -3,8 +3,8 @@
   "slug": "",
   "seo": {
     "bg": {
-      "title": "Генезис Текнолоджи - Професионални системи за напитки | Вертикално интегриран производител",
-      "description": "Генезис Текнолоджи проектира, произвежда и обслужва професионални системи за кафе, коктейли и напитки с вградена облачна платформа. TÜV Nord сертифициран. Официален партньор на ILLY за България.",
+      "title": "Генезис Текнолоджи — Инженерна прецизност в системи за напитки | Вертикално интегриран производител",
+      "description": "Генезис Текнолоджи проектира, произвежда и управлява професионални системи за кафе, коктейли и напитки с вградена облачна платформа. TÜV Nord сертифициран. Официален партньор на ILLY за България.",
       "keywords": ["професионални кафемашини", "системи за напитки", "хорека оборудване", "облачно управление", "генезис текнолоджи", "TÜV сертификат", "ILLY партньор"],
       "structuredData": {
         "@type": "Organization",
@@ -23,8 +23,8 @@
       }
     },
     "en": {
-      "title": "Genesis Technology - Professional Beverage Systems | Vertically Integrated Manufacturer",
-      "description": "Genesis Technology designs, manufactures and services professional coffee, cocktail and beverage systems with built-in cloud platform. TÜV Nord certified. Official ILLY partner for Bulgaria.",
+      "title": "Genesis Technology — Engineered Precision in Beverage Systems | Vertically Integrated Manufacturer",
+      "description": "Genesis Technology designs, manufactures and manages professional coffee, cocktail and beverage systems with built-in cloud intelligence. TÜV Nord certified. Official ILLY partner for Bulgaria.",
       "keywords": ["professional coffee machines", "beverage systems", "horeca equipment", "cloud management", "genesis technology", "TÜV certified", "ILLY partner"],
       "structuredData": {
         "@type": "Organization",
@@ -46,17 +46,20 @@
   "sections": [
     {
       "type": "heroSection",
-      "title": { "bg": "Genesis Technology", "en": "Genesis Technology" },
+      "title": {
+        "bg": "Инженерна прецизност.\nСвързана интелигентност.",
+        "en": "Engineered Precision.\nConnected Intelligence."
+      },
       "subtitle": {
         "bg": "Проектираме, произвеждаме и управляваме професионални системи за напитки — от прецизно изрязания стоманен корпус до облачната интелигентност, която контролира всяка чаша.",
-        "en": "We design, manufacture and manage professional beverage systems — from the precision-cut steel housing to the cloud intelligence that controls every cup."
+        "en": "We design, manufacture and manage professional beverage systems — from the precision-cut steel housing to the cloud intelligence that governs every cup."
       },
       "ctaPrimary": {
-        "text": { "bg": "Разгледайте системите", "en": "Explore Our Systems" },
+        "text": { "bg": "Открийте системите", "en": "Discover Our Systems" },
         "href": "/equipment/genesis-alpha"
       },
       "ctaSecondary": {
-        "text": { "bg": "Заявете консултация", "en": "Request a Consultation" },
+        "text": { "bg": "Заявете консултация", "en": "Schedule a Consultation" },
         "href": "/contacts"
       },
       "backgroundImage": "/images/hero-home.jpg"
@@ -74,7 +77,7 @@
         },
         {
           "icon": "mdi:calendar-check",
-          "label": { "bg": "15+ години опит", "en": "15+ Years of Experience" }
+          "label": { "bg": "15+ години майсторство", "en": "15+ Years of Mastery" }
         },
         {
           "icon": "mdi:check-decagram",
@@ -97,28 +100,28 @@
           "title": { "bg": "Непостоянно качество", "en": "Inconsistent Quality" },
           "description": {
             "bg": "Гостите очакват перфектна чаша всеки път. Повечето машини не могат да го гарантират.",
-            "en": "Guests expect a perfect cup every time. Most machines cannot guarantee it."
+            "en": "Guests expect a perfect cup every time. Most machines simply cannot guarantee it."
           }
         },
         {
-          "title": { "bg": "Скрити загуби", "en": "Hidden Losses" },
+          "title": { "bg": "Скрити загуби", "en": "Hidden Revenue Losses" },
           "description": {
             "bg": "Без данни за консумацията не знаете къде отиват приходите ви — и къде се губят.",
-            "en": "Without consumption data, you have no idea where your revenue goes — and where it leaks."
+            "en": "Without consumption data, you have no visibility into where your revenue goes — and where it leaks."
           }
         },
         {
           "title": { "bg": "Скъп престой", "en": "Costly Downtime" },
           "description": {
             "bg": "Всеки час, в който машината не работи, е загубен приход и компрометирано обслужване.",
-            "en": "Every hour your machine is down means lost revenue and compromised service."
+            "en": "Every hour your machine is down means lost revenue and compromised guest experience."
           }
         }
       ],
       "solution": {
         "title": {
           "bg": "Пълен контрол — от машината до облака",
-          "en": "Full Control — From Machine to Cloud"
+          "en": "Complete Control — From Machine to Cloud"
         },
         "description": {
           "bg": "Genesis Technology е единственият производител в региона, който контролира целия процес — от рязането на метала до софтуера и облачната платформа. Всяка машина е проектирана, произведена и обслужвана от нашия екип. Резултатът: надеждност, която можете да измерите.",
@@ -130,8 +133,8 @@
       "type": "featuredProducts",
       "title": { "bg": "Системи за кафе и топли напитки", "en": "Coffee & Hot Beverage Systems" },
       "subtitle": {
-        "bg": "Всяка система е проектирана за постоянно качество, минимална поддръжка и пълен облачен контрол.",
-        "en": "Every system is engineered for consistent quality, minimal maintenance, and full cloud control."
+        "bg": "Всяка система е създадена за безкомпромисно качество, минимална поддръжка и пълен облачен контрол.",
+        "en": "Every system is engineered for uncompromising quality, minimal maintenance, and complete cloud oversight."
       },
       "products": [
         {
@@ -139,8 +142,8 @@
           "name": "Genesis Alpha",
           "tagline": { "bg": "AI облачна кафемашина", "en": "AI Cloud Coffee Machine" },
           "description": {
-            "bg": "Нашата водеща система с два бункера за зърна, автоматично мляко и вградена AI облачна платформа. Проектирана за обекти с висок трафик, които изискват безкомпромисно качество и пълна дистанционна видимост.",
-            "en": "Our flagship system with dual bean hoppers, automatic milk, and built-in AI cloud platform. Engineered for high-traffic venues that demand uncompromising quality and full remote visibility."
+            "bg": "Нашата водеща система с два бункера за зърна, автоматично мляко и вградена AI облачна платформа. Проектирана за обекти с висок трафик, които изискват безкомпромисно качество.",
+            "en": "Our flagship system with dual bean hoppers, automatic milk, and built-in AI cloud platform. Engineered for high-traffic venues that demand uncompromising quality."
           },
           "image": "/images/products/alpha.jpg",
           "href": "/equipment/genesis-alpha"
@@ -148,10 +151,10 @@
         {
           "id": "genesis-universa",
           "name": "Genesis Universa",
-          "tagline": { "bg": "E.S.E Pods — нулев риск от грешка", "en": "E.S.E Pods — Zero Risk of Error" },
+          "tagline": { "bg": "E.S.E Pods — нулев риск от грешка", "en": "E.S.E Pods — Zero Margin for Error" },
           "description": {
-            "bg": "Перфектно еспресо всеки път, без да зависите от оператора. Работи с биоразградими E.S.E дози — екологичната алтернатива на капсулите, без компромис с вкуса.",
-            "en": "Perfect espresso every time, without relying on the operator. Uses biodegradable E.S.E pods — the ecological alternative to capsules, without compromising taste."
+            "bg": "Перфектно еспресо всеки път, без да зависите от оператора. Работи с биоразградими E.S.E дози — екологичната алтернатива на капсулите.",
+            "en": "Perfect espresso every time, without relying on the operator. Uses biodegradable E.S.E pods — the ecological alternative to capsules."
           },
           "image": "/images/products/universa.jpg",
           "href": "/equipment/genesis-universa"
@@ -159,10 +162,10 @@
         {
           "id": "genesis-prime",
           "name": "Genesis Prime",
-          "tagline": { "bg": "Облачна кафемашина — компактна ефективност", "en": "Cloud Coffee Machine — Compact Efficiency" },
+          "tagline": { "bg": "Облачна кафемашина — компактна прецизност", "en": "Cloud Coffee Machine — Compact Precision" },
           "description": {
-            "bg": "Пълна облачна функционалност в компактен формат. Един бункер за зърна, интелигентно управление и мобилен достъп — идеална за офиси и бутикови обекти.",
-            "en": "Full cloud functionality in a compact form. Single bean hopper, intelligent management, and mobile access — ideal for offices and boutique venues."
+            "bg": "Пълна облачна функционалност в компактен формат. Интелигентно управление и мобилен достъп — идеална за офиси и бутикови обекти.",
+            "en": "Full cloud functionality in a compact form. Intelligent management and mobile access — ideal for offices and boutique venues."
           },
           "image": "/images/products/prime.jpg",
           "href": "/equipment/genesis-prime"
@@ -173,8 +176,8 @@
       "type": "featuredProducts",
       "title": { "bg": "Системи за студени напитки и бар", "en": "Cold Beverage & Bar Systems" },
       "subtitle": {
-        "bg": "Автоматизирани решения за коктейли, сокове и освежаващи напитки — прецизност без отпадъци.",
-        "en": "Automated solutions for cocktails, juices, and refreshments — precision without waste."
+        "bg": "Автоматизирани решения за коктейли, сокове и освежаващи напитки — прецизност без компромиси.",
+        "en": "Automated solutions for cocktails, juices, and refreshments — precision without compromise."
       },
       "products": [
         {
@@ -182,8 +185,8 @@
           "name": "Genesis Eclipse",
           "tagline": { "bg": "Коктейл бар система", "en": "Cocktail Bar System" },
           "description": {
-            "bg": "250+ коктейла, до 40% спестяване на разходи. Автоматизирана бар система с CO₂, която елиминира грешките, злоупотребите и отпадъците. Перфектна рецепта всеки път.",
-            "en": "250+ cocktails, up to 40% cost savings. Automated bar system with CO₂ that eliminates errors, abuse, and waste. Perfect recipe every time."
+            "bg": "250+ коктейла, до 40% спестяване на разходи. Автоматизирана бар система с CO₂, която елиминира грешките и отпадъците.",
+            "en": "250+ cocktails, up to 40% cost savings. Automated bar system with CO₂ that eliminates errors and waste."
           },
           "image": "/images/products/eclipse.jpg",
           "href": "/equipment/genesis-eclipse"
@@ -193,8 +196,8 @@
           "name": "Genesis Solaris 2",
           "tagline": { "bg": "Фюжън и уелнес напитки", "en": "Fusion & Wellness Drinks" },
           "description": {
-            "bg": "Ново поколение Post Mix система за фюжън, уелнес и сок напитки. Компактна, с голям тъч екран и многоезичен софтуер за пълно персонализиране на рецептите.",
-            "en": "Next-generation Post Mix system for fusion, wellness, and juice drinks. Compact, with a large touchscreen and multilingual software for full recipe customisation."
+            "bg": "Ново поколение Post Mix система за фюжън, уелнес и сок напитки. Компактна, с голям тъч екран и пълно персонализиране.",
+            "en": "Next-generation Post Mix system for fusion, wellness, and juice drinks. Compact, with a large touchscreen and full customisation."
           },
           "image": "/images/products/solaris2.jpg",
           "href": "/equipment/genesis-solaris-2"
@@ -204,8 +207,8 @@
           "name": "Genesis Equinox",
           "tagline": { "bg": "Фрапе и лимонади", "en": "Frappes & Lemonades" },
           "description": {
-            "bg": "Специализирана система за студени напитки — фрапе, студен шоколад и лимонади. Компактен дизайн, нови рецепти и нови възможности за приходи.",
-            "en": "Specialised cold beverage system — frappes, cold chocolate, and lemonades. Compact design, new recipes, and new revenue opportunities."
+            "bg": "Специализирана система за студени напитки — фрапе, студен шоколад и лимонади. Компактен дизайн, нови рецепти.",
+            "en": "Specialised cold beverage system — frappes, cold chocolate, and lemonades. Compact design, new recipes."
           },
           "image": "/images/products/equinox.jpg",
           "href": "/equipment/genesis-equinox"
@@ -223,8 +226,8 @@
           "icon": "mdi:factory",
           "title": { "bg": "Произведено изцяло от нас", "en": "Engineered Entirely In-House" },
           "description": {
-            "bg": "От лазерното рязане на стоманения корпус до написването на всеки ред код — всичко се случва в нашите производствени бази в Пловдив. Нямаме аутсорснати компоненти, нямаме посредници. Контролираме качеството на всеки етап.",
-            "en": "From laser-cutting the steel housing to writing every line of code — everything happens in our production facilities in Plovdiv. No outsourced components, no middlemen. We control quality at every stage."
+            "bg": "От лазерното рязане на стоманения корпус до написването на всеки ред код — всичко се случва в нашите производствени бази в Пловдив. Нямаме аутсорснати компоненти. Контролираме качеството на всеки етап.",
+            "en": "From laser-cutting the steel housing to writing every line of code — everything happens in our production facilities in Plovdiv. No outsourced components. We control quality at every stage."
           },
           "stat": { "value": "100%", "label": { "bg": "вътрешно производство", "en": "in-house production" } }
         },
@@ -232,8 +235,8 @@
           "icon": "mdi:cloud-sync",
           "title": { "bg": "Вградена облачна интелигентност", "en": "Built-In Cloud Intelligence" },
           "description": {
-            "bg": "Облачната платформа не е допълнение — тя е ядрото на всяка машина. Следете консумацията в реално време, променяйте рецепти дистанционно, получавайте известия за проблеми преди да станат престои.",
-            "en": "The cloud platform is not an add-on — it is the core of every machine. Track consumption in real time, change recipes remotely, receive alerts about issues before they become downtime."
+            "bg": "Облачната платформа не е допълнение — тя е ядрото на всяка машина. Следете консумацията в реално време, променяйте рецепти дистанционно, получавайте известия преди да станат престои.",
+            "en": "The cloud platform is not an add-on — it is the core of every machine. Track consumption in real time, change recipes remotely, receive alerts before issues become downtime."
           },
           "stat": { "value": "24/7", "label": { "bg": "дистанционен мониторинг", "en": "remote monitoring" } }
         },
@@ -241,8 +244,8 @@
           "icon": "mdi:shield-check",
           "title": { "bg": "Европейски сертифицирано качество", "en": "European Certified Quality" },
           "description": {
-            "bg": "Нашите системи са сертифицирани от TÜV Nord и отговарят на най-високите европейски стандарти за безопасност и качество. Официалното ни партньорство с ILLY гарантира, че предлагаме кафе от световна класа.",
-            "en": "Our systems are certified by TÜV Nord and meet the highest European safety and quality standards. Our official partnership with ILLY ensures we deliver world-class coffee."
+            "bg": "Нашите системи са сертифицирани от TÜV Nord и отговарят на най-високите европейски стандарти. Официалното ни партньорство с ILLY гарантира кафе от световна класа.",
+            "en": "Our systems are certified by TÜV Nord and meet the highest European safety and quality standards. Our official partnership with ILLY ensures world-class coffee."
           },
           "stat": { "value": "TÜV", "label": { "bg": "Nord сертификат", "en": "Nord Certified" } }
         }
@@ -252,8 +255,8 @@
       "type": "partnersSection",
       "title": { "bg": "Доверието на водещите", "en": "Trusted by Industry Leaders" },
       "subtitle": {
-        "bg": "Най-добрите хотели и бизнес обекти в България избраха Genesis Technology за своите съоръжения за напитки. 3000+ инсталации в цялата страна потвърждават стандарта, който поддържаме.",
-        "en": "Bulgaria's finest hotels and business venues chose Genesis Technology for their beverage equipment. 3,000+ installations across the country confirm the standard we uphold."
+        "bg": "Най-престижните хотели и бизнес обекти в България избраха Genesis Technology. 3000+ инсталации в цялата страна потвърждават стандарта, който поддържаме.",
+        "en": "Bulgaria's most prestigious hotels and business venues chose Genesis Technology. 3,000+ installations across the country confirm the standard we uphold."
       }
     },
     {
@@ -262,8 +265,8 @@
       "testimonials": [
         {
           "quote": {
-            "bg": "Машините на Genesis работят безупречно вече 5 години. Облачната система ни дава пълен контрол над консумацията и ни помага да планираме по-добре.",
-            "en": "Genesis machines have been running flawlessly for 5 years. The cloud system gives us full control over consumption and helps us plan better."
+            "bg": "Машините на Genesis работят безупречно вече 5 години. Облачната система ни дава пълен контрол над консумацията и ни помага да планираме по-ефективно.",
+            "en": "Genesis machines have been running flawlessly for 5 years. The cloud system gives us full control over consumption and helps us plan more efficiently."
           },
           "author": { "bg": "Хотел Марица", "en": "Hotel Maritsa" },
           "role": { "bg": "Пловдив", "en": "Plovdiv" }
@@ -271,7 +274,7 @@
         {
           "quote": {
             "bg": "Преминахме от друг доставчик към Genesis и разликата е очевидна — по-малко престои, по-добро кафе и реална видимост за разходите ни.",
-            "en": "We switched from another supplier to Genesis and the difference is obvious — less downtime, better coffee, and real visibility into our costs."
+            "en": "We switched from another supplier to Genesis and the difference is clear — less downtime, better coffee, and real visibility into our costs."
           },
           "author": { "bg": "Бизнес Парк Пловдив", "en": "Business Park Plovdiv" },
           "role": { "bg": "Пловдив", "en": "Plovdiv" }
@@ -289,9 +292,9 @@
     {
       "type": "statsSection",
       "stats": [
-        { "value": 15, "suffix": "+", "label": { "bg": "Години опит в индустрията", "en": "Years in the Industry" } },
+        { "value": 15, "suffix": "+", "label": { "bg": "Години майсторство", "en": "Years of Mastery" } },
         { "value": 3000, "suffix": "+", "label": { "bg": "Инсталирани системи", "en": "Installed Systems" } },
-        { "value": 98.2, "suffix": "%", "label": { "bg": "Удовлетвореност на клиентите", "en": "Client Satisfaction" } }
+        { "value": 98, "suffix": "%", "label": { "bg": "Удовлетвореност на клиентите", "en": "Client Satisfaction" } }
       ]
     },
     {
@@ -302,9 +305,9 @@
       },
       "subtitle": {
         "bg": "Всеки обект е различен. Нашите консултанти ще анализират вашите нужди — обем, пространство, тип клиенти — и ще препоръчат системата, която ще работи най-добре за вас.",
-        "en": "Every venue is different. Our consultants will analyse your needs — volume, space, guest profile — and recommend the system that will work best for you."
+        "en": "Every venue is different. Our consultants will analyse your needs — volume, space, guest profile — and recommend the system that will perform best for you."
       },
-      "buttonText": { "bg": "Заявете безплатна консултация", "en": "Request a Free Consultation" },
+      "buttonText": { "bg": "Заявете безплатна консултация", "en": "Schedule a Free Consultation" },
       "buttonHref": "/contacts"
     }
   ]

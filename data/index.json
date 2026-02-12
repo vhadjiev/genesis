@@ -3,8 +3,8 @@
         "id": "gentech",
         "name": "Genesis Technology",
         "tagline": {
-            "en": "Professional beverage systems. Engineered in-house. Cloud-managed.",
-            "bg": "Професионални системи за напитки. Произведени от нас. Облачно управлявани."
+            "en": "Engineered precision. Connected intelligence. European-certified beverage systems.",
+            "bg": "Инженерна прецизност. Свързана интелигентност. Европейски сертифицирани системи за напитки."
         },
         "defaultLocale": "bg",
         "locales": ["bg", "en"],

@@ -2,7 +2,7 @@ import "../app.css";
 
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { Open_Sans } from "next/font/google";
+import { DM_Sans, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Providers } from "@/providers/Providers";
 import initTranslations from "@/app/i18n";
@@ -11,11 +11,26 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const GTM_ID = "GTM-MFZNM4LN";
 
-const openSans = Open_Sans({
-  subsets: ["latin", "cyrillic"],
-  weight: ["300", "400", "600", "700", "800"],
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
-  variable: "--font-open-sans",
+  variable: "--font-body",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin", "cyrillic"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+  variable: "--font-mono",
 });
 
 /**
@@ -81,7 +96,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#0066cc",
+  themeColor: "#0A0A0F",
 };
 
 /**
@@ -112,7 +127,7 @@ export default async function RootLayout({
   });
 
   return (
-    <html lang={locale} className={`dark ${openSans.variable}`}>
+    <html lang={locale} className={`dark ${dmSans.variable} ${instrumentSerif.variable} ${jetBrainsMono.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <Script
@@ -134,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${openSans.className} antialiased min-h-screen bg-background text-foreground`}
+        className={`${dmSans.className} antialiased min-h-screen bg-background text-foreground`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

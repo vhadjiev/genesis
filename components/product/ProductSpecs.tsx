@@ -29,17 +29,17 @@ export function ProductSpecs({ data, locale }: ProductSpecsProps) {
     }
 
     return (
-        <section className="py-20 bg-foreground/[0.02]">
+        <section className="py-24" style={{ backgroundColor: 'var(--gt-surface)' }}>
             <div className="container mx-auto px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-12"
+                    className="text-center mb-14"
                 >
-                    <h2 className="text-3xl font-bold text-foreground">{title}</h2>
-                    <div className="w-16 h-1 bg-[var(--gt-blue)] mx-auto mt-4" />
+                    <h2 className="font-display text-3xl text-[var(--gt-text)] italic">{title}</h2>
+                    <div className="gold-accent-line mx-auto mt-6" />
                 </motion.div>
 
                 <div className="max-w-2xl mx-auto glass-card rounded-2xl overflow-hidden">
@@ -47,15 +47,19 @@ export function ProductSpecs({ data, locale }: ProductSpecsProps) {
                         const label = getLocalizedContent(spec.label, locale)
                         const value = getLocalizedContent(spec.value, locale)
                         return (
-                            <div
+                            <motion.div
                                 key={index}
-                                className={`flex justify-between items-center px-6 py-4 ${
-                                    index !== data.specs.length - 1 ? 'border-b border-foreground/10' : ''
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3, delay: index * 0.05 }}
+                                className={`flex justify-between items-center px-7 py-4.5 ${
+                                    index !== data.specs.length - 1 ? 'border-b border-[var(--gt-border-subtle)]' : ''
                                 }`}
                             >
-                                <span className="text-foreground/60">{label}</span>
-                                <span className="font-medium text-foreground">{value}</span>
-                            </div>
+                                <span className="text-[var(--gt-text-secondary)] text-sm">{label}</span>
+                                <span className="font-mono font-medium text-[var(--gt-text)] text-sm">{value}</span>
+                            </motion.div>
                         )
                     })}
                 </div>

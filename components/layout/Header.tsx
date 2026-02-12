@@ -9,7 +9,7 @@ import { Button } from '@heroui/react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Icon } from '@iconify/react'
 import i18nConfig from '@/i18nConfig'
-import { navLinks, type NavItem, type NavChild, type NavGroup } from '@/config/navigation'
+import { navLinks, type NavItem } from '@/config/navigation'
 
 export function Header() {
     const { t, i18n } = useTranslation()
@@ -50,7 +50,7 @@ export function Header() {
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50)
-        window.addEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', handleScroll, { passive: true })
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
@@ -102,7 +102,7 @@ export function Header() {
         dropdownTimeoutRef.current = setTimeout(() => setOpenDropdown(null), 150)
     }
 
-    /** Render a grouped mega-dropdown (for "Systems") */
+    /** Render a grouped mega-dropdown */
     const renderMegaDropdown = (item: NavItem) => (
         <div className="gt-mega-dropdown-menu">
             <div className="gt-mega-dropdown-groups">
@@ -129,7 +129,7 @@ export function Header() {
                         className={`gt-mega-dropdown-featured ${isActive(item.featured.href) ? 'is-active' : ''}`}
                     >
                         {item.featured.icon && (
-                            <Icon icon={item.featured.icon} className="w-5 h-5 text-(--gt-accent)" />
+                            <Icon icon={item.featured.icon} className="w-5 h-5 text-[var(--gt-gold)]" />
                         )}
                         <span>{t(`nav.${item.featured.key}`)}</span>
                         <Icon icon="mdi:arrow-right" className="w-4 h-4 ml-auto opacity-50" />
@@ -139,7 +139,7 @@ export function Header() {
         </div>
     )
 
-    /** Render a simple dropdown (for "Company") */
+    /** Render a simple dropdown */
     const renderSimpleDropdown = (item: NavItem) => (
         <div className="gt-dropdown-menu">
             {item.href !== '#' && (
@@ -167,7 +167,7 @@ export function Header() {
         <div className="flex flex-col items-center gap-2 mt-3">
             {item.groups!.map((group) => (
                 <React.Fragment key={group.labelKey}>
-                    <span className="text-xs uppercase tracking-widest text-white/30 mt-2 mb-1">
+                    <span className="text-[10px] uppercase tracking-[0.15em] text-[var(--gt-gold-dim)] mt-3 mb-1 font-medium">
                         {t(`nav.${group.labelKey}`)}
                     </span>
                     {group.children.map((child) => (
@@ -176,7 +176,7 @@ export function Header() {
                             href={localizedHref(child.href)}
                             onClick={() => setIsMobileMenuOpen(false)}
                             className={`text-base transition-colors ${
-                                isActive(child.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                                isActive(child.href) ? 'text-[var(--gt-gold)]' : 'text-[var(--gt-text-secondary)] hover:text-[var(--gt-text)]'
                             }`}
                         >
                             {t(`nav.${child.key}`)}
@@ -186,12 +186,12 @@ export function Header() {
             ))}
             {item.featured && (
                 <>
-                    <div className="w-12 h-px bg-white/10 my-2" />
+                    <div className="w-12 h-px bg-[var(--gt-border)] my-2" />
                     <Link
                         href={localizedHref(item.featured.href)}
                         onClick={() => setIsMobileMenuOpen(false)}
                         className={`text-base flex items-center gap-2 transition-colors ${
-                            isActive(item.featured.href) ? 'text-(--gt-accent)' : 'text-(--gt-accent)/80 hover:text-(--gt-accent)'
+                            isActive(item.featured.href) ? 'text-[var(--gt-gold)]' : 'text-[var(--gt-gold)]/80 hover:text-[var(--gt-gold)]'
                         }`}
                     >
                         {item.featured.icon && <Icon icon={item.featured.icon} className="w-4 h-4" />}
@@ -210,7 +210,7 @@ export function Header() {
                     href={localizedHref(item.href)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-base transition-colors ${
-                        isActive(item.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                        isActive(item.href) ? 'text-[var(--gt-gold)]' : 'text-[var(--gt-text-secondary)] hover:text-[var(--gt-text)]'
                     }`}
                 >
                     {t(`nav.${item.key}`)}
@@ -222,7 +222,7 @@ export function Header() {
                     href={localizedHref(child.href)}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-base transition-colors ${
-                        isActive(child.href) ? 'text-(--gt-accent)' : 'text-white/60 hover:text-white'
+                        isActive(child.href) ? 'text-[var(--gt-gold)]' : 'text-[var(--gt-text-secondary)] hover:text-[var(--gt-text)]'
                     }`}
                 >
                     {t(`nav.${child.key}`)}
@@ -236,16 +236,20 @@ export function Header() {
             <header className={`gt-header fixed top-0 left-0 right-0 z-50 ${isScrolled ? 'is-scrolled' : ''}`}>
                 <nav className="container mx-auto gt-header-nav">
                     <div className="gt-header-bar">
-                        {/* Logo */}
+                        {/* Serif Wordmark */}
                         <Link href={localizedHref('/')} className="gt-header-logo">
                             <Image
                                 src="/images/gentech-logo.svg"
                                 alt="Genesis Technology"
                                 width={140}
                                 height={40}
-                                className="w-auto h-[36px] object-contain"
+                                className="w-auto h-[36px] object-contain hidden"
                                 priority
                             />
+                            <span className="font-display text-[22px] tracking-[-0.01em] text-[var(--gt-text)]">
+                                <span className="text-[var(--gt-gold)]">Genesis</span>{' '}
+                                <span className="font-normal opacity-70">Technology</span>
+                            </span>
                         </Link>
 
                         {/* Desktop Navigation */}
@@ -253,7 +257,6 @@ export function Header() {
                             {navLinks.map((link) => (
                                 <div key={link.key} className="relative">
                                     {link.isCTA ? (
-                                        /* CTA Button */
                                         <Link
                                             href={localizedHref(link.href)}
                                             className="gt-nav-cta"
@@ -297,16 +300,16 @@ export function Header() {
                         </div>
 
                         {/* Language Switcher */}
-                        <div className="hidden lg:flex items-center gap-1 text-sm absolute right-0 z-2">
+                        <div className="hidden lg:flex items-center gap-1 text-xs absolute right-0 z-2">
                             {i18nConfig.locales.map((locale, index) => (
                                 <React.Fragment key={locale}>
-                                    {index > 0 && <span className="text-white/30">|</span>}
+                                    {index > 0 && <span className="text-[var(--gt-text-muted)]">/</span>}
                                     <button
                                         onClick={() => switchLanguage(locale)}
-                                        className={`uppercase tracking-wide transition-colors px-1 ${
+                                        className={`uppercase tracking-[0.1em] transition-colors px-1 ${
                                             currentLocale === locale
-                                                ? 'text-(--gt-accent) font-medium'
-                                                : 'text-white/60 hover:text-white'
+                                                ? 'text-[var(--gt-gold)] font-medium'
+                                                : 'text-[var(--gt-text-muted)] hover:text-[var(--gt-text)]'
                                         }`}
                                     >
                                         {locale}
@@ -356,7 +359,7 @@ export function Header() {
                         className="fixed inset-0 z-40 lg:hidden"
                     >
                         <div
-                            className="absolute inset-0 bg-(--gt-darker)/98 backdrop-blur-md"
+                            className="absolute inset-0 bg-[var(--gt-bg)]/98 backdrop-blur-xl"
                             onClick={() => setIsMobileMenuOpen(false)}
                         />
 
@@ -377,11 +380,10 @@ export function Header() {
                                         className="w-full text-center"
                                     >
                                         {link.isCTA ? (
-                                            /* Mobile CTA */
                                             <Link
                                                 href={localizedHref(link.href)}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className="inline-flex items-center justify-center px-8 py-3 bg-(--gt-blue) hover:bg-(--gt-blue-light) text-white font-semibold rounded-lg transition-colors text-lg"
+                                                className="inline-flex items-center justify-center px-8 py-3 bg-[var(--gt-gold)] hover:bg-[var(--gt-gold-light)] text-[var(--gt-bg)] font-semibold rounded-lg transition-colors text-lg"
                                             >
                                                 {t(`nav.${link.key}`)}
                                             </Link>
@@ -393,10 +395,10 @@ export function Header() {
                                                             openMobileSubmenu === link.key ? null : link.key
                                                         )
                                                     }
-                                                    className={`text-2xl font-light transition-colors flex items-center gap-2 mx-auto ${
+                                                    className={`font-display text-2xl transition-colors flex items-center gap-2 mx-auto ${
                                                         isParentActive(link)
-                                                            ? 'text-(--gt-accent)'
-                                                            : 'text-white/90 hover:text-white'
+                                                            ? 'text-[var(--gt-gold)]'
+                                                            : 'text-[var(--gt-text)]/90 hover:text-[var(--gt-text)]'
                                                     }`}
                                                 >
                                                     {t(`nav.${link.key}`)}
@@ -427,10 +429,10 @@ export function Header() {
                                             <Link
                                                 href={localizedHref(link.href)}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className={`text-2xl font-light transition-colors ${
+                                                className={`font-display text-2xl transition-colors ${
                                                     isActive(link.href)
-                                                        ? 'text-(--gt-accent)'
-                                                        : 'text-white/90 hover:text-white'
+                                                        ? 'text-[var(--gt-gold)]'
+                                                        : 'text-[var(--gt-text)]/90 hover:text-[var(--gt-text)]'
                                                 }`}
                                             >
                                                 {t(`nav.${link.key}`)}
@@ -444,7 +446,7 @@ export function Header() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.1 + navLinks.length * 0.05 }}
-                                    className="flex items-center gap-3 mt-4 pt-6 border-t border-white/10"
+                                    className="flex items-center gap-3 mt-4 pt-6 border-t border-[var(--gt-border)]"
                                 >
                                     {i18nConfig.locales.map((locale) => (
                                         <button
@@ -453,10 +455,10 @@ export function Header() {
                                                 switchLanguage(locale)
                                                 setIsMobileMenuOpen(false)
                                             }}
-                                            className={`uppercase text-lg tracking-wider transition-colors px-3 py-1 rounded ${
+                                            className={`uppercase text-lg tracking-[0.1em] transition-colors px-3 py-1 rounded ${
                                                 currentLocale === locale
-                                                    ? 'text-(--gt-accent) bg-(--gt-accent)/10'
-                                                    : 'text-white/60 hover:text-white'
+                                                    ? 'text-[var(--gt-gold)] bg-[var(--gt-gold)]/10'
+                                                    : 'text-[var(--gt-text-muted)] hover:text-[var(--gt-text)]'
                                             }`}
                                         >
                                             {locale}
