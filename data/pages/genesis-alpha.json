@@ -52,10 +52,77 @@
       }
     },
     {
+      "type": "productOverview",
+      "label": { "bg": "Характеристики", "en": "Features" },
+      "title": {
+        "bg": "Елегантен дизайн с пълен набор от напитки",
+        "en": "Elegant Design with a Full Range of Beverages"
+      },
+      "description": {
+        "bg": "Нашите машини са оборудвани с най-новите иновативни технологии, които ви позволяват да станете бариста за нула време. Приготвяйте любимите си напитки за броени минути — еспресо, мокачино, капучино, лате, макиато, горещ шоколад, 3 в 1 и редица други вкусни напитки. Идеална за места с ограничено пространство и високи стандарти.",
+        "en": "Our machines are equipped with the latest innovative technologies that allow you to become a barista in no time. Prepare your favourite drinks in minutes — espresso, mochaccino, cappuccino, latte, macchiato, hot chocolate, 3-in-1, and many other delicious drinks. Ideal for spaces with limited room and high standards."
+      },
+      "quote": {
+        "bg": "Идеална за места с ограничено пространство и високи стандарти, компактният ѝ дизайн съдържа много първокласни функции.",
+        "en": "Ideal for spaces with limited room and high standards, its compact design contains many first-class features."
+      },
+      "callouts": [
+        {
+          "icon": "mdi:cloud-sync",
+          "title": { "bg": "Cloud Система", "en": "Cloud System" },
+          "description": { "bg": "Управлявайте и анализирайте потреблението на машината в реално време. Дистанционен контрол от всяко устройство.", "en": "Manage and analyse machine consumption in real time. Remote control from any device." }
+        },
+        {
+          "icon": "mdi:resize",
+          "title": { "bg": "Компактен дизайн", "en": "Compact Design" },
+          "description": { "bg": "Идеална за места с ограничено пространство и високи стандарти — компактният дизайн съдържа много първокласни функции.", "en": "Ideal for spaces with limited room and high standards — the compact design contains many first-class features." }
+        }
+      ],
+      "stats": [
+        {
+          "value": "2X",
+          "label": { "bg": "По-надеждна от стандартните вендинг машини", "en": "More reliable than standard vending machines" },
+          "description": { "bg": "По-надеждна и издръжлива от всички машини на пазара. Професионална еспресо група гарантира безпроблемна работа.", "en": "More reliable and durable than all machines on the market. Professional espresso group guarantees trouble-free operation." }
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "mdi:shield-star",
+          "value": "500+",
+          "label": { "bg": "Активни обекта в България", "en": "Active venues in Bulgaria" },
+          "description": { "bg": "Хотели, ресторанти, офиси и бензиностанции. Доказана надеждност в реални условия.", "en": "Hotels, restaurants, offices, and gas stations. Proven reliability in real conditions." }
+        },
+        {
+          "icon": "mdi:coffee",
+          "value": "256",
+          "label": { "bg": "Рецепти на екрана", "en": "Recipes on screen" },
+          "description": { "bg": "Добавяйте, редактирайте или премахвайте рецепти дистанционно от облачната платформа.", "en": "Add, edit, or remove recipes remotely via the cloud platform." }
+        },
+        {
+          "icon": "mdi:certificate",
+          "value": "TÜV",
+          "label": { "bg": "Nord сертифицирана", "en": "Nord certified" },
+          "description": { "bg": "Европейски стандарти за безопасност и качество.", "en": "European standards for safety and quality." }
+        }
+      ],
+      "badge": {
+        "icon": "mdi:star-circle",
+        "text": { "bg": "Официален партньор на ILLY за България", "en": "Official ILLY Partner for Bulgaria" }
+      }
+    },
+    {
       "type": "productFeatures",
+      "label": {
+        "bg": "Възможности",
+        "en": "Capabilities"
+      },
       "title": {
         "bg": "Защо обектите с високи стандарти избират Alpha",
         "en": "Why High-Standard Venues Choose Alpha"
+      },
+      "subtitle": {
+        "bg": "Всичко необходимо за перфектно кафе — от зърното до облачната аналитика — в една система.",
+        "en": "Everything you need for perfect coffee — from bean to cloud analytics — in one system."
       },
       "features": [
         {
@@ -150,28 +217,26 @@
         { "label": { "bg": "Операционна система", "en": "Operating system" }, "value": { "bg": "Linux", "en": "Linux" } },
         { "label": { "bg": "Цвят", "en": "Colour" }, "value": { "bg": "Перлен графит / Черна перла (персонализиране по заявка)", "en": "Pearl graphite / Black pearl (customisation on request)" } }
       ],
-      "pricing": [
-        {
-          "label": { "bg": "Единична бройка", "en": "Single unit" },
-          "sublabel": { "bg": "Стандартна цена", "en": "Standard price" },
-          "price": { "bg": "7 430 лв.", "en": "7,430 BGN" },
-          "note": { "bg": "Включва инсталация и обучение", "en": "Includes installation and training" }
-        },
-        {
-          "label": { "bg": "10+ бройки", "en": "10+ units" },
-          "sublabel": { "bg": "Партньорска цена", "en": "Partner price" },
-          "price": { "bg": "Спестете 15%", "en": "Save 15%" },
-          "note": { "bg": "За операции с множество обекти", "en": "For multi-venue operations" }
-        }
-      ],
-      "faq": [
+      "certifications": ["TÜV Nord", "Patent №3653 U1"]
+    },
+    {
+      "type": "productFAQ",
+      "title": {
+        "bg": "Често задавани въпроси",
+        "en": "Frequently Asked Questions"
+      },
+      "subtitle": {
+        "bg": "Ако не намирате отговор на вашия въпрос, не се колебайте да се свържете с нас.",
+        "en": "If you can't find the answer you're looking for, don't hesitate to contact us."
+      },
+      "items": [
         {
           "question": { "bg": "За какъв тип обекти е подходяща Genesis Alpha?", "en": "What type of venues is Genesis Alpha suitable for?" },
           "answer": { "bg": "Genesis Alpha е проектирана за ресторанти, хотели, магазини, бензиностанции, кафетерии и всякакви обекти, предлагащи кафе напитки. Благодарение на AI операционната система, машината се адаптира към конкретния обект и начин на работа.", "en": "Genesis Alpha is designed for restaurants, hotels, stores, gas stations, cafeterias, and any venue offering coffee drinks. Thanks to the AI operating system, the machine adapts to the specific venue and workflow." }
         },
         {
           "question": { "bg": "Могат ли рецептите да се променят дистанционно?", "en": "Can recipes be changed remotely?" },
-          "answer": { "bg": "Да. Чрез облачната платформа можете да добавяте, редактирате или премахвате рецепти от всяко устройство, без физическо посещение на обекта.", "en": "Yes. Through the cloud platform you can add, edit, or remove recipes from any device, without physically visiting the venue." }
+          "answer": { "bg": "Да. Чрез облачната платформа можете да добавяте, редактирайте или премахвате рецепти от всяко устройство, без физическо посещение на обекта.", "en": "Yes. Through the cloud platform you can add, edit, or remove recipes from any device, without physically visiting the venue." }
         },
         {
           "question": { "bg": "Какъв цвят или дизайн може да се поръча?", "en": "What colour or design can be ordered?" },
@@ -185,6 +250,28 @@
           "question": { "bg": "Какви патенти имате?", "en": "What patents do you hold?" },
           "answer": { "bg": "Полезен модел №3653 U1, регистриран от Патентно ведомство на Република България — \"Интелигентна система за управление и контрол на кафемашини\".", "en": "Utility model №3653 U1, registered with the Patent Office of the Republic of Bulgaria — \"Intelligent system for management and control of coffee machines\"." }
         }
+      ]
+    },
+    {
+      "type": "productCTA",
+      "title": {
+        "bg": "Готови ли сте да модернизирате вашия обект?",
+        "en": "Ready to Modernise Your Venue?"
+      },
+      "description": {
+        "bg": "Нашите консултанти ще анализират вашите нужди и ще ви препоръчат оптималната конфигурация на Genesis Alpha за вашия бизнес.",
+        "en": "Our consultants will analyse your needs and recommend the optimal Genesis Alpha configuration for your business."
+      },
+      "buttonLabel": {
+        "bg": "Заявете безплатна консултация",
+        "en": "Request a Free Consultation"
+      },
+      "buttonHref": "/contacts",
+      "features": [
+        { "bg": "Безплатна консултация", "en": "Free consultation" },
+        { "bg": "Персонализирана оферта", "en": "Personalised quote" },
+        { "bg": "Инсталация и обучение", "en": "Installation & training" },
+        { "bg": "Директна поддръжка", "en": "Direct support" }
       ]
     },
     {

@@ -1140,6 +1140,40 @@ button {
     z-index: 0;
 }
 
+/* ===== Product Overview — bento grid layout ===== */
+
+.overview-bento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* Tablet: 2-col with quote spanning rows */
+@media (min-width: 768px) {
+    .overview-bento {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+    .overview-bento__quote {
+        grid-row: 1 / 3;
+    }
+}
+
+/* Desktop: 3-col bento, quote spans left, stat spans bottom-right */
+@media (min-width: 1024px) {
+    .overview-bento {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    .overview-bento__quote {
+        grid-row: 1 / 3;
+    }
+    /* Single stat fills bottom 2 cols */
+    .overview-bento__stat:last-child:nth-child(4) {
+        grid-column: 2 / 4;
+    }
+}
+
 /* ===== Smooth scroll — only for in-page anchor links, not route navigation ===== */
 /* scroll-behavior: smooth on <html> interferes with View Transitions and
    Next.js route navigation (causes a visible scroll animation on every page

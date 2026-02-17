@@ -128,6 +128,20 @@ const sectionComponents: Record<
       >,
     { loading: () => <SectionSkeleton /> }
   ),
+  productOverview: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductOverview").then(
+        (m) => m.ProductOverview
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  productHighlights: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductHighlights").then(
+        (m) => m.ProductHighlights
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
   productFeatures: dynamic<SectionComponentProps>(
     () =>
       import("@/components/product/ProductFeatures").then(
@@ -139,6 +153,20 @@ const sectionComponents: Record<
     () =>
       import("@/components/product/ProductSpecs").then(
         (m) => m.ProductSpecs
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  productFAQ: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductFAQ").then(
+        (m) => m.ProductFAQ
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  productCTA: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/product/ProductCTA").then(
+        (m) => m.ProductCTA
       ) as Promise<ComponentType<SectionComponentProps>>,
     { loading: () => <SectionSkeleton /> }
   ),

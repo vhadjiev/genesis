@@ -28,96 +28,73 @@
       "image": "/images/eclipse/genesys-eclipse.jpg"
     },
     {
-      "type": "productFeatures",
+      "type": "productOverview",
+      "label": { "bg": "Характеристики", "en": "Features" },
       "title": {
-        "bg": "250+ коктейла — 7 готови конфигурации",
-        "en": "250+ Cocktails — 7 Ready Configurations"
+        "bg": "Коктейл бар система — от алкохолни до безалкохолни напитки",
+        "en": "Cocktail Bar System — From Alcoholic to Non-Alcoholic Drinks"
       },
-      "subtitle": {
-        "bg": "Изберете конфигурацията, която съответства на вашия тип обект и меню.",
-        "en": "Choose the configuration that matches your venue type and menu."
+      "description": {
+        "bg": "Коктейл Бар Системата Eclipse е универсалното решение за направата на алкохолни, безалкохолни и газирани напитки. Възможност за персонализиране на всяка една рецепта, така че да задоволи вашите нужди и предпочитанията на вашите клиенти. Съчетаваща високата производителност и уникалния си луксозен дизайн, Eclipse е перфектен избор за модерния бар.",
+        "en": "The Eclipse Cocktail Bar System is the universal solution for making alcoholic, non-alcoholic, and carbonated drinks. Ability to customise every recipe to meet your needs and your customers' preferences. Combining high performance with its unique luxurious design, Eclipse is the perfect choice for the modern bar."
       },
-      "cocktails": [
-        { "bg": "Текила Сънрайс", "en": "Tequila Sunrise" },
-        { "bg": "Мохито", "en": "Mojito" },
-        { "bg": "Секс на плажа", "en": "Sex on the Beach" },
-        { "bg": "Розов Джин с Тоник", "en": "Pink Gin & Tonic" },
-        { "bg": "Синя Лагуна", "en": "Blue Lagoon" },
-        { "bg": "Аперол Шприц", "en": "Aperol Spritz" }
-      ],
-      "features": [
+      "quote": {
+        "bg": "Не е просто машина — това е вашият персонален барман. Неограничена креативност и впечатляваща бързина за модерния бар.",
+        "en": "It's not just a machine — it's your personal bartender. Unlimited creativity and impressive speed for the modern bar."
+      },
+      "callouts": [
         {
-          "icon": "mdi:glass-cocktail",
-          "title": { "bg": "250+ напитки", "en": "250+ Drinks" },
-          "description": {
-            "bg": "Текила Сънрайс, Мохито, Секс на плажа, Розов Джин с Тоник, Синя Лагуна, Аперол Шприц и стотици други — алкохолни, безалкохолни и газирани.",
-            "en": "Tequila Sunrise, Mojito, Sex on the Beach, Pink Gin & Tonic, Blue Lagoon, Aperol Spritz, and hundreds more — alcoholic, non-alcoholic, and carbonated."
-          }
+          "icon": "mdi:tune-vertical",
+          "title": { "bg": "7 готови конфигурации", "en": "7 Ready Configurations" },
+          "description": { "bg": "От класически коктейл бар до безалкохолна конфигурация — изберете тази, която съответства на вашия тип обект и меню.", "en": "From classic cocktail bar to non-alcoholic configuration — choose the one that matches your venue type and menu." }
+        },
+        {
+          "icon": "mdi:cloud",
+          "title": { "bg": "Cloud управление", "en": "Cloud Management" },
+          "description": { "bg": "Клауд базиран софтуер за отдалечен достъп — настройвайте рецепти, следете консумацията и обновявайте версии дистанционно.", "en": "Cloud-based software for remote access — configure recipes, track consumption, and update versions remotely." }
         }
       ],
-      "configurations": [
+      "stats": [
         {
-          "title": { "bg": "1. Класически коктейл бар", "en": "1. Classic Cocktail Bar" },
-          "description": {
-            "bg": "6 линии за алкохол: водка, ром, джин, текила, уиски, бърбън. 4 линии за ликьори: амарето, трипъл сек, кокосов ликьор, малина. 4 линии за сокове: портокал, ананас, червена боровинка, грейпфрут. Плюс студена и газирана вода.",
-            "en": "6 alcohol lines: vodka, rum, gin, tequila, whiskey, bourbon. 4 liqueur lines: amaretto, triple sec, coconut liqueur, raspberry. 4 juice lines: orange, pineapple, cranberry, grapefruit. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Барове и ресторанти с класическо меню и високо търсене на коктейли.", "en": "Bars and restaurants with a classic menu and high cocktail demand." }
+          "value": "40%",
+          "label": { "bg": "Спестяване на алкохол и сок", "en": "Savings on Alcohol & Juice" },
+          "description": { "bg": "Прецизното дозиране елиминира загубите, злоупотребите и грешките в бар операциите.", "en": "Precise dosing eliminates losses, abuse, and errors in bar operations." }
         },
         {
-          "title": { "bg": "2. Фюжън коктейли и модерни напитки", "en": "2. Fusion Cocktails & Modern Drinks" },
-          "description": {
-            "bg": "5 линии за алкохол: водка, ром, джин, текила, уиски. 5 линии за ликьори и сиропи: амарето, кокосов ликьор, мента, нар, кафе ликьор. 4 линии за сокове: портокал, ананас, грейпфрут, манго. Плюс студена и газирана вода.",
-            "en": "5 alcohol lines: vodka, rum, gin, tequila, whiskey. 5 liqueur and syrup lines: amaretto, coconut liqueur, mint, pomegranate, coffee liqueur. 4 juice lines: orange, pineapple, grapefruit, mango. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Модерни заведения с фокус върху иновативни и авторски напитки.", "en": "Modern venues focused on innovative and signature drinks." }
+          "value": "250+",
+          "label": { "bg": "Коктейла и напитки", "en": "Cocktails & Drinks" },
+          "description": { "bg": "Текила Сънрайс, Мохито, Аперол Шприц и стотици други — алкохолни, безалкохолни и газирани.", "en": "Tequila Sunrise, Mojito, Aperol Spritz, and hundreds more — alcoholic, non-alcoholic, and carbonated." }
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "mdi:percent",
+          "value": "40%",
+          "label": { "bg": "Спестяване на алкохол и сок", "en": "Savings on Alcohol & Juice" },
+          "description": { "bg": "Прецизното дозиране елиминира загубите — всяка капка е вложена в напитката.", "en": "Precise dosing eliminates losses — every drop goes into the drink." }
         },
         {
-          "title": { "bg": "3. Безалкохолна конфигурация", "en": "3. Non-Alcoholic Configuration" },
-          "description": {
-            "bg": "8 линии за сокове: портокал, ябълка, ананас, праскова, череша, грейпфрут, нар, манго. 4 линии за сиропи: малина, мента, бъз, нар. 2 линии за лимонада и студен чай. Плюс студена и газирана вода.",
-            "en": "8 juice lines: orange, apple, pineapple, peach, cherry, grapefruit, pomegranate, mango. 4 syrup lines: raspberry, mint, elderflower, pomegranate. 2 lines for lemonade and iced tea. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Корпоративни събития, детски партита и обекти с акцент върху безалкохолни напитки.", "en": "Corporate events, children's parties, and venues focused on non-alcoholic drinks." }
+          "icon": "mdi:glass-cocktail",
+          "value": "250+",
+          "label": { "bg": "Коктейла и напитки", "en": "Cocktails & Drinks" },
+          "description": { "bg": "Алкохолни, безалкохолни и газирани — 7 готови конфигурации за всеки тип обект.", "en": "Alcoholic, non-alcoholic, and carbonated — 7 ready configurations for every venue type." }
         },
         {
-          "title": { "bg": "4. Нискоалкохолни напитки", "en": "4. Low-Alcohol Drinks" },
-          "description": {
-            "bg": "6 линии за алкохол: Бейлис, Кюрасо, Амарето, ром, джин, водка. 4 линии за сиропи: карамел, кокос, малина, мента. 4 линии за сокове: праскова, портокал, червена боровинка, круша. Плюс студена и газирана вода.",
-            "en": "6 alcohol lines: Baileys, Curaçao, Amaretto, rum, gin, vodka. 4 syrup lines: caramel, coconut, raspberry, mint. 4 juice lines: peach, orange, cranberry, pear. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Кафенета, сладкарници и заведения с десертни напитки и леки коктейли.", "en": "Cafes, patisseries, and venues with dessert drinks and light cocktails." }
-        },
-        {
-          "title": { "bg": "5. All-in-One", "en": "5. All-in-One" },
-          "description": {
-            "bg": "4 линии за алкохол: водка, ром, джин, текила. 4 линии за ликьори: амарето, трипъл сек, кокосов, малинов. 6 линии за сокове: портокал, ананас, червена боровинка, ябълка, манго, грейпфрут. Плюс студена и газирана вода.",
-            "en": "4 alcohol lines: vodka, rum, gin, tequila. 4 liqueur lines: amaretto, triple sec, coconut, raspberry. 6 juice lines: orange, pineapple, cranberry, apple, mango, grapefruit. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Обекти, които искат максимално разнообразие от една система.", "en": "Venues seeking maximum variety from a single system." }
-        },
-        {
-          "title": { "bg": "6. Парти конфигурация за премикси", "en": "6. Party Premix Configuration" },
-          "description": {
-            "bg": "10 линии за алкохолни премикси (bag-in-box): Маргарита, Мохито, Пина Колада, Лонг Айлънд, Мимоза, Космополитън, Белини, Сангрия, Камикейз, Секс на плажа. 4 линии за натурални сокове. Плюс студена и газирана вода.",
-            "en": "10 alcoholic premix lines (bag-in-box): Margarita, Mojito, Piña Colada, Long Island, Mimosa, Cosmopolitan, Bellini, Sangria, Kamikaze, Sex on the Beach. 4 natural juice lines. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Сватби, партита и корпоративни събития с висок оборот на напитки.", "en": "Weddings, parties, and corporate events with high drink turnover." }
-        },
-        {
-          "title": { "bg": "7. Минималистична конфигурация", "en": "7. Minimalist Configuration" },
-          "description": {
-            "bg": "4 линии за алкохол: водка, ром, джин, уиски. 4 линии за сиропи: малина, мента, кокос, нар. 6 линии за сокове: портокал, ананас, праскова, ябълка, череша, нар. Плюс студена и газирана вода.",
-            "en": "4 alcohol lines: vodka, rum, gin, whiskey. 4 syrup lines: raspberry, mint, coconut, pomegranate. 6 juice lines: orange, pineapple, peach, apple, cherry, pomegranate. Plus cold and sparkling water."
-          },
-          "suitable": { "bg": "Малки обекти или събития с ограничено пространство, но нужда от разнообразие.", "en": "Small venues or events with limited space but a need for variety." }
+          "icon": "mdi:pump",
+          "value": "14",
+          "label": { "bg": "Линии + вода и CO₂", "en": "Lines + Water & CO₂" },
+          "description": { "bg": "Максимална гъвкавост с всякакви комбинации от алкохоли, ликьори и сокове.", "en": "Maximum flexibility with any combination of alcohols, liqueurs, and juices." }
         }
       ]
     },
     {
       "type": "productFeatures",
+      "label": {
+        "bg": "Елиминира загубите",
+        "en": "Eliminates Losses"
+      },
       "title": {
-        "bg": "Какво елиминира Eclipse от вашите операции",
+        "bg": "Какво Eclipse премахва от вашите операции",
         "en": "What Eclipse Eliminates from Your Operations"
       },
       "subtitle": {
@@ -161,39 +138,10 @@
     },
     {
       "type": "productFeatures",
-      "title": {
-        "bg": "Измерим ефект върху разходите",
-        "en": "Measurable Impact on Costs"
+      "label": {
+        "bg": "Измерим ефект",
+        "en": "Measurable Impact"
       },
-      "features": [
-        {
-          "icon": "mdi:cup",
-          "title": { "bg": "Прецизна доза във всяка чаша", "en": "Precise Dose in Every Cup" },
-          "description": {
-            "bg": "Точното количество алкохол и сок, което рецептата изисква. Нито капка повече, нито капка по-малко.",
-            "en": "The exact amount of alcohol and juice that the recipe requires. Not a drop more, not a drop less."
-          }
-        },
-        {
-          "icon": "mdi:clipboard-check",
-          "title": { "bg": "Пълен контрол на инвентара", "en": "Full Inventory Control" },
-          "description": {
-            "bg": "Облачната система проследява в реално време какво, кога и колко се използва. Без изненади в края на месеца.",
-            "en": "The cloud system tracks in real time what, when, and how much is used. No surprises at the end of the month."
-          }
-        },
-        {
-          "icon": "mdi:trending-up",
-          "title": { "bg": "Директно увеличение на печалбата", "en": "Direct Profit Increase" },
-          "description": {
-            "bg": "Намалени разходи + нулеви загуби = по-висока рентабилност от първия месец.",
-            "en": "Reduced costs + zero losses = higher profitability from the first month."
-          }
-        }
-      ]
-    },
-    {
-      "type": "productFeatures",
       "title": {
         "bg": "Защо обектите преминават към Eclipse",
         "en": "Why Venues Switch to Eclipse"
@@ -255,9 +203,64 @@
       ],
       "steps": [
         { "bg": "Свържете Bag-in-Box", "en": "Connect Bag-in-Box" },
-        { "bg": "Свържете алкохол", "en": "Connect alcohol" },
-        { "bg": "Настройте напитките", "en": "Configure drinks" },
-        { "bg": "Управлявайте от облака", "en": "Manage from the cloud" }
+        { "bg": "Свържете алкохол", "en": "Connect Alcohol" },
+        { "bg": "Настройте напитките", "en": "Configure Drinks" },
+        { "bg": "Управлявайте от облака", "en": "Manage from the Cloud" }
+      ]
+    },
+    {
+      "type": "productFAQ",
+      "title": {
+        "bg": "Често задавани въпроси",
+        "en": "Frequently Asked Questions"
+      },
+      "subtitle": {
+        "bg": "Ако не намирате отговор на вашия въпрос, не се колебайте да се свържете с нас.",
+        "en": "If you can't find the answer you're looking for, don't hesitate to contact us."
+      },
+      "items": [
+        {
+          "question": { "bg": "Колко коктейла може да прави Eclipse?", "en": "How many cocktails can Eclipse make?" },
+          "answer": { "bg": "Eclipse е способна да създаде над 250 различни коктейла — алкохолни, безалкохолни и газирани. Работи с всякакви комбинации от алкохоли, ликьори, сиропи и сокове.", "en": "Eclipse can create over 250 different cocktails — alcoholic, non-alcoholic, and carbonated. It works with any combination of alcohols, liqueurs, syrups, and juices." }
+        },
+        {
+          "question": { "bg": "Нуждае ли се от обучен барман?", "en": "Does it need a trained bartender?" },
+          "answer": { "bg": "Не. Eclipse е проектирана за нулева зависимост от обучен барман. Интуитивният интерфейс позволява на всеки служител да работи с машината. Спестявате време и разходи за наемане и обучение на персонал.", "en": "No. Eclipse is designed for zero dependence on a trained bartender. The intuitive interface allows any employee to operate the machine. Save time and costs on hiring and training staff." }
+        },
+        {
+          "question": { "bg": "Как се спестяват 40% от алкохола?", "en": "How does it save 40% on alcohol?" },
+          "answer": { "bg": "Прецизното дозиране елиминира четирите основни проблема: разхищение (неточни дози), злоупотреби (щедри наливания), грешки (объркани рецепти) и брак (некачествени напитки). Всяка капка е контролирана от облачната система.", "en": "Precise dosing eliminates the four main problems: waste (inaccurate doses), abuse (generous pours), errors (confused recipes), and defects (low-quality drinks). Every drop is controlled by the cloud system." }
+        },
+        {
+          "question": { "bg": "Как се монтира под бара?", "en": "How is it installed under the bar?" },
+          "answer": { "bg": "Помпеният модул е отделна част, проектирана да се скрие под бара. На повърхността остава само елегантният дисплей. Инсталацията е бърза и не изисква значителни модификации.", "en": "The pump module is a separate unit designed to be hidden under the bar. Only the elegant display remains on the surface. Installation is quick and doesn't require significant modifications." }
+        },
+        {
+          "question": { "bg": "Може ли менюто да се променя сезонно?", "en": "Can the menu be changed seasonally?" },
+          "answer": { "bg": "Да. Благодарение на облачното управление, можете дистанционно да настройвате рецепти, да добавяте сезонни коктейли и да променяте менюто за конкретни събития — без физическо посещение.", "en": "Yes. Thanks to cloud management, you can remotely configure recipes, add seasonal cocktails, and change the menu for specific events — without a physical visit." }
+        }
+      ]
+    },
+    {
+      "type": "productCTA",
+      "title": {
+        "bg": "Готови ли сте да оптимизирате вашия бар?",
+        "en": "Ready to Optimise Your Bar?"
+      },
+      "description": {
+        "bg": "Нашите консултанти ще анализират вашия обект и ще ви препоръчат оптималната конфигурация на Eclipse — без ангажимент.",
+        "en": "Our consultants will analyse your venue and recommend the optimal Eclipse configuration — no commitment required."
+      },
+      "buttonLabel": {
+        "bg": "Заявете безплатна консултация",
+        "en": "Request a Free Consultation"
+      },
+      "buttonHref": "/contacts",
+      "features": [
+        { "bg": "Безплатна консултация", "en": "Free consultation" },
+        { "bg": "Персонализирана оферта", "en": "Personalised quote" },
+        { "bg": "Инсталация и обучение", "en": "Installation & training" },
+        { "bg": "Директна поддръжка", "en": "Direct support" }
       ]
     },
     {

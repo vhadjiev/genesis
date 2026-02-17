@@ -1,4 +1,8 @@
 export { ProductHero } from './ProductHero'
+export { ProductOverview } from './ProductOverview'
+export { ProductHighlights } from './ProductHighlights'
 export { ProductFeatures } from './ProductFeatures'
 export { ProductSpecs } from './ProductSpecs'
+export { ProductFAQ } from './ProductFAQ'
+export { ProductCTA } from './ProductCTA'
 export { ProductGallery } from './ProductGallery'

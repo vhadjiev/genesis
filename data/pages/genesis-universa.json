@@ -32,10 +32,77 @@
       "image": "/images/universa/genesis-universa-ese-pods.jpg"
     },
     {
+      "type": "productOverview",
+      "label": { "bg": "Характеристики", "en": "Features" },
+      "title": {
+        "bg": "E.S.E Pods — перфектното еспресо от биоразградими дози",
+        "en": "E.S.E Pods — Perfect Espresso from Biodegradable Doses"
+      },
+      "description": {
+        "bg": "Кафе машината Universa работи с мляно кафе в хартиено филтърно покритие, още познато като кафе на дози (E.S.E pod). Кафето е предварително смляно, претеглено и пакетирано в азотна среда. По този начин винаги си гарантирате перфектното еспресо. Universa е екологична алтернатива на капсулното кафе, като не остава отпечатък върху природата.",
+        "en": "The Universa coffee machine works with ground coffee in a paper filter cover, also known as coffee pods (E.S.E pod). The coffee is pre-ground, weighed, and packaged in a nitrogen atmosphere. This way you always guarantee the perfect espresso. Universa is an ecological alternative to capsule coffee, leaving no footprint on nature."
+      },
+      "quote": {
+        "bg": "Без смилане, без разсипване, без калибриране — всяка доза е стандартизирана от фабриката за постоянен вкус и качество.",
+        "en": "No grinding, no spillage, no calibration — every dose is standardised at the factory for consistent taste and quality."
+      },
+      "callouts": [
+        {
+          "icon": "mdi:beaker",
+          "title": { "bg": "Два канистъра + E.S.E pods", "en": "Two Canisters + E.S.E Pods" },
+          "description": { "bg": "Два независими канистъра за мляко и какао, комбинирани с E.S.E pods системата. Над 15 рецепти — от класическо еспресо до кокосово капучино.", "en": "Two independent canisters for milk and cocoa, combined with the E.S.E pods system. Over 15 recipes — from classic espresso to coconut cappuccino." }
+        },
+        {
+          "icon": "mdi:waveform",
+          "title": { "bg": "Superfoam технология", "en": "Superfoam Technology" },
+          "description": { "bg": "Създава плътна микропяна с идеална текстура и температура. Поддържа новата линия вкусове от RAUCH, включително кокосово капучино.", "en": "Creates dense microfoam with ideal texture and temperature. Supports the new RAUCH flavour line, including coconut cappuccino." }
+        }
+      ],
+      "stats": [
+        {
+          "value": "100%",
+          "label": { "bg": "Биоразградими дози", "en": "Biodegradable Pods" },
+          "description": { "bg": "Хартиени E.S.E дози без пластмаса. Екологична алтернатива на капсулното кафе.", "en": "Paper E.S.E pods without plastic. Eco-friendly alternative to capsule coffee." }
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "mdi:shield-check",
+          "value": "0%",
+          "label": { "bg": "Риск от грешка", "en": "Risk of Error" },
+          "description": { "bg": "Без смилане, без калибриране. Всяка доза е стандартизирана от фабриката.", "en": "No grinding, no calibration. Every dose is standardised at the factory." }
+        },
+        {
+          "icon": "mdi:lightning-bolt",
+          "value": "<30s",
+          "label": { "bg": "Готово еспресо", "en": "Ready Espresso" },
+          "description": { "bg": "Бързо обслужване без компромис с качеството, дори при високо натоварване.", "en": "Fast service without compromising quality, even under high load." }
+        },
+        {
+          "icon": "mdi:leaf",
+          "value": "100%",
+          "label": { "bg": "Биоразградими дози", "en": "Biodegradable Pods" },
+          "description": { "bg": "Без пластмаса, без вреда за природата. Хартиени E.S.E дози.", "en": "No plastic, no environmental harm. Paper E.S.E pods." }
+        }
+      ],
+      "badge": {
+        "icon": "mdi:leaf",
+        "text": { "bg": "Нулев екологичен отпечатък", "en": "Zero Environmental Footprint" }
+      }
+    },
+    {
       "type": "productFeatures",
+      "label": {
+        "bg": "Възможности",
+        "en": "Capabilities"
+      },
       "title": {
         "bg": "Защо Universa елиминира операционния риск",
         "en": "Why Universa Eliminates Operational Risk"
+      },
+      "subtitle": {
+        "bg": "Всяка доза е предварително подготвена — постоянен вкус и качество без обучение на персонала.",
+        "en": "Every dose is pre-prepared — consistent taste and quality without staff training."
       },
       "features": [
         {
@@ -100,6 +167,61 @@
         "bg": "E.S.E (Easy Serving Espresso) pods съдържат точно 7 грама прецизно смляно кафе, запечатано в биоразградим хартиен филтър. Азотното опаковане запазва свежестта и аромата до последната доза. Системата е чиста, удобна и екологична — без нужда от мелачка, без бариста умения, без пластмасови отпадъци.",
         "en": "E.S.E (Easy Serving Espresso) pods contain exactly 7 grams of precisely ground coffee, sealed in a biodegradable paper filter. Nitrogen packaging preserves freshness and aroma until the last dose. The system is clean, convenient, and eco-friendly — no grinder needed, no barista skills, no plastic waste."
       }
+    },
+    {
+      "type": "productFAQ",
+      "title": {
+        "bg": "Често задавани въпроси",
+        "en": "Frequently Asked Questions"
+      },
+      "subtitle": {
+        "bg": "Ако не намирате отговор на вашия въпрос, не се колебайте да се свържете с нас.",
+        "en": "If you can't find the answer you're looking for, don't hesitate to contact us."
+      },
+      "items": [
+        {
+          "question": { "bg": "Какво представляват E.S.E pods?", "en": "What are E.S.E pods?" },
+          "answer": { "bg": "E.S.E (Easy Serving Espresso) pods съдържат точно 7 грама прецизно смляно кафе, запечатано в биоразградим хартиен филтър. Азотното опаковане запазва свежестта и аромата. Системата е чиста, удобна и екологична.", "en": "E.S.E (Easy Serving Espresso) pods contain exactly 7 grams of precisely ground coffee, sealed in a biodegradable paper filter. Nitrogen packaging preserves freshness and aroma. The system is clean, convenient, and eco-friendly." }
+        },
+        {
+          "question": { "bg": "Какви напитки може да прави Universa?", "en": "What drinks can Universa make?" },
+          "answer": { "bg": "Universa приготвя над 15 напитки — еспресо, дълго еспресо, капучино, лате, мокачино, горещ шоколад, бял шоколад, кафе със сметана, мляко с шоколад, 3 в 1 и други. С технологията Superfoam поддържа и новата линия RAUCH вкусове — кокосово капучино, кокосово лате и бял шоколад.", "en": "Universa makes over 15 drinks — espresso, long espresso, cappuccino, latte, mochaccino, hot chocolate, white chocolate, coffee with cream, milk with chocolate, 3-in-1, and more. With Superfoam technology it also supports the new RAUCH flavour line — coconut cappuccino, coconut latte, and white chocolate." }
+        },
+        {
+          "question": { "bg": "Нуждае ли се от обучен бариста?", "en": "Does it need a trained barista?" },
+          "answer": { "bg": "Не. Universa е проектирана за нулева зависимост от оператора. Просто поставяте дозата и натискате бутон — перфектно еспресо всеки път, без обучение, без настройки, без грешки.", "en": "No. Universa is designed for zero operator dependency. Simply place the pod and press a button — perfect espresso every time, without training, adjustments, or errors." }
+        },
+        {
+          "question": { "bg": "Екологична ли е?", "en": "Is it eco-friendly?" },
+          "answer": { "bg": "Да. Хартиените E.S.E дози са напълно биоразградими. За разлика от капсулното кафе, няма пластмасови отпадъци. Universa е екологичната алтернатива за професионалния сектор.", "en": "Yes. Paper E.S.E pods are fully biodegradable. Unlike capsule coffee, there is no plastic waste. Universa is the eco-friendly alternative for the professional sector." }
+        },
+        {
+          "question": { "bg": "За какви обекти е подходяща?", "en": "What venues is it suitable for?" },
+          "answer": { "bg": "Universa е идеална за офиси, хотелски лоби зони, кафенета, коуъркинг пространства и всяко място, което иска перфектно кафе без сложна поддръжка. Компактният дизайн я прави подходяща и за пространства с ограничено място.", "en": "Universa is ideal for offices, hotel lobbies, cafes, coworking spaces, and any place that wants perfect coffee without complex maintenance. The compact design makes it suitable even for limited spaces." }
+        }
+      ]
+    },
+    {
+      "type": "productCTA",
+      "title": {
+        "bg": "Готови ли сте за кафе без компромиси?",
+        "en": "Ready for Coffee Without Compromise?"
+      },
+      "description": {
+        "bg": "Нашите консултанти ще ви помогнат да изберете правилната конфигурация на Universa за вашия обект — без ангажимент.",
+        "en": "Our consultants will help you choose the right Universa configuration for your venue — no commitment required."
+      },
+      "buttonLabel": {
+        "bg": "Заявете безплатна консултация",
+        "en": "Request a Free Consultation"
+      },
+      "buttonHref": "/contacts",
+      "features": [
+        { "bg": "Безплатна консултация", "en": "Free consultation" },
+        { "bg": "Персонализирана оферта", "en": "Personalised quote" },
+        { "bg": "Инсталация и обучение", "en": "Installation & training" },
+        { "bg": "Директна поддръжка", "en": "Direct support" }
+      ]
     },
     {
       "type": "productGallery",
