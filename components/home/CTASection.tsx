@@ -48,7 +48,7 @@ export function CTASection({ data, locale }: CTASectionProps) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7 }}
                 >
-                    <h2 className="text-3xl md:text-5xl font-semibold text-[var(--gt-dark-text)] mb-7 tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[var(--gt-dark-text)] mb-7 tracking-tight">{title}</h2>
                     <p className="text-[var(--gt-dark-text-secondary)] text-lg max-w-2xl mx-auto mb-12 leading-relaxed">{subtitle}</p>
                     <Link
                         href={data.buttonHref}

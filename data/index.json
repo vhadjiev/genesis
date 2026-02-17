@@ -48,8 +48,8 @@
                     {
                         "labelKey": "nav.hotBeverages",
                         "children": [
-                            { "id": "genesis-alpha", "labelKey": "nav.genesisAlpha" },
                             { "id": "genesis-universa", "labelKey": "nav.genesisUniversa" },
+                            { "id": "genesis-alpha", "labelKey": "nav.genesisAlpha" },
                             { "id": "genesis-prime", "labelKey": "nav.genesisPrime" }
                         ]
                     },

@@ -144,7 +144,7 @@ body {
     overflow-x: hidden;
     background-color: var(--gt-bg);
     color: var(--gt-text);
-    font-family: var(--font-sans, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+    font-family: var(--font-sans, 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
     letter-spacing: -0.011em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -160,6 +160,10 @@ body {
 }
 
 /* ===== Typography ===== */
+.font-heading {
+    font-family: var(--font-heading, 'Space Grotesk', -apple-system, sans-serif);
+}
+
 .font-mono {
     font-family: var(--font-mono, 'JetBrains Mono', monospace);
 }
@@ -332,21 +336,86 @@ body {
     background: rgba(255, 255, 255, 0.04);
 }
 
-/* CTA nav button */
+/* CTA nav button — spinning gradient border */
+@property --gt-cta-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 .gt-nav-cta {
+    --_cta-bg: #0a0a0f;
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    color: var(--gt-blue);
-    padding: 8px 12px;
-    transition: color 0.2s ease;
+    letter-spacing: 0.03em;
+    color: var(--gt-dark-text);
+    padding: 8px 20px;
+    border-radius: 100px;
+    background: transparent;
+    border: none;
     white-space: nowrap;
+    isolation: isolate;
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.16s ease;
+}
+
+/* Layer 1: spinning conic gradient (behind everything) */
+.gt-nav-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: conic-gradient(
+        from var(--gt-cta-angle),
+        transparent 30%,
+        var(--gt-blue) 42%,
+        #60a5fa 50%,
+        var(--gt-blue) 58%,
+        transparent 70%
+    );
+    animation: gt-cta-spin 4s linear infinite;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    z-index: -2;
+}
+
+/* Layer 2: solid fill — covers the gradient, leaving only a 1.5px border gap */
+.gt-nav-cta::after {
+    content: '';
+    position: absolute;
+    inset: 1.5px;
+    border-radius: inherit;
+    background: var(--_cta-bg);
+    transition: background 0.3s ease;
+    z-index: -1;
 }
 
 .gt-nav-cta:hover {
-    color: var(--gt-blue-light);
+    /* transform: translateY(-1px); */
+    box-shadow: 0 4px 20px rgba(0, 113, 227, 0.2);
+}
+
+.gt-nav-cta:hover::before {
+    opacity: 1;
+}
+
+.gt-nav-cta:hover::after {
+    background: #0a1028;
+}
+
+.gt-nav-cta:active {
+    transform: translateY(0) scale(0.98);
+}
+
+@keyframes gt-cta-spin {
+    to {
+        --gt-cta-angle: 360deg;
+    }
 }
 
 /* Language switcher default (dark theme) */
@@ -390,11 +459,15 @@ body {
 }
 
 .gt-header.theme-light .gt-nav-cta {
+    --_cta-bg: #f5f5f7;
     color: var(--gt-blue);
 }
 
 .gt-header.theme-light .gt-nav-cta:hover {
     color: var(--gt-blue-dark);
+    box-shadow:
+        0 0 24px rgba(0, 113, 227, 0.1),
+        0 0 8px rgba(0, 113, 227, 0.06);
 }
 
 .gt-header.theme-light .gt-menu-button {
@@ -729,13 +802,14 @@ body {
     transform-origin: center center;
 }
 
-/* Hero typography — modern sans-serif */
+/* Hero typography — modern geometric heading */
 .hero-text {
     text-align: center;
 }
 
 .hero-title {
     color: var(--gt-dark-text);
+    font-family: var(--font-heading, 'Space Grotesk', -apple-system, sans-serif);
     font-weight: 700;
     font-size: 64px;
     line-height: 1.05;
@@ -804,6 +878,7 @@ body {
 
 /* ===== Glass Card — Light (for light sections) ===== */
 .glass-card-light {
+    position: relative;
     background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(24px) saturate(1.4);
     -webkit-backdrop-filter: blur(24px) saturate(1.4);
@@ -813,21 +888,23 @@ body {
         0 2px 8px rgba(0, 0, 0, 0.04),
         0 8px 32px rgba(0, 0, 0, 0.06),
         inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card-light:hover {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.72);
+    border-color: rgba(255, 255, 255, 0.8);
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.06),
         0 16px 48px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 113, 227, 0.06),
         inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 /* ===== Glass Card — Dark (for dark sections) ===== */
 .glass-card-dark {
+    position: relative;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(24px) saturate(1.4);
     -webkit-backdrop-filter: blur(24px) saturate(1.4);
@@ -837,17 +914,18 @@ body {
         0 2px 8px rgba(0, 0, 0, 0.2),
         0 8px 32px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-card-dark:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.15);
     box-shadow:
         0 4px 12px rgba(0, 0, 0, 0.25),
         0 20px 60px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(0, 113, 227, 0.08),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 /* ===== Frosted surface — subtle glass bg for sections ===== */
@@ -996,6 +1074,42 @@ body {
 /* Ensure buttons have pointer cursor */
 button {
     cursor: pointer;
+}
+
+/* ===== Premium visual effects ===== */
+
+/* Subtle grain texture overlay for premium depth */
+.gt-grain::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+}
+
+/* Section heading — uses premium heading font */
+.font-heading {
+    font-family: var(--font-heading, 'Space Grotesk', -apple-system, sans-serif);
+}
+
+/* Section wave divider */
+.gt-section-divider-wave {
+    position: relative;
+}
+
+.gt-section-divider-wave::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(180deg, transparent 0%, var(--gt-dark-bg) 100%);
+    pointer-events: none;
 }
 
 /* ===== Selection color ===== */

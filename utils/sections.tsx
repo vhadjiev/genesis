@@ -98,6 +98,27 @@ const sectionComponents: Record<
       >,
     { loading: () => <SectionSkeleton /> }
   ),
+  brandStorySection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/BrandStorySection").then(
+        (m) => m.BrandStorySection
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  serviceSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/ServiceSection").then(
+        (m) => m.ServiceSection
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
+  newsletterSection: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/home/NewsletterSection").then(
+        (m) => m.NewsletterSection
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
 
   // ===== Product page sections =====
   productHero: dynamic<SectionComponentProps>(

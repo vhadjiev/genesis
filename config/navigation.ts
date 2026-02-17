@@ -1,17 +1,21 @@
 /**
- * Shared navigation configuration
- * Single source of truth for Header and Footer navigation
+ * Navigation configuration — derived from data/index.json
+ *
+ * Structure and ordering come from index.json (single source of truth).
+ * UI-specific extras (gradients, images, descriptions) are enriched here
+ * since they are presentation concerns, not data concerns.
  */
+
+import indexData from '@/data/index.json'
+
+/* ── Types ── */
 
 export interface NavChild {
     key: string
     href: string
     icon?: string
-    /** Short description for mega dropdown */
     desc?: string
-    /** Gradient class for placeholder thumbnail */
     gradient?: string
-    /** Product image path (when available, replaces gradient placeholder) */
     image?: string
 }
 
@@ -29,62 +33,99 @@ export interface NavItem {
     featured?: NavChild
 }
 
-/**
- * Primary navigation links used by both Header and Footer
- */
-export const navLinks: NavItem[] = [
-    {
-        key: 'systems',
-        href: '#',
-        groups: [
-            {
-                labelKey: 'hotBeverages',
-                children: [
-                    { key: 'genesisAlpha', href: '/equipment/genesis-alpha', desc: 'Compact hot beverage system', gradient: 'from-blue-950 to-slate-900', image: '/images/alpha/genesis-alpha.png' },
-                    { key: 'genesisUniversa', href: '/equipment/genesis-universa', desc: 'Universal premium platform', gradient: 'from-gray-900 to-slate-900', image: '/images/universa/genesis-universa-ese-pods.jpg' },
-                    { key: 'genesisPrime', href: '/equipment/genesis-prime', desc: 'High-volume professional', gradient: 'from-emerald-950 to-slate-900' },
-                ],
-            },
-            {
-                labelKey: 'coldBeverages',
-                children: [
-                    { key: 'genesisEclipse', href: '/equipment/genesis-eclipse', desc: 'Advanced cold brew system', gradient: 'from-purple-950 to-slate-900', image: '/images/eclipse/genesys-eclipse.jpg' },
-                    { key: 'genesisSolaris2', href: '/equipment/genesis-solaris-2', desc: 'Next-gen juice dispenser', gradient: 'from-amber-950 to-slate-900', image: '/images/solaris/genesys-solaris2.jpg' },
-                    { key: 'genesisEquinox', href: '/equipment/genesis-equinox', desc: 'Dual temperature system', gradient: 'from-cyan-950 to-slate-900' },
-                    { key: 'genesisSolaris', href: '/equipment/genesis-solaris', desc: 'Classic juice platform', gradient: 'from-orange-950 to-slate-900' },
-                ],
-            },
-        ],
-        featured: {
-            key: 'cloudPlatform',
-            href: '/services/cloud-system',
-            icon: 'mdi:cloud-sync',
-        },
-    },
-    {
-        key: 'company',
-        href: '/about',
-        children: [
-            { key: 'about', href: '/about' },
-            { key: 'projects', href: '/projects' },
-            { key: 'news', href: '/news' },
-            { key: 'exhibitions', href: '/exhibitions' },
-        ],
-    },
-    {
-        key: 'contactUs',
-        href: '/contacts',
-        isCTA: true,
-    },
-]
+/* ── Page lookup: id → href ── */
+
+const pageSlugMap = new Map<string, string>(
+    indexData.pages.map((p) => [p.id, p.slug ? `/${p.slug}` : '/'])
+)
+
+function hrefFor(id: string): string {
+    return pageSlugMap.get(id) || `/${id}`
+}
 
 /**
- * Manufacturing services links (footer only, different audience)
+ * Camel-case a kebab-case id for use as a translation key.
+ * e.g. "genesis-alpha" → "genesisAlpha"
  */
-export const manufacturingLinks: NavChild[] = [
-    { key: 'laserCutting', href: '/services/laser-cutting' },
-    { key: 'sheetMetalBending', href: '/services/sheet-metal-bending' },
-]
+function camelCase(id: string): string {
+    return id.replace(/-([a-z0-9])/g, (_, c) => c.toUpperCase())
+}
+
+/* ── UI enrichment data (presentation-only) ── */
+
+interface ProductMeta {
+    desc?: string
+    gradient?: string
+    image?: string
+    icon?: string
+}
+
+const productMeta: Record<string, ProductMeta> = {
+    'genesis-universa': { desc: 'Universal premium platform', gradient: 'from-gray-900 to-slate-900', image: '/images/universa/genesis-universa-ese-pods.jpg' },
+    'genesis-alpha': { desc: 'Compact hot beverage system', gradient: 'from-blue-950 to-slate-900', image: '/images/alpha/genesis-alpha.png' },
+    'genesis-prime': { desc: 'High-volume professional', gradient: 'from-emerald-950 to-slate-900' },
+    'genesis-eclipse': { desc: 'Advanced cold brew system', gradient: 'from-purple-950 to-slate-900', image: '/images/eclipse/genesys-eclipse.jpg' },
+    'genesis-solaris-2': { desc: 'Next-gen juice dispenser', gradient: 'from-amber-950 to-slate-900', image: '/images/solaris/genesys-solaris2.jpg' },
+    'genesis-equinox': { desc: 'Dual temperature system', gradient: 'from-cyan-950 to-slate-900' },
+    'genesis-solaris': { desc: 'Classic juice platform', gradient: 'from-orange-950 to-slate-900' },
+    'cloud-system': { icon: 'mdi:cloud-sync' },
+}
+
+/* ── Build navigation from index.json ── */
+
+function buildNavChild(item: { id: string; labelKey?: string }): NavChild {
+    const meta = productMeta[item.id] || {}
+    return {
+        key: camelCase(item.id),
+        href: hrefFor(item.id),
+        ...(meta.desc && { desc: meta.desc }),
+        ...(meta.gradient && { gradient: meta.gradient }),
+        ...(meta.image && { image: meta.image }),
+        ...(meta.icon && { icon: meta.icon }),
+    }
+}
+
+function buildNavItem(raw: typeof indexData.navigation.main[number]): NavItem {
+    const item: NavItem = {
+        key: camelCase(raw.id),
+        href: hrefFor(raw.id),
+    }
+
+    if ('isCTA' in raw && raw.isCTA) {
+        item.isCTA = true
+    }
+
+    if ('groups' in raw && raw.groups) {
+        item.href = '#'
+        item.groups = raw.groups.map((g) => ({
+            labelKey: g.labelKey.replace('nav.', ''),
+            children: g.children.map(buildNavChild),
+        }))
+    }
+
+    if ('children' in raw && raw.children) {
+        item.children = raw.children.map(buildNavChild)
+    }
+
+    if ('featured' in raw && raw.featured) {
+        const feat = raw.featured as { id: string; labelKey: string }
+        const meta = productMeta[feat.id] || {}
+        item.featured = {
+            key: camelCase(feat.id),
+            href: hrefFor(feat.id),
+            ...(meta.icon && { icon: meta.icon }),
+        }
+    }
+
+    return item
+}
+
+export const navLinks: NavItem[] = indexData.navigation.main.map(buildNavItem)
+
+/**
+ * Manufacturing services links (footer only)
+ */
+export const manufacturingLinks: NavChild[] = indexData.navigation.manufacturing.map(buildNavChild)
 
 /**
  * Social media links

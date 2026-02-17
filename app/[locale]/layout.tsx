@@ -2,7 +2,7 @@ import "../app.css";
 
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Space_Grotesk, DM_Sans, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Providers } from "@/providers/Providers";
 import initTranslations from "@/app/i18n";
@@ -12,8 +12,15 @@ import { Header, Footer } from "@/components/layout";
 
 const GTM_ID = "GTM-MFZNM4LN";
 
-const inter = Inter({
-  subsets: ["latin", "latin-ext", "cyrillic"],
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-heading",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
   variable: "--font-sans",
@@ -120,7 +127,7 @@ export default async function RootLayout({
   });
 
   return (
-    <html lang={locale} className={`dark ${inter.variable} ${jetBrainsMono.variable}`}>
+    <html lang={locale} className={`dark ${spaceGrotesk.variable} ${dmSans.variable} ${jetBrainsMono.variable}`}>
       <head>
         {/* Google Tag Manager */}
         <Script
@@ -142,7 +149,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${inter.className} antialiased min-h-screen bg-background text-foreground`}
+        className={`${dmSans.className} antialiased min-h-screen bg-background text-foreground gt-grain`}
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>

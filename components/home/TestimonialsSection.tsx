@@ -6,10 +6,16 @@ import { Icon } from '@iconify/react'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
+interface TestimonialMetric {
+    value: string
+    label: LocalizedContent<string>
+}
+
 interface Testimonial {
     quote: LocalizedContent<string>
     author: string | LocalizedContent<string>
     role: LocalizedContent<string>
+    metric?: TestimonialMetric
 }
 
 interface TestimonialsSectionData {
@@ -44,11 +50,20 @@ const PLACEHOLDER_TESTIMONIALS = (locale: string) => [
 export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) {
     const title = getLocalizedContent(data.title, locale)
 
-    const testimonials = data.testimonials?.length
+    const testimonials: Array<{
+        quote: string
+        author: string
+        role: string
+        metric?: { value: string; label: string }
+    }> = data.testimonials?.length
         ? data.testimonials.map((t) => ({
               quote: getLocalizedContent(t.quote, locale),
               author: typeof t.author === 'string' ? t.author : getLocalizedContent(t.author, locale),
               role: getLocalizedContent(t.role, locale),
+              metric: t.metric ? {
+                  value: t.metric.value,
+                  label: getLocalizedContent(t.metric.label, locale),
+              } : undefined,
           }))
         : PLACEHOLDER_TESTIMONIALS(locale)
 
@@ -62,7 +77,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -73,7 +88,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="glass-card-light p-8 lg:p-9 relative"
+                            className="glass-card-light p-8 lg:p-9 relative flex flex-col"
                         >
                             {/* Blue accent top bar */}
                             <div className="absolute top-0 left-8 right-8 h-[2px] bg-gradient-to-r from-transparent via-[var(--gt-blue)] to-transparent opacity-40 rounded-full" />
@@ -83,7 +98,15 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                                 <Icon icon="mdi:format-quote-close" className="w-5 h-5 text-[var(--gt-blue)]" />
                             </div>
 
-                            <p className="text-[var(--gt-light-text)] mb-8 leading-relaxed text-[15px]">{testimonial.quote}</p>
+                            <p className="text-[var(--gt-light-text)] mb-8 leading-relaxed text-[15px] flex-1">{testimonial.quote}</p>
+
+                            {/* Metric badge */}
+                            {'metric' in testimonial && testimonial.metric && (
+                                <div className="mb-6 flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50/50 border border-blue-100/50">
+                                    <span className="font-mono text-xl font-bold text-[var(--gt-blue)]">{testimonial.metric.value}</span>
+                                    <span className="text-[var(--gt-light-text-secondary)] text-xs">{testimonial.metric.label}</span>
+                                </div>
+                            )}
 
                             <div className="pt-5 border-t border-[var(--gt-light-border)]">
                                 <p className="font-semibold text-[var(--gt-light-text)] text-sm">{testimonial.author}</p>

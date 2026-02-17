@@ -4,7 +4,7 @@ interface LogoProps extends React.SVGProps<SVGSVGElement> {
     color?: string
 }
 
-export function Logo({ color = '#4b6db1', ...props }: LogoProps) {
+export function Logo({ color = '#0071e3', ...props }: LogoProps) {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
