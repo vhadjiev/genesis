@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -38,7 +38,7 @@ export function TrustBarSection({ data, locale }: TrustBarSectionProps) {
                                 className="flex items-center gap-2.5"
                             >
                                 <Icon icon={item.icon} className="w-4 h-4 text-[var(--gt-blue)] shrink-0" />
-                                <span className="text-[12px] font-medium text-[var(--gt-light-text-secondary)] whitespace-nowrap tracking-wide">
+                                <span className="text-[12px] font-light text-[var(--gt-light-text-secondary)] whitespace-nowrap tracking-wide">
                                     {label}
                                 </span>
                             </motion.div>

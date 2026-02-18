@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -46,7 +46,7 @@ export function BrandStorySection({ data, locale }: BrandStorySectionProps) {
                         transition={{ duration: 0.7 }}
                     >
                         <div className="w-12 h-[2px] bg-[var(--gt-blue)] mb-8" />
-                        <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-dark-text)] tracking-tight leading-[1.1] mb-6">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] text-[var(--gt-dark-text)] tracking-tight leading-[1.1] mb-6">
                             {title}
                         </h2>
                         <p className="text-[var(--gt-dark-text-secondary)] text-lg leading-relaxed mb-6">
@@ -79,7 +79,7 @@ export function BrandStorySection({ data, locale }: BrandStorySectionProps) {
                                     <div className="w-12 h-12 rounded-2xl bg-[var(--gt-blue)]/10 flex items-center justify-center mx-auto mb-4">
                                         <Icon icon={highlight.icon} className="w-6 h-6 text-[var(--gt-blue)]" />
                                     </div>
-                                    <p className="text-[var(--gt-dark-text-secondary)] text-sm font-medium leading-snug">
+                                    <p className="text-[var(--gt-dark-text-secondary)] text-sm font-light leading-snug">
                                         {label}
                                     </p>
                                 </motion.div>

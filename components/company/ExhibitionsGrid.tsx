@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -38,7 +38,7 @@ export function ExhibitionsGrid({ data, locale }: ExhibitionsGridProps) {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-foreground">{title}</h2>
                     <div className="w-16 h-1 bg-[var(--gt-blue)] mx-auto mt-4" />
                 </motion.div>
 
@@ -61,7 +61,7 @@ export function ExhibitionsGrid({ data, locale }: ExhibitionsGridProps) {
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     className="glass-card rounded-2xl p-8"
                                 >
-                                    <h3 className="text-xl font-bold text-foreground mb-2">{exhibition.name}</h3>
+                                    <h3 className="text-xl font-medium text-foreground mb-2">{exhibition.name}</h3>
                                     <div className="flex items-center gap-2 text-foreground/60 mb-1">
                                         <Icon icon="mdi:map-marker" className="w-4 h-4" />
                                         <span>{location}</span>

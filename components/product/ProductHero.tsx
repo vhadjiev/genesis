@@ -3,7 +3,7 @@
 import React, { ViewTransition, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -129,7 +129,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                         </ViewTransition>
                     ) : (
                         <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/[0.04] bg-gradient-to-br from-slate-900 via-blue-950/30 to-slate-900 flex items-center justify-center shadow-[0_0_100px_rgba(75,109,177,0.1)]">
-                            <span className="text-white/[0.05] text-[80px] lg:text-[140px] font-bold tracking-tighter select-none leading-none">
+                            <span className="text-white/[0.05] text-[80px] lg:text-[140px] font-semibold tracking-tighter select-none leading-none">
                                 {data.name.split(' ').pop()}
                             </span>
                         </div>
@@ -149,7 +149,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                         {/* Badge */}
                         {badge && (
                             <motion.div variants={fadeUp} className="mb-6">
-                                <span className="inline-flex items-center gap-2 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.15em] bg-(--gt-blue)/10 text-(--gt-blue) rounded-full border border-(--gt-blue)/15 backdrop-blur-sm">
+                                <span className="inline-flex items-center gap-2 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.15em] bg-(--gt-blue)/10 text-(--gt-blue) rounded-full border border-(--gt-blue)/15 backdrop-blur-sm">
                                     <span className="w-1.5 h-1.5 rounded-full bg-(--gt-blue) animate-pulse" />
                                     {badge}
                                 </span>
@@ -159,7 +159,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                         {/* Tagline */}
                         <motion.p
                             variants={fadeUp}
-                            className="text-(--gt-blue) font-medium text-sm tracking-wide mb-4"
+                            className="text-(--gt-blue) font-normal text-sm tracking-wide mb-4"
                         >
                             {tagline}
                         </motion.p>
@@ -172,7 +172,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                                 variants={fadeUp}
                                 initial={isVTNav ? false : 'hidden'}
                                 animate="show"
-                                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white mb-6 tracking-tight leading-[1.08]"
+                                className="text-4xl md:text-5xl lg:text-[56px] font-semibold text-white mb-6 tracking-[-0.035em] leading-[1.08]"
                             >
                                 {data.name}
                             </motion.h1>
@@ -207,7 +207,7 @@ export function ProductHero({ data, locale }: ProductHeroProps) {
                                             key={i}
                                             className="group flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-white/[0.03] border border-white/[0.06] backdrop-blur-sm hover:bg-white/[0.06] hover:border-white/[0.1] transition-all duration-300"
                                         >
-                                            <span className="text-xl font-bold text-(--gt-blue) tracking-tight leading-none">
+                                            <span className="text-xl font-semibold text-(--gt-blue) tracking-tight leading-none">
                                                 {callout.value}
                                             </span>
                                             <span className="text-(--gt-dark-text-muted) text-sm leading-snug max-w-[160px]">

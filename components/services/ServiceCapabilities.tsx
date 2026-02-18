@@ -33,7 +33,7 @@ export function ServiceCapabilities({ data, locale }: ServiceCapabilitiesProps) 
                     transition={{ duration: 0.6 }}
                     className="text-center mb-14"
                 >
-                    <h2 className="text-3xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="max-w-2xl mx-auto bg-white rounded-2xl overflow-hidden shadow-sm">
@@ -52,7 +52,7 @@ export function ServiceCapabilities({ data, locale }: ServiceCapabilitiesProps) 
                                 }`}
                             >
                                 <span className="text-[var(--gt-light-text-secondary)] text-sm">{label}</span>
-                                <span className="font-mono font-medium text-[var(--gt-light-text)] text-sm">{value}</span>
+                                <span className="font-mono font-normal text-[var(--gt-light-text)] text-sm">{value}</span>
                             </motion.div>
                         )
                     })}

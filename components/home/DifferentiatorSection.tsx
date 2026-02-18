@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -49,7 +49,7 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                     {subtitle && (
                         <p className="text-[var(--gt-light-text-secondary)] text-lg max-w-2xl mx-auto mt-5 leading-relaxed">{subtitle}</p>
                     )}
@@ -75,7 +75,7 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                                             <Icon icon={challenge.icon} className="w-5 h-5 text-red-500/80" />
                                         </div>
                                         <div>
-                                            <h3 className="text-sm font-semibold text-[var(--gt-light-text)] mb-1">{challengeTitle}</h3>
+                                            <h3 className="text-sm font-medium text-[var(--gt-light-text)] mb-1">{challengeTitle}</h3>
                                             <p className="text-[var(--gt-light-text-secondary)] text-xs leading-relaxed">{challengeDesc}</p>
                                         </div>
                                     </div>
@@ -104,11 +104,11 @@ export function DifferentiatorSection({ data, locale }: DifferentiatorSectionPro
                                 <div className="w-14 h-14 rounded-2xl bg-blue-50/80 backdrop-blur-sm flex items-center justify-center mx-auto mb-7">
                                     <Icon icon={pillar.icon} className="w-7 h-7 text-[var(--gt-blue)]" />
                                 </div>
-                                <h3 className="text-lg font-semibold text-[var(--gt-light-text)] mb-4">{pillarTitle}</h3>
+                                <h3 className="text-lg font-medium text-[var(--gt-light-text)] mb-4">{pillarTitle}</h3>
                                 <p className="text-[var(--gt-light-text-secondary)] leading-relaxed mb-8 text-sm">{pillarDesc}</p>
 
                                 <div className="pt-6 border-t border-[var(--gt-light-border)]">
-                                    <div className="font-mono text-3xl font-bold text-[var(--gt-blue)] tracking-tight">{pillar.stat.value}</div>
+                                    <div className="font-mono text-3xl font-semibold text-[var(--gt-blue)] tracking-tight">{pillar.stat.value}</div>
                                     <p className="text-[var(--gt-light-text-muted)] text-[11px] uppercase tracking-widest mt-2">{statLabel}</p>
                                 </div>
                             </motion.div>

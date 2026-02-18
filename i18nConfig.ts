@@ -8,8 +8,8 @@ const i18nConfig: Config = {
     // Disable automatic locale detection from browser headers
     localeDetector: false,
     // Disable cookie-based locale persistence (use URL as source of truth)
-    localeCookie: '',
-    serverSetCookie: 'never',
+    localeCookie: '_LOCALE',
+    // serverSetCookie: 'never',
 }
 
 export default i18nConfig

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -43,7 +43,7 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-light-text)] max-w-3xl mx-auto leading-tight tracking-tight">
+                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] text-[var(--gt-light-text)] max-w-3xl mx-auto leading-tight tracking-tight">
                         {title}
                     </h2>
                 </motion.div>
@@ -67,7 +67,7 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                                         <Icon icon="mdi:alert-circle-outline" className="w-5 h-5 text-red-500" />
                                     </div>
                                     <div>
-                                        <h3 className="font-semibold text-[var(--gt-light-text)] text-lg mb-1.5">{problemTitle}</h3>
+                                        <h3 className="font-medium text-[var(--gt-light-text)] text-lg mb-1.5">{problemTitle}</h3>
                                         <p className="text-[var(--gt-light-text-secondary)] leading-relaxed">{problemDesc}</p>
                                     </div>
                                 </motion.div>
@@ -87,7 +87,7 @@ export function ProblemSolutionSection({ data, locale }: ProblemSolutionSectionP
                             <div className="w-12 h-12 rounded-2xl bg-blue-50/80 backdrop-blur-sm flex items-center justify-center mb-6">
                                 <Icon icon="mdi:check-circle" className="w-6 h-6 text-[var(--gt-blue)]" />
                             </div>
-                            <h3 className="text-2xl font-semibold text-[var(--gt-light-text)] mb-4">{solutionTitle}</h3>
+                            <h3 className="text-2xl font-medium text-[var(--gt-light-text)] mb-4">{solutionTitle}</h3>
                             <p className="text-[var(--gt-light-text-secondary)] leading-relaxed text-lg">{solutionDesc}</p>
                         </div>
                     </motion.div>

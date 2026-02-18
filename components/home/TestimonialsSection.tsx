@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -77,7 +77,7 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                     transition={{ duration: 0.7 }}
                     className="text-center mb-20"
                 >
-                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
@@ -103,13 +103,13 @@ export function TestimonialsSection({ data, locale }: TestimonialsSectionProps) 
                             {/* Metric badge */}
                             {'metric' in testimonial && testimonial.metric && (
                                 <div className="mb-6 flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-50/50 border border-blue-100/50">
-                                    <span className="font-mono text-xl font-bold text-[var(--gt-blue)]">{testimonial.metric.value}</span>
+                                    <span className="font-mono text-xl font-semibold text-[var(--gt-blue)]">{testimonial.metric.value}</span>
                                     <span className="text-[var(--gt-light-text-secondary)] text-xs">{testimonial.metric.label}</span>
                                 </div>
                             )}
 
                             <div className="pt-5 border-t border-[var(--gt-light-border)]">
-                                <p className="font-semibold text-[var(--gt-light-text)] text-sm">{testimonial.author}</p>
+                                <p className="font-medium text-[var(--gt-light-text)] text-sm">{testimonial.author}</p>
                                 <p className="text-[12px] text-[var(--gt-light-text-muted)] mt-0.5">{testimonial.role}</p>
                             </div>
                         </motion.div>

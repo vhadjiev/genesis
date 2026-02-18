@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { motion, AnimatePresence } from 'framer-motion'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
@@ -150,7 +150,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-2xl font-semibold text-[var(--gt-light-text)] mb-3"
+                className="text-2xl font-medium text-[var(--gt-light-text)] mb-3"
             >
                 {t(variant === 'equipment' ? 'equipmentRental.form.successTitle' : 'contact.form.successTitle')}
             </motion.h3>
@@ -169,7 +169,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                 onClick={handleSendAnother}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--gt-light-border)] text-[var(--gt-light-text)] font-medium hover:border-[var(--gt-blue)] transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--gt-light-border)] text-[var(--gt-light-text)] font-normal hover:border-[var(--gt-blue)] transition-colors"
             >
                 <Icon icon="mdi:plus" className="w-5 h-5" />
                 {t(variant === 'equipment' ? 'equipmentRental.form.sendAnother' : 'contact.form.sendAnother')}
@@ -188,7 +188,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                     className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-200 text-red-600"
                 >
                     <Icon icon="mdi:alert-circle" className="w-5 h-5 shrink-0" />
-                    <span className="text-sm font-medium">
+                    <span className="text-sm font-normal">
                         {errorMessage || t('contact.form.errorMessage')}
                     </span>
                 </motion.div>
@@ -214,7 +214,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
             disabled={disabled}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-200 border disabled:opacity-50 disabled:cursor-not-allowed ${
+            className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-normal transition-all duration-200 border disabled:opacity-50 disabled:cursor-not-allowed ${
                 isSelected
                     ? 'bg-[var(--gt-blue)] text-white border-[var(--gt-blue)]'
                     : 'bg-[var(--gt-light-surface)] text-[var(--gt-light-text-secondary)] border-[var(--gt-light-border)] hover:border-[var(--gt-blue)]'
@@ -238,7 +238,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
             disabled={status === 'submitting'}
             whileHover={{ scale: status === 'submitting' ? 1 : 1.01 }}
             whileTap={{ scale: status === 'submitting' ? 1 : 0.99 }}
-            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[var(--gt-blue)] text-white font-medium text-[15px] hover:bg-[var(--gt-blue-light)] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-[var(--gt-blue)] text-white font-normal text-[15px] hover:bg-[var(--gt-blue-light)] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed"
         >
             {status === 'submitting' ? (
                 <>
@@ -273,33 +273,33 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                 className="space-y-5"
                             >
                                 <div className="text-center mb-8">
-                                    <h3 className="text-2xl font-semibold text-[var(--gt-light-text)] mb-3">
+                                    <h3 className="text-2xl font-medium text-[var(--gt-light-text)] mb-3">
                                         {getLocalizedContent(data.title, locale)}
                                     </h3>
                                 </div>
                                 <ErrorBanner />
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                        <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                             {t('equipmentRental.form.name')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="text" required value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder={t('equipmentRental.form.name')} />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                        <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                             {t('equipmentRental.form.mobile')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="+359 ..." />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                    <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                         {t('equipmentRental.form.email')} <span className="text-red-500">*</span>
                                     </label>
                                     <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="email@example.com" />
                                 </div>
                                 <div className="space-y-3">
-                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.categories')}</label>
+                                    <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.categories')}</label>
                                     <div className="flex flex-wrap gap-2">
                                         {equipmentCategories.map((category) => (
                                             <ChipButton key={category} isSelected={selectedCategories.includes(category)} onClick={() => handleCheckboxChange(category, selectedCategories, setSelectedCategories)} disabled={status === 'submitting'}>
@@ -309,7 +309,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.message')}</label>
+                                    <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">{t('equipmentRental.form.message')}</label>
                                     <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} disabled={status === 'submitting'} className={`${inputClasses} resize-none`} placeholder={t('equipmentRental.form.message')} />
                                 </div>
                                 <SubmitButton />
@@ -341,7 +341,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     className="space-y-5"
                                 >
                                     <div className="mb-6">
-                                        <h3 className="text-xl font-semibold text-[var(--gt-light-text)] mb-3">
+                                        <h3 className="text-xl font-medium text-[var(--gt-light-text)] mb-3">
                                             {getLocalizedContent(data.title, locale)}
                                         </h3>
                                         <div className="accent-line" />
@@ -349,27 +349,27 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     <ErrorBanner />
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div className="space-y-2">
-                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                            <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                                 {t('contact.form.name')} <span className="text-red-500">*</span>
                                             </label>
                                             <input type="text" required value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder={t('contact.form.name')} />
                                         </div>
                                         <div className="space-y-2">
-                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                            <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                                 {t('contact.form.mobile')} <span className="text-red-500">*</span>
                                             </label>
                                             <input type="tel" required value={phone} onChange={(e) => setPhone(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="+359 ..." />
                                         </div>
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">
+                                        <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">
                                             {t('contact.form.email')} <span className="text-red-500">*</span>
                                         </label>
                                         <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'submitting'} className={inputClasses} placeholder="email@example.com" />
                                     </div>
                                     {data.projectTypes && data.projectTypes.length > 0 && (
                                         <div className="space-y-3">
-                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.projectType')}</label>
+                                            <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">{t('contact.form.projectType')}</label>
                                             <div className="flex flex-wrap gap-2">
                                                 {data.projectTypes.map((type) => (
                                                     <ChipButton key={type.id} isSelected={selectedProjects.includes(type.id)} onClick={() => handleCheckboxChange(type.id, selectedProjects, setSelectedProjects)} disabled={status === 'submitting'}>
@@ -381,7 +381,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                     )}
                                     {data.serviceTypes && data.serviceTypes.length > 0 && (
                                         <div className="space-y-3">
-                                            <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.services')}</label>
+                                            <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">{t('contact.form.services')}</label>
                                             <div className="flex flex-wrap gap-2">
                                                 {data.serviceTypes.map((type) => (
                                                     <ChipButton key={type.id} isSelected={selectedServices.includes(type.id)} onClick={() => handleCheckboxChange(type.id, selectedServices, setSelectedServices)} disabled={status === 'submitting'}>
@@ -392,7 +392,7 @@ export function ContactForm({ data, locale }: ContactFormProps) {
                                         </div>
                                     )}
                                     <div className="space-y-2">
-                                        <label className="block text-sm font-medium text-[var(--gt-light-text-secondary)]">{t('contact.form.description')}</label>
+                                        <label className="block text-sm font-normal text-[var(--gt-light-text-secondary)]">{t('contact.form.description')}</label>
                                         <textarea rows={4} value={message} onChange={(e) => setMessage(e.target.value)} disabled={status === 'submitting'} className={`${inputClasses} resize-none`} placeholder={t('contact.form.description')} />
                                     </div>
                                     <SubmitButton />

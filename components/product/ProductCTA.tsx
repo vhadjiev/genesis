@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import Link from 'next/link'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
@@ -57,7 +57,7 @@ export function ProductCTA({ data, locale }: ProductCTAProps) {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                     >
-                        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-6 leading-[1.1]">
+                        <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white tracking-tight mb-6 leading-[1.1]">
                             {title}
                         </h2>
                     </motion.div>
@@ -101,7 +101,7 @@ export function ProductCTA({ data, locale }: ProductCTAProps) {
                     >
                         <Link
                             href={href}
-                            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-(--gt-blue) text-white font-semibold text-base hover:bg-(--gt-blue-dark) transition-all duration-300 shadow-[0_0_32px_rgba(0,113,227,0.25)] hover:shadow-[0_0_48px_rgba(0,113,227,0.35)] hover:translate-y-[-2px]"
+                            className="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-(--gt-blue) text-white font-normal text-base hover:bg-(--gt-blue-dark) transition-all duration-300 shadow-[0_0_32px_rgba(0,113,227,0.25)] hover:shadow-[0_0_48px_rgba(0,113,227,0.35)] hover:translate-y-[-2px]"
                         >
                             {buttonLabel}
                             <Icon

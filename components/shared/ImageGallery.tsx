@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useCallback } from 'react'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
@@ -140,7 +140,7 @@ function GalleryCard({
                 >
                     <div className="flex items-center justify-between">
                         <div className="backdrop-blur-md bg-white/10 rounded-full px-4 py-2 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0">
-                            <span className="text-white text-sm font-medium">
+                            <span className="text-white text-sm font-light">
                                 {getLocalizedContent(image.alt, locale)}
                             </span>
                         </div>
@@ -257,7 +257,7 @@ export function ImageGallery({ data, locale }: ImageGalleryProps) {
                     >
                         {/* Top bar */}
                         <div className="flex items-center justify-between p-4 md:p-6">
-                            <div className="text-white/50 text-sm font-medium">
+                            <div className="text-white/50 text-sm font-light">
                                 <span className="text-white">{selectedImage + 1}</span>
                                 <span className="mx-2">/</span>
                                 <span>{data.images.length}</span>

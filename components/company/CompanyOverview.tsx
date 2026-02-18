@@ -38,7 +38,7 @@ export function CompanyOverview({ data, locale }: CompanyOverviewProps) {
                         transition={{ duration: 0.6 }}
                         className="text-center mb-12"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">{title}</h2>
+                        <h2 className="font-heading text-3xl md:text-4xl text-foreground mb-6">{title}</h2>
                         <p className="text-foreground/70 text-lg leading-relaxed">{description}</p>
                     </motion.div>
 
@@ -55,7 +55,7 @@ export function CompanyOverview({ data, locale }: CompanyOverviewProps) {
                                         transition={{ duration: 0.5, delay: index * 0.1 }}
                                         className="text-center glass-card rounded-2xl p-8"
                                     >
-                                        <div className="text-4xl font-bold text-gradient mb-2">
+                                        <div className="text-4xl font-semibold text-gradient mb-2">
                                             {stat.value}{stat.suffix || ''}
                                         </div>
                                         <p className="text-foreground/60">{label}</p>

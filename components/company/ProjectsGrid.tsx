@@ -36,7 +36,7 @@ export function ProjectsGrid({ data, locale }: ProjectsGridProps) {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-foreground">{title}</h2>
                     <div className="w-16 h-1 bg-[var(--gt-blue)] mx-auto mt-4" />
                 </motion.div>
 
@@ -60,7 +60,7 @@ export function ProjectsGrid({ data, locale }: ProjectsGridProps) {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                                    <h3 className="text-xl font-bold text-white">{categoryTitle}</h3>
+                                    <h3 className="text-xl font-medium text-white">{categoryTitle}</h3>
                                 </div>
                             </motion.div>
                         )

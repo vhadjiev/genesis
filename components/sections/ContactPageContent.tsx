@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Icon } from "@iconify/react";
+import { Icon } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { getLocalizedContent } from "@/utils/data";
 import type { LocalizedContent } from "@/types";
@@ -163,7 +163,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-2xl font-bold text-gray-900 mb-3"
+        className="text-2xl font-medium text-gray-900 mb-3"
       >
         {t("contact.form.successTitle")}
       </motion.h3>
@@ -184,7 +184,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
         onClick={handleSendAnother}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-100 text-gray-700 font-medium hover:bg-gray-200 transition-colors"
+        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gray-100 text-gray-700 font-normal hover:bg-gray-200 transition-colors"
       >
         <Icon icon="mdi:plus" className="w-5 h-5" />
         {t("contact.form.sendAnother")}
@@ -203,7 +203,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
           className="flex items-center gap-3 p-4 rounded-xl bg-red-50 border border-red-100 text-red-600"
         >
           <Icon icon="mdi:alert-circle" className="w-5 h-5 shrink-0" />
-          <span className="text-sm font-medium">
+          <span className="text-sm font-normal">
             {errorMessage || t("contact.form.errorMessage")}
           </span>
         </motion.div>
@@ -224,7 +224,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              <h3 className="text-2xl font-medium text-gray-900 mb-4">
                 {getLocalizedContent(studioInfo.title, locale)}
               </h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
@@ -239,7 +239,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                   <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon icon="mdi:phone" className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="font-medium">{studioInfo.phone}</span>
+                  <span className="font-normal">{studioInfo.phone}</span>
                 </a>
 
                 <a
@@ -254,7 +254,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                       className="w-5 h-5 text-primary"
                     />
                   </div>
-                  <span className="font-medium">
+                  <span className="font-normal">
                     {getLocalizedContent(studioInfo.address, locale)}
                   </span>
                 </a>
@@ -268,35 +268,35 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <h3 className="text-2xl font-medium text-gray-900 mb-6">
                 {getLocalizedContent(openingHours.title, locale)}
               </h3>
 
               <div className="space-y-3 max-w-sm mx-auto">
                 <div className="flex justify-between items-center gap-4 py-2">
-                  <span className="text-gray-600 font-medium">
+                  <span className="text-gray-600 font-light">
                     {getLocalizedContent(openingHours.weekdays.label, locale)}
                   </span>
                   <span className="border-b border-gray-200 flex-1" />
-                  <span className="text-primary font-semibold">
+                  <span className="text-primary font-medium">
                     {getLocalizedContent(openingHours.weekdays.hours, locale)}
                   </span>
                 </div>
                 <div className="flex justify-between items-center gap-4 py-2">
-                  <span className="text-gray-600 font-medium">
+                  <span className="text-gray-600 font-light">
                     {getLocalizedContent(openingHours.year.label, locale)}
                   </span>
                   <span className="border-b border-gray-200 flex-1" />
-                  <span className="text-primary font-semibold">
+                  <span className="text-primary font-medium">
                     {getLocalizedContent(openingHours.year.hours, locale)}
                   </span>
                 </div>
                 <div className="flex justify-between items-center gap-4 py-2">
-                  <span className="text-gray-600 font-medium">
+                  <span className="text-gray-600 font-light">
                     {getLocalizedContent(openingHours.holidays.label, locale)}
                   </span>
                   <span className="border-b border-gray-200 flex-1" />
-                  <span className="text-primary font-semibold">
+                  <span className="text-primary font-medium">
                     {getLocalizedContent(openingHours.holidays.answer, locale)}
                   </span>
                 </div>
@@ -322,7 +322,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                 className="space-y-5"
               >
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-2xl font-medium text-gray-900 mb-2">
                     {getLocalizedContent(data.formTitle, locale)}
                   </h3>
                   <div className="w-12 h-1 bg-primary rounded-full mx-auto" />
@@ -333,7 +333,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                 {/* Name and Phone Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
+                    <label className="block text-sm font-normal text-gray-700">
                       {t("contact.form.name")}{" "}
                       <span className="text-red-500">*</span>
                     </label>
@@ -348,7 +348,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                     />
                   </div>
                   <div className="space-y-2">
-                    <label className="block text-sm font-medium text-gray-700">
+                    <label className="block text-sm font-normal text-gray-700">
                       {t("contact.form.mobile")}{" "}
                       <span className="text-red-500">*</span>
                     </label>
@@ -366,7 +366,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
 
                 {/* Email */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label className="block text-sm font-normal text-gray-700">
                     {t("contact.form.email")}{" "}
                     <span className="text-red-500">*</span>
                   </label>
@@ -384,7 +384,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                 {/* Project Types */}
                 {data.projectTypes && data.projectTypes.length > 0 && (
                   <div className="space-y-3">
-                    <label className="block text-sm font-medium text-gray-700">
+                    <label className="block text-sm font-normal text-gray-700">
                       {t("contact.form.projectType")}
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -405,7 +405,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className={`
-                              inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium
+                              inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-normal
                               transition-all duration-200 border
                               ${
                                 isSelected
@@ -443,7 +443,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                 {/* Service Types */}
                 {data.serviceTypes && data.serviceTypes.length > 0 && (
                   <div className="space-y-3">
-                    <label className="block text-sm font-medium text-gray-700">
+                    <label className="block text-sm font-normal text-gray-700">
                       {t("contact.form.services")}
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -464,7 +464,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                             className={`
-                              inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium
+                              inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-normal
                               transition-all duration-200 border
                               ${
                                 isSelected
@@ -501,7 +501,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
 
                 {/* Message */}
                 <div className="space-y-2">
-                  <label className="block text-sm font-medium text-gray-700">
+                  <label className="block text-sm font-normal text-gray-700">
                     {t("contact.form.description")}
                   </label>
                   <textarea
@@ -520,7 +520,7 @@ export function ContactPageContent({ data, locale }: ContactPageContentProps) {
                   disabled={status === "submitting"}
                   whileHover={{ scale: status === "submitting" ? 1 : 1.01 }}
                   whileTap={{ scale: status === "submitting" ? 1 : 0.99 }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-white font-semibold hover:bg-primary/90 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/20"
+                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-white font-normal hover:bg-primary/90 transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-primary/20"
                 >
                   {status === "submitting" ? (
                     <>

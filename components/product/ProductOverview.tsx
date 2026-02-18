@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -126,7 +126,7 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
                 >
                     {label && (
                         <motion.div variants={fadeUp} className="mb-7">
-                            <span className="inline-flex items-center px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-(--gt-light-text-secondary) rounded-full border border-(--gt-light-border) bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
+                            <span className="inline-flex items-center px-5 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-(--gt-light-text-secondary) rounded-full border border-(--gt-light-border) bg-white shadow-[0_1px_3px_rgba(0,0,0,0.04)]">
                                 {label}
                             </span>
                         </motion.div>
@@ -134,7 +134,7 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
 
                     <motion.h2
                         variants={fadeUp}
-                        className="font-heading text-[28px] md:text-[40px] lg:text-[50px] font-bold text-(--gt-light-text) tracking-tight leading-[1.08] mb-7 max-w-3xl mx-auto"
+                        className="font-heading text-[28px] md:text-[40px] lg:text-[50px] text-(--gt-light-text) tracking-tight leading-[1.08] mb-7 max-w-3xl mx-auto"
                     >
                         {title}
                     </motion.h2>
@@ -183,7 +183,7 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
                                     <div className="w-12 h-12 rounded-2xl bg-(--gt-blue)/8 flex items-center justify-center mb-5 ring-1 ring-(--gt-blue)/10">
                                         <Icon icon={callout.icon} className="w-6 h-6 text-(--gt-blue)" />
                                     </div>
-                                    <h3 className="text-[17px] font-semibold text-(--gt-blue) mb-2 tracking-[-0.01em]">
+                                    <h3 className="text-[17px] font-medium text-(--gt-blue) mb-2 tracking-[-0.01em]">
                                         {cTitle}
                                     </h3>
                                     <p className="text-[14px] text-(--gt-light-text-secondary) leading-relaxed">
@@ -210,7 +210,7 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
                                 <span className="absolute bottom-5 left-7 text-white/15 text-xs select-none pointer-events-none">&#10022;</span>
                                 <span className="absolute bottom-5 right-7 text-white/15 text-xs select-none pointer-events-none">&#10022;</span>
 
-                                <span className="text-[52px] lg:text-[60px] font-bold text-white tracking-tight leading-none mb-3 relative z-10">
+                                <span className="text-[52px] lg:text-[60px] font-semibold text-white tracking-tight leading-none mb-3 relative z-10">
                                     {stat.value}
                                 </span>
                                 <p className="text-[13px] text-white/75 leading-relaxed relative z-10 max-w-[220px]">
@@ -254,11 +254,11 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
                                             <div className="w-10 h-10 rounded-xl bg-(--gt-blue)/8 flex items-center justify-center shrink-0 ring-1 ring-(--gt-blue)/10">
                                                 <Icon icon={hl.icon} className="w-5 h-5 text-(--gt-blue)" />
                                             </div>
-                                            <span className="text-3xl md:text-4xl font-bold text-(--gt-light-text) tracking-tight leading-none">
+                                            <span className="text-3xl md:text-4xl font-semibold text-(--gt-light-text) tracking-tight leading-none">
                                                 {hl.value}
                                             </span>
                                         </div>
-                                        <h3 className="text-[15px] font-semibold text-(--gt-light-text) mb-1.5">
+                                        <h3 className="text-[15px] font-medium text-(--gt-light-text) mb-1.5">
                                             {hlLabel}
                                         </h3>
                                         {hlDesc && (
@@ -287,7 +287,7 @@ export function ProductOverview({ data, locale }: ProductOverviewProps) {
                         <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-3 shadow-[0_1px_3px_rgba(0,0,0,0.06)] ring-1 ring-black/4">
                             <Icon icon={badge.icon} className="w-7 h-7 text-(--gt-blue)" />
                         </div>
-                        <span className="text-sm font-medium text-(--gt-light-text-secondary)">
+                        <span className="text-sm font-light text-(--gt-light-text-secondary)">
                             {getLocalizedContent(badge.text, locale)}
                         </span>
                     </motion.div>

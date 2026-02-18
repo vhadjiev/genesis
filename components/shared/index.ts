@@ -1,4 +1,5 @@
 export { ImageGallery } from './ImageGallery'
 export { Logo } from './Logo'
+export { LogoSplash } from './LogoSplash'
 export { PageBanner } from './PageBanner'
 export { ContactForm } from './ContactForm'

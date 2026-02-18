@@ -39,7 +39,7 @@ export function PartnersSection({ data, locale }: PartnersSectionProps) {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight mb-5">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-[var(--gt-light-text)] tracking-tight mb-5">{title}</h2>
                     <p className="text-[var(--gt-light-text-secondary)] text-lg max-w-2xl mx-auto leading-relaxed">{subtitle}</p>
                 </motion.div>
 
@@ -62,7 +62,7 @@ export function PartnersSection({ data, locale }: PartnersSectionProps) {
                                     className="max-h-8 w-auto object-contain opacity-60 hover:opacity-90 transition-opacity"
                                 />
                             ) : (
-                                <span className="text-[var(--gt-light-text-muted)] text-[11px] font-medium uppercase tracking-wider text-center leading-tight">
+                                <span className="text-[var(--gt-light-text-muted)] text-[11px] font-light uppercase tracking-wider text-center leading-tight">
                                     {partner.name}
                                 </span>
                             )}

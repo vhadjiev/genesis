@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -49,7 +49,7 @@ function AccordionItem({
                 className="w-full flex items-center justify-between gap-4 py-6 text-left group cursor-pointer"
                 aria-expanded={isOpen}
             >
-                <span className="text-base md:text-lg font-medium text-(--gt-light-text) group-hover:text-(--gt-blue) transition-colors duration-200 pr-4">
+                <span className="text-base md:text-lg font-normal text-(--gt-light-text) group-hover:text-(--gt-blue) transition-colors duration-200 pr-4">
                     {question}
                 </span>
                 <motion.div
@@ -107,7 +107,7 @@ export function ProductFAQ({ data, locale }: ProductFAQProps) {
                         className="text-center mb-14"
                     >
                         {title && (
-                            <h2 className="text-3xl md:text-4xl font-bold text-(--gt-light-text) tracking-tight mb-3">
+                            <h2 className="font-heading text-3xl md:text-4xl text-(--gt-light-text) tracking-tight mb-3">
                                 {title}
                             </h2>
                         )}

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -36,7 +36,7 @@ export function ServiceDetails({ data, locale }: ServiceDetailsProps) {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-semibold text-[var(--gt-light-text)] tracking-tight">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-[var(--gt-light-text)] tracking-tight">{title}</h2>
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto">
@@ -56,7 +56,7 @@ export function ServiceDetails({ data, locale }: ServiceDetailsProps) {
                                     <Icon icon={feature.icon} className="w-6 h-6 text-[var(--gt-blue)]" />
                                 </div>
                                 <div>
-                                    <h3 className="font-semibold text-[var(--gt-light-text)] mb-1.5">{featureTitle}</h3>
+                                    <h3 className="font-medium text-[var(--gt-light-text)] mb-1.5">{featureTitle}</h3>
                                     <p className="text-[var(--gt-light-text-muted)] text-sm leading-relaxed">{featureDesc}</p>
                                 </div>
                             </motion.div>

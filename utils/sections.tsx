@@ -248,6 +248,13 @@ const sectionComponents: Record<
   ),
 
   // ===== Contacts page sections =====
+  contactPage: dynamic<SectionComponentProps>(
+    () =>
+      import("@/components/sections/ContactPage").then(
+        (m) => m.ContactPage
+      ) as Promise<ComponentType<SectionComponentProps>>,
+    { loading: () => <SectionSkeleton /> }
+  ),
   contactInfo: dynamic<SectionComponentProps>(
     () =>
       import("@/components/sections/ContactInfo").then(

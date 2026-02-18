@@ -7,7 +7,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import i18nConfig from '@/i18nConfig'
 import { navLinks, type NavItem } from '@/config/navigation'
 import { Logo } from '@/components/shared'
@@ -23,10 +23,17 @@ export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
     const [openDropdown, setOpenDropdown] = useState<string | null>(null)
     const [openMobileSubmenu, setOpenMobileSubmenu] = useState<string | null>(null)
+    const [logoDrawActive, setLogoDrawActive] = useState(false)
     const dropdownTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
     const currentLocale = i18n.language || i18nConfig.defaultLocale
     const isDefaultLocale = currentLocale === i18nConfig.defaultLocale
+
+    const isHomePage =
+        pathname === '/' ||
+        i18nConfig.locales.some(
+            (l) => l !== i18nConfig.defaultLocale && (pathname === `/${l}` || pathname === `/${l}/`)
+        )
 
     const localizedHref = (href: string) => {
         if (isDefaultLocale) return href
@@ -35,6 +42,8 @@ export function Header() {
     }
 
     const switchLanguage = (newLocale: string) => {
+        document.cookie = `${i18nConfig.localeCookie ?? '_LOCALE'}=${newLocale};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`
+
         let pathWithoutLocale = pathname
         for (const locale of i18nConfig.locales) {
             if (locale !== i18nConfig.defaultLocale && pathname.startsWith(`/${locale}`)) {
@@ -101,6 +110,15 @@ export function Header() {
         setIsMobileMenuOpen(false)
         setOpenDropdown(null)
     }, [pathname])
+
+    useEffect(() => {
+        if (!isHomePage) {
+            setLogoDrawActive(false)
+            return
+        }
+        const t = setTimeout(() => setLogoDrawActive(true), 200)
+        return () => clearTimeout(t)
+    }, [isHomePage])
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -350,7 +368,8 @@ export function Header() {
                             className="gt-header-logo py-5"
                         >
                             <Logo
-                                className="h-[22px] w-auto transition-colors duration-500"
+                                // animated={isHomePage}
+                                className={`h-[22px] w-auto transition-colors duration-500 ${isHomePage && logoDrawActive ? 'active' : ''}`}
                                 color={headerTheme === 'light' ? '#4b6db1' : '#ffffff'}
                             />
                         </Link>
@@ -497,7 +516,7 @@ export function Header() {
                                                             openMobileSubmenu === link.key ? null : link.key
                                                         )
                                                     }
-                                                    className={`text-2xl font-semibold transition-colors flex items-center gap-2 mx-auto ${
+                                                    className={`text-2xl font-medium transition-colors flex items-center gap-2 mx-auto ${
                                                         isParentActive(link)
                                                             ? 'text-[var(--gt-dark-text)]'
                                                             : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'
@@ -531,7 +550,7 @@ export function Header() {
                                             <Link
                                                 href={localizedHref(link.href)}
                                                 onClick={() => setIsMobileMenuOpen(false)}
-                                                className={`text-2xl font-semibold transition-colors ${
+                                                className={`text-2xl font-medium transition-colors ${
                                                     isActive(link.href)
                                                         ? 'text-[var(--gt-dark-text)]'
                                                         : 'text-[var(--gt-dark-text-secondary)] hover:text-[var(--gt-dark-text)]'

@@ -37,7 +37,7 @@ export function NewsGrid({ data, locale }: NewsGridProps) {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground">{title}</h2>
+                    <h2 className="font-heading text-3xl md:text-4xl text-foreground">{title}</h2>
                     <div className="w-16 h-1 bg-[var(--gt-blue)] mx-auto mt-4" />
                 </motion.div>
 
@@ -63,7 +63,7 @@ export function NewsGrid({ data, locale }: NewsGridProps) {
                                 >
                                     <div className="p-6">
                                         <time className="text-sm text-[var(--gt-accent)]">{article.date}</time>
-                                        <h3 className="text-lg font-semibold text-foreground mt-2 mb-3">{articleTitle}</h3>
+                                        <h3 className="text-lg font-medium text-foreground mt-2 mb-3">{articleTitle}</h3>
                                         <p className="text-foreground/60 text-sm">{excerpt}</p>
                                     </div>
                                 </motion.article>

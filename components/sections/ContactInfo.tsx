@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Icon } from "@iconify/react";
+import { Icon } from "@/components/icons";
 import { motion } from "framer-motion";
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
 import { getLocalizedContent } from "@/utils/data";
@@ -84,7 +84,7 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
         transition={{ duration: 0.6 }}
         className="glass-card rounded-2xl p-6 md:p-8"
       >
-        <h3 className="text-xl font-bold text-foreground mb-4">
+        <h3 className="text-xl font-medium text-foreground mb-4">
           {getLocalizedContent(studioInfo.title, locale)}
         </h3>
         <p className="text-foreground/70 mb-6">
@@ -124,7 +124,7 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
         transition={{ duration: 0.6, delay: 0.1 }}
         className="glass-card rounded-2xl p-6 md:p-8"
       >
-        <h3 className="text-xl font-bold text-foreground mb-4">
+        <h3 className="text-xl font-medium text-foreground mb-4">
           {getLocalizedContent(openingHours.title, locale)}
         </h3>
 
@@ -133,7 +133,7 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
             <span className="text-foreground/70">
               {getLocalizedContent(openingHours.weekdays.label, locale)}
             </span>
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-medium">
               {getLocalizedContent(openingHours.weekdays.hours, locale)}
             </span>
           </div>
@@ -141,7 +141,7 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
             <span className="text-foreground/70">
               {getLocalizedContent(openingHours.year.label, locale)}
             </span>
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-medium">
               {getLocalizedContent(openingHours.year.hours, locale)}
             </span>
           </div>
@@ -149,7 +149,7 @@ export function ContactInfo({ data, locale }: ContactInfoProps) {
             <span className="text-foreground/70">
               {getLocalizedContent(openingHours.holidays.label, locale)}
             </span>
-            <span className="text-primary font-semibold">
+            <span className="text-primary font-medium">
               {getLocalizedContent(openingHours.holidays.answer, locale)}
             </span>
           </div>

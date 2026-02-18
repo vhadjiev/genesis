@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -53,7 +53,7 @@ export function ProductHighlights({ data, locale }: ProductHighlightsProps) {
                         transition={{ duration: 0.6 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">{title}</h2>
+                        <h2 className="font-heading text-3xl md:text-4xl text-white tracking-tight">{title}</h2>
                     </motion.div>
                 )}
 
@@ -90,12 +90,12 @@ export function ProductHighlights({ data, locale }: ProductHighlightsProps) {
                                         <div className="w-11 h-11 rounded-2xl bg-(--gt-blue)/10 flex items-center justify-center shrink-0">
                                             <Icon icon={highlight.icon} className="w-5 h-5 text-(--gt-blue)" />
                                         </div>
-                                        <span className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-none">
+                                        <span className="text-3xl md:text-4xl font-semibold text-white tracking-tight leading-none">
                                             {highlight.value}
                                         </span>
                                     </div>
 
-                                    <h3 className="text-base font-semibold text-white/90 mb-1.5">{label}</h3>
+                                    <h3 className="text-base font-medium text-white/90 mb-1.5">{label}</h3>
 
                                     {description && (
                                         <p className="text-sm text-(--gt-dark-text-muted) leading-relaxed">

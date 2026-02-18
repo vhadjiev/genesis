@@ -50,8 +50,8 @@ export function PageBanner({ data, locale }: PageBannerProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
                 >
-                    {subtitle && <p className="text-[var(--gt-blue)] text-sm font-medium tracking-wide mb-3">{subtitle}</p>}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white tracking-tight">
+                    {subtitle && <p className="text-[var(--gt-blue)] text-sm font-normal tracking-wide mb-3">{subtitle}</p>}
+                    <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-white tracking-tight">
                         {title}
                     </h1>
                 </motion.div>

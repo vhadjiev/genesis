@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import i18nConfig from '@/i18nConfig'
 import { getAllProductLinks, getCompanyLinks, manufacturingLinks, socialLinks } from '@/config/navigation'
 import { Logo } from '@/components/shared'
@@ -37,7 +37,7 @@ function FooterNewsletter() {
 
     return (
         <div>
-            <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">
+            <h3 className="text-[11px] font-medium uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">
                 {locale === 'bg' ? 'Бюлетин' : 'Newsletter'}
             </h3>
             <p className="text-sm text-[var(--gt-dark-text-muted)] mb-4 leading-relaxed">
@@ -63,7 +63,7 @@ function FooterNewsletter() {
                     <button
                         type="submit"
                         disabled={status === 'loading'}
-                        className="px-4 py-2 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white text-sm font-medium rounded-lg transition-colors disabled:opacity-60 cursor-pointer"
+                        className="px-4 py-2 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white text-sm font-normal rounded-lg transition-colors disabled:opacity-60 cursor-pointer"
                     >
                         {status === 'loading' ? (
                             <Icon icon="mdi:loading" className="w-4 h-4 animate-spin" />
@@ -222,7 +222,7 @@ export function Footer() {
 
                         {/* Systems */}
                         <div>
-                            <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.systems')}</h3>
+                            <h3 className="text-[11px] font-medium uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.systems')}</h3>
                             <ul className="space-y-2.5">
                                 {productLinks.map((link) => (
                                     <li key={link.key}>
@@ -248,7 +248,7 @@ export function Footer() {
 
                         {/* Company */}
                         <div>
-                            <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.company')}</h3>
+                            <h3 className="text-[11px] font-medium uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.company')}</h3>
                             <ul className="space-y-2.5">
                                 {companyLinks.map((link) => (
                                     <li key={link.key}>
@@ -265,7 +265,7 @@ export function Footer() {
 
                         {/* Manufacturing */}
                         <div>
-                            <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.manufacturingServices')}</h3>
+                            <h3 className="text-[11px] font-medium uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('nav.manufacturingServices')}</h3>
                             <ul className="space-y-2.5">
                                 {manufacturingLinks.map((link) => (
                                     <li key={link.key}>
@@ -282,7 +282,7 @@ export function Footer() {
 
                         {/* Contacts */}
                         <div>
-                            <h3 className="text-[11px] font-semibold uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('footer.contacts')}</h3>
+                            <h3 className="text-[11px] font-medium uppercase tracking-widest text-[var(--gt-dark-text-muted)] mb-5">{t('footer.contacts')}</h3>
                             <ul className="space-y-3">
                                 <li>
                                     <a

@@ -2,36 +2,15 @@ import "../app.css";
 
 import React from "react";
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, DM_Sans, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { Providers } from "@/providers/Providers";
 import initTranslations from "@/app/i18n";
 import { getIndex } from "@/utils/data";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Header, Footer } from "@/components/layout";
+import { LogoSplash } from "@/components/shared";
 
 const GTM_ID = "GTM-MFZNM4LN";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-heading",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin", "latin-ext"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-  variable: "--font-sans",
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  subsets: ["latin", "cyrillic"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-mono",
-});
 
 /**
  * Generate metadata from site config
@@ -127,7 +106,7 @@ export default async function RootLayout({
   });
 
   return (
-    <html lang={locale} className={`dark ${spaceGrotesk.variable} ${dmSans.variable} ${jetBrainsMono.variable}`}>
+    <html lang={locale} className="dark">
       <head>
         {/* Google Tag Manager */}
         <Script
@@ -149,7 +128,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${dmSans.className} antialiased min-h-screen bg-background text-foreground gt-grain`}
+        className="antialiased min-h-screen bg-background text-foreground gt-grain"
       >
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -163,6 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Providers locale={locale} resources={resources}>
           {/* Header persists across navigations — no re-render on page change */}
           <Header />
+          {/* <LogoSplash /> */}
           {/* Main content wrapper for footer reveal effect */}
           <div className="gt-main-content">
             {children}

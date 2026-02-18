@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import Link from 'next/link'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
@@ -45,7 +45,7 @@ export function ServiceSection({ data, locale }: ServiceSectionProps) {
                     transition={{ duration: 0.7 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] font-semibold text-[var(--gt-dark-text)] tracking-tight mb-5">
+                    <h2 className="font-heading text-3xl md:text-4xl lg:text-[44px] text-[var(--gt-dark-text)] tracking-tight mb-5">
                         {title}
                     </h2>
                     <p className="text-[var(--gt-dark-text-secondary)] text-lg max-w-2xl mx-auto leading-relaxed">
@@ -69,7 +69,7 @@ export function ServiceSection({ data, locale }: ServiceSectionProps) {
                                 <div className="w-12 h-12 rounded-2xl bg-[var(--gt-blue)]/10 flex items-center justify-center mb-5">
                                     <Icon icon={service.icon} className="w-6 h-6 text-[var(--gt-blue)]" />
                                 </div>
-                                <h3 className="text-[15px] font-semibold text-[var(--gt-dark-text)] mb-3">{serviceTitle}</h3>
+                                <h3 className="text-[15px] font-medium text-[var(--gt-dark-text)] mb-3">{serviceTitle}</h3>
                                 <p className="text-[var(--gt-dark-text-muted)] text-sm leading-relaxed">{serviceDesc}</p>
                             </motion.div>
                         )
@@ -86,7 +86,7 @@ export function ServiceSection({ data, locale }: ServiceSectionProps) {
                     >
                         <Link
                             href={data.ctaHref}
-                            className="inline-flex items-center gap-2 text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)] text-sm font-medium transition-colors"
+                            className="inline-flex items-center gap-2 text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)] text-sm font-normal transition-colors"
                         >
                             {ctaText}
                             <Icon icon="mdi:arrow-right" className="w-4 h-4" />

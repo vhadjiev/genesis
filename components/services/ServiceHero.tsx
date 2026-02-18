@@ -36,8 +36,8 @@ export function ServiceHero({ data, locale }: ServiceHeroProps) {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
                     >
-                        <p className="text-[var(--gt-blue)] font-medium text-sm tracking-wide mb-3">{tagline}</p>
-                        <h1 className="text-4xl md:text-5xl font-semibold text-[var(--gt-dark-text)] mb-6 tracking-tight">{name}</h1>
+                        <p className="text-[var(--gt-blue)] font-normal text-sm tracking-wide mb-3">{tagline}</p>
+                        <h1 className="font-heading text-4xl md:text-5xl text-[var(--gt-dark-text)] mb-6 tracking-tight">{name}</h1>
                         <p className="text-[var(--gt-dark-text-secondary)] text-lg leading-relaxed max-w-lg">{description}</p>
                         <div className="accent-line mt-8" />
                     </motion.div>

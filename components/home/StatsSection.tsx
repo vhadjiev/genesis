@@ -66,7 +66,7 @@ function StatCounter({ stat, locale, index }: { stat: StatItem; locale: string; 
             transition={{ duration: 0.5, delay: index * 0.15 }}
             className="text-center"
         >
-            <div className="font-mono text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tighter">
+            <div className="font-mono text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-4 tracking-tighter">
                 {Number.isInteger(stat.value) ? count : count.toFixed(1)}
                 {stat.suffix && <span className="text-[var(--gt-blue)]">{stat.suffix}</span>}
             </div>

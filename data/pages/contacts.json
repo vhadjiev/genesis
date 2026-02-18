@@ -15,49 +15,58 @@
   },
   "sections": [
     {
-      "type": "pageBanner",
-      "title": { "bg": "Нека обсъдим вашите нужди", "en": "Let's Discuss Your Requirements" },
-      "subtitle": {
-        "bg": "Безплатна консултация за правилната система за вашия обект",
-        "en": "Free consultation for the right system for your venue"
+      "type": "contactPage",
+      "hero": {
+        "title": {
+          "bg": "Нека обсъдим вашите нужди",
+          "en": "Let's Discuss Your Requirements"
+        },
+        "subtitle": {
+          "bg": "Безплатна консултация за правилната система за вашия обект",
+          "en": "Free consultation for the right system for your venue"
+        }
       },
-      "backgroundImage": "/images/contacts-banner.jpg"
-    },
-    {
-      "type": "contactInfo",
-      "studioInfo": {
-        "title": { "bg": "Genesis Technology", "en": "Genesis Technology" },
+      "contactInfo": {
         "description": {
           "bg": "Вертикално интегриран производител на професионални системи за кафе, коктейли и напитки. Проектираме, произвеждаме и обслужваме — всичко под един покрив.",
           "en": "Vertically integrated manufacturer of professional coffee, cocktail, and beverage systems. We design, manufacture, and service — all under one roof."
         },
         "phone": "+359 89 565 7706",
-        "address": { "bg": "ул. Брезовско шосе 145, 4003 Пловдив", "en": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria" }
+        "email": "info@gentech.bg",
+        "address": {
+          "bg": "ул. Брезовско шосе 145, 4003 Пловдив",
+          "en": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria"
+        },
+        "addressUrl": "https://maps.app.goo.gl/V3rvmEvFyFLjkH1d9"
       },
       "openingHours": {
         "title": { "bg": "Работно време", "en": "Working Hours" },
-        "weekdays": {
-          "label": { "bg": "Понеделник – Петък", "en": "Monday – Friday" },
-          "hours": { "bg": "09:00 – 18:00", "en": "09:00 – 18:00" }
+        "rows": [
+          {
+            "label": { "bg": "Понеделник – Петък", "en": "Monday – Friday" },
+            "value": { "bg": "09:00 – 18:00", "en": "09:00 – 18:00" }
+          },
+          {
+            "label": { "bg": "Събота", "en": "Saturday" },
+            "value": { "bg": "По предварителна заявка", "en": "By appointment" }
+          },
+          {
+            "label": { "bg": "Неделя", "en": "Sunday" },
+            "value": { "bg": "Затворено", "en": "Closed" }
+          }
+        ]
+      },
+      "booking": {
+        "title": {
+          "bg": "Запазете консултация",
+          "en": "Book a Consultation"
         },
-        "year": {
-          "label": { "bg": "Събота", "en": "Saturday" },
-          "hours": { "bg": "По предварителна заявка", "en": "By appointment" }
-        },
-        "holidays": {
-          "label": { "bg": "Неделя", "en": "Sunday" },
-          "answer": { "bg": "Затворено", "en": "Closed" }
+        "subtitle": {
+          "bg": "Изберете удобно време за 30-минутна безплатна консултация с нашия екип.",
+          "en": "Pick a convenient time for a free 30-minute consultation with our team."
         }
-      }
-    },
-    {
-      "type": "contactForm",
-      "variant": "full",
-      "title": { "bg": "Изпратете запитване", "en": "Send an Enquiry" }
-    },
-    {
-      "type": "mapEmbed",
-      "embedUrl": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBn6SrXt9nE7PboA-jFXug1zincSQlRdRs&q=Brezovsko+Shose+145,+Plovdiv,+Bulgaria"
+      },
+      "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2958.8!2d24.7453!3d42.1354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDA4JzA3LjQiTiAyNMKwNDQnNDMuMSJF!5e0!3m2!1sen!2sbg!4v1"
     }
   ]
 }

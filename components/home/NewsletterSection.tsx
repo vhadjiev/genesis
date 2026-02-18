@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -71,7 +71,7 @@ export function NewsletterSection({ data, locale }: NewsletterSectionProps) {
                     <div className="w-12 h-12 rounded-2xl bg-blue-50/80 flex items-center justify-center mx-auto mb-6">
                         <Icon icon="mdi:email-newsletter" className="w-6 h-6 text-[var(--gt-blue)]" />
                     </div>
-                    <h2 className="font-heading text-2xl md:text-3xl font-semibold text-[var(--gt-light-text)] tracking-tight mb-3">
+                    <h2 className="font-heading text-2xl md:text-3xl text-[var(--gt-light-text)] tracking-tight mb-3">
                         {title}
                     </h2>
                     <p className="text-[var(--gt-light-text-secondary)] text-[15px] mb-8 leading-relaxed">
@@ -82,7 +82,7 @@ export function NewsletterSection({ data, locale }: NewsletterSectionProps) {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="flex items-center justify-center gap-2 text-green-600 font-medium text-sm"
+                            className="flex items-center justify-center gap-2 text-green-600 font-normal text-sm"
                         >
                             <Icon icon="mdi:check-circle" className="w-5 h-5" />
                             {successMessage}
@@ -100,7 +100,7 @@ export function NewsletterSection({ data, locale }: NewsletterSectionProps) {
                             <button
                                 type="submit"
                                 disabled={status === 'loading'}
-                                className="px-6 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-medium text-sm rounded-full transition-all duration-300 shadow-[0_2px_12px_rgba(0,113,227,0.3)] disabled:opacity-60 cursor-pointer"
+                                className="px-6 py-3 bg-[var(--gt-blue)] hover:bg-[var(--gt-blue-light)] text-white font-normal text-sm rounded-full transition-all duration-300 shadow-[0_2px_12px_rgba(0,113,227,0.3)] disabled:opacity-60 cursor-pointer"
                             >
                                 {status === 'loading' ? (
                                     <Icon icon="mdi:loading" className="w-5 h-5 animate-spin" />

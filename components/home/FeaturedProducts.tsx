@@ -4,7 +4,7 @@ import React, { ViewTransition } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import { ViewTransitionLink } from '@/components/shared/ViewTransitionLink'
 import type { LocalizedContent } from '@/types'
@@ -105,7 +105,7 @@ function ProductCard({
                                 />
                             ) : (
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <span className={`text-[100px] font-bold tracking-tighter select-none leading-none ${isDark ? 'text-white/[0.04]' : 'text-black/[0.04]'}`}>
+                                    <span className={`text-[100px] font-semibold tracking-tighter select-none leading-none ${isDark ? 'text-white/[0.04]' : 'text-black/[0.04]'}`}>
                                         {product.name.split(' ').pop()}
                                     </span>
                                 </div>
@@ -116,14 +116,14 @@ function ProductCard({
 
                             {/* Product number */}
                             <div className="absolute top-4 left-5">
-                                <span className="font-mono text-[11px] font-medium text-white/30 tracking-wider">
+                                <span className="font-mono text-[11px] font-light text-white/30 tracking-wider">
                                     {String(index + 1).padStart(2, '0')}
                                 </span>
                             </div>
 
                             {/* Explore prompt on hover */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <span className="flex items-center gap-2 text-sm font-medium text-white opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                                <span className="flex items-center gap-2 text-sm font-normal text-white opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 ease-out px-5 py-2.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
                                     {locale === 'bg' ? 'Разгледай' : 'Explore'}
                                     <Icon icon="mdi:arrow-right" className="w-4 h-4" />
                                 </span>
@@ -132,11 +132,11 @@ function ProductCard({
                             {/* Bottom info overlay */}
                             <div className="absolute bottom-0 left-0 right-0 p-5">
                                 <ViewTransition name={`product-title-${product.id}`}>
-                                    <h3 className={`font-heading font-semibold text-white mb-1 ${isHero ? 'text-xl' : 'text-[17px]'}`} style={{ textWrap: 'balance' }}>
+                                    <h3 className={`font-heading text-white mb-1 ${isHero ? 'text-xl' : 'text-[17px]'}`} style={{ textWrap: 'balance' }}>
                                         {product.name}
                                     </h3>
                                 </ViewTransition>
-                                <p className="text-white/50 text-[13px] font-medium">{tagline}</p>
+                                <p className="text-white/50 text-[13px] font-light">{tagline}</p>
                             </div>
                         </div>
                     </ViewTransition>
@@ -192,7 +192,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                         <div className="w-10 h-[2px] bg-[var(--gt-blue)] mb-6 rounded-full" />
 
                         <h2
-                            className={`font-heading text-3xl md:text-4xl lg:text-[40px] font-bold ${headingColor} tracking-tight leading-[1.1] mb-5`}
+                            className={`font-heading text-3xl md:text-4xl lg:text-[40px] ${headingColor} tracking-tight leading-[1.1] mb-5`}
                             style={{ textWrap: 'balance' }}
                         >
                             {title}
@@ -208,7 +208,7 @@ export function FeaturedProducts({ data, locale }: FeaturedProductsProps) {
                         {viewAllHref !== '#' && (
                             <Link
                                 href={viewAllHref}
-                                className="inline-flex items-center gap-2 text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)] text-sm font-medium transition-colors duration-200 group/link cursor-pointer"
+                                className="inline-flex items-center gap-2 text-[var(--gt-blue)] hover:text-[var(--gt-blue-light)] text-sm font-normal transition-colors duration-200 group/link cursor-pointer"
                             >
                                 {viewAllText}
                                 <Icon icon="mdi:arrow-right" className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" />

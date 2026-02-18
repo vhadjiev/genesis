@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
+import { Icon } from '@/components/icons'
 import { getLocalizedContent } from '@/utils/data'
 import type { LocalizedContent } from '@/types'
 
@@ -59,12 +59,12 @@ export function ProductFeatures({ data, locale }: ProductFeaturesProps) {
                         className="max-w-3xl mx-auto text-center mb-16"
                     >
                         {label && (
-                            <span className="inline-block text-[11px] font-semibold uppercase tracking-[0.15em] text-(--gt-blue) mb-4">
+                            <span className="inline-block text-[11px] font-medium uppercase tracking-[0.15em] text-(--gt-blue) mb-4">
                                 {label}
                             </span>
                         )}
                         {title && (
-                            <h2 className="text-3xl md:text-4xl font-bold text-(--gt-light-text) tracking-tight mb-4 leading-[1.15]">
+                            <h2 className="font-heading text-3xl md:text-4xl text-(--gt-light-text) tracking-tight mb-4 leading-[1.15]">
                                 {title}
                             </h2>
                         )}
@@ -109,7 +109,7 @@ export function ProductFeatures({ data, locale }: ProductFeaturesProps) {
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-base font-semibold text-(--gt-light-text) mb-2 leading-snug">
+                                <h3 className="text-base font-medium text-(--gt-light-text) mb-2 leading-snug">
                                     {featureTitle}
                                 </h3>
                                 <p className="text-sm text-(--gt-light-text-secondary) leading-relaxed">
