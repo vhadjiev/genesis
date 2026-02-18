@@ -29,12 +29,6 @@ export function Header() {
     const currentLocale = i18n.language || i18nConfig.defaultLocale
     const isDefaultLocale = currentLocale === i18nConfig.defaultLocale
 
-    const isHomePage =
-        pathname === '/' ||
-        i18nConfig.locales.some(
-            (l) => l !== i18nConfig.defaultLocale && (pathname === `/${l}` || pathname === `/${l}/`)
-        )
-
     const localizedHref = (href: string) => {
         if (isDefaultLocale) return href
         if (href === '/') return `/${currentLocale}`
@@ -112,13 +106,9 @@ export function Header() {
     }, [pathname])
 
     useEffect(() => {
-        if (!isHomePage) {
-            setLogoDrawActive(false)
-            return
-        }
         const t = setTimeout(() => setLogoDrawActive(true), 200)
         return () => clearTimeout(t)
-    }, [isHomePage])
+    }, [])
 
     useEffect(() => {
         if (isMobileMenuOpen) {
@@ -368,8 +358,8 @@ export function Header() {
                             className="gt-header-logo py-5"
                         >
                             <Logo
-                                // animated={isHomePage}
-                                className={`h-[22px] w-auto transition-colors duration-500 ${isHomePage && logoDrawActive ? 'active' : ''}`}
+                                animated
+                                className={`h-[22px] w-auto transition-colors duration-500 ${logoDrawActive ? 'active' : ''}`}
                                 color={headerTheme === 'light' ? '#4b6db1' : '#ffffff'}
                             />
                         </Link>
