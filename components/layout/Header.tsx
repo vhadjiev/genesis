@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useTranslation } from 'react-i18next'
 import { Button } from '@heroui/react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -17,6 +17,7 @@ type HeaderTheme = 'dark' | 'light'
 export function Header() {
     const { t, i18n } = useTranslation()
     const pathname = usePathname()
+    const router = useRouter()
     const [isScrolled, setIsScrolled] = useState(false)
     const [headerTheme, setHeaderTheme] = useState<HeaderTheme>('dark')
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -49,7 +50,7 @@ export function Header() {
             newPath = `/${newLocale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
         }
 
-        window.location.href = newPath
+        router.push(newPath)
     }
 
     // Chameleon header: detect section behind header and adapt theme
