@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Tabs } from "@heroui/react";
 import { useInView } from "@/hooks/useInView";
+import { Text } from "../primitives";
 import type { LayoutProps } from "./LayoutProps";
 
 interface TabsLayoutProps extends LayoutProps {
@@ -109,9 +110,9 @@ export default function TabsLayout({ items, orientation = "horizontal" }: TabsLa
                   >
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-l" style={{ color: "var(--neutral-400)", lineHeight: "var(--lh-xl)" }}>
+                  <Text size="l" theme="light" style={{ lineHeight: "var(--lh-xl)" }}>
                     {feature}
-                  </p>
+                  </Text>
                 </div>
               ))}
             </div>
@@ -119,28 +120,6 @@ export default function TabsLayout({ items, orientation = "horizontal" }: TabsLa
         ))}
       </Tabs>
 
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @keyframes tabSlideIn {
-          from { transform: translateY(16px); opacity: 0; }
-          to { transform: translateY(0); opacity: 1; }
-        }
-        @media (max-width: 767px) {
-          .hiw-steps-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .hiw-steps-grid > div {
-            border-right: none !important;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-          }
-          .hiw-steps-grid > div:last-child {
-            border-bottom: none;
-          }
-        }
-      `,
-        }}
-      />
     </div>
   );
 }

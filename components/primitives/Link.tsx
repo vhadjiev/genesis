@@ -1,19 +1,15 @@
 "use client";
 
-import { Link as HeroLink } from "@heroui/react";
 import NextLink from "next/link";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 export interface LinkProps {
   href: string;
-  /** Show the arrow icon */
-  showIcon?: boolean;
   /** Show underline (default: false) */
   underline?: boolean;
   /** Open in new tab */
   external?: boolean;
-  isDisabled?: boolean;
   className?: string;
   style?: React.CSSProperties;
   children: React.ReactNode;
@@ -22,58 +18,47 @@ export interface LinkProps {
 // ─── Link ────────────────────────────────────────────────────────────────────
 
 /**
- * Link primitive wrapping HeroUI Link with Next.js client-side navigation.
+ * Link primitive using Next.js Link directly.
  *
- * - Internal links use Next.js Link for prefetching + client nav
- * - External links (`external` prop) open in new tab with proper rel attributes
- * - Optional arrow icon via `showIcon`
+ * - Internal links: NextLink for client-side navigation + prefetch
+ * - External links: native <a> with target="_blank" and rel attributes
+ * - No HeroUI render prop — avoids DOM element mismatch warnings
  */
 export function Link({
   href,
-  showIcon = false,
   underline = false,
   external = false,
-  isDisabled,
   className: classNameProp,
   style,
   children,
 }: LinkProps) {
-  const className = underline
-    ? classNameProp
-    : classNameProp
-      ? `no-underline ${classNameProp}`
-      : "no-underline";
+  const baseStyle: React.CSSProperties = {
+    textDecoration: underline ? undefined : "none",
+    color: "inherit",
+    ...style,
+  };
 
   if (external) {
     return (
-      <HeroLink
+      <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        isDisabled={isDisabled}
-        className={className}
-        style={style}
+        className={classNameProp}
+        style={baseStyle}
       >
         {children}
-        {showIcon && <HeroLink.Icon />}
-      </HeroLink>
+      </a>
     );
   }
 
   return (
-    <HeroLink
-      render={(props) => (
-        <NextLink
-          {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
-          href={href}
-        />
-      )}
-      isDisabled={isDisabled}
-      className={className}
-      style={style}
+    <NextLink
+      href={href}
+      className={classNameProp}
+      style={baseStyle}
     >
       {children}
-      {showIcon && <HeroLink.Icon />}
-    </HeroLink>
+    </NextLink>
   );
 }

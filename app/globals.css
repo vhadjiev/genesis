@@ -355,6 +355,39 @@ body {
 @keyframes vt-out { from { opacity: 1; } to { opacity: 0; } }
 @keyframes vt-in { from { opacity: 0; } to { opacity: 1; } }
 
+/* ═══════════ KEYFRAMES ═══════════ */
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tabSlideIn {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ═══════════ LAYOUT RESPONSIVE ═══════════ */
+
+@media (max-width: 991px) {
+  .footer-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 767px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .testimonial-grid > div:first-child {
+    aspect-ratio: 4/3 !important;
+  }
+  .hiw-steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hiw-steps-grid > div {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .hiw-steps-grid > div:last-child {
+    border-bottom: none;
+  }
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
+
 /* ═══════════ RESPONSIVE ═══════════ */
 
 @media (max-width: 991px) {

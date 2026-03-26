@@ -1,22 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { Badge, Heading } from "../primitives";
-import { themeColors } from "@/lib/theme-colors";
+import { Card, Button, Icon, DotIndicator } from "../primitives";
+import { Content } from "../Content";
 import type { LayoutProps } from "./LayoutProps";
 
-/** Testimonial-style carousel: image left + content right with prev/next navigation */
-
-const testimonialImages = [
-  "/images/universa/genesis-universa.jpg",
-  "/images/alpha/genesis-alpha.png",
-  "/images/eclipse/genesys-eclipse.jpg",
-];
-
-export default function CarouselLayout({ items, theme }: LayoutProps) {
+/**
+ * Carousel layout — shows one item at a time with prev/next navigation.
+ * Uses Content primitive for item rendering (works with any itemLayout).
+ * Optional image column when items have images.
+ */
+export default function CarouselLayout({ items, itemLayout, theme, sectionConfig }: LayoutProps) {
   const [active, setActive] = useState(0);
   const t = items[active];
+  const hasImage = !!t.image?.src;
 
   const goTo = (i: number) => {
     setActive(((i % items.length) + items.length) % items.length);
@@ -28,28 +25,24 @@ export default function CarouselLayout({ items, theme }: LayoutProps) {
         className="testimonial-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 1fr",
+          gridTemplateColumns: hasImage ? "1fr 1fr" : "1fr",
           gap: "var(--sp-3xl)",
           alignItems: "stretch",
         }}
       >
         {/* Left: image */}
-        <div
-          style={{
-            aspectRatio: "1",
-            borderRadius: "1.25rem",
-            overflow: "hidden",
-            position: "relative",
-          }}
-        >
-          <Image
-            src={testimonialImages[active % testimonialImages.length]}
-            alt={t.company || "Testimonial"}
-            fill
-            style={{ objectFit: "cover" }}
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
-        </div>
+        {hasImage && (
+          <Card
+            image={t.image}
+            imagePosition="top"
+            imageAspectRatio="1"
+            variant="flat"
+            style={{ borderRadius: "1.25rem", overflow: "hidden" }}
+          >
+            {/* Card with image-only, no body content */}
+            <span />
+          </Card>
+        )}
 
         {/* Right: content + navigation */}
         <div
@@ -59,42 +52,14 @@ export default function CarouselLayout({ items, theme }: LayoutProps) {
             justifyContent: "space-between",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "var(--sp-xl)",
-            }}
-          >
-            {/* Metric pill */}
-            {t.metric && <Badge text={t.metric} variant="metric" />}
+          <Content
+            item={t}
+            layout={itemLayout}
+            theme={theme}
+            headingLevel={sectionConfig.headingLevel}
+          />
 
-            {/* Quote */}
-            <blockquote style={{ fontStyle: "normal", fontWeight: 500, margin: 0 }}>
-              <Heading level={4} size="h4" theme="dark">
-                {`\u201C${t.quote}\u201D`}
-              </Heading>
-            </blockquote>
-
-            {/* Author */}
-            <div>
-              <p
-                style={{
-                  color: "var(--neutral-white)",
-                  fontWeight: 600,
-                  fontSize: "var(--text-m)",
-                  marginBottom: "0.25rem",
-                }}
-              >
-                {t.author}
-              </p>
-              <p style={{ color: "var(--neutral-300)", fontSize: "var(--text-s)" }}>
-                {t.company}
-              </p>
-            </div>
-          </div>
-
-          {/* Navigation */}
+          {/* Navigation — prev, dots, next */}
           <div
             style={{
               display: "flex",
@@ -103,85 +68,30 @@ export default function CarouselLayout({ items, theme }: LayoutProps) {
               marginTop: "var(--sp-2xl)",
             }}
           >
-            <button
-              onClick={() => goTo(active - 1)}
+            <Button
+              isIconOnly
+              variant="secondary"
+              size="sm"
+              onPress={() => goTo(active - 1)}
               aria-label="Previous"
-              style={{
-                width: "3rem",
-                height: "3rem",
-                borderRadius: "50%",
-                backgroundColor: "var(--neutral-white)",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                transition: "background-color 0.3s",
-              }}
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-midnight)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+              <Icon name="lucide:chevron-left" size={16} />
+            </Button>
 
-            <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
-              {items.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setActive(i)}
-                  aria-label={`Testimonial ${i + 1}`}
-                  style={{
-                    width: active === i ? "0.625rem" : "0.5rem",
-                    height: active === i ? "0.625rem" : "0.5rem",
-                    borderRadius: "50%",
-                    backgroundColor: active === i ? "var(--neutral-white)" : "rgba(255,255,255,0.3)",
-                    border: "none",
-                    cursor: "pointer",
-                    padding: 0,
-                    transition: "all 0.3s",
-                  }}
-                />
-              ))}
-            </div>
+            <DotIndicator count={items.length} active={active} theme="dark" onSelect={setActive} />
 
-            <button
-              onClick={() => goTo(active + 1)}
+            <Button
+              isIconOnly
+              variant="secondary"
+              size="sm"
+              onPress={() => goTo(active + 1)}
               aria-label="Next"
-              style={{
-                width: "3rem",
-                height: "3rem",
-                borderRadius: "50%",
-                backgroundColor: "var(--neutral-white)",
-                border: "none",
-                cursor: "pointer",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                transition: "background-color 0.3s",
-              }}
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-midnight)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
+              <Icon name="lucide:chevron-right" size={16} />
+            </Button>
           </div>
         </div>
       </div>
-
-      <style
-        dangerouslySetInnerHTML={{
-          __html: `
-        @media (max-width: 767px) {
-          .testimonial-grid {
-            grid-template-columns: 1fr !important;
-          }
-          .testimonial-grid > div:first-child {
-            aspect-ratio: 4/3 !important;
-          }
-        }
-      `,
-        }}
-      />
     </div>
   );
 }

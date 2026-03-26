@@ -2,7 +2,7 @@
 
 import { useInView } from "@/hooks/useInView";
 import { themeColors } from "@/lib/theme-colors";
-import { Card, Button, Badge, Heading, Icon } from "./primitives";
+import { Card, Button, Badge, Heading, Icon, Text } from "./primitives";
 import type { CmsCta } from "@/lib/types";
 import type { ImagePosition, CardVariant } from "./primitives";
 import type { ContentItem, ItemLayout } from "@/lib/types";
@@ -71,9 +71,9 @@ function StatBody({ item, theme }: { item: ContentItem; theme?: string }) {
         </Heading>
       </div>
       {item.content && (
-        <p className="text-l" style={{ maxWidth: "23rem", color: colors.muted }}>
+        <Text size="l" theme={theme} style={{ maxWidth: "23rem" }}>
           {item.content}
-        </p>
+        </Text>
       )}
     </>
   );
@@ -139,10 +139,10 @@ function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLe
       )}
 
       {item.subtitle && (
-        <p
-          className="text-l"
+        <Text
+          size="l"
+          theme="dark"
           style={{
-            color: "var(--neutral-300)",
             maxWidth: "38rem",
             marginBottom: "var(--sp-2xl)",
             opacity: isVisible ? 1 : 0,
@@ -151,7 +151,7 @@ function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLe
           }}
         >
           {item.subtitle}
-        </p>
+        </Text>
       )}
 
       {(item.cta || item.secondaryCta) && (
@@ -203,9 +203,9 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
       )}
 
       {item.label && (
-        <p className="label-s" style={{ color: colors.label, marginBottom: "var(--sp-xs)" }}>
+        <Text variant="label" theme={theme} style={{ marginBottom: "var(--sp-xs)" }}>
           {item.label}
-        </p>
+        </Text>
       )}
 
       {item.title && (
@@ -215,15 +215,15 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
       )}
 
       {item.subtitle && (
-        <p className="text-l" style={{ color: colors.muted, marginBottom: "var(--sp-s)" }}>
+        <Text size="l" theme={theme} style={{ marginBottom: "var(--sp-s)" }}>
           {item.subtitle}
-        </p>
+        </Text>
       )}
 
       {item.content && (
-        <p className="text-l" style={{ color: colors.muted }}>
+        <Text size="l" theme={theme}>
           {item.content}
-        </p>
+        </Text>
       )}
 
       {item.features && item.features.length > 0 && (
@@ -238,14 +238,10 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
           }}
         >
           {item.features.map((f, i) => (
-            <li
-              key={i}
-              className="text-m"
-              style={{ color: colors.muted, paddingLeft: "1rem", position: "relative" }}
-            >
+            <Text key={i} as="li" size="m" theme={theme} style={{ paddingLeft: "1rem", position: "relative" }}>
               <span style={{ position: "absolute", left: 0, color: colors.accent }}>·</span>
               {f}
-            </li>
+            </Text>
           ))}
         </ul>
       )}

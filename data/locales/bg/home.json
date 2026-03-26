@@ -300,18 +300,21 @@
           "sectionConfig": { "theme": "dark" },
           "items": [
             {
+              "image": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis Universa in hotel lobby" },
               "quote": "We stopped thinking about the coffee machines. That's the highest compliment I can give.",
               "author": "Operations Director",
               "company": "Regional Hotel Group",
               "metric": "42% fewer breakfast complaints"
             },
             {
+              "image": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis Alpha in office kitchen" },
               "quote": "The facility team forgot we even had coffee machines. They just work.",
               "author": "Facility Manager",
               "company": "Technology Campus (1,500 employees)",
               "metric": "Zero unplanned downtime in 14 months"
             },
             {
+              "image": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis Eclipse in restaurant" },
               "quote": "For the first time, a customer in Plovdiv gets exactly the same drink as in Sofia.",
               "author": "Head of Operations",
               "company": "National QSR Brand (30 locations)",
@@ -324,10 +327,10 @@
           "preset": "bento-stats",
           "sectionConfig": { "theme": "dark" },
           "items": [
-            { "number": "3,000+", "title": "Locations served", "content": "Hotels, offices, restaurants, and retail chains across Europe trust Genesis systems every day.", "colSpan": 7 },
-            { "number": "99.2%", "title": "Machine uptime", "content": "Proactive maintenance and local service teams keep your operations running without interruption.", "colSpan": 5 },
-            { "number": "15+", "title": "Years of innovation", "content": "Over a decade of engineering excellence, from our first prototype to patent-registered AI systems.", "colSpan": 5 },
-            { "number": "< 4h", "title": "Service response", "content": "Local technicians, local parts. Because in hospitality, four hours is already too long.", "colSpan": 7 }
+            { "number": "3,000+", "title": "Locations served", "content": "Hotels, offices, restaurants, and retail chains across Europe trust Genesis systems every day.", "colSpan": 7, "color": "rgba(255,255,255,0.06)", "bgImage": { "src": "/images/stats-dots-map.svg", "alt": "" } },
+            { "number": "99.2%", "title": "Machine uptime", "content": "Proactive maintenance and local service teams keep your operations running without interruption.", "colSpan": 5, "color": "rgba(255,255,255,0.08)" },
+            { "number": "15+", "title": "Years of innovation", "content": "Over a decade of engineering excellence, from our first prototype to patent-registered AI systems.", "colSpan": 5, "color": "rgba(177,239,213,0.1)" },
+            { "number": "< 4h", "title": "Service response", "content": "Local technicians, local parts. Because in hospitality, four hours is already too long.", "colSpan": 7, "color": "rgba(255,255,255,0.06)", "bgImage": { "src": "/images/stats-chart.svg", "alt": "" } }
           ]
         }
       ]

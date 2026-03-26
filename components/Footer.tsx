@@ -179,14 +179,6 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
         </div>
       </div>
 
-      <style dangerouslySetInnerHTML={{ __html: `
-        @media (max-width: 991px) {
-          .footer-grid { grid-template-columns: repeat(3, 1fr) !important; }
-        }
-        @media (max-width: 767px) {
-          .footer-grid { grid-template-columns: 1fr !important; }
-        }
-      `}} />
     </footer>
   );
 }

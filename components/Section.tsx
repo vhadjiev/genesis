@@ -12,6 +12,7 @@ import { SectionHeader } from "./SectionHeader";
 import { CollectionRenderer } from "./CollectionRenderer";
 import { SectionShell } from "./SectionShell";
 import { FadeStrip } from "./capabilities/FadeStrip";
+import { Text } from "./primitives";
 
 interface SectionProps {
   block: SectionBlock;
@@ -186,12 +187,9 @@ function MergedSection({ block }: { block: SectionBlock }) {
   return (
     <div style={{ position: "relative", zIndex: 2, paddingBottom: "var(--sp-4xl)" }}>
       {config.label && (
-        <p
-          className="label-s"
-          style={{ textAlign: "center", color: "var(--neutral-400)", marginBottom: "var(--sp-xl)" }}
-        >
+        <Text variant="label" theme={config.theme} style={{ textAlign: "center", marginBottom: "var(--sp-xl)" }}>
           {config.label}
-        </p>
+        </Text>
       )}
       <CollectionRenderer
         blockId={block.id}

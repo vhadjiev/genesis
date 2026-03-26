@@ -3,7 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { useScrollCallback } from "@/hooks/useScroll";
-import { Heading } from "../primitives";
+import { Heading, Text, DotIndicator } from "../primitives";
 import type { ContentItem } from "@/lib/types";
 import type { LayoutProps } from "./LayoutProps";
 
@@ -19,7 +19,7 @@ function MobileView({ items }: { items: ContentItem[] }) {
         <div key={item.id || item.number}>
           {item.image && (
             <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 9", borderRadius: "var(--radius-l)", overflow: "hidden", marginBottom: "var(--sp-l)" }}>
-              <Image src={item.image.src} alt={item.image.alt} fill sizes="100vw" style={{ objectFit: "cover" }} />
+              <Image src={item.image.src} alt={item.image.alt} fill sizes="(max-width: 768px) 90vw, 50vw" style={{ objectFit: "cover" }} />
             </div>
           )}
           <span style={{ fontSize: "var(--jumbo-2)", fontWeight: 600, color: "var(--brand-blue)", opacity: 0.25, lineHeight: 1, display: "block", marginBottom: "var(--sp-xs)" }}>
@@ -28,9 +28,9 @@ function MobileView({ items }: { items: ContentItem[] }) {
           <Heading level={3} size="h5" theme="light" style={{ marginBottom: "var(--sp-s)" }}>
             {item.title || ""}
           </Heading>
-          <p className="text-l" style={{ color: "var(--neutral-400)" }}>
+          <Text size="l" theme="light">
             {item.content}
-          </p>
+          </Text>
         </div>
       ))}
     </div>
@@ -112,27 +112,15 @@ function DesktopView({ items }: { items: ContentItem[] }) {
           >
             {active.title || ""}
           </Heading>
-          <p
+          <Text
             key={`p-${animKey}`}
-            className="text-l"
-            style={{ color: "var(--neutral-400)", lineHeight: "var(--lh-xl)", maxWidth: "28rem", animation: "benFadeIn 0.5s ease 0.05s both" }}
+            size="l"
+            theme="light"
+            style={{ lineHeight: "var(--lh-xl)", maxWidth: "28rem", animation: "benFadeIn 0.5s ease 0.05s both" }}
           >
             {active.content}
-          </p>
-          <div style={{ display: "flex", gap: "var(--sp-2xs)", alignItems: "center", marginTop: "var(--sp-xl)" }}>
-            {items.map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  width: i === activeIndex ? "2rem" : "0.5rem",
-                  height: "0.5rem",
-                  borderRadius: "var(--radius-pill)",
-                  backgroundColor: i === activeIndex ? "var(--brand-blue)" : "var(--neutral-300)",
-                  transition: "width 0.4s ease, background-color 0.4s ease",
-                }}
-              />
-            ))}
-          </div>
+          </Text>
+          <DotIndicator count={items.length} active={activeIndex} theme="light" style={{ marginTop: "var(--sp-xl)" }} />
         </div>
       </div>
 

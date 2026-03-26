@@ -1,14 +1,22 @@
 "use client";
 
-import { Button as HeroButton, type ButtonProps as HeroButtonProps } from "@heroui/react";
+import {
+  Button as HeroButton,
+  buttonVariants,
+  type ButtonProps as HeroButtonProps,
+} from "@heroui/react";
 import NextLink from "next/link";
+import type { VariantProps } from "tailwind-variants";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 export type ButtonSize = "sm" | "md" | "lg" | "xl";
 
+type HeroVariant = VariantProps<typeof buttonVariants>["variant"];
+type HeroSize = VariantProps<typeof buttonVariants>["size"];
+
 export interface ButtonProps extends Omit<HeroButtonProps, "render" | "size"> {
-  /** When provided, renders as a Next.js Link for client-side navigation */
+  /** When provided, renders as a styled NextLink (<a>) instead of <button> */
   href?: string;
   /** Sizes: sm, md, lg (HeroUI native) + xl (custom extension) */
   size?: ButtonSize;
@@ -17,43 +25,60 @@ export interface ButtonProps extends Omit<HeroButtonProps, "render" | "size"> {
 // ─── Button ──────────────────────────────────────────────────────────────────
 
 /**
- * Button primitive wrapping HeroUI Button.
+ * Button primitive.
  *
- * - With `href`: renders as a Next.js Link (client-side navigation, prefetch)
- * - Without `href`: renders as a native button with `onPress`
- * - Icons: pass as children before/after the label text (HeroUI pattern)
- * - Icon-only: use `isIconOnly` prop
- * - Variants: primary, secondary, tertiary, outline, ghost, danger
- * - Sizes: sm, md, lg (HeroUI native) + xl (custom CSS extension)
+ * - With `href`: renders as NextLink styled with buttonVariants (proper <a>)
+ * - Without `href`: renders as HeroUI Button (proper <button>)
+ * - No render prop, no nested interactive elements
+ *
+ * Uses buttonVariants from HeroUI for consistent styling across both modes.
  */
-export function Button({ href, size = "md", className, children, ...props }: ButtonProps) {
-  // xl is a custom size — pass lg to HeroUI and add the button--xl CSS class
+export function Button({
+  href,
+  size = "md",
+  variant = "primary",
+  className,
+  children,
+  style,
+  ...props
+}: ButtonProps) {
   const isXl = size === "xl";
-  const heroSize = isXl ? "lg" : size;
-  const mergedClassName = isXl
-    ? className ? `button--xl ${className}` : "button--xl"
-    : className;
+  const heroSize: HeroSize = isXl ? "lg" : size;
 
   if (href) {
+    // Link mode — <a> with button styling via buttonVariants
+    const classes = buttonVariants({
+      variant: variant as HeroVariant,
+      size: heroSize,
+    });
+    const merged = [classes, isXl && "button--xl", className]
+      .filter(Boolean)
+      .join(" ");
+
     return (
-      <HeroButton
-        render={(renderProps) => (
-          <NextLink
-            {...(renderProps as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
-            href={href}
-          />
-        )}
-        size={heroSize}
-        className={mergedClassName}
-        {...props}
+      <NextLink
+        href={href}
+        className={merged}
+        style={style as React.CSSProperties}
       >
-        {children}
-      </HeroButton>
+        {children as React.ReactNode}
+      </NextLink>
     );
   }
 
+  // Button mode — native <button> via HeroUI Button
+  const merged = [isXl && "button--xl", className]
+    .filter(Boolean)
+    .join(" ") || undefined;
+
   return (
-    <HeroButton size={heroSize} className={mergedClassName} {...props}>
+    <HeroButton
+      size={heroSize}
+      variant={variant}
+      className={merged}
+      style={style}
+      {...props}
+    >
       {children}
     </HeroButton>
   );

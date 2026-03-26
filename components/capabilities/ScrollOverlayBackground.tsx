@@ -58,9 +58,6 @@ export function ScrollOverlayBackground({
           animation: "fadeIn 0.5s ease forwards",
         }}
       />
-      <style dangerouslySetInnerHTML={{ __html: `
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-      `}} />
     </>
   );
 }

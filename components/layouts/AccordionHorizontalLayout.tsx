@@ -3,34 +3,17 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import { useInView } from "@/hooks/useInView";
-import { Card, Button, Heading, Icon } from "../primitives";
+import { Card, Button, Heading, Icon, Text } from "../primitives";
 import { themeColors } from "@/lib/theme-colors";
 import type { LayoutProps } from "./LayoutProps";
 
-function ExpandIcon() {
+/** Collapsed accordion card — vertical text + expand icon, rendered as a Button */
+function CollapsedCard({ title, onPress }: { title?: string; onPress: () => void }) {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      style={{ marginBottom: "var(--sp-xs)", flexShrink: 0 }}
-    >
-      <path
-        d="M10 4v12M4 10l6 6 6-6"
-        stroke="var(--brand-midnight)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-/** Collapsed accordion card — vertical text + expand icon */
-function CollapsedCard({ title }: { title?: string }) {
-  return (
-    <div
+    <Button
+      variant="outline"
+      onPress={onPress}
+      aria-label={`Expand ${title}`}
       style={{
         width: "100%",
         height: "100%",
@@ -39,6 +22,10 @@ function CollapsedCard({ title }: { title?: string }) {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "var(--sp-l) 0",
+        borderRadius: "var(--radius-m)",
+        border: "1px solid var(--neutral-200)",
+        background: "var(--neutral-white)",
+        cursor: "pointer",
       }}
     >
       <span
@@ -56,8 +43,8 @@ function CollapsedCard({ title }: { title?: string }) {
       >
         {title}
       </span>
-      <ExpandIcon />
-    </div>
+      <Icon name="lucide:chevron-down" size={18} style={{ color: "var(--brand-midnight)" }} />
+    </Button>
   );
 }
 
@@ -112,15 +99,9 @@ function ActiveCard({
         }}
       >
         <div>
-          <p
-            className="label-s"
-            style={{
-              color: colors.accent,
-              marginBottom: "var(--sp-xs)",
-            }}
-          >
+          <Text variant="label" theme="dark" style={{ color: colors.accent, marginBottom: "var(--sp-xs)" }}>
             {item.number}
-          </p>
+          </Text>
           <Heading
             level={3}
             size="h5"
@@ -129,9 +110,9 @@ function ActiveCard({
           >
             {item.title || ""}
           </Heading>
-          <p className="text-l" style={{ color: colors.muted }}>
+          <Text size="l" theme="dark">
             {item.subtitle}
-          </p>
+          </Text>
         </div>
         {item.cta && <Button href={item.cta.href} variant="primary">{item.cta.label}{item.cta.icon && <Icon name={item.cta.icon} size={16} />}</Button>}
       </Card>
@@ -157,7 +138,7 @@ function MobileCard({ item }: { item: LayoutProps["items"][0] }) {
           src={item.image.src}
           alt={item.image.alt}
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 90vw, 70vw"
           style={{ objectFit: "cover" }}
         />
       )}
@@ -184,12 +165,9 @@ function MobileCard({ item }: { item: LayoutProps["items"][0] }) {
           color: colors.text,
         }}
       >
-        <p
-          className="label-s"
-          style={{ color: colors.accent, marginBottom: "var(--sp-3xs)" }}
-        >
+        <Text variant="label" theme="dark" style={{ color: colors.accent, marginBottom: "var(--sp-3xs)" }}>
           {item.number}
-        </p>
+        </Text>
         <Heading
           level={3}
           size="h6"
@@ -198,12 +176,9 @@ function MobileCard({ item }: { item: LayoutProps["items"][0] }) {
         >
           {item.title || ""}
         </Heading>
-        <p
-          className="text-s"
-          style={{ color: colors.muted, marginBottom: "var(--sp-m)" }}
-        >
+        <Text size="s" theme="dark" style={{ marginBottom: "var(--sp-m)" }}>
           {item.subtitle}
-        </p>
+        </Text>
         {item.cta && <Button href={item.cta.href} variant="primary">{item.cta.label}{item.cta.icon && <Icon name={item.cta.icon} size={16} />}</Button>}
       </Card>
     </div>
@@ -238,33 +213,20 @@ export default function AccordionHorizontalLayout({ items }: LayoutProps) {
           return (
             <div
               key={item.id || i}
-              onClick={() => handleCardClick(i)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  handleCardClick(i);
-                }
-              }}
               style={{
                 flex: isActive ? "1 1 0%" : "0 0 7%",
                 height: "100%",
-                borderRadius: "var(--radius-l)",
+                borderRadius: isActive ? "var(--radius-l)" : "var(--radius-m)",
                 overflow: "hidden",
                 position: "relative",
-                cursor: "pointer",
                 transition: "flex 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
-                background: isActive
-                  ? "var(--brand-midnight)"
-                  : "var(--neutral-white)",
-                border: isActive ? "none" : "1px solid var(--neutral-200)",
+                background: isActive ? "var(--brand-midnight)" : "transparent",
               }}
             >
               {isActive ? (
                 <ActiveCard item={item} isPriority={i === 0} />
               ) : (
-                <CollapsedCard title={item.title} />
+                <CollapsedCard title={item.title} onPress={() => handleCardClick(i)} />
               )}
             </div>
           );
