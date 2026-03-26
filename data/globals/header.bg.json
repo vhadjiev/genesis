@@ -11,5 +11,9 @@
     "href": "#contact",
     "variant": "primary",
     "size": "lg"
+  },
+  "localeNames": {
+    "en": "English",
+    "bg": "Български"
   }
 }

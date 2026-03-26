@@ -68,28 +68,6 @@
               "content": "Genesis Technology isn't an assembler or reseller. We fully design, develop, and manufacture professional beverage machines in Bulgaria — from the laser cutting and bending of metal chassis to the proprietary software that runs each system. Everything happens under one roof."
             }
           ]
-        },
-        {
-          "id": "story-tags-ltr",
-          "preset": "marquee-tags",
-          "sectionConfig": { "theme": "dark", "padding": "none" },
-          "items": [
-            { "label": "In-house fabrication", "color": "blue" },
-            { "label": "Proprietary software", "color": "green" },
-            { "label": "Cloud-connected", "color": "gradient" },
-            { "label": "Patent registered", "color": "blue" }
-          ]
-        },
-        {
-          "id": "story-tags-rtl",
-          "preset": "marquee-tags-rtl",
-          "sectionConfig": { "theme": "dark", "padding": "none" },
-          "items": [
-            { "label": "Patent registered", "color": "blue" },
-            { "label": "Cloud-connected", "color": "gradient" },
-            { "label": "Proprietary software", "color": "green" },
-            { "label": "In-house fabrication", "color": "blue" }
-          ]
         }
       ]
     },

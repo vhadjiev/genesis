@@ -186,9 +186,9 @@ export const PRESETS: Record<string, SectionPreset> = {
 
   "story-headline": {
     slug: "story-headline",
-    label: "Story Headline (Frosted Card, Centered)",
+    label: "Story Headline (Frosted Card, Centered, Full Height)",
     collection: { layout: "single" },
-    itemLayout: "cta-centered",
+    itemLayout: "text-only",
     sectionDefaults: { theme: "dark", padding: "none" },
     activeFields: ["title"],
     maxItems: 1,
@@ -201,15 +201,15 @@ export const PRESETS: Record<string, SectionPreset> = {
 
   "story-body": {
     slug: "story-body",
-    label: "Story Body (Bottom-Aligned Content)",
+    label: "Story Body (Frosted Card, Centered)",
     collection: { layout: "single" },
     itemLayout: "text-only",
-    sectionDefaults: { theme: "dark", padding: "none" },
+    sectionDefaults: { theme: "dark", padding: "lg", paddingBottom: "3xl" },
     activeFields: ["title", "content"],
     maxItems: 1,
     capabilities: {
-      fullHeight: true,
-      contentAlign: "end",
+      contentAlign: "center",
+      contentWrapper: "frosted-card",
     },
   },
 

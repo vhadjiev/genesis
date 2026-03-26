@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "./Link";
 import { frost, frostHeavy, frostLight } from "@/lib/frost";
 import type { CmsImage } from "@/lib/types";
 
@@ -157,7 +157,7 @@ export function Card({
         <div style={{ position: "relative", zIndex: 1, padding }}>{children}</div>
       </div>
     );
-    return href ? <Link href={href} style={{ textDecoration: "none", color: "inherit", display: "block" }}>{content}</Link> : content;
+    return href ? <Link href={href} style={{ display: "block" }}>{content}</Link> : content;
   }
 
   // Horizontal layout
@@ -176,7 +176,7 @@ export function Card({
         {imageFirst ? <>{imageEl}{body}</> : <>{body}{imageEl}</>}
       </div>
     );
-    return href ? <Link href={href} style={{ textDecoration: "none", color: "inherit", display: "block" }}>{content}</Link> : content;
+    return href ? <Link href={href} style={{ display: "block" }}>{content}</Link> : content;
   }
 
   // Vertical layout (top, bottom, none)
@@ -194,5 +194,5 @@ export function Card({
       )}
     </div>
   );
-  return href ? <Link href={href} style={{ textDecoration: "none", color: "inherit", display: "block" }}>{content}</Link> : content;
+  return href ? <Link href={href} style={{ display: "block" }}>{content}</Link> : content;
 }

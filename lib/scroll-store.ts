@@ -15,6 +15,19 @@
 
 type ScrollCallback = (scrollY: number) => void;
 
+/** Cached reduced-motion preference — checked once, updated on change */
+let prefersReducedMotion = false;
+if (typeof window !== "undefined") {
+  const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
+  prefersReducedMotion = mql.matches;
+  mql.addEventListener("change", (e) => { prefersReducedMotion = e.matches; });
+}
+
+/** Returns true if the user prefers reduced motion */
+export function getReducedMotion(): boolean {
+  return prefersReducedMotion;
+}
+
 let subscribers = new Set<ScrollCallback>();
 let rafId: number | null = null;
 let currentScrollY = 0;

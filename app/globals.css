@@ -142,19 +142,17 @@ body {
 
 /* ═══════════ TYPOGRAPHY ═══════════ */
 
-.jumbo-h {
-  color: var(--brand-midnight);
-  font-size: var(--jumbo-2);
-  line-height: var(--lh);
-  font-weight: 600;
-  letter-spacing: var(--ls-l);
-}
-.heading-h1 { font-size: var(--h1); line-height: var(--lh); font-weight: 600; letter-spacing: var(--ls-m); }
-.heading-h2 { font-size: var(--h2); line-height: var(--lh-s); font-weight: 600; letter-spacing: var(--ls-s); }
-.heading-h3 { font-size: var(--h3); line-height: var(--lh); font-weight: 600; letter-spacing: var(--ls-m); }
-.heading-h4 { font-size: var(--h4); line-height: var(--lh-l); font-weight: 500; letter-spacing: var(--ls-m); }
-.heading-h5 { font-size: var(--h5); line-height: var(--lh-l); font-weight: 500; letter-spacing: var(--ls-m); }
-.heading-h6 { font-size: var(--h6); line-height: var(--lh-m); font-weight: 500; letter-spacing: var(--ls-s); }
+/* Heading scale: 3xl → xs (largest → smallest) */
+.heading-3xl { font-size: var(--jumbo-2); line-height: var(--lh);   font-weight: 600; letter-spacing: var(--ls-l); margin-bottom: var(--sp-xl); }
+.heading-2xl { font-size: var(--h1);      line-height: var(--lh);   font-weight: 600; letter-spacing: var(--ls-m); margin-bottom: var(--sp-l); }
+.heading-xl  { font-size: var(--h2);      line-height: var(--lh-s); font-weight: 600; letter-spacing: var(--ls-s); margin-bottom: var(--sp-l); }
+.heading-lg  { font-size: var(--h3);      line-height: var(--lh);   font-weight: 600; letter-spacing: var(--ls-m); margin-bottom: var(--sp-m); }
+.heading-md  { font-size: var(--h4);      line-height: var(--lh-l); font-weight: 500; letter-spacing: var(--ls-m); margin-bottom: var(--sp-s); }
+.heading-sm  { font-size: var(--h5);      line-height: var(--lh-l); font-weight: 500; letter-spacing: var(--ls-m); margin-bottom: var(--sp-s); }
+.heading-xs  { font-size: var(--h6);      line-height: var(--lh-m); font-weight: 500; letter-spacing: var(--ls-s); margin-bottom: var(--sp-xs); }
+
+/* Remove margin when heading is last child or inside flex/grid containers with gap */
+[class^="heading-"]:last-child { margin-bottom: 0; }
 .text-l { font-size: var(--text-l); line-height: var(--lh-xl); }
 .text-m { font-size: var(--text-m); line-height: var(--lh-xl); }
 .text-s { font-size: var(--text-s); line-height: var(--lh-xl); }
@@ -391,17 +389,24 @@ body {
 /* ═══════════ RESPONSIVE ═══════════ */
 
 @media (max-width: 991px) {
-  .jumbo-h { font-size: var(--h2); }
-  .heading-h1 { font-size: var(--h2); }
-  .heading-h2 { font-size: var(--h3); }
-  .heading-h4 { font-size: var(--h5); }
-  .heading-h5 { font-size: var(--h6); }
+  .heading-3xl { font-size: var(--h2); }
+  .heading-2xl { font-size: var(--h2); }
+  .heading-xl  { font-size: var(--h3); }
+  .heading-md  { font-size: var(--h5); }
+  .heading-sm  { font-size: var(--h6); }
   :root { --jumbo-2: 3rem; --h1: 3rem; }
 }
 @media (max-width: 767px) {
-  .jumbo-h { font-size: 2.25rem; }
-  .heading-h2 { font-size: 2rem; }
+  .heading-3xl { font-size: 2.25rem; }
+  .heading-xl  { font-size: 2rem; }
   :root { --jumbo-2: 2.625rem; --h1: 2.5rem; --h2: 2.25rem; --h3: 2rem; --h4: 1.5rem; --h5: 1.5rem; }
+}
+
+/* ═══════════ CONTENT VISIBILITY — below-fold sections ═══════════ */
+
+section[data-below-fold] {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 /* ═══════════ REDUCED MOTION ═══════════ */

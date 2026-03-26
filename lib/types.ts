@@ -248,6 +248,8 @@ export interface HeaderGlobal {
   logo: string // URL to logo SVG
   navigation: NavItem[]
   cta: CmsCta
+  /** Display names for locale switcher, keyed by locale code */
+  localeNames?: Record<string, string>
 }
 
 export interface FooterGlobal {

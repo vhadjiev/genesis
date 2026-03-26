@@ -104,9 +104,7 @@ function ActiveCard({
           </Text>
           <Heading
             level={3}
-            size="h5"
             theme="dark"
-            style={{ marginBottom: "var(--sp-m)" }}
           >
             {item.title || ""}
           </Heading>
@@ -170,9 +168,7 @@ function MobileCard({ item }: { item: LayoutProps["items"][0] }) {
         </Text>
         <Heading
           level={3}
-          size="h6"
           theme="dark"
-          style={{ marginBottom: "var(--sp-2xs)" }}
         >
           {item.title || ""}
         </Heading>

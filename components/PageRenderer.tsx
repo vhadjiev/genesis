@@ -46,11 +46,12 @@ export function PageRenderer({ page }: { page: CmsPage }) {
               key={block.id}
               block={block}
               mergedBlock={mergedBlock}
+              belowFold={i > 0}
             />
           );
         }
 
-        return <BlockRenderer key={block.id} block={block} />;
+        return <BlockRenderer key={block.id} block={block} belowFold={i > 0} />;
       })}
     </>
   );

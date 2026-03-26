@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type {
   SectionBlock,
   CompositeBlock,
@@ -19,6 +20,8 @@ interface SectionProps {
   insideComposite?: boolean;
   /** Items from a merged next-block (e.g., hero absorbs logo marquee) */
   mergedBlock?: SectionBlock;
+  /** Below-fold sections get content-visibility: auto for rendering perf */
+  belowFold?: boolean;
 }
 
 const paddingScale: Record<string, string> = {
@@ -59,7 +62,7 @@ function sectionStyles(config: SectionConfig): React.CSSProperties {
  * Renders a single SectionBlock using its preset configuration.
  * Capabilities from the preset drive structural behaviors (background, animations, decorators).
  */
-export function Section({ block, insideComposite, mergedBlock }: SectionProps) {
+export function Section({ block, insideComposite, mergedBlock, belowFold }: SectionProps) {
   const preset = PRESETS[block.preset];
 
   if (!preset) {
@@ -138,6 +141,7 @@ export function Section({ block, insideComposite, mergedBlock }: SectionProps) {
         id={config.sectionId || undefined}
         aria-labelledby={config.headline ? `${block.id}-heading` : undefined}
         data-header-theme={isDark ? "dark" : "light"}
+        data-below-fold={belowFold || undefined}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -278,17 +282,13 @@ function StickyBgComposite({
           zIndex: 0,
         }}
       >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={config.stickyBgSrc!}
           alt={config.stickyBgAlt || ""}
-          style={{
-            position: "absolute",
-            inset: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-          }}
+          fill
+          sizes="100vw"
+          quality={90}
+          style={{ objectFit: "cover" }}
         />
         <div
           style={{
@@ -312,9 +312,9 @@ function StickyBgComposite({
 /**
  * Top-level block renderer — handles both SectionBlock and CompositeBlock.
  */
-export function BlockRenderer({ block, mergedBlock }: { block: PageBlock; mergedBlock?: SectionBlock }) {
+export function BlockRenderer({ block, mergedBlock, belowFold }: { block: PageBlock; mergedBlock?: SectionBlock; belowFold?: boolean }) {
   if (isCompositeBlock(block)) {
     return <CompositeSection block={block} />;
   }
-  return <Section block={block} mergedBlock={mergedBlock} />;
+  return <Section block={block} mergedBlock={mergedBlock} belowFold={belowFold} />;
 }

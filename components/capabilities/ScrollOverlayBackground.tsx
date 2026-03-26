@@ -3,6 +3,7 @@
 import { useRef, useCallback } from "react";
 import Image from "next/image";
 import { useScrollCallback } from "@/hooks/useScroll";
+import { getReducedMotion } from "@/lib/scroll-store";
 import type { CmsImage } from "@/lib/types";
 
 interface Props {
@@ -26,7 +27,11 @@ export function ScrollOverlayBackground({
 
   const handleScroll = useCallback((scrollY: number) => {
     if (overlayRef.current) {
-      overlayRef.current.style.opacity = String(Math.min(scrollY / 450, 1));
+      // Skip gradual transition when user prefers reduced motion
+      const opacity = getReducedMotion()
+        ? (scrollY > 10 ? 1 : 0)
+        : Math.min(scrollY / 450, 1);
+      overlayRef.current.style.opacity = String(opacity);
     }
   }, []);
 

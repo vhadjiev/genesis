@@ -6,26 +6,46 @@ import { themeColors } from "@/lib/theme-colors";
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 /**
- * Maps heading level to the design system's CSS class.
- * Supports a "jumbo" variant for display-size headings.
+ * T-shirt size scale for visual heading size.
+ * Maps to CSS classes: .heading-xs through .heading-3xl
+ *
+ * | Size | Font size       | Use case                     |
+ * |------|-----------------|------------------------------|
+ * | 3xl  | var(--jumbo-2)  | Hero headlines, display text  |
+ * | 2xl  | var(--h1)       | Page titles                  |
+ * | xl   | var(--h2)       | Section headlines             |
+ * | lg   | var(--h3)       | Sub-section titles            |
+ * | md   | var(--h4)       | Card titles, quote text       |
+ * | sm   | var(--h5)       | Item titles, small headings   |
+ * | xs   | var(--h6)       | Labels, compact card titles   |
  */
-type HeadingSize = "jumbo" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+export type HeadingSize = "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl";
 
 const sizeClassMap: Record<HeadingSize, string> = {
-  jumbo: "jumbo-h",
-  h1: "heading-h1",
-  h2: "heading-h2",
-  h3: "heading-h3",
-  h4: "heading-h4",
-  h5: "heading-h5",
-  h6: "heading-h6",
+  "3xl": "heading-3xl",
+  "2xl": "heading-2xl",
+  xl: "heading-xl",
+  lg: "heading-lg",
+  md: "heading-md",
+  sm: "heading-sm",
+  xs: "heading-xs",
+};
+
+/** Default visual size for each semantic level */
+const levelDefaults: Record<HeadingLevel, HeadingSize> = {
+  1: "2xl",
+  2: "2xl",
+  3: "lg",
+  4: "md",
+  5: "sm",
+  6: "xs",
 };
 
 export interface HeadingProps {
   children: string;
   /** Semantic heading level (h1-h6) */
   level?: HeadingLevel;
-  /** Visual size (can differ from level for a11y vs visual hierarchy) */
+  /** Visual size override — defaults based on level */
   size?: HeadingSize;
   /** Substring to highlight with gradient (alternative to *asterisk* syntax) */
   gradient?: string;
@@ -44,7 +64,8 @@ export interface HeadingProps {
 /**
  * Heading atom. Supports:
  * - Semantic level (h1-h6) independent of visual size
- * - Design system size classes (jumbo, h1-h6)
+ * - T-shirt sizes (xs-3xl) with level-based defaults
+ * - Built-in margin-bottom per size (via CSS classes)
  * - Gradient text via *asterisk* syntax in children or gradient prop
  * - Theme-aware colors
  * - Line break support (\n in text)
@@ -61,7 +82,8 @@ export function Heading({
   style: styleProp,
 }: HeadingProps) {
   const Tag = `h${level}` as const;
-  const sizeClass = size ? sizeClassMap[size] : sizeClassMap[`h${level}`];
+  const resolvedSize = size || levelDefaults[level];
+  const sizeClass = sizeClassMap[resolvedSize];
   const colors = themeColors(theme);
 
   const className = classNameProp

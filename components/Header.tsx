@@ -11,6 +11,85 @@ import type { HeaderGlobal } from "@/lib/types";
 
 type NavState = "static" | "ready" | "fixed";
 
+// ─── Hoisted style constants per nav state ──────────────────────────────────
+
+const NAV_BASE: React.CSSProperties = {
+  top: "1.25rem",
+  left: "50%",
+  width: "calc(100% - 3rem)",
+  maxWidth: "var(--container-max)",
+  height: "3.75rem",
+  padding: "0 0.75rem",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  zIndex: 999,
+  borderRadius: "100vw",
+};
+
+const TRANSITION_SMOOTH =
+  "opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s, border-color 0.3s, border-radius 0.3s, box-shadow 0.3s, backdrop-filter 0.3s";
+
+const GLASS_ON: React.CSSProperties = {
+  backdropFilter: "blur(40px) saturate(180%)",
+  WebkitBackdropFilter: "blur(40px) saturate(180%)",
+  backgroundColor: "rgba(255, 255, 255, 0.72)",
+  border: "1px solid rgba(255, 255, 255, 0.45)",
+  boxShadow: "0 2px 20px rgba(0, 0, 0, 0.06), 0 0 0 0.5px rgba(0, 0, 0, 0.04)",
+};
+
+const GLASS_OFF: React.CSSProperties = {
+  backdropFilter: "none",
+  WebkitBackdropFilter: "none",
+  backgroundColor: "transparent",
+  border: "1px solid transparent",
+  boxShadow: "none",
+};
+
+const STATE_STYLES: Record<NavState, {
+  position: "absolute" | "fixed";
+  transform: string;
+  opacity: number;
+  pointerEvents: "auto" | "none";
+  muted: string;
+  logoTheme: "dark" | "light";
+  glass: React.CSSProperties;
+  ctaVariant: "secondary" | "primary";
+}> = {
+  static: {
+    position: "absolute",
+    transform: "translateX(-50%)",
+    opacity: 1,
+    pointerEvents: "auto",
+    muted: "rgba(255,255,255,0.6)",
+    logoTheme: "dark",
+    glass: GLASS_OFF,
+    ctaVariant: "secondary",
+  },
+  ready: {
+    position: "fixed",
+    transform: "translateX(-50%) translateY(-10px) scale(0.97)",
+    opacity: 0,
+    pointerEvents: "none",
+    muted: "var(--neutral-400)",
+    logoTheme: "light",
+    glass: GLASS_OFF,
+    ctaVariant: "primary",
+  },
+  fixed: {
+    position: "fixed",
+    transform: "translateX(-50%) translateY(0) scale(1)",
+    opacity: 1,
+    pointerEvents: "auto",
+    muted: "var(--neutral-400)",
+    logoTheme: "light",
+    glass: GLASS_ON,
+    ctaVariant: "primary",
+  },
+};
+
+// ─── Component ──────────────────────────────────────────────────────────────
+
 export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale }) {
   const [state, setState] = useState<NavState>("static");
   const [prevState, setPrevState] = useState<NavState>("static");
@@ -23,7 +102,10 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
     return subscribeScroll(() => {
       const section = pageCtx?.firstSectionRef.current;
       if (!section) {
-        setState((prev) => (window.scrollY > 100 ? "fixed" : "static") === prev ? prev : window.scrollY > 100 ? "fixed" : "static");
+        setState((prev) => {
+          const next: NavState = window.scrollY > 100 ? "fixed" : "static";
+          return next === prev ? prev : next;
+        });
         return;
       }
       const bottom = section.getBoundingClientRect().bottom;
@@ -52,59 +134,27 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
   }, [mobileOpen]);
 
   const otherLocales = locales.filter((l) => l !== locale);
-
-  const isStatic = state === "static";
-  const isFixed = state === "fixed";
-  const isReady = state === "ready";
-
-  const muted = isStatic ? "rgba(255,255,255,0.6)" : "var(--neutral-400)";
-  const showGlass = isFixed;
-  const position = isStatic ? "absolute" : "fixed";
-  const logoTheme = isStatic ? "dark" : "light";
-
-  const transform = isStatic
-    ? "translateX(-50%)"
-    : isReady
-      ? "translateX(-50%) translateY(-10px) scale(0.97)"
-      : "translateX(-50%) translateY(0) scale(1)";
-
-  const opacity = isReady ? 0 : 1;
+  const s = STATE_STYLES[state];
 
   const shouldAnimate = state === "fixed" || (state === "static" && prevState !== "static");
-  const transition = shouldAnimate
-    ? "opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s, border-color 0.3s, border-radius 0.3s, box-shadow 0.3s, backdrop-filter 0.3s"
-    : "none";
+  const transition = shouldAnimate ? TRANSITION_SMOOTH : "none";
 
   return (
     <>
       <nav
         style={{
-          position,
-          top: "1.25rem",
-          left: "50%",
-          transform,
-          opacity,
-          width: "calc(100% - 3rem)",
-          maxWidth: "var(--container-max)",
-          height: "3.75rem",
-          padding: "0 0.75rem",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          zIndex: 999,
-          borderRadius: "100vw",
-          backdropFilter: showGlass ? "blur(40px) saturate(180%)" : "none",
-          WebkitBackdropFilter: showGlass ? "blur(40px) saturate(180%)" : "none",
-          backgroundColor: showGlass ? "rgba(255, 255, 255, 0.72)" : "transparent",
-          border: showGlass ? "1px solid rgba(255, 255, 255, 0.45)" : "1px solid transparent",
-          boxShadow: showGlass ? "0 2px 20px rgba(0, 0, 0, 0.06), 0 0 0 0.5px rgba(0, 0, 0, 0.04)" : "none",
+          ...NAV_BASE,
+          ...s.glass,
+          position: s.position,
+          transform: s.transform,
+          opacity: s.opacity,
+          pointerEvents: s.pointerEvents,
           transition,
-          pointerEvents: isReady ? "none" : "auto",
         }}
       >
         {/* Logo */}
         <Link href={`/${locale}`} className="shrink-0" style={{ display: "inline-flex" }}>
-          <Logo src={data.logo} alt="Genesis Technology" theme={logoTheme} />
+          <Logo src={data.logo} alt="Genesis Technology" theme={s.logoTheme} />
         </Link>
 
         {/* Desktop nav */}
@@ -114,7 +164,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
               key={item.href}
               href={item.href}
               className="nav-link"
-              style={{ color: muted, fontSize: "var(--text-l)", fontWeight: 600 }}
+              style={{ color: s.muted, fontSize: "var(--text-l)", fontWeight: 600 }}
             >
               {item.label}
             </Link>
@@ -128,12 +178,12 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
               key={alt}
               href={pathname.replace(`/${locale}`, `/${alt}`)}
               className="nav-link"
-              style={{ color: muted, fontSize: "var(--text-s)", fontWeight: 500 }}
+              style={{ color: s.muted, fontSize: "var(--text-s)", fontWeight: 500 }}
             >
               {alt.toUpperCase()}
             </Link>
           ))}
-          <Button href={data.cta.href} variant={isStatic ? "secondary" : "primary"} size={data.cta.size}>
+          <Button href={data.cta.href} variant={s.ctaVariant} size={data.cta.size}>
             {data.cta.label}
             {data.cta.icon && <Icon name={data.cta.icon} size={14} />}
           </Button>
@@ -170,7 +220,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="heading-h4"
+                  className="heading-md"
                   style={{ color: "var(--neutral-white)" }}
                 >
                   {item.label}
@@ -182,7 +232,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
                   href={pathname.replace(`/${locale}`, `/${alt}`)}
                   style={{ color: "var(--neutral-300)", fontSize: "var(--text-s)", fontWeight: 500, marginTop: "var(--sp-l)" }}
                 >
-                  {alt === "en" ? "English" : "Български"}
+                  {data.localeNames?.[alt] || alt.toUpperCase()}
                 </Link>
               ))}
               <Button href={data.cta.href} variant="secondary" style={{ marginTop: "var(--sp-m)" }}>

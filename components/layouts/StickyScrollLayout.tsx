@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { useScrollCallback } from "@/hooks/useScroll";
+import { getReducedMotion } from "@/lib/scroll-store";
 import { Heading, Text, DotIndicator } from "../primitives";
 import type { ContentItem } from "@/lib/types";
 import type { LayoutProps } from "./LayoutProps";
@@ -22,10 +23,10 @@ function MobileView({ items }: { items: ContentItem[] }) {
               <Image src={item.image.src} alt={item.image.alt} fill sizes="(max-width: 768px) 90vw, 50vw" style={{ objectFit: "cover" }} />
             </div>
           )}
-          <span style={{ fontSize: "var(--jumbo-2)", fontWeight: 600, color: "var(--brand-blue)", opacity: 0.25, lineHeight: 1, display: "block", marginBottom: "var(--sp-xs)" }}>
+          <span style={{ fontSize: "var(--h2)", fontWeight: 600, color: "var(--brand-blue)", opacity: 0.25, lineHeight: 1, display: "block", marginBottom: "var(--sp-xs)" }}>
             {item.number}
           </span>
-          <Heading level={3} size="h5" theme="light" style={{ marginBottom: "var(--sp-s)" }}>
+          <Heading level={3} theme="light">
             {item.title || ""}
           </Heading>
           <Text size="l" theme="light">
@@ -60,10 +61,16 @@ function DesktopView({ items }: { items: ContentItem[] }) {
       const distance = Math.abs(elCenter - viewportCenter);
 
       const normalised = (elCenter - viewportCenter) / window.innerHeight;
-      const opacity = 0.15 + 0.85 * smoothstep(0, 1, 1 - Math.abs(normalised) * 1.2);
-      const scale = 0.88 + 0.12 * smoothstep(0, 1, 1 - Math.abs(normalised));
-      el.style.opacity = String(opacity);
-      el.style.transform = `scale(${scale})`;
+      if (getReducedMotion()) {
+        // Reduced motion: no scale/opacity transitions, just show/hide
+        el.style.opacity = "1";
+        el.style.transform = "none";
+      } else {
+        const opacity = 0.15 + 0.85 * smoothstep(0, 1, 1 - Math.abs(normalised) * 1.2);
+        const scale = 0.88 + 0.12 * smoothstep(0, 1, 1 - Math.abs(normalised));
+        el.style.opacity = String(opacity);
+        el.style.transform = `scale(${scale})`;
+      }
 
       if (distance < closestDistance) {
         closestDistance = distance;
@@ -90,9 +97,9 @@ function DesktopView({ items }: { items: ContentItem[] }) {
           <span
             key={`num-${animKey}`}
             style={{
-              fontSize: "var(--jumbo-2)",
+              fontSize: "var(--h2)",
               fontWeight: 600,
-              letterSpacing: "var(--ls-l)",
+              letterSpacing: "var(--ls-m)",
               lineHeight: "var(--lh)",
               color: "var(--brand-blue)",
               opacity: 0.25,
@@ -106,9 +113,8 @@ function DesktopView({ items }: { items: ContentItem[] }) {
           <Heading
             key={`h-${animKey}`}
             level={3}
-            size="h2"
             theme="light"
-            style={{ marginBottom: "1.25rem", animation: "benFadeIn 0.5s ease both" }}
+            style={{ animation: "benFadeIn 0.5s ease both" }}
           >
             {active.title || ""}
           </Heading>

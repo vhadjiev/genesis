@@ -59,14 +59,13 @@ function getContentConfig(layout: ItemLayout): ContentConfig {
 // ─── Mode renderers ──────────────────────────────────────────────────────────
 
 function StatBody({ item, theme }: { item: ContentItem; theme?: string }) {
-  const colors = themeColors(theme);
   return (
     <>
       <div>
-        <Heading level={4} size="jumbo" theme={theme} style={{ marginBottom: "var(--sp-s)" }}>
+        <Heading level={4} size="3xl" theme={theme}>
           {item.number || ""}
         </Heading>
-        <Heading level={5} size="h6" theme={theme} style={{ margin: 0 }}>
+        <Heading level={5} theme={theme}>
           {item.title || ""}
         </Heading>
       </div>
@@ -86,7 +85,7 @@ function QuoteBody({ item, theme }: { item: ContentItem; theme?: string }) {
       {item.metric && <Badge text={item.metric} variant="metric" />}
       {item.quote && (
         <blockquote style={{ fontStyle: "normal", fontWeight: 500, margin: 0 }}>
-          <Heading level={4} size="h4" theme={theme}>
+          <Heading level={4} theme={theme}>
             {`\u201C${item.quote}\u201D`}
           </Heading>
         </blockquote>
@@ -124,11 +123,9 @@ function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLe
       {item.title && (
         <Heading
           level={headingLevel as 1 | 2 | 3 | 4 | 5 | 6}
-          size="jumbo"
           theme="dark"
+          maxWidth="56rem"
           style={{
-            maxWidth: "56rem",
-            marginBottom: "var(--sp-l)",
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(30px)",
             transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)",
@@ -188,9 +185,9 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
       {item.number && (
         <span
           style={{
-            fontSize: "var(--jumbo-2)",
+            fontSize: "var(--h2)",
             fontWeight: 600,
-            letterSpacing: "var(--ls-l)",
+            letterSpacing: "var(--ls-m)",
             lineHeight: "var(--lh)",
             color: colors.accent,
             opacity: theme === "dark" ? 1 : 0.25,
@@ -209,7 +206,7 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
       )}
 
       {item.title && (
-        <Heading level={3} size="h5" theme={theme} style={{ marginBottom: "var(--sp-s)" }}>
+        <Heading level={3} theme={theme}>
           {item.title}
         </Heading>
       )}

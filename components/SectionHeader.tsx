@@ -24,7 +24,6 @@ export function SectionHeader({ config, headingLevel = 2, id }: SectionHeaderPro
       {config.headline && (
         <Heading
           level={headingLevel}
-          size="jumbo"
           gradient={config.headlineGradient}
           theme={config.theme}
           id={id}

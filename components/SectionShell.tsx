@@ -54,7 +54,7 @@ export function SectionShell({
     );
   }
 
-  // Full-height + alignment container
+  // Content alignment + optional full-height
   const contentStyle: React.CSSProperties = {
     position: "relative",
     zIndex: 2,
@@ -62,9 +62,12 @@ export function SectionShell({
 
   if (fullHeight) {
     contentStyle.height = "100vh";
+    contentStyle.padding = "var(--sp-xl)";
+  }
+
+  if (contentAlign) {
     contentStyle.display = "flex";
     contentStyle.flexDirection = "column";
-    contentStyle.padding = "var(--sp-xl)";
 
     switch (contentAlign) {
       case "center":
