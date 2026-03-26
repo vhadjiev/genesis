@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "machines": "Machines",
+    "technology": "Technology",
+    "story": "Our Story",
+    "contact": "Contact",
+    "cta": "Get a Quote"
+  },
+  "hero": {
+    "label": "Professional Beverage Systems",
+    "headline": "Intelligent machines,\nengineered from the\nground up.",
+    "subheading": "Genesis designs, manufactures, and connects professional beverage systems — entirely in-house. From laser-cut metal to cloud-connected AI.",
+    "cta_primary": "Explore Machines",
+    "cta_secondary": "Get a Quote",
+    "counter_value": "3,000+",
+    "counter_label": "locations served"
+  },
+  "trust": {
+    "label": "Trusted by leading hospitality and retail brands",
+    "logos": ["ILLY Official Partner", "Hilton Hotels", "Accor Group", "OMV Stations", "Lukoil", "Happy Restaurant", "Marriott", "Shell"]
+  },
+  "story": {
+    "label": "Our story",
+    "headline": "Every component.\nEvery line of code.\nOurs.",
+    "body": "Genesis Technology isn't an assembler or reseller. We fully design, develop, and manufacture professional beverage machines in Bulgaria — from the laser cutting and bending of metal chassis to the proprietary software that runs each system. Everything happens under one roof.",
+    "body2": "In a market dominated by German, Italian, and Swiss manufacturers, Genesis is a rare independent that controls the entire vertical. That's not a talking point — it's the reason we can guarantee parts, customise hardware, and trace every component to the engineer who made it.",
+    "badge": "Designed & Manufactured in Bulgaria",
+    "points": [
+      { "label": "In-house fabrication", "detail": "Laser cutting, bending, welding" },
+      { "label": "Proprietary software", "detail": "AI-powered operating system" },
+      { "label": "Cloud-connected", "detail": "Real-time telemetry & remote management" },
+      { "label": "Patent registered", "detail": "Bulgarian Patent Office, Reg. 3653 U1" }
+    ]
+  },
+  "products": {
+    "label": "Our machines",
+    "headline": "Precision-built for every setting",
+    "items": [
+      {
+        "id": "universa",
+        "number": "01",
+        "name": "Genesis Universa",
+        "tagline": "One platform. Every format.",
+        "description": "A modular system bridging ESE pods and fresh-brew in a single footprint. Designed for operators who need variety without complexity — configured to your menu, not the other way around.",
+        "image": "/images/universa/genesis-universa.jpg",
+        "accent": "amber",
+        "specs": [
+          "ESE pod + fresh-brew",
+          "Programmable touchscreen",
+          "Compact modular chassis",
+          "Tool-free maintenance",
+          "Auto-rinse cycles"
+        ],
+        "audience": "Quick Service · Cafeterias · Retail"
+      },
+      {
+        "id": "alpha",
+        "number": "02",
+        "name": "Genesis Alpha",
+        "tagline": "The intelligent coffee experience",
+        "description": "A bean-to-cup system engineered for high-volume hospitality. Dual boilers, precision grind calibration, AI-powered recipes, and a self-cleaning architecture that keeps the machine in service when it matters most.",
+        "image": "/images/alpha/genesis-alpha.png",
+        "accent": "coral",
+        "specs": [
+          "500+ active locations",
+          "15.6\" touch display",
+          "AI operating system",
+          "Custom LED lighting",
+          "ILLY compatible"
+        ],
+        "audience": "Hotels · Restaurants · Offices"
+      },
+      {
+        "id": "prime",
+        "number": "03",
+        "name": "Genesis Prime",
+        "tagline": "Always connected. Always learning.",
+        "description": "A cloud-connected smart beverage system with Wi-Fi and Bluetooth, built for chains and multi-site operators who need centralised control. Remote monitoring, error diagnostics, and OTA updates — your fleet managed from one dashboard.",
+        "image": "/images/universa/genesis-universa-ese-pods.jpg",
+        "accent": "sage",
+        "specs": [
+          "Cloud-connected",
+          "Wi-Fi & Bluetooth",
+          "Remote monitoring",
+          "OTA firmware updates",
+          "Fleet management"
+        ],
+        "audience": "Chains · Multi-site · Enterprise"
+      },
+      {
+        "id": "eclipse",
+        "number": "04",
+        "name": "Genesis Eclipse",
+        "tagline": "Cold precision. Zero waste.",
+        "description": "A post-mix and cold beverage system built for environments where speed, consistency, and portion control are non-negotiable. Exact servings at exact temperatures, hundreds of times a day.",
+        "image": "/images/eclipse/genesys-eclipse.jpg",
+        "accent": "coral",
+        "specs": [
+          "Still, sparkling, flavoured, juice",
+          "Instant-chill technology",
+          "Programmable portions",
+          "Integrated CO₂ system",
+          "BPA-free closed-circuit"
+        ],
+        "audience": "Hotels · Restaurants · Events"
+      },
+      {
+        "id": "solaris",
+        "number": "05",
+        "name": "Genesis Solaris",
+        "tagline": "Compact power. Custom recipes.",
+        "description": "A versatile compact machine with a large touchscreen and multilingual software. Custom recipe configuration, post-mix capability, and a footprint that fits anywhere — from counter-service cafés to petrol stations.",
+        "image": "/images/solaris/genesys-solaris2.jpg",
+        "accent": "amber",
+        "specs": [
+          "Large touch display",
+          "Multilingual software",
+          "Custom recipes",
+          "Post-mix ready",
+          "Compact footprint"
+        ],
+        "audience": "Quick Service · Petrol Stations · Retail"
+      },
+      {
+        "id": "solaris2",
+        "number": "06",
+        "name": "Genesis Solaris 2",
+        "tagline": "Next-gen compact. Smarter than ever.",
+        "description": "The evolution of Solaris — same compact form, upgraded internals. Enhanced touch interface, faster brew cycles, improved energy efficiency, and full IoT connectivity for remote management.",
+        "image": "/images/solaris/genesys-solaris2.jpg",
+        "accent": "sage",
+        "specs": [
+          "Enhanced touch UI",
+          "Faster brew cycle",
+          "IoT connectivity",
+          "Energy efficient",
+          "Remote diagnostics"
+        ],
+        "audience": "Cafeterias · Offices · Healthcare"
+      }
+    ]
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "headline": "Partnering with Genesis is simple",
+    "tabs": [
+      {
+        "id": "consultation",
+        "name": "Consultation",
+        "steps": [
+          { "number": "01", "text": "Tell us about your business — volume, space, drink preferences" },
+          { "number": "02", "text": "Our team recommends the right machine configuration for your specific needs" },
+          { "number": "03", "text": "Receive a detailed proposal with pricing, timeline, and customisation options" }
+        ]
+      },
+      {
+        "id": "installation",
+        "name": "Installation",
+        "steps": [
+          { "number": "01", "text": "Our certified technicians install and calibrate your machine on-site" },
+          { "number": "02", "text": "Staff training ensures your team can operate everything from day one" }
+        ]
+      },
+      {
+        "id": "customisation",
+        "name": "Customisation",
+        "steps": [
+          { "number": "01", "text": "Configure drink recipes — adjust strengths, sweetness, milk ratios" },
+          { "number": "02", "text": "Choose LED lighting colour to match your brand environment" },
+          { "number": "03", "text": "Upload your logo and brand visuals to the machine's display" }
+        ]
+      },
+      {
+        "id": "operation",
+        "name": "Operation",
+        "steps": [
+          { "number": "01", "text": "Monitor performance, consumption, and health via the cloud dashboard" },
+          { "number": "02", "text": "Use the mobile app for drink selection, nutrition tracking, and management" }
+        ]
+      },
+      {
+        "id": "support",
+        "name": "Support",
+        "steps": [
+          { "number": "01", "text": "Proactive alerts notify you of maintenance needs before they become issues" },
+          { "number": "02", "text": "Remote diagnostics and on-site service — sub-4-hour response" }
+        ]
+      }
+    ]
+  },
+  "intelligence": {
+    "label": "Technology",
+    "headline": "Cloud-connected.\nAI-powered.\nAlways improving.",
+    "features": [
+      {
+        "id": "cloud",
+        "title": "Cloud Management",
+        "description": "Monitor every machine in your fleet from one dashboard. Real-time consumption data, error diagnostics, recipe management — accessible from anywhere."
+      },
+      {
+        "id": "ai",
+        "title": "AI Operating System",
+        "description": "Patent-registered intelligent system that learns your business patterns. The machine adapts to peak hours, suggests optimisations, and flags maintenance before you notice a problem."
+      },
+      {
+        "id": "mobile",
+        "title": "Mobile Application",
+        "description": "Contactless drink selection via personal devices. Nutrition tracking, allergen alerts, ingredient control. All without touching the machine screen."
+      },
+      {
+        "id": "ota",
+        "title": "Over-the-Air Updates",
+        "description": "New drinks, new recipes, software improvements — pushed wirelessly. Your machine gets better while you sleep."
+      }
+    ]
+  },
+  "proof": {
+    "label": "Impact",
+    "headline": "Numbers that speak for themselves",
+    "stats": [
+      { "value": "3,000+", "label": "Locations served", "description": "Hotels, offices, restaurants, and retail chains across Europe trust Genesis systems every day." },
+      { "value": "99.2%", "label": "Machine uptime", "description": "Proactive maintenance and local service teams keep your operations running without interruption." },
+      { "value": "15+", "label": "Years of innovation", "description": "Over a decade of engineering excellence, from our first prototype to patent-registered AI systems." },
+      { "value": "< 4h", "label": "Service response", "description": "Local technicians, local parts. Because in hospitality, four hours is already too long." }
+    ],
+    "testimonials": [
+      {
+        "quote": "We stopped thinking about the coffee machines. That's the highest compliment I can give.",
+        "author": "Operations Director",
+        "company": "Regional Hotel Group",
+        "metric": "42% fewer breakfast complaints"
+      },
+      {
+        "quote": "The facility team forgot we even had coffee machines. They just work.",
+        "author": "Facility Manager",
+        "company": "Technology Campus (1,500 employees)",
+        "metric": "Zero unplanned downtime in 14 months"
+      },
+      {
+        "quote": "For the first time, a customer in Plovdiv gets exactly the same drink as in Sofia.",
+        "author": "Head of Operations",
+        "company": "National QSR Brand (30 locations)",
+        "metric": "96.4% beverage consistency"
+      }
+    ],
+    "illy_badge": "Official ILLY Partner for Bulgaria"
+  },
+  "cta": {
+    "headline": "Ready to elevate your\nbeverage experience?",
+    "subheading": "Whether you're outfitting a single café or a chain of 50 locations, our team will design the right solution for you.",
+    "cta_primary": "Get in Touch",
+    "cta_secondary": "Download Catalog",
+    "trust_line": "No sales pressure. Free consultation. Tailored recommendations."
+  },
+  "footer": {
+    "tagline": "Designed, engineered, and manufactured in Bulgaria.",
+    "columns": [
+      {
+        "title": "Company",
+        "items": [
+          { "label": "About", "href": "/about" },
+          { "label": "Careers", "href": "/careers" },
+          { "label": "News", "href": "/news" }
+        ]
+      },
+      {
+        "title": "Support",
+        "items": [
+          { "label": "Service", "href": "/service" },
+          { "label": "Parts", "href": "/parts" },
+          { "label": "Contact", "href": "/contact" }
+        ]
+      }
+    ],
+    "copyright": "© {year} Genesis Technology. All rights reserved.",
+    "socials": {
+      "facebook": { "label": "Facebook", "href": "https://facebook.com/gentechtechnology" },
+      "linkedin": { "label": "LinkedIn", "href": "https://linkedin.com/company/genesis-technology" },
+      "instagram": { "label": "Instagram", "href": "https://instagram.com/genesis.technology" }
+    }
+  }
+}

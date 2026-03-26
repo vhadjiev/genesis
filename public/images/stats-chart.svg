@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <!-- Upward trending area chart -->
+  <defs>
+    <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(29,78,216,0.25)"/>
+      <stop offset="100%" stop-color="rgba(29,78,216,0)"/>
+    </linearGradient>
+  </defs>
+  <!-- Grid lines -->
+  <line x1="40" y1="40" x2="40" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="40" y1="260" x2="380" y2="260" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="40" y1="200" x2="380" y2="200" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="40" y1="140" x2="380" y2="140" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="40" y1="80" x2="380" y2="80" stroke="rgba(255,255,255,0.04)" stroke-width="1" stroke-dasharray="4,4"/>
+  <!-- Area fill -->
+  <path d="M40,240 L90,220 L140,210 L190,185 L240,155 L290,120 L340,90 L380,65 L380,260 L40,260 Z" fill="url(#chartFill)"/>
+  <!-- Line -->
+  <path d="M40,240 L90,220 L140,210 L190,185 L240,155 L290,120 L340,90 L380,65" stroke="rgba(29,78,216,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Dots on line -->
+  <circle cx="140" cy="210" r="3" fill="rgba(29,78,216,0.8)"/>
+  <circle cx="240" cy="155" r="3" fill="rgba(29,78,216,0.8)"/>
+  <circle cx="340" cy="90" r="3" fill="rgba(29,78,216,0.8)"/>
+  <circle cx="380" cy="65" r="4" fill="rgba(29,78,216,1)"/>
+</svg>

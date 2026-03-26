@@ -1,0 +1,30 @@
+{
+  "header": {
+    "items": [
+      { "key": "products", "href": "/products" },
+      { "key": "industries", "href": "/industries" },
+      { "key": "about", "href": "/about" },
+      { "key": "contact", "href": "/contact" }
+    ]
+  },
+  "footer": {
+    "columns": [
+      {
+        "titleKey": "footer.company",
+        "items": [
+          { "key": "footer.about", "href": "/about" },
+          { "key": "footer.careers", "href": "/careers" },
+          { "key": "footer.news", "href": "/news" }
+        ]
+      },
+      {
+        "titleKey": "footer.support",
+        "items": [
+          { "key": "footer.service", "href": "/service" },
+          { "key": "footer.parts", "href": "/parts" },
+          { "key": "footer.contact", "href": "/contact" }
+        ]
+      }
+    ]
+  }
+}

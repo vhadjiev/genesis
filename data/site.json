@@ -1,0 +1,16 @@
+{
+  "name": "Genesis Technology",
+  "domain": "https://gentech.bg",
+  "defaultLocale": "en",
+  "locales": ["en", "bg"],
+  "social": {
+    "facebook": "https://facebook.com/gentechtechnology",
+    "linkedin": "https://linkedin.com/company/genesis-technology",
+    "instagram": "https://instagram.com/genesis.technology"
+  },
+  "contact": {
+    "email": "info@gentech.bg",
+    "phone": "+359 2 XXX XXXX",
+    "address": "Sofia, Bulgaria"
+  }
+}
