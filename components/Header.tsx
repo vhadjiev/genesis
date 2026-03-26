@@ -154,7 +154,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
       >
         {/* Logo */}
         <Link href={localePath(locale)} className="shrink-0" style={{ display: "inline-flex" }}>
-          <Logo src={data.logo} alt="Genesis Technology" theme={s.logoTheme} />
+          <Logo logo={data.resolvedLogo || { type: "image", src: data.logo }} alt="Genesis Technology" theme={s.logoTheme} />
         </Link>
 
         {/* Desktop nav */}

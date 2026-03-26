@@ -244,8 +244,14 @@ export interface TrustBadge {
   icon?: string
 }
 
+/** Server-resolved logo — SVG content inlined, or image src for next/image */
+export type ResolvedLogoData =
+  | { type: "svg"; src: string; content: string }
+  | { type: "image"; src: string }
+
 export interface HeaderGlobal {
-  logo: string // URL to logo SVG
+  logo: string // URL to logo file
+  resolvedLogo?: ResolvedLogoData
   navigation: NavItem[]
   cta: CmsCta
   /** Display names for locale switcher, keyed by locale code */
@@ -254,6 +260,7 @@ export interface HeaderGlobal {
 
 export interface FooterGlobal {
   logo: string
+  resolvedLogo?: ResolvedLogoData
   tagline: string
   columns: FooterColumn[]
   socials: SocialLink[]
@@ -271,4 +278,15 @@ export function isCompositeBlock(block: PageBlock): block is CompositeBlock {
 
 export function isSectionBlock(block: PageBlock): block is SectionBlock {
   return block.type !== "composite"
+}
+
+// ─── Site Config ─────────────────────────────────────────────────────────────
+
+export interface SiteConfig {
+  name: string
+  domain: string
+  defaultLocale: string
+  locales: string[]
+  social: Record<string, string>
+  contact: { email: string; phone: string; address: string }
 }

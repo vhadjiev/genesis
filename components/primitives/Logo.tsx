@@ -1,60 +1,42 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import type { ResolvedLogoData } from "@/lib/types";
 
 export interface LogoProps {
-  /** URL to logo file (SVG or image) */
-  src: string;
+  /** Server-resolved logo data (SVG content or image reference) */
+  logo: ResolvedLogoData;
   alt?: string;
   /** Height in rem */
   height?: string;
-  /** Color mode — inverts logo for dark backgrounds */
+  /** Color mode — controls currentColor for SVG or filter for raster images */
   theme?: "light" | "dark";
   className?: string;
   style?: React.CSSProperties;
 }
 
 /**
- * Logo primitive.
- * - SVG files: fetches and inlines the SVG content for color control via currentColor
- * - Image files: renders via next/image with filter for dark/light mode
+ * Logo primitive — pure render, no client-side fetch.
+ *
+ * Receives server-resolved logo data:
+ * - SVG: inlined for color control via currentColor
+ * - Image: rendered via next/image with theme filter
+ *
+ * Resolution happens server-side in getHeader/getFooter via resolveLogo().
  */
 export function Logo({
-  src,
+  logo,
   alt = "Logo",
   height = "1.375rem",
   theme = "dark",
   className,
   style,
 }: LogoProps) {
-  const isSvg = src.endsWith(".svg");
-  const [svgContent, setSvgContent] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!isSvg) return;
-    fetch(src)
-      .then((res) => res.text())
-      .then((text) => {
-        // Remove XML declaration and add currentColor fill
-        const cleaned = text
-          .replace(/<\?xml[^?]*\?>/g, "")
-          .replace(/<!DOCTYPE[^>]*>/g, "");
-        setSvgContent(cleaned);
-      })
-      .catch(() => setSvgContent(null));
-  }, [src, isSvg]);
-
   const color = theme === "dark" ? "var(--neutral-white)" : "var(--brand-midnight)";
 
-  // SVG: inline for color control
-  if (isSvg) {
-    if (!svgContent) {
-      // Reserve space while SVG loads to prevent layout shift
-      return <span className={className} style={{ display: "inline-block", height, ...style }} />;
-    }
+  if (logo.type === "svg") {
     return (
       <span
+        role="img"
+        aria-label={alt}
         className={className}
         style={{
           display: "inline-flex",
@@ -64,30 +46,49 @@ export function Logo({
           ...style,
         }}
         dangerouslySetInnerHTML={{
-          __html: svgContent.replace(
+          __html: logo.content.replace(
             /<svg/,
-            `<svg style="height:${height};width:auto"`
+            `<svg style="height:${height};width:auto" aria-hidden="true"`
           ),
         }}
       />
     );
   }
 
-  // Non-SVG: image with filter
+  if (logo.type === "image") {
+    return (
+      <Image
+        src={logo.src}
+        alt={alt}
+        width={140}
+        height={22}
+        className={className}
+        style={{
+          height,
+          width: "auto",
+          filter: theme === "dark" ? "brightness(0) invert(1)" : "none",
+          ...style,
+        }}
+        priority
+      />
+    );
+  }
+
+  // Fallback: text
   return (
-    <Image
-      src={src}
-      alt={alt}
-      width={140}
-      height={22}
+    <span
       className={className}
       style={{
+        display: "inline-flex",
+        alignItems: "center",
         height,
-        width: "auto",
-        filter: theme === "dark" ? "brightness(0) invert(1)" : "none",
+        fontWeight: 600,
+        fontSize: "var(--text-s)",
+        color,
         ...style,
       }}
-      priority
-    />
+    >
+      {alt}
+    </span>
   );
 }

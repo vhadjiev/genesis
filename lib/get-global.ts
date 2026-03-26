@@ -1,5 +1,6 @@
 import type { Locale } from "@/i18n/settings";
 import type { HeaderGlobal, FooterGlobal } from "./types";
+import { resolveLogo } from "./resolve-logo";
 
 /**
  * Fetches a CMS global by slug and locale.
@@ -12,9 +13,13 @@ export async function getGlobal<T>(slug: string, locale: Locale): Promise<T> {
 }
 
 export async function getHeader(locale: Locale): Promise<HeaderGlobal> {
-  return getGlobal<HeaderGlobal>("header", locale);
+  const data = await getGlobal<HeaderGlobal>("header", locale);
+  data.resolvedLogo = await resolveLogo(data.logo);
+  return data;
 }
 
 export async function getFooter(locale: Locale): Promise<FooterGlobal> {
-  return getGlobal<FooterGlobal>("footer", locale);
+  const data = await getGlobal<FooterGlobal>("footer", locale);
+  data.resolvedLogo = await resolveLogo(data.logo);
+  return data;
 }

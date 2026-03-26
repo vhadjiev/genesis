@@ -3,7 +3,6 @@ import { isCompositeBlock, isSectionBlock } from "@/lib/types";
 import { PRESETS } from "@/lib/presets";
 import { BlockRenderer, Section } from "./Section";
 import { SectionRefRegistrar } from "./SectionRefRegistrar";
-import { Fragment } from "react";
 
 /**
  * Renders a CMS page from its block array.

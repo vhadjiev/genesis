@@ -1,8 +1,18 @@
-export const defaultLocale = 'en';
-export const locales = ['en', 'bg'] as const;
-export type Locale = (typeof locales)[number];
+import siteConfig from "@/data/site.json";
 
-export function getDirection(locale: Locale) {
+// ─── Source of truth: site.json ─────────────────────────────────────────────
+// The i18n module re-exports locale config for synchronous access everywhere
+// (middleware, client components, utilities). No async needed.
+
+export const defaultLocale = siteConfig.defaultLocale;
+export const locales = siteConfig.locales as readonly string[];
+export type Locale = string;
+
+export function isValidLocale(value: string): boolean {
+  return locales.includes(value);
+}
+
+export function getDirection(_locale: Locale) {
   return 'ltr';
 }
 

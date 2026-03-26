@@ -106,7 +106,7 @@ function QuoteBody({ item, theme }: { item: ContentItem; theme?: string }) {
   );
 }
 
-function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLevel?: number }) {
+function CenteredBody({ item, headingLevel = 2, headingId }: { item: ContentItem; headingLevel?: number; headingId?: string }) {
   const { ref, isVisible } = useInView(0.1);
 
   return (
@@ -123,6 +123,7 @@ function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLe
       {item.title && (
         <Heading
           level={headingLevel as 1 | 2 | 3 | 4 | 5 | 6}
+          id={headingId}
           theme="dark"
           maxWidth="56rem"
           style={{
@@ -172,7 +173,7 @@ function CenteredBody({ item, headingLevel = 2 }: { item: ContentItem; headingLe
   );
 }
 
-function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
+function StandardBody({ item, theme, headingLevel = 3, headingId }: { item: ContentItem; theme?: string; headingLevel?: number; headingId?: string }) {
   const colors = themeColors(theme);
   return (
     <>
@@ -206,7 +207,7 @@ function StandardBody({ item, theme }: { item: ContentItem; theme?: string }) {
       )}
 
       {item.title && (
-        <Heading level={3} theme={theme}>
+        <Heading level={headingLevel as 1 | 2 | 3 | 4 | 5 | 6} id={headingId} theme={theme}>
           {item.title}
         </Heading>
       )}
@@ -262,6 +263,8 @@ export interface ContentProps {
   imageSizes?: string;
   /** Heading level for the main title (1 for hero, 2 for sections, 3 for items) */
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  /** ID for the heading element (used for aria-labelledby) */
+  headingId?: string;
   index?: number;
 }
 
@@ -278,6 +281,7 @@ export function Content({
   href,
   imageSizes,
   headingLevel,
+  headingId,
 }: ContentProps) {
   const config = getContentConfig(layout);
   const variant = variantOverride || config.cardVariant;
@@ -292,10 +296,10 @@ export function Content({
       body = <QuoteBody item={item} theme={theme} />;
       break;
     case "centered":
-      body = <CenteredBody item={item} headingLevel={headingLevel} />;
+      body = <CenteredBody item={item} headingLevel={headingLevel} headingId={headingId} />;
       break;
     default:
-      body = <StandardBody item={item} theme={theme} />;
+      body = <StandardBody item={item} theme={theme} headingLevel={headingLevel} headingId={headingId} />;
   }
 
   return (

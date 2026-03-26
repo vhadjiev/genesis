@@ -139,7 +139,7 @@ export function Section({ block, insideComposite, mergedBlock, belowFold }: Sect
     <>
       <section
         id={config.sectionId || undefined}
-        aria-labelledby={config.headline ? `${block.id}-heading` : undefined}
+        aria-labelledby={config.headline || block.items?.[0]?.title ? `${block.id}-heading` : undefined}
         data-header-theme={isDark ? "dark" : "light"}
         data-below-fold={belowFold || undefined}
         style={{

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { locales, localePath, type Locale } from "@/i18n/settings";
+import { locales, defaultLocale, isValidLocale, localePath, type Locale } from "@/i18n/settings";
 import { plusJakarta, inter, jetbrainsMono } from "@/lib/fonts";
 import { getSiteConfig } from "@/lib/get-content";
+import { getCmsPage, findFirstBlockImage } from "@/lib/get-page";
 import { getHeader, getFooter } from "@/lib/get-global";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -19,27 +20,42 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const site = await getSiteConfig();
-  const isEn = locale === "en";
+  const [site, page] = await Promise.all([
+    getSiteConfig(),
+    getCmsPage("home", locale as Locale),
+  ]);
+
+  // Resolve OG image: page meta → first image from blocks
+  const ogImagePath = page.meta.ogImage || findFirstBlockImage(page.blocks);
+  const ogImageUrl = ogImagePath
+    ? `${site.domain}${ogImagePath.startsWith("/") ? "" : "/"}${ogImagePath}`
+    : undefined;
 
   return {
     title: {
-      default: isEn
-        ? "Genesis Technology — Professional Beverage Systems"
-        : "Genesis Technology — Професионални напиткови системи",
+      default: page.meta.title,
       template: `%s | ${site.name}`,
     },
-    description: isEn
-      ? "European-engineered professional beverage systems for hotels, offices, and restaurant chains. Vertically integrated manufacturing, software, and service."
-      : "Европейски професионални напиткови системи за хотели, офиси и ресторантски вериги. Вертикално интегрирано производство, софтуер и сервиз.",
+    description: page.meta.description,
     openGraph: {
       type: "website",
-      locale: locale === "bg" ? "bg_BG" : "en_US",
+      locale: locale === defaultLocale ? "en_US" : `${locale}_${locale.toUpperCase()}`,
       url: site.domain,
       siteName: site.name,
+      ...(ogImageUrl && {
+        images: [
+          {
+            url: ogImageUrl,
+            width: 1200,
+            height: 630,
+            alt: page.meta.title,
+          },
+        ],
+      }),
     },
     twitter: {
       card: "summary_large_image",
+      ...(ogImageUrl && { images: [ogImageUrl] }),
     },
     alternates: {
       canonical: `${site.domain}${localePath(locale)}`,
@@ -63,7 +79,7 @@ export default async function LocaleLayout({
 }) {
   const { locale } = await params;
 
-  if (!locales.includes(locale as Locale)) {
+  if (!isValidLocale(locale)) {
     notFound();
   }
 

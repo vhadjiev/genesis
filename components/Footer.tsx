@@ -1,6 +1,6 @@
 "use client";
 
-import { Icon, Link, Logo, Button } from "@/components/primitives";
+import { Icon, Link, Logo, Button, Text } from "@/components/primitives";
 import { localePath, type Locale } from "@/i18n/settings";
 import type { FooterGlobal } from "@/lib/types";
 
@@ -10,11 +10,6 @@ const linkStyle: React.CSSProperties = {
 };
 
 const colHeadingStyle: React.CSSProperties = {
-  fontSize: "11px",
-  fontWeight: 500,
-  textTransform: "uppercase" as const,
-  letterSpacing: "0.1em",
-  color: "var(--neutral-400)",
   marginBottom: "1.25rem",
 };
 
@@ -33,7 +28,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
           {/* Col 1: Logo + tagline + social */}
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--sp-l)" }}>
             <Link href={localePath(locale)} style={{ display: "inline-flex" }}>
-              <Logo src={data.logo} alt="Genesis Technology" theme="dark" height="1.125rem" />
+              <Logo logo={data.resolvedLogo || { type: "image", src: data.logo }} alt="Genesis Technology" theme="dark" height="1.125rem" />
             </Link>
             <p style={{ fontSize: "var(--text-s)", color: "var(--neutral-400)", lineHeight: 1.6, maxWidth: "16rem" }}>
               {data.tagline}
@@ -65,7 +60,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
           {/* Dynamic link columns */}
           {data.columns.map((col) => (
             <div key={col.title}>
-              <h3 style={colHeadingStyle}>{col.title}</h3>
+              <Text variant="label" theme="dark" as="div" style={colHeadingStyle}>{col.title}</Text>
               <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.625rem" }}>
                 {col.links.map((link) => (
                   <li key={link.href}>
@@ -88,7 +83,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
 
           {/* Contacts column */}
           <div>
-            <h3 style={colHeadingStyle}>Contacts</h3>
+            <Text variant="label" theme="dark" as="div" style={colHeadingStyle}>Contacts</Text>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <li>
                 <Link
@@ -123,7 +118,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
 
           {/* Newsletter column */}
           <div>
-            <h3 style={colHeadingStyle}>{data.newsletter.title}</h3>
+            <Text variant="label" theme="dark" as="div" style={colHeadingStyle}>{data.newsletter.title}</Text>
             <p style={{ fontSize: "var(--text-s)", color: "var(--neutral-400)", lineHeight: 1.6, marginBottom: "var(--sp-m)" }}>
               {data.newsletter.description}
             </p>

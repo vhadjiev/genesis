@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next";
 import { locales, localePath } from "@/i18n/settings";
+import { getSiteConfig } from "@/lib/get-content";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://gentech.bg";
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const site = await getSiteConfig();
   const now = new Date();
 
   const pages = [
@@ -15,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return pages.flatMap((page) =>
     locales.map((locale) => ({
-      url: `${baseUrl}${localePath(locale, page.path)}`,
+      url: `${site.domain}${localePath(locale, page.path)}`,
       lastModified: now,
       changeFrequency: page.changeFrequency,
       priority: page.priority,

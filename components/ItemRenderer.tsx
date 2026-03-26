@@ -13,12 +13,14 @@ export interface ItemRendererProps {
   cardVariant?: CardVariant;
   /** Heading level from sectionConfig (data-driven) */
   headingLevel?: 1 | 2 | 3 | 4 | 5 | 6;
+  /** ID for the heading element (used for aria-labelledby) */
+  headingId?: string;
 }
 
 /**
  * Dispatches item rendering — all layouts go through the unified Content component.
  */
-export function ItemRenderer({ item, layout, theme, index, cardVariant, headingLevel }: ItemRendererProps) {
+export function ItemRenderer({ item, layout, theme, index, cardVariant, headingLevel, headingId }: ItemRendererProps) {
   return (
     <Content
       item={item}
@@ -27,6 +29,7 @@ export function ItemRenderer({ item, layout, theme, index, cardVariant, headingL
       index={index}
       cardVariant={cardVariant}
       headingLevel={headingLevel}
+      headingId={headingId}
     />
   );
 }

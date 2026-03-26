@@ -51,7 +51,7 @@
         {
           "id": "story-headline",
           "preset": "story-headline",
-          "sectionConfig": { "theme": "dark" },
+          "sectionConfig": { "theme": "dark", "headingLevel": 2 },
           "items": [
             {
               "title": "Every component.\nEvery line of code.\n*Ours.*"
@@ -61,7 +61,7 @@
         {
           "id": "story-body",
           "preset": "story-body",
-          "sectionConfig": { "theme": "dark" },
+          "sectionConfig": { "theme": "dark", "headingLevel": 2 },
           "items": [
             {
               "title": "Your new *engineering*\npartner",

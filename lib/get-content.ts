@@ -1,4 +1,6 @@
-export async function getSiteConfig() {
+import type { SiteConfig } from "./types";
+
+export async function getSiteConfig(): Promise<SiteConfig> {
   const config = await import("@/data/site.json");
-  return config.default;
+  return config.default as SiteConfig;
 }
