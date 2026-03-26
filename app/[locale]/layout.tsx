@@ -3,10 +3,11 @@ import { notFound } from "next/navigation";
 import { locales, type Locale } from "@/i18n/settings";
 import { plusJakarta, inter, jetbrainsMono } from "@/lib/fonts";
 import { getSiteConfig } from "@/lib/get-content";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { getHeader, getFooter } from "@/lib/get-global";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { StructuredData } from "./structured-data";
-import { PageContextProvider } from "@/lib/cms/page-context";
+import { PageContextProvider } from "@/lib/page-context";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -67,6 +68,11 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  const [headerData, footerData] = await Promise.all([
+    getHeader(locale as Locale),
+    getFooter(locale as Locale),
+  ]);
+
   return (
     <html
       lang={locale}
@@ -82,9 +88,9 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen bg-[var(--color-bg-base)] text-[var(--color-text-primary)] font-[family-name:var(--font-body)] antialiased">
         <PageContextProvider>
-          <Header locale={locale as Locale} />
+          <Header data={headerData} locale={locale as Locale} />
           <main>{children}</main>
-          <Footer locale={locale as Locale} />
+          <Footer data={footerData} locale={locale as Locale} />
         </PageContextProvider>
       </body>
     </html>

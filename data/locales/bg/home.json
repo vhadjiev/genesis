@@ -8,13 +8,13 @@
     {
       "id": "hero",
       "preset": "hero",
-      "sectionConfig": { "theme": "dark", "sectionId": "hero", "animation": "hero-scroll-overlay" },
+      "sectionConfig": { "theme": "dark", "sectionId": "hero", "animation": "hero-scroll-overlay", "headingLevel": 1 },
       "items": [
         {
           "title": "Intelligent machines,\nengineered from the\nground up.",
           "subtitle": "Genesis designs, manufactures, and connects professional beverage systems — entirely in-house. From laser-cut metal to cloud-connected AI.",
-          "cta": { "label": "Explore Machines", "href": "#machines", "icon": "lucide:arrow-right" },
-          "secondaryCta": { "label": "Get a Quote", "href": "#contact" },
+          "cta": { "label": "Explore Machines", "href": "#machines", "variant": "primary", "size": "xl", "icon": "lucide:arrow-right" },
+          "secondaryCta": { "label": "Get a Quote", "href": "#contact", "variant": "secondary", "size": "xl" },
           "bgImage": { "src": "/images/hero/coffee-beans-dark.jpg", "alt": "Genesis coffee machine in premium setting" },
           "number": "3,000+",
           "label": "locations served"
@@ -340,8 +340,8 @@
         {
           "title": "Ready to elevate your\nbeverage experience?",
           "subtitle": "Whether you're outfitting a single café or a chain of 50 locations, our team will design the right solution for you.",
-          "cta": { "label": "Get in Touch", "href": "#contact", "icon": "lucide:arrow-right" },
-          "secondaryCta": { "label": "Download Catalog", "href": "#" }
+          "cta": { "label": "Get in Touch", "href": "#contact", "variant": "primary", "size": "lg", "icon": "lucide:arrow-right" },
+          "secondaryCta": { "label": "Download Catalog", "href": "#", "variant": "secondary", "size": "lg" }
         }
       ]
     }

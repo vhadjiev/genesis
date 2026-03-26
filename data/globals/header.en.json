@@ -1,0 +1,15 @@
+{
+  "logo": "/logo.svg",
+  "navigation": [
+    { "label": "Machines", "href": "#machines" },
+    { "label": "Technology", "href": "#technology" },
+    { "label": "Our Story", "href": "#story" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "cta": {
+    "label": "Get a Quote",
+    "href": "#contact",
+    "variant": "primary",
+    "size": "lg"
+  }
+}

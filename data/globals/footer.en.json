@@ -1,0 +1,58 @@
+{
+  "logo": "/logo.svg",
+  "tagline": "Designed, engineered, and manufactured in Bulgaria.",
+  "columns": [
+    {
+      "title": "Systems",
+      "links": [
+        { "label": "Genesis Universa", "href": "/machines/universa" },
+        { "label": "Genesis Alpha", "href": "/machines/alpha" },
+        { "label": "Genesis Prime", "href": "/machines/prime" },
+        { "label": "Genesis Eclipse", "href": "/machines/eclipse" },
+        { "label": "Genesis Solaris", "href": "/machines/solaris" },
+        { "label": "Genesis Solaris 2", "href": "/machines/solaris-2" },
+        { "label": "Cloud Platform", "href": "/services/cloud-system", "highlight": true }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        { "label": "About", "href": "/about" },
+        { "label": "Careers", "href": "/careers" },
+        { "label": "News", "href": "/news" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "Manufacturing",
+      "links": [
+        { "label": "CNC Machining", "href": "/manufacturing/cnc" },
+        { "label": "Laser Cutting", "href": "/manufacturing/laser" },
+        { "label": "Metal Bending", "href": "/manufacturing/bending" },
+        { "label": "Welding", "href": "/manufacturing/welding" }
+      ]
+    }
+  ],
+  "socials": [
+    { "label": "Instagram", "href": "https://www.instagram.com/genesistechnology/", "icon": "mdi:instagram" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/genesis-technology-bg/", "icon": "mdi:linkedin" },
+    { "label": "Facebook", "href": "https://facebook.com/gentechtechnology", "icon": "mdi:facebook" }
+  ],
+  "contact": {
+    "address": "Plovdiv, Bulgaria",
+    "addressUrl": "https://maps.app.goo.gl/gentech-plovdiv",
+    "phone": "+359 89 565 7706",
+    "email": "info@gentech.bg"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Get product updates and industry insights.",
+    "placeholder": "Email address"
+  },
+  "badges": [
+    { "label": "TÜV Nord Certified", "icon": "lucide:shield" },
+    { "label": "Official ILLY Partner", "icon": "lucide:coffee" },
+    { "label": "Patent Reg. 3653 U1" }
+  ],
+  "copyright": "Genesis Technology Ltd. All rights reserved."
+}

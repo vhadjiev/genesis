@@ -1,0 +1,15 @@
+{
+  "logo": "/logo.svg",
+  "navigation": [
+    { "label": "Машини", "href": "#machines" },
+    { "label": "Технология", "href": "#technology" },
+    { "label": "Нашата история", "href": "#story" },
+    { "label": "Контакт", "href": "#contact" }
+  ],
+  "cta": {
+    "label": "Запитване",
+    "href": "#contact",
+    "variant": "primary",
+    "size": "lg"
+  }
+}

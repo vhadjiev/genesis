@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/settings";
-import { getCmsPage } from "@/lib/cms/get-page";
-import { PageRenderer } from "@/components/cms/PageRenderer";
+import { getCmsPage } from "@/lib/get-page";
+import { PageRenderer } from "@/components/PageRenderer";
 
 export default async function HomePage({
   params,

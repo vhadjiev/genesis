@@ -1,0 +1,58 @@
+{
+  "logo": "/logo.svg",
+  "tagline": "Проектирано, инженерно и произведено в България.",
+  "columns": [
+    {
+      "title": "Системи",
+      "links": [
+        { "label": "Genesis Universa", "href": "/machines/universa" },
+        { "label": "Genesis Alpha", "href": "/machines/alpha" },
+        { "label": "Genesis Prime", "href": "/machines/prime" },
+        { "label": "Genesis Eclipse", "href": "/machines/eclipse" },
+        { "label": "Genesis Solaris", "href": "/machines/solaris" },
+        { "label": "Genesis Solaris 2", "href": "/machines/solaris-2" },
+        { "label": "Облачна платформа", "href": "/services/cloud-system", "highlight": true }
+      ]
+    },
+    {
+      "title": "Компания",
+      "links": [
+        { "label": "За нас", "href": "/about" },
+        { "label": "Кариери", "href": "/careers" },
+        { "label": "Новини", "href": "/news" },
+        { "label": "Контакт", "href": "/contact" }
+      ]
+    },
+    {
+      "title": "Производство",
+      "links": [
+        { "label": "CNC обработка", "href": "/manufacturing/cnc" },
+        { "label": "Лазерно рязане", "href": "/manufacturing/laser" },
+        { "label": "Огъване на метал", "href": "/manufacturing/bending" },
+        { "label": "Заваряване", "href": "/manufacturing/welding" }
+      ]
+    }
+  ],
+  "socials": [
+    { "label": "Instagram", "href": "https://www.instagram.com/genesistechnology/", "icon": "mdi:instagram" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/genesis-technology-bg/", "icon": "mdi:linkedin" },
+    { "label": "Facebook", "href": "https://facebook.com/gentechtechnology", "icon": "mdi:facebook" }
+  ],
+  "contact": {
+    "address": "Пловдив, България",
+    "addressUrl": "https://maps.app.goo.gl/gentech-plovdiv",
+    "phone": "+359 89 565 7706",
+    "email": "info@gentech.bg"
+  },
+  "newsletter": {
+    "title": "Бюлетин",
+    "description": "Получавайте продуктови новини и индустриални прозрения.",
+    "placeholder": "Имейл адрес"
+  },
+  "badges": [
+    { "label": "TÜV Nord сертифициран", "icon": "lucide:shield" },
+    { "label": "Официален ILLY партньор", "icon": "lucide:coffee" },
+    { "label": "Патент Рег. 3653 U1" }
+  ],
+  "copyright": "Genesis Technology Ltd. Всички права запазени."
+}
