@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon, Link, Logo, Button } from "@/components/primitives";
-import type { Locale } from "@/i18n/settings";
+import { localePath, type Locale } from "@/i18n/settings";
 import type { FooterGlobal } from "@/lib/types";
 
 const linkStyle: React.CSSProperties = {
@@ -32,7 +32,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
         }}>
           {/* Col 1: Logo + tagline + social */}
           <div style={{ display: "flex", flexDirection: "column", gap: "var(--sp-l)" }}>
-            <Link href={`/${locale}`} style={{ display: "inline-flex" }}>
+            <Link href={localePath(locale)} style={{ display: "inline-flex" }}>
               <Logo src={data.logo} alt="Genesis Technology" theme="dark" height="1.125rem" />
             </Link>
             <p style={{ fontSize: "var(--text-s)", color: "var(--neutral-400)", lineHeight: 1.6, maxWidth: "16rem" }}>
@@ -70,7 +70,7 @@ export function Footer({ data, locale }: { data: FooterGlobal; locale: Locale })
                 {col.links.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.external ? link.href : `/${locale}${link.href}`}
+                      href={link.external ? link.href : localePath(locale, link.href)}
                       external={link.external}
                       style={{
                         ...linkStyle,

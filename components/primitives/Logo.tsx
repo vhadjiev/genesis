@@ -48,7 +48,11 @@ export function Logo({
   const color = theme === "dark" ? "var(--neutral-white)" : "var(--brand-midnight)";
 
   // SVG: inline for color control
-  if (isSvg && svgContent) {
+  if (isSvg) {
+    if (!svgContent) {
+      // Reserve space while SVG loads to prevent layout shift
+      return <span className={className} style={{ display: "inline-block", height, ...style }} />;
+    }
     return (
       <span
         className={className}
@@ -69,7 +73,7 @@ export function Logo({
     );
   }
 
-  // Fallback: image with filter
+  // Non-SVG: image with filter
   return (
     <Image
       src={src}

@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { subscribeScroll } from "@/lib/scroll-store";
 import { usePageContext } from "@/lib/page-context";
 import { Button, Icon, Link, Logo } from "@/components/primitives";
-import { locales, type Locale } from "@/i18n/settings";
+import { locales, localePath, parseLocalePath, type Locale } from "@/i18n/settings";
 import type { HeaderGlobal } from "@/lib/types";
 
 type NavState = "static" | "ready" | "fixed";
@@ -153,7 +153,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
         }}
       >
         {/* Logo */}
-        <Link href={`/${locale}`} className="shrink-0" style={{ display: "inline-flex" }}>
+        <Link href={localePath(locale)} className="shrink-0" style={{ display: "inline-flex" }}>
           <Logo src={data.logo} alt="Genesis Technology" theme={s.logoTheme} />
         </Link>
 
@@ -176,7 +176,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
           {otherLocales.map((alt) => (
             <Link
               key={alt}
-              href={pathname.replace(`/${locale}`, `/${alt}`)}
+              href={localePath(alt, parseLocalePath(pathname).pathWithoutLocale)}
               className="nav-link"
               style={{ color: s.muted, fontSize: "var(--text-s)", fontWeight: 500 }}
             >
@@ -229,7 +229,7 @@ export function Header({ data, locale }: { data: HeaderGlobal; locale: Locale })
               {otherLocales.map((alt) => (
                 <Link
                   key={alt}
-                  href={pathname.replace(`/${locale}`, `/${alt}`)}
+                  href={localePath(alt, parseLocalePath(pathname).pathWithoutLocale)}
                   style={{ color: "var(--neutral-300)", fontSize: "var(--text-s)", fontWeight: 500, marginTop: "var(--sp-l)" }}
                 >
                   {data.localeNames?.[alt] || alt.toUpperCase()}

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { locales, type Locale } from "@/i18n/settings";
+import { locales, localePath, type Locale } from "@/i18n/settings";
 import { plusJakarta, inter, jetbrainsMono } from "@/lib/fonts";
 import { getSiteConfig } from "@/lib/get-content";
 import { getHeader, getFooter } from "@/lib/get-global";
@@ -42,11 +42,10 @@ export async function generateMetadata({
       card: "summary_large_image",
     },
     alternates: {
-      canonical: `${site.domain}/${locale}`,
-      languages: {
-        en: `${site.domain}/en`,
-        bg: `${site.domain}/bg`,
-      },
+      canonical: `${site.domain}${localePath(locale)}`,
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${site.domain}${localePath(l)}`])
+      ),
     },
     robots: {
       index: true,

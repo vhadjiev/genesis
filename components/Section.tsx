@@ -282,21 +282,23 @@ function StickyBgComposite({
           zIndex: 0,
         }}
       >
-        <Image
-          src={config.stickyBgSrc!}
-          alt={config.stickyBgAlt || ""}
-          fill
-          sizes="100vw"
-          quality={90}
-          style={{ objectFit: "cover" }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0, 0, 0, 0.35)",
-          }}
-        />
+        <div style={{ position: "relative", width: "100%", height: "100%" }}>
+          <Image
+            src={config.stickyBgSrc!}
+            alt={config.stickyBgAlt || ""}
+            fill
+            sizes="100vw"
+            quality={90}
+            style={{ objectFit: "cover" }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              background: "rgba(0, 0, 0, 0.35)",
+            }}
+          />
+        </div>
       </div>
 
       {/* Content overlay — pulled up over the sticky background */}
