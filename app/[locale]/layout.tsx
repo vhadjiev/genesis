@@ -75,6 +75,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
+      data-scroll-behavior="smooth"
       className={`${plusJakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
