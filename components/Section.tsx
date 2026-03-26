@@ -189,7 +189,7 @@ function MergedSection({ block }: { block: SectionBlock }) {
   const config: SectionConfig = { ...preset.sectionDefaults, ...block.sectionConfig };
 
   return (
-    <div style={{ position: "relative", zIndex: 2, paddingBottom: "var(--sp-4xl)" }}>
+    <div style={{ position: "relative", zIndex: 2, paddingBottom: "var(--sp-xl)" }}>
       {config.label && (
         <Text variant="label" theme={config.theme} style={{ textAlign: "center", marginBottom: "var(--sp-xl)" }}>
           {config.label}

@@ -75,6 +75,7 @@ export type CollectionLayout =
   | "marquee"
   | "stack"
   | "single"
+  | "hero-stats"
 
 export type ItemLayout =
   | "image-top"

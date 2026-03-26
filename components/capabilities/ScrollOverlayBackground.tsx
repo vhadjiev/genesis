@@ -10,28 +10,30 @@ interface Props {
   image: CmsImage;
   /** Color used for the scroll overlay, defaults to midnight */
   overlayColor?: string;
+  /** Base overlay opacity before any scroll (0-1), defaults to 0.4 */
+  baseOverlay?: number;
 }
 
 /**
- * Full-bleed background image with scroll-driven dark overlay.
- * As the user scrolls, the overlay opacity increases from 0 to 1 over 450px.
- * The image fades in via CSS animation on mount (no setState needed).
+ * Full-bleed background image with layered dark overlays:
+ * 1. Base overlay — constant dim for readability (works with image or future video)
+ * 2. Scroll overlay — opacity increases from 0 to 1 over 450px scroll
  *
  * Uses the shared scroll store — no private rAF loop.
  */
 export function ScrollOverlayBackground({
   image,
   overlayColor = "var(--brand-midnight)",
+  baseOverlay = 0.4,
 }: Props) {
-  const overlayRef = useRef<HTMLDivElement>(null);
+  const scrollOverlayRef = useRef<HTMLDivElement>(null);
 
   const handleScroll = useCallback((scrollY: number) => {
-    if (overlayRef.current) {
-      // Skip gradual transition when user prefers reduced motion
+    if (scrollOverlayRef.current) {
       const opacity = getReducedMotion()
         ? (scrollY > 10 ? 1 : 0)
         : Math.min(scrollY / 450, 1);
-      overlayRef.current.style.opacity = String(opacity);
+      scrollOverlayRef.current.style.opacity = String(opacity);
     }
   }, []);
 
@@ -39,17 +41,7 @@ export function ScrollOverlayBackground({
 
   return (
     <>
-      <div
-        ref={overlayRef}
-        style={{
-          position: "absolute",
-          inset: 0,
-          backgroundColor: overlayColor,
-          opacity: 0,
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
-      />
+      {/* Background image — full quality, future-ready for <video> swap */}
       <Image
         src={image.src}
         alt={image.alt}
@@ -60,7 +52,34 @@ export function ScrollOverlayBackground({
           objectFit: "cover",
           position: "absolute",
           inset: 0,
-          animation: "fadeIn 0.5s ease forwards",
+          opacity: 0,
+          transform: "scale(1.06)",
+          animation: "heroImageReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        }}
+      />
+
+      {/* Base overlay — constant dim for text readability */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: overlayColor,
+          opacity: baseOverlay,
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Scroll overlay — progressive darkening as user scrolls */}
+      <div
+        ref={scrollOverlayRef}
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: overlayColor,
+          opacity: 0,
+          zIndex: 1,
+          pointerEvents: "none",
         }}
       />
     </>

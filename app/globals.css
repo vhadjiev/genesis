@@ -312,7 +312,7 @@ body {
 
 /* ═══════════ STATS CARDS ═══════════ */
 
-.stats-card {
+.stats-card, .bento-tile {
   padding: var(--sp-xl);
   border-radius: 1.5rem;
   display: flex;
@@ -322,12 +322,26 @@ body {
   position: relative;
   overflow: hidden;
 }
+.bento-tile {
+  transition: box-shadow 0.3s ease, transform 0.15s ease !important;
+}
+.bento-tile:hover {
+  box-shadow: 0 16px 48px rgba(0,0,0,0.18), 0 6px 16px rgba(0,0,0,0.1) !important;
+  transform: translateY(-3px) !important;
+}
+.bento-tile:active {
+  transform: scale(0.98) !important;
+}
 @media (max-width: 991px) {
-  .stats-grid > .stats-card { grid-column: span 6 !important; height: 20rem !important; }
+  .stats-grid > .stats-card,
+  .stats-grid > .bento-tile { grid-column: span 6 !important; height: 20rem !important; }
 }
 @media (max-width: 767px) {
-  .stats-grid > .stats-card { grid-column: 1 / -1 !important; height: 16rem !important; }
+  .stats-grid > .stats-card,
+  .stats-grid > .bento-tile { grid-column: 1 / -1 !important; height: 16rem !important; }
 }
+
+/* ═══════════ HERO STATS STRIP (responsive only — visual styles are inline) ═══════════ */
 
 /* ═══════════ BENEFITS ═══════════ */
 
@@ -356,6 +370,10 @@ body {
 /* ═══════════ KEYFRAMES ═══════════ */
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes heroImageReveal {
+  from { opacity: 0; transform: scale(1.06); }
+  to   { opacity: 1; transform: scale(1); }
+}
 @keyframes tabSlideIn {
   from { transform: translateY(16px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }

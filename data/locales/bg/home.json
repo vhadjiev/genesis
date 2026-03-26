@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Genesis Technology — Intelligent Beverage Systems",
-    "description": "Genesis designs, manufactures, and connects professional beverage systems — entirely in-house. From laser-cut metal to cloud-connected AI.",
+    "title": "Genesis Technology — Професионални напиткови системи",
+    "description": "Ние проектираме, произвеждаме и обслужваме професионални напиткови системи за хотели, офиси и ресторантски вериги. Един екип, един покрив — пълна отговорност.",
     "ogImage": "/images/hero/coffee-beans-dark.jpg"
   },
   "blocks": [
@@ -11,29 +11,23 @@
       "sectionConfig": { "theme": "dark", "sectionId": "hero", "animation": "hero-scroll-overlay", "headingLevel": 1 },
       "items": [
         {
-          "title": "Intelligent machines,\nengineered from the\nground up.",
-          "subtitle": "Genesis designs, manufactures, and connects professional beverage systems — entirely in-house. From laser-cut metal to cloud-connected AI.",
-          "cta": { "label": "Explore Machines", "href": "#machines", "variant": "primary", "size": "xl", "icon": "lucide:arrow-right" },
-          "secondaryCta": { "label": "Get a Quote", "href": "#contact", "variant": "secondary", "size": "xl" },
-          "bgImage": { "src": "/images/hero/coffee-beans-dark.jpg", "alt": "Genesis coffee machine in premium setting" },
-          "number": "3,000+",
-          "label": "locations served"
+          "title": "Вашата напиткова операция\nтрябва да *работи сама.*",
+          "subtitle": "Ние проектираме, произвеждаме и обслужваме всяка машина сами. Когато имате нужда от нас, вече сме там.",
+          "cta": { "label": "Заявете консултация", "href": "#contact", "variant": "primary", "size": "xl", "icon": "lucide:arrow-right" },
+          "secondaryCta": { "label": "Разгледайте системите", "href": "#systems", "variant": "secondary", "size": "xl" },
+          "bgImage": { "src": "/images/hero/coffee-beans-dark.jpg", "alt": "Genesis кафе машина в премиум хотелска среда" }
         }
       ]
     },
     {
-      "id": "trust",
-      "preset": "marquee-logos",
-      "sectionConfig": { "label": "Trusted by leading hospitality and retail brands", "theme": "dark" },
+      "id": "trust-stats",
+      "preset": "grid-stats",
+      "sectionConfig": { "theme": "dark", "padding": "none" },
       "items": [
-        { "label": "ILLY Official Partner" },
-        { "label": "Hilton Hotels" },
-        { "label": "Accor Group" },
-        { "label": "OMV Stations" },
-        { "label": "Lukoil" },
-        { "label": "Happy Restaurant" },
-        { "label": "Marriott" },
-        { "label": "Shell" }
+        { "number": "3,000+", "title": "Обслужвани локации", "content": "Хотели, офиси и ресторантски вериги в Европа." },
+        { "number": "99.2%", "title": "Среден ъптайм на всички обекти", "content": "Проактивна поддръжка за непрекъсната работа." },
+        { "number": "98%", "title": "Удовлетвореност на клиентите", "content": "Операторите, които избраха Genesis, остават с Genesis." },
+        { "number": "< 4ч", "title": "Средно време за реакция", "content": "Локални техници. Локални части. Обещание, не приблизителна оценка." }
       ]
     },
     {
@@ -44,7 +38,7 @@
         "sectionId": "story",
         "stickyBg": true,
         "stickyBgSrc": "/images/IMG_2199.jpg",
-        "stickyBgAlt": "Genesis machine in a premium café environment",
+        "stickyBgAlt": "Производствена база на Genesis в Пловдив",
         "overlapPrevious": "-80vh"
       },
       "blocks": [
@@ -54,7 +48,7 @@
           "sectionConfig": { "theme": "dark", "headingLevel": 2 },
           "items": [
             {
-              "title": "Every component.\nEvery line of code.\n*Ours.*"
+              "title": "Всеки компонент.\nВсеки ред код.\n*Наш.*"
             }
           ]
         },
@@ -64,252 +58,247 @@
           "sectionConfig": { "theme": "dark", "headingLevel": 2 },
           "items": [
             {
-              "title": "Your new *engineering*\npartner",
-              "content": "Genesis Technology isn't an assembler or reseller. We fully design, develop, and manufacture professional beverage machines in Bulgaria — from the laser cutting and bending of metal chassis to the proprietary software that runs each system. Everything happens under one roof."
+              "title": "Едно обаждане.\n*Един екип.*\nЕдно решение.",
+              "content": "Проектираме, произвеждаме и обслужваме всяка машина от нашата база в Пловдив. Хардуер, софтуер, облачна платформа — всичко под един покрив. Когато машината ви има нужда от нова рецепта, резервна част или софтуерна корекция, едно обаждане решава всичко."
             }
           ]
         }
       ]
     },
     {
-      "id": "benefits",
-      "preset": "sticky-scroll",
+      "id": "why-genesis",
+      "preset": "bento-stats",
       "sectionConfig": {
-        "label": "why genesis",
-        "headline": "The unfair advantage of vertical integration",
-        "headlineGradient": "unfair advantage",
-        "theme": "light",
-        "sectionId": "benefits",
-        "animation": "sticky-scroll"
-      },
-      "items": [
-        {
-          "number": "01",
-          "title": "Built, not assembled",
-          "content": "Every Genesis system is designed, fabricated, and assembled in our own facility. From laser-cut metal to running firmware — controlled end-to-end.",
-          "image": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis Universa machine" }
-        },
-        {
-          "number": "02",
-          "title": "Software that thinks ahead",
-          "content": "Our AI operating system learns your patterns, predicts maintenance, and optimises recipes. Patent-registered intelligence, not a third-party licence.",
-          "image": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis Alpha machine" }
-        },
-        {
-          "number": "03",
-          "title": "Service in under 4 hours",
-          "content": "Local technicians, local parts, local knowledge. Our service model is built around the reality that in hospitality, four hours is already too long.",
-          "image": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis Eclipse machine" }
-        },
-        {
-          "number": "04",
-          "title": "Your machine, your rules",
-          "content": "Programmable recipes, branded displays, custom LED lighting. Configure everything to match your operation — no compromises.",
-          "image": { "src": "/images/solaris/genesys-solaris2.jpg", "alt": "Genesis Solaris machine" }
-        }
-      ]
-    },
-    {
-      "id": "products",
-      "preset": "accordion-horizontal",
-      "sectionConfig": {
-        "label": "Our machines",
-        "headline": "Precision-built for every setting",
-        "headlineGradient": "setting",
-        "theme": "light",
-        "sectionId": "machines"
-      },
-      "items": [
-        {
-          "id": "universa",
-          "number": "01",
-          "title": "Genesis Universa",
-          "subtitle": "One platform. Every format.",
-          "content": "A modular system bridging ESE pods and fresh-brew in a single footprint. Designed for operators who need variety without complexity — configured to your menu, not the other way around.",
-          "image": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis Universa" },
-          "cta": { "label": "Learn More", "href": "#universa" },
-          "specs": ["ESE pod + fresh-brew", "Programmable touchscreen", "Compact modular chassis", "Tool-free maintenance", "Auto-rinse cycles"],
-          "label": "Quick Service · Cafeterias · Retail"
-        },
-        {
-          "id": "alpha",
-          "number": "02",
-          "title": "Genesis Alpha",
-          "subtitle": "The intelligent coffee experience",
-          "content": "A bean-to-cup system engineered for high-volume hospitality. Dual boilers, precision grind calibration, AI-powered recipes, and a self-cleaning architecture that keeps the machine in service when it matters most.",
-          "image": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis Alpha" },
-          "cta": { "label": "Learn More", "href": "#alpha" },
-          "specs": ["500+ active locations", "15.6\" touch display", "AI operating system", "Custom LED lighting", "ILLY compatible"],
-          "label": "Hotels · Restaurants · Offices"
-        },
-        {
-          "id": "prime",
-          "number": "03",
-          "title": "Genesis Prime",
-          "subtitle": "Always connected. Always learning.",
-          "content": "A cloud-connected smart beverage system with Wi-Fi and Bluetooth, built for chains and multi-site operators who need centralised control.",
-          "image": { "src": "/images/universa/genesis-universa-ese-pods.jpg", "alt": "Genesis Prime" },
-          "cta": { "label": "Learn More", "href": "#prime" },
-          "specs": ["Cloud-connected", "Wi-Fi & Bluetooth", "Remote monitoring", "OTA firmware updates", "Fleet management"],
-          "label": "Chains · Multi-site · Enterprise"
-        },
-        {
-          "id": "eclipse",
-          "number": "04",
-          "title": "Genesis Eclipse",
-          "subtitle": "Cold precision. Zero waste.",
-          "content": "A post-mix and cold beverage system built for environments where speed, consistency, and portion control are non-negotiable.",
-          "image": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis Eclipse" },
-          "cta": { "label": "Learn More", "href": "#eclipse" },
-          "specs": ["Still, sparkling, flavoured, juice", "Instant-chill technology", "Programmable portions", "Integrated CO₂ system", "BPA-free closed-circuit"],
-          "label": "Hotels · Restaurants · Events"
-        },
-        {
-          "id": "solaris",
-          "number": "05",
-          "title": "Genesis Solaris",
-          "subtitle": "Compact power. Custom recipes.",
-          "content": "A versatile compact machine with a large touchscreen and multilingual software.",
-          "image": { "src": "/images/solaris/genesys-solaris2.jpg", "alt": "Genesis Solaris" },
-          "cta": { "label": "Learn More", "href": "#solaris" },
-          "specs": ["Large touch display", "Multilingual software", "Custom recipes", "Post-mix ready", "Compact footprint"],
-          "label": "Quick Service · Petrol Stations · Retail"
-        },
-        {
-          "id": "solaris2",
-          "number": "06",
-          "title": "Genesis Solaris 2",
-          "subtitle": "Next-gen compact. Smarter than ever.",
-          "content": "The evolution of Solaris — same compact form, upgraded internals.",
-          "image": { "src": "/images/solaris/genesys-solaris2.jpg", "alt": "Genesis Solaris 2" },
-          "cta": { "label": "Learn More", "href": "#solaris2" },
-          "specs": ["Enhanced touch UI", "Faster brew cycle", "IoT connectivity", "Energy efficient", "Remote diagnostics"],
-          "label": "Cafeterias · Offices · Healthcare"
-        }
-      ]
-    },
-    {
-      "id": "howItWorks",
-      "preset": "tabs-feature",
-      "sectionConfig": {
-        "label": "How it works",
-        "headline": "Partnering with Genesis is simple",
-        "theme": "light",
-        "sectionId": "how-it-works"
-      },
-      "items": [
-        {
-          "id": "consultation",
-          "label": "Consultation",
-          "title": "Consultation",
-          "features": [
-            "Tell us about your business — volume, space, drink preferences",
-            "Our team recommends the right machine configuration for your specific needs",
-            "Receive a detailed proposal with pricing, timeline, and customisation options"
-          ]
-        },
-        {
-          "id": "installation",
-          "label": "Installation",
-          "title": "Installation",
-          "features": [
-            "Our certified technicians install and calibrate your machine on-site",
-            "Staff training ensures your team can operate everything from day one"
-          ]
-        },
-        {
-          "id": "customisation",
-          "label": "Customisation",
-          "title": "Customisation",
-          "features": [
-            "Configure drink recipes — adjust strengths, sweetness, milk ratios",
-            "Choose LED lighting colour to match your brand environment",
-            "Upload your logo and brand visuals to the machine's display"
-          ]
-        },
-        {
-          "id": "operation",
-          "label": "Operation",
-          "title": "Operation",
-          "features": [
-            "Monitor performance, consumption, and health via the cloud dashboard",
-            "Use the mobile app for drink selection, nutrition tracking, and management"
-          ]
-        },
-        {
-          "id": "support",
-          "label": "Support",
-          "title": "Support",
-          "features": [
-            "Proactive alerts notify you of maintenance needs before they become issues",
-            "Remote diagnostics and on-site service — sub-4-hour response"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "facts",
-      "type": "composite",
-      "sectionConfig": {
+        "label": "какво ни отличава",
+        "headline": "Какво прави Genesis *различен*",
         "theme": "dark",
-        "bgGradient": "linear-gradient(220deg, #000000 61%, #1a3a6b 89%)"
+        "sectionId": "why-genesis",
+        "animation": "stagger",
+        "bgGradient": "linear-gradient(220deg, #0a0a0a 61%, #1a3a6b 89%)"
       },
-      "blocks": [
+      "items": [
         {
-          "id": "intelligence",
-          "preset": "grid-icon-card",
-          "sectionConfig": {
-            "label": "Technology",
-            "headline": "Cloud-connected.\nAI-powered.\nAlways improving.",
-            "theme": "dark",
-            "sectionId": "technology",
-            "animation": "stagger"
-          },
-          "items": [
-            { "id": "cloud", "icon": "lucide:cloud", "title": "Cloud Management", "content": "Monitor every machine in your fleet from one dashboard. Real-time consumption data, error diagnostics, recipe management — accessible from anywhere." },
-            { "id": "ai", "icon": "lucide:brain-circuit", "title": "AI Operating System", "content": "Patent-registered intelligent system that learns your business patterns. The machine adapts to peak hours, suggests optimisations, and flags maintenance before you notice a problem." },
-            { "id": "mobile", "icon": "lucide:smartphone", "title": "Mobile Application", "content": "Contactless drink selection via personal devices. Nutrition tracking, allergen alerts, ingredient control. All without touching the machine screen." },
-            { "id": "ota", "icon": "lucide:download", "title": "Over-the-Air Updates", "content": "New drinks, new recipes, software improvements — pushed wirelessly. Your machine gets better while you sleep." }
-          ]
+          "number": "",
+          "title": "Произведени, не купени",
+          "content": "Проектираме и произвеждаме всяка система в нашия завод в Пловдив — хардуер, софтуер, всичко. Пълен контрол означава по-бързи поправки, по-високо качество и машини, създадени точно за работата.",
+          "colSpan": 7,
+          "color": "rgba(255,255,255,0.06)"
         },
         {
-          "id": "proof",
-          "preset": "testimonial-carousel",
-          "sectionConfig": { "theme": "dark" },
-          "items": [
-            {
-              "image": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis Universa in hotel lobby" },
-              "quote": "We stopped thinking about the coffee machines. That's the highest compliment I can give.",
-              "author": "Operations Director",
-              "company": "Regional Hotel Group",
-              "metric": "42% fewer breakfast complaints"
-            },
-            {
-              "image": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis Alpha in office kitchen" },
-              "quote": "The facility team forgot we even had coffee machines. They just work.",
-              "author": "Facility Manager",
-              "company": "Technology Campus (1,500 employees)",
-              "metric": "Zero unplanned downtime in 14 months"
-            },
-            {
-              "image": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis Eclipse in restaurant" },
-              "quote": "For the first time, a customer in Plovdiv gets exactly the same drink as in Sofia.",
-              "author": "Head of Operations",
-              "company": "National QSR Brand (30 locations)",
-              "metric": "96.4% beverage consistency"
-            }
-          ]
+          "number": "99.2%",
+          "title": "Ъптайм на всички обекти",
+          "content": "Вашата машина работи, когато имате нужда от нея. Наблюдаваме проактивно и решаваме проблеми преди да стигнат до гостите ви.",
+          "colSpan": 5,
+          "color": "rgba(255,255,255,0.08)"
         },
         {
-          "id": "stats",
-          "preset": "bento-stats",
-          "sectionConfig": { "theme": "dark" },
-          "items": [
-            { "number": "3,000+", "title": "Locations served", "content": "Hotels, offices, restaurants, and retail chains across Europe trust Genesis systems every day.", "colSpan": 7, "color": "rgba(255,255,255,0.06)", "bgImage": { "src": "/images/stats-dots-map.svg", "alt": "" } },
-            { "number": "99.2%", "title": "Machine uptime", "content": "Proactive maintenance and local service teams keep your operations running without interruption.", "colSpan": 5, "color": "rgba(255,255,255,0.08)" },
-            { "number": "15+", "title": "Years of innovation", "content": "Over a decade of engineering excellence, from our first prototype to patent-registered AI systems.", "colSpan": 5, "color": "rgba(177,239,213,0.1)" },
-            { "number": "< 4h", "title": "Service response", "content": "Local technicians, local parts. Because in hospitality, four hours is already too long.", "colSpan": 7, "color": "rgba(255,255,255,0.06)", "bgImage": { "src": "/images/stats-chart.svg", "alt": "" } }
-          ]
+          "number": "< 4ч",
+          "title": "Време за реакция",
+          "content": "Нашите инженери са в Пловдив. Резервните части се произвеждат вътрешно. Когато позвъните, отговаря човек, който познава вашата машина.",
+          "colSpan": 5,
+          "color": "rgba(177,239,213,0.08)"
+        },
+        {
+          "number": "",
+          "title": "Постоянно качество, всяка чаша",
+          "content": "От първата чаша сутринта до последната в полунощ — всяка напитка отговаря на един и същи стандарт. Системата настройва рецептите автоматично, за да поддържа качеството.",
+          "colSpan": 7,
+          "color": "rgba(255,255,255,0.06)"
+        },
+        {
+          "number": "",
+          "title": "Вграден облачен интелект",
+          "content": "Облачната платформа е ядрото на всяка машина. Проследявайте консумацията в реално време, сменяйте рецепти дистанционно и получавайте предупреждения навреме.",
+          "colSpan": 7,
+          "color": "rgba(29,78,216,0.1)"
+        },
+        {
+          "number": "",
+          "title": "Проектирани за вашия екип",
+          "content": "Интуитивни тъчскрийни, самопочистващи цикли и ясни известия. Вашият персонал работи уверено от първия ден. По-малко обучение, по-гладки смени.",
+          "colSpan": 5,
+          "color": "rgba(255,255,255,0.08)"
+        }
+      ]
+    },
+    {
+      "id": "coffee-systems",
+      "preset": "bento-products",
+      "sectionConfig": {
+        "label": "Нашите системи · Кафе и топли напитки",
+        "headline": "От еспресо подове до *bean-to-cup*",
+        "theme": "light",
+        "sectionId": "systems"
+      },
+      "items": [
+        {
+          "title": "Genesis Universa",
+          "content": "Нашият флагман. Биоразградими E.S.E подове и прясно смляно кафе от една машина. Настройте менюто, което искате — машината се адаптира към вас.",
+          "label": "Бързо хранене · Столове · Хотели · Ритейл",
+          "colSpan": 7,
+          "bgImage": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis Universa" },
+          "cta": { "label": "Разгледайте Universa", "href": "/systems/universa" }
+        },
+        {
+          "title": "Genesis Alpha",
+          "content": "Двойни бункера за зърна, автоматично мляко, вграден AI облак. Стотици чаши дневно, самопочистване, нула компромиси.",
+          "label": "Хотели · Ресторанти · Офиси",
+          "colSpan": 5,
+          "bgImage": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis Alpha" },
+          "cta": { "label": "Разгледайте Alpha", "href": "/systems/alpha" }
+        },
+        {
+          "title": "Genesis Prime",
+          "content": "Пълна облачна функционалност в компактен размер. Интелигентно управление и мобилен достъп — перфектна за офиси и бутикови обекти.",
+          "label": "Офиси · Бутикови хотели · Ритейл",
+          "colSpan": 5,
+          "color": "rgba(0,0,0,0.03)",
+          "cta": { "label": "Разгледайте Prime", "href": "/systems/prime" }
+        },
+        {
+          "number": "3",
+          "title": "Кафе системи",
+          "content": "Всяка машина споделя една и съща облачна платформа, една и съща сервизна мрежа и един и същи ангажимент към качеството.",
+          "colSpan": 7,
+          "color": "rgba(29,78,216,0.06)",
+          "cta": { "label": "Вижте всички кафе системи", "href": "/systems/coffee" }
+        }
+      ]
+    },
+    {
+      "id": "cold-systems",
+      "preset": "bento-products",
+      "sectionConfig": {
+        "label": "Нашите системи · Студени напитки и бар",
+        "headline": "Всяка напитка, прецизно *отмерена*",
+        "theme": "light"
+      },
+      "items": [
+        {
+          "title": "Genesis Eclipse",
+          "content": "Над 250 коктейлни рецепти, автоматично дозиране и вграден CO₂. До 40% спестявания от разходите за напитки.",
+          "label": "Коктейлна бар система",
+          "colSpan": 7,
+          "bgImage": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis Eclipse" },
+          "cta": { "label": "Разгледайте Eclipse", "href": "/systems/eclipse" }
+        },
+        {
+          "title": "Genesis Solaris 2",
+          "content": "Пресни сокове, уелнес напитки, ароматизирана вода. Голям тъчскрийн, персонализируеми менюта.",
+          "label": "Фюжън и уелнес",
+          "colSpan": 5,
+          "bgImage": { "src": "/images/solaris/genesys-solaris2.jpg", "alt": "Genesis Solaris 2" },
+          "cta": { "label": "Разгледайте Solaris 2", "href": "/systems/solaris-2" }
+        },
+        {
+          "title": "Genesis Equinox",
+          "content": "Фрапета, студен шоколад, пресни лимонади. Компактна, побира се зад всеки бар. Нови рецепти чрез облака.",
+          "label": "Фрапета и лимонади",
+          "colSpan": 5,
+          "color": "rgba(0,0,0,0.03)",
+          "cta": { "label": "Разгледайте Equinox", "href": "/systems/equinox" }
+        },
+        {
+          "number": "3",
+          "title": "Бар и студени системи",
+          "content": "Коктейли, сокове, фрапета, лимонади — всяка студена напитка, от която операцията ви се нуждае, от един партньор.",
+          "colSpan": 7,
+          "color": "rgba(29,78,216,0.06)",
+          "cta": { "label": "Вижте всички бар системи", "href": "/systems/bar" }
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "preset": "grid-cloud",
+      "sectionConfig": {
+        "label": "Genesis Cloud",
+        "headline": "Всяка машина. Един *панел.*",
+        "theme": "dark",
+        "sectionId": "cloud",
+        "bgGradient": "linear-gradient(220deg, #0a0a0a 61%, #1a3a6b 89%)"
+      },
+      "items": [
+        {
+          "icon": "lucide:bar-chart-3",
+          "title": "Вижте какво се случва, навсякъде",
+          "content": "Данни за консумацията в реално време от всяка машина и всяка локация. Знайте кои напитки са популярни, кога търсенето е пиково и къде е нужно внимание."
+        },
+        {
+          "icon": "lucide:sliders-horizontal",
+          "title": "Сменяйте рецепти от телефона",
+          "content": "Обновявайте менюта за напитки, настройвайте сила и порции, пускайте сезонни специалитети — всичко дистанционно. Промените стигат до всяка машина мигновено."
+        },
+        {
+          "icon": "lucide:bell",
+          "title": "Известия преди да забележите проблем",
+          "content": "Платформата следи здравето на машината непрекъснато. Когато нещо се нуждае от внимание, вие знаете първи — преди да засегне гост."
+        }
+      ]
+    },
+    {
+      "id": "proof",
+      "preset": "testimonial-carousel",
+      "sectionConfig": {
+        "label": "Резултати",
+        "headline": "Чуйте от оператори *като вас*",
+        "theme": "light",
+        "sectionId": "proof",
+        "padding": "xl",
+        "bgColor": "#F5F2ED"
+      },
+      "items": [
+        {
+          "image": { "src": "/images/universa/genesis-universa.jpg", "alt": "Genesis машина в Хотел Марица" },
+          "quote": "Машините на Genesis работят безупречно от 5 години. Облачната система ни дава пълен контрол над консумацията и ни помага да планираме по-ефективно.",
+          "author": "Хотел Марица",
+          "company": "Пловдив",
+          "metric": "5 години безупречна работа"
+        },
+        {
+          "image": { "src": "/images/alpha/genesis-alpha.png", "alt": "Genesis машина в Бизнес Парк Пловдив" },
+          "quote": "Преминахме към Genesis и разликата беше незабавна — по-добро кафе, реална видимост на разходите и екип, който наистина вдига телефона.",
+          "author": "Бизнес Парк Пловдив",
+          "company": "Пловдив",
+          "metric": "40% по-малко престой"
+        },
+        {
+          "image": { "src": "/images/eclipse/genesys-eclipse.jpg", "alt": "Genesis машина в Ресторант Верея" },
+          "quote": "Облачната система ни спестява часове всяка седмица. Рецепти, статистика, сервизни известия — всичко се управлява от телефона.",
+          "author": "Ресторант Верея",
+          "company": "Стара Загора",
+          "metric": "10+ часа спестени седмично"
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "preset": "grid-process",
+      "sectionConfig": {
+        "label": "Как работим заедно",
+        "headline": "От първи разговор до *перфектна настройка*",
+        "theme": "light",
+        "sectionId": "process",
+        "padding": "xl"
+      },
+      "items": [
+        {
+          "number": "01",
+          "icon": "lucide:message-circle",
+          "title": "Слушаме",
+          "content": "Разкажете ни за вашата операция — обем, пространство, предпочитания за напитки, профил на гостите. Ще препоръчаме системата, която пасва, а не тази, която е най-лесна за продажба."
+        },
+        {
+          "number": "02",
+          "icon": "lucide:settings",
+          "title": "Настройваме",
+          "content": "Нашият екип инсталира, калибрира и конфигурира всичко на място. Вашият персонал получава практическо обучение, за да е уверен от първия ден."
+        },
+        {
+          "number": "03",
+          "icon": "lucide:headphones",
+          "title": "Оставаме",
+          "content": "Облачен мониторинг, дистанционна диагностика, локални инженери на повикване. Не изчезваме след инсталацията — ние сме вашият дългосрочен партньор."
         }
       ]
     },
@@ -319,10 +308,10 @@
       "sectionConfig": { "theme": "dark", "sectionId": "contact" },
       "items": [
         {
-          "title": "Ready to elevate your\nbeverage experience?",
-          "subtitle": "Whether you're outfitting a single café or a chain of 50 locations, our team will design the right solution for you.",
-          "cta": { "label": "Get in Touch", "href": "#contact", "variant": "primary", "size": "lg", "icon": "lucide:arrow-right" },
-          "secondaryCta": { "label": "Download Catalog", "href": "#", "variant": "secondary", "size": "lg" }
+          "title": "Нека намерим правилната\nнастройка за *вашата* операция.",
+          "subtitle": "Ще прегледаме вашите нужди, ще препоръчаме конфигурация и ще ви дадем ясно предложение. Повечето консултации отнемат 30 минути. Без натиск, без шаблонна оферта.",
+          "cta": { "label": "Заявете консултация", "href": "#contact", "variant": "primary", "size": "lg", "icon": "lucide:arrow-right" },
+          "secondaryCta": { "label": "Изтеглете каталог", "href": "#", "variant": "secondary", "size": "lg" }
         }
       ]
     }

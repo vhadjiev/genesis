@@ -1,58 +1,55 @@
 {
   "logo": "/logo.svg",
-  "tagline": "Designed, engineered, and manufactured in Bulgaria.",
+  "tagline": "Professional beverage systems. Engineered in-house. Cloud-managed.",
   "columns": [
     {
-      "title": "Systems",
+      "title": "Coffee Systems",
       "links": [
-        { "label": "Genesis Universa", "href": "/machines/universa" },
-        { "label": "Genesis Alpha", "href": "/machines/alpha" },
-        { "label": "Genesis Prime", "href": "/machines/prime" },
-        { "label": "Genesis Eclipse", "href": "/machines/eclipse" },
-        { "label": "Genesis Solaris", "href": "/machines/solaris" },
-        { "label": "Genesis Solaris 2", "href": "/machines/solaris-2" },
-        { "label": "Cloud Platform", "href": "/services/cloud-system", "highlight": true }
+        { "label": "Genesis Alpha", "href": "/systems/alpha" },
+        { "label": "Genesis Universa", "href": "/systems/universa" },
+        { "label": "Genesis Prime", "href": "/systems/prime" }
+      ]
+    },
+    {
+      "title": "Cold & Bar Systems",
+      "links": [
+        { "label": "Genesis Eclipse", "href": "/systems/eclipse" },
+        { "label": "Genesis Solaris 2", "href": "/systems/solaris-2" },
+        { "label": "Genesis Equinox", "href": "/systems/equinox" },
+        { "label": "Genesis Solaris", "href": "/systems/solaris" }
       ]
     },
     {
       "title": "Company",
       "links": [
         { "label": "About", "href": "/about" },
-        { "label": "Careers", "href": "/careers" },
+        { "label": "Cloud Platform", "href": "/cloud", "highlight": true },
+        { "label": "Manufacturing", "href": "/manufacturing" },
         { "label": "News", "href": "/news" },
         { "label": "Contact", "href": "/contact" }
-      ]
-    },
-    {
-      "title": "Manufacturing",
-      "links": [
-        { "label": "CNC Machining", "href": "/manufacturing/cnc" },
-        { "label": "Laser Cutting", "href": "/manufacturing/laser" },
-        { "label": "Metal Bending", "href": "/manufacturing/bending" },
-        { "label": "Welding", "href": "/manufacturing/welding" }
       ]
     }
   ],
   "socials": [
+    { "label": "Facebook", "href": "https://www.facebook.com/GenesisCoffeeMachine/", "icon": "mdi:facebook" },
     { "label": "Instagram", "href": "https://www.instagram.com/genesistechnology/", "icon": "mdi:instagram" },
-    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/genesis-technology-bg/", "icon": "mdi:linkedin" },
-    { "label": "Facebook", "href": "https://facebook.com/gentechtechnology", "icon": "mdi:facebook" }
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/company/genesis-technology-bg/", "icon": "mdi:linkedin" }
   ],
   "contact": {
-    "address": "Plovdiv, Bulgaria",
-    "addressUrl": "https://maps.app.goo.gl/gentech-plovdiv",
+    "address": "145 Brezovsko Shose str., 4003 Plovdiv, Bulgaria",
+    "addressUrl": "https://maps.google.com/?q=145+Brezovsko+Shose+Plovdiv+Bulgaria",
     "phone": "+359 89 565 7706",
     "email": "info@gentech.bg"
   },
   "newsletter": {
-    "title": "Newsletter",
-    "description": "Get product updates and industry insights.",
-    "placeholder": "Email address"
+    "title": "Stay ahead",
+    "description": "Product updates, engineering insights, and industry news.",
+    "placeholder": "Your email"
   },
   "badges": [
-    { "label": "TÜV Nord Certified", "icon": "lucide:shield" },
+    { "label": "TÜV Nord Certified", "icon": "lucide:shield-check" },
     { "label": "Official ILLY Partner", "icon": "lucide:coffee" },
     { "label": "Patent Reg. 3653 U1" }
   ],
-  "copyright": "Genesis Technology Ltd. All rights reserved."
+  "copyright": "Genesis Technology Ltd. VAT BG205415874. All rights reserved."
 }

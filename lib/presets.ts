@@ -17,9 +17,8 @@ export const PRESETS: Record<string, SectionPreset> = {
       backgroundImageFrom: "item",
       afterSection: "fade-strip",
       entranceAnimation: "fade-up-stagger",
-      mergeNextPreset: "marquee-logos",
+      mergeNextPreset: "grid-stats",
       bottomGradient: true,
-      bottomSpacer: true,
     },
   },
 
@@ -94,15 +93,38 @@ export const PRESETS: Record<string, SectionPreset> = {
 
   "grid-icon-card": {
     slug: "grid-icon-card",
-    label: "Intelligence (Icon Card Grid)",
+    label: "Icon Card Grid (2-col)",
     collection: { layout: "grid", columns: 2 },
     itemLayout: "icon-card",
-    sectionDefaults: { theme: "dark", animation: "stagger" },
-    activeFields: ["id", "icon", "title", "content"],
+    sectionDefaults: { theme: "dark", animation: "none" },
+    activeFields: ["id", "icon", "number", "title", "content"],
     minItems: 2,
     capabilities: {
       decorators: ["grid-pattern"],
     },
+  },
+
+  "grid-stats": {
+    slug: "grid-stats",
+    label: "Stats Strip (Hero)",
+    collection: { layout: "hero-stats" },
+    itemLayout: "stat-card",
+    sectionDefaults: { theme: "dark" },
+    activeFields: ["number", "title", "content"],
+    minItems: 2,
+    maxItems: 6,
+  },
+
+  // ─── Stakes ─────────────────────────────────────────────────────────────────
+
+  "stakes-headline": {
+    slug: "stakes-headline",
+    label: "Stakes Headline (Centered Dark)",
+    collection: { layout: "single" },
+    itemLayout: "cta-centered",
+    sectionDefaults: { theme: "dark", padding: "xl" },
+    activeFields: ["title", "label"],
+    maxItems: 1,
   },
 
   "grid-media": {
@@ -110,7 +132,7 @@ export const PRESETS: Record<string, SectionPreset> = {
     label: "Media Card Grid",
     collection: { layout: "grid", columns: 3 },
     itemLayout: "image-top",
-    sectionDefaults: { theme: "light", animation: "stagger" },
+    sectionDefaults: { theme: "light", animation: "none" },
     activeFields: ["image", "label", "title", "content", "cta", "date"],
   },
 
@@ -133,7 +155,7 @@ export const PRESETS: Record<string, SectionPreset> = {
     label: "Stats (Bento Grid)",
     collection: { layout: "bento" },
     itemLayout: "stat-card",
-    sectionDefaults: { theme: "dark", animation: "stagger" },
+    sectionDefaults: { theme: "dark", animation: "none" },
     activeFields: ["number", "title", "content", "color", "bgImage", "colSpan"],
     minItems: 2,
   },
@@ -222,5 +244,45 @@ export const PRESETS: Record<string, SectionPreset> = {
     itemLayout: "image-top",
     sectionDefaults: { theme: "light", animation: "reveal" },
     activeFields: ["image", "title", "content", "cta"],
+  },
+
+  // ─── Bento Products ────────────────────────────────────────────────────────────
+
+  "bento-products": {
+    slug: "bento-products",
+    label: "Products (Bento Grid)",
+    collection: { layout: "bento" },
+    itemLayout: "stat-card",
+    sectionDefaults: { theme: "light", animation: "none" },
+    activeFields: ["title", "subtitle", "content", "cta", "label", "colSpan", "color", "bgImage"],
+    minItems: 2,
+  },
+
+  // ─── Process ──────────────────────────────────────────────────────────────────
+
+  "grid-process": {
+    slug: "grid-process",
+    label: "Process Steps (3-col Grid)",
+    collection: { layout: "grid", columns: 3 },
+    itemLayout: "icon-card",
+    sectionDefaults: { theme: "light", animation: "none" },
+    activeFields: ["number", "icon", "title", "content"],
+    minItems: 2,
+    maxItems: 5,
+  },
+
+  // ─── Cloud Platform ───────────────────────────────────────────────────────────
+
+  "grid-cloud": {
+    slug: "grid-cloud",
+    label: "Cloud Platform Features (3-col Grid)",
+    collection: { layout: "grid", columns: 3 },
+    itemLayout: "icon-card",
+    sectionDefaults: { theme: "dark", animation: "none" },
+    activeFields: ["icon", "title", "content"],
+    minItems: 2,
+    capabilities: {
+      decorators: ["grid-pattern"],
+    },
   },
 } as const satisfies Record<string, SectionPreset>

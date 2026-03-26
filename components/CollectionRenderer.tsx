@@ -23,6 +23,7 @@ const StickyScrollLayout = dynamic(() => import("./layouts/StickyScrollLayout"))
 const MarqueeLayout = dynamic(() => import("./layouts/MarqueeLayout"));
 const SingleLayout = dynamic(() => import("./layouts/SingleLayout"));
 const StackLayout = dynamic(() => import("./layouts/StackLayout"));
+const HeroStatsLayout = dynamic(() => import("./layouts/HeroStatsLayout"));
 
 export interface CollectionRendererProps {
   blockId: string;
@@ -78,6 +79,8 @@ export function CollectionRenderer({
       return <SingleLayout {...commonProps} />;
     case "stack":
       return <StackLayout {...commonProps} />;
+    case "hero-stats":
+      return <HeroStatsLayout {...commonProps} />;
     default:
       return null;
   }
