@@ -10,6 +10,8 @@ export interface CmsCta {
   label: string
   href: string
   variant?: "primary" | "secondary" | "outline" | "ghost"
+  /** Iconify icon name for trailing icon (e.g., "lucide:arrow-right") */
+  icon?: string
 }
 
 export interface CmsTag {

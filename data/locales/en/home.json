@@ -13,7 +13,7 @@
         {
           "title": "Intelligent machines,\nengineered from the\nground up.",
           "subtitle": "Genesis designs, manufactures, and connects professional beverage systems — entirely in-house. From laser-cut metal to cloud-connected AI.",
-          "cta": { "label": "Explore Machines", "href": "#machines" },
+          "cta": { "label": "Explore Machines", "href": "#machines", "icon": "lucide:arrow-right" },
           "secondaryCta": { "label": "Get a Quote", "href": "#contact" },
           "bgImage": { "src": "/images/hero/coffee-beans-dark.jpg", "alt": "Genesis coffee machine in premium setting" },
           "number": "3,000+",
@@ -288,10 +288,10 @@
             "animation": "stagger"
           },
           "items": [
-            { "id": "cloud", "icon": "cloud", "title": "Cloud Management", "content": "Monitor every machine in your fleet from one dashboard. Real-time consumption data, error diagnostics, recipe management — accessible from anywhere." },
-            { "id": "ai", "icon": "ai", "title": "AI Operating System", "content": "Patent-registered intelligent system that learns your business patterns. The machine adapts to peak hours, suggests optimisations, and flags maintenance before you notice a problem." },
-            { "id": "mobile", "icon": "mobile", "title": "Mobile Application", "content": "Contactless drink selection via personal devices. Nutrition tracking, allergen alerts, ingredient control. All without touching the machine screen." },
-            { "id": "ota", "icon": "ota", "title": "Over-the-Air Updates", "content": "New drinks, new recipes, software improvements — pushed wirelessly. Your machine gets better while you sleep." }
+            { "id": "cloud", "icon": "lucide:cloud", "title": "Cloud Management", "content": "Monitor every machine in your fleet from one dashboard. Real-time consumption data, error diagnostics, recipe management — accessible from anywhere." },
+            { "id": "ai", "icon": "lucide:brain-circuit", "title": "AI Operating System", "content": "Patent-registered intelligent system that learns your business patterns. The machine adapts to peak hours, suggests optimisations, and flags maintenance before you notice a problem." },
+            { "id": "mobile", "icon": "lucide:smartphone", "title": "Mobile Application", "content": "Contactless drink selection via personal devices. Nutrition tracking, allergen alerts, ingredient control. All without touching the machine screen." },
+            { "id": "ota", "icon": "lucide:download", "title": "Over-the-Air Updates", "content": "New drinks, new recipes, software improvements — pushed wirelessly. Your machine gets better while you sleep." }
           ]
         },
         {
@@ -340,7 +340,7 @@
         {
           "title": "Ready to elevate your\nbeverage experience?",
           "subtitle": "Whether you're outfitting a single café or a chain of 50 locations, our team will design the right solution for you.",
-          "cta": { "label": "Get in Touch", "href": "#contact" },
+          "cta": { "label": "Get in Touch", "href": "#contact", "icon": "lucide:arrow-right" },
           "secondaryCta": { "label": "Download Catalog", "href": "#" }
         }
       ]

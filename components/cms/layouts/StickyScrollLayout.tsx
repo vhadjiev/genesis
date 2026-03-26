@@ -3,6 +3,7 @@
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { useScrollCallback } from "@/hooks/useScroll";
+import { Heading } from "../primitives";
 import type { ContentItem } from "@/lib/cms/types";
 import type { LayoutProps } from "./LayoutProps";
 
@@ -24,9 +25,9 @@ function MobileView({ items }: { items: ContentItem[] }) {
           <span style={{ fontSize: "var(--jumbo-2)", fontWeight: 600, color: "var(--brand-blue)", opacity: 0.25, lineHeight: 1, display: "block", marginBottom: "var(--sp-xs)" }}>
             {item.number}
           </span>
-          <h3 className="heading-h5" style={{ color: "var(--brand-midnight)", marginBottom: "var(--sp-s)" }}>
-            {item.title}
-          </h3>
+          <Heading level={3} size="h5" theme="light" style={{ marginBottom: "var(--sp-s)" }}>
+            {item.title || ""}
+          </Heading>
           <p className="text-l" style={{ color: "var(--neutral-400)" }}>
             {item.content}
           </p>
@@ -102,13 +103,15 @@ function DesktopView({ items }: { items: ContentItem[] }) {
           >
             {active.number}
           </span>
-          <h3
+          <Heading
             key={`h-${animKey}`}
-            className="heading-h2"
-            style={{ color: "var(--brand-midnight)", marginBottom: "1.25rem", animation: "benFadeIn 0.5s ease both" }}
+            level={3}
+            size="h2"
+            theme="light"
+            style={{ marginBottom: "1.25rem", animation: "benFadeIn 0.5s ease both" }}
           >
-            {active.title}
-          </h3>
+            {active.title || ""}
+          </Heading>
           <p
             key={`p-${animKey}`}
             className="text-l"

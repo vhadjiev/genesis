@@ -108,7 +108,9 @@
   --color-blue: var(--brand-blue);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* box-sizing handled by Tailwind preflight; margin/padding resets removed
+   to avoid overriding HeroUI component styles */
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 
 body {

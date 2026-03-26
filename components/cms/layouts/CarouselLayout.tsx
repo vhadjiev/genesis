@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { Badge, Heading } from "../primitives";
+import { themeColors } from "@/lib/cms/theme-colors";
 import type { LayoutProps } from "./LayoutProps";
 
 /** Testimonial-style carousel: image left + content right with prev/next navigation */
@@ -65,34 +67,13 @@ export default function CarouselLayout({ items, theme }: LayoutProps) {
             }}
           >
             {/* Metric pill */}
-            {t.metric && (
-              <span
-                style={{
-                  display: "inline-block",
-                  width: "fit-content",
-                  padding: "var(--sp-2xs) var(--sp-s)",
-                  borderRadius: "var(--radius-pill)",
-                  backgroundColor: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.15)",
-                  color: "var(--brand-blue-85)",
-                  fontSize: "var(--text-s)",
-                  fontWeight: 600,
-                }}
-              >
-                {t.metric}
-              </span>
-            )}
+            {t.metric && <Badge text={t.metric} variant="metric" />}
 
             {/* Quote */}
-            <blockquote
-              className="heading-h4"
-              style={{
-                color: "var(--neutral-white)",
-                fontStyle: "normal",
-                fontWeight: 500,
-              }}
-            >
-              &ldquo;{t.quote}&rdquo;
+            <blockquote style={{ fontStyle: "normal", fontWeight: 500, margin: 0 }}>
+              <Heading level={4} size="h4" theme="dark">
+                {`\u201C${t.quote}\u201D`}
+              </Heading>
             </blockquote>
 
             {/* Author */}
